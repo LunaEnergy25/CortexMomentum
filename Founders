@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Clarity Engine™ | Strategic Intelligence for Clean Energy Leaders</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* High Contrast Professional Palette */
+            --obsidian: #0F1419;
+            --midnight: #1A1F2E;
+            --charcoal: #2D3748;
+            --slate: #4A5568;
+            --steel: #718096;
+            --silver: #A0AEC0;
+            --cloud: #CBD5E0;
+            --light: #E2E8F0;
+            --frost: #F7FAFC;
+            --pure: #FFFFFF;
+            
+            /* Strategic Accent Colors */
+            --emerald: #10B981;
+            --emerald-dark: #059669;
+            --emerald-light: #34D399;
+            --amber: #F59E0B;
+            --crimson: #DC2626;
+            
+            /* High Contrast Text Colors */
+            --text-primary: #F7FAFC;
+            --text-secondary: #CBD5E0;
+            --text-muted: #A0AEC0;
+            
+            /* Premium Gradients */
+            --premium-gradient: linear-gradient(135deg, #0F1419 0%, #1A1F2E 100%);
+            --emerald-gradient: linear-gradient(135deg, #10B981 0%, #059669 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background: var(--obsidian);
+            color: var(--text-secondary);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        /* Container System */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-narrow {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Typography */
+        .display-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        h1 {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: clamp(24px, 3.5vw, 32px);
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: clamp(20px, 3vw, 24px);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .lead-text {
+            font-size: 20px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        /* Section Spacing */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 60px;
+            background: var(--premium-gradient);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--crimson);
+            color: var(--pure);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--pure);
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .highlight-number {
+            color: var(--emerald-light);
+            font-weight: 900;
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            background: var(--midnight);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+            text-align: center;
+        }
+
+        .trust-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .trust-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-right: 12px;
+        }
+
+        .trust-item {
+            font-size: 14px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--midnight);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 24px 0;
+            border: 1px solid rgba(203, 213, 224, 0.1);
+        }
+
+        .card-accent {
+            border-left: 4px solid var(--emerald);
+            padding-left: 28px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--emerald);
+            color: var(--obsidian);
+        }
+
+        .btn-primary:hover {
+            background: var(--emerald-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-secondary {
+            color: var(--emerald-light);
+            text-decoration: underline;
+            background: none;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .btn-secondary:hover {
+            color: var(--emerald);
+        }
+
+        /* Metrics Bar */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+            padding: 24px 0;
+            border-top: 1px solid rgba(203, 213, 224, 0.1);
+            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--emerald-light);
+            display: block;
+            margin-bottom: 4px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .metric-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        li {
+            padding: 10px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--emerald-light);
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1.2;
+        }
+
+        .bullet-list li {
+            padding: 8px 0;
+        }
+
+        /* Value Stack */
+        .value-section {
+            padding: 60px 0;
+            background: var(--midnight);
+        }
+
+        .value-stack {
+            background: var(--obsidian);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 32px 0;
+            border: 2px solid var(--emerald);
+        }
+
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+        }
+
+        .value-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .value-description {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .value-name {
+            font-size: 18px;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .value-detail {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .value-amount {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            font-family: 'Space Grotesk', sans-serif;
+            white-space: nowrap;
+        }
+
+        .value-total {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 2px solid var(--emerald);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .value-total-amount {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--emerald-light);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Price Section */
+        .price-section {
+            padding: 80px 0;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, transparent 50%), var(--obsidian);
+            text-align: center;
+        }
+
+        .price-actual {
+            font-size: clamp(56px, 7vw, 80px);
+            font-weight: 900;
+            color: var(--emerald-light);
+            font-family: 'Space Grotesk', sans-serif;
+            display: inline-block;
+            margin: 24px 0;
+        }
+
+        .price-terms {
+            background: var(--midnight);
+            border-radius: 8px;
+            padding: 24px;
+            max-width: 450px;
+            margin: 32px auto;
+            text-align: left;
+        }
+
+        /* Urgency Section */
+        .urgency-section {
+            padding: 60px 0;
+            background: var(--midnight);
+        }
+
+        .deadline-box {
+            background: var(--obsidian);
+            border: 2px solid var(--crimson);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .deadline-date {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--crimson);
+            display: block;
+            margin: 20px 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        /* Qualification Grid */
+        .qual-section {
+            padding: 60px 0;
+            background: var(--obsidian);
+        }
+
+        .qual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 32px 0;
+        }
+
+        .qual-box {
+            padding: 32px;
+            border-radius: 12px;
+        }
+
+        .qual-ideal {
+            background: rgba(16, 185, 129, 0.08);
+            border: 2px solid var(--emerald);
+        }
+
+        .qual-not {
+            background: var(--midnight);
+            border: 1px solid rgba(203, 213, 224, 0.1);
+            opacity: 0.8;
+        }
+
+        /* Guarantee */
+        .guarantee-box {
+            background: var(--emerald);
+            color: var(--obsidian);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guarantee-box h3 {
+            color: var(--obsidian);
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .guarantee-box p {
+            color: var(--obsidian);
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: var(--premium-gradient);
+            text-align: center;
+        }
+
+        .cta-main {
+            margin: 32px 0;
+        }
+
+        .cta-alternative {
+            margin-top: 24px;
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        /* Decision Section */
+        .decision-section {
+            padding: 60px 0;
+            background: var(--obsidian);
+            text-align: center;
+        }
+
+        .decision-points {
+            max-width: 500px;
+            margin: 32px auto;
+            text-align: left;
+        }
+
+        .decision-point {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            font-size: 17px;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+        }
+
+        .decision-point::before {
+            content: '→';
+            color: var(--emerald-light);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        /* Signature */
+        .signature {
+            text-align: center;
+            padding: 40px 0;
+            background: var(--midnight);
+        }
+
+        .signature-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--emerald-light);
+            margin-bottom: 8px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            section {
+                padding: 40px 0;
+            }
+
+            .card, .value-stack, .price-terms {
+                padding: 24px;
+            }
+
+            .metrics-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .qual-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-actual {
+                font-size: 48px;
+            }
+
+            .value-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .value-description {
+                padding-right: 0;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .display-text {
+                font-size: 32px;
+            }
+
+            .deadline-date {
+                font-size: 28px;
+            }
+
+            .trust-content {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .trust-label {
+                margin-right: 0;
+                margin-bottom: 8px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Trust Bar -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-content">
+                <span class="trust-label">Trusted By</span>
+                <span class="trust-item">Houston Chronicle</span>
+                <span class="trust-item">•</span>
+                <span class="trust-item">Building Performance Journal</span>
+                <span class="trust-item">•</span>
+                <span class="trust-item">National Insulation Institute</span>
+                <span class="trust-item">•</span>
+                <span class="trust-item">LA Climate Week Speaker</span>
+                <span class="trust-item">•</span>
+                <span class="trust-item">Rewiring America Advisor</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container-narrow hero-content">
+            <span class="hero-badge">
+                Limited: 3 Founding Partners Only
+            </span>
+            
+            <h1>
+                <span class="highlight-number">Three</span> Clean Energy CEOs Will Have Systematic Intelligence While Others React to Headlines
+            </h1>
+            
+            <p class="lead-text">
+                Every week, critical information affects your business. You find out when everyone else does—through press releases and LinkedIn posts. By then, the opportunity is gone or the threat is real.
+            </p>
+            
+            <p class="lead-text">
+                I'm Jamie Skaar. For 15 years, I've navigated every shift in clean energy. Now I'm offering 3 founding partners access to my strategic intelligence system—enterprise-level market awareness at a fraction of the cost.
+            </p>
+            
+            <div style="text-align: center; margin-top: 32px;">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqlCa6lLjRcpMvPZSp4FaEEYDo6Js6d92VihQU0fiTGovVjw/viewform?usp=dialog" class="btn btn-primary">
+                  Reserve Your Founding Partner Spot →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibility Section -->
+    <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container-narrow">
+            <h2>The Intelligence Gap Between Systematic and Random</h2>
+            
+            <div class="card">
+                <p style="font-size: 20px; margin-bottom: 24px;">
+                    <strong>If you follow my LinkedIn, you see market observations. This system is what creates those observations.</strong>
+                </p>
+                
+                <p style="margin-bottom: 20px;"><strong>My track record in clean energy:</strong></p>
+                
+                <ul class="bullet-list" style="margin-bottom: 24px;">
+                    <li>• Scaled Lumio to $2.2B valuation (INC5000 fastest-growing 2 years)</li>
+                    <li>• Built multi-state operations from ground up</li>
+                    <li>• Previously advised Rewiring America on market transformation</li>
+                    <li>• Keynote speaker at LA Climate Week</li>
+                    <li>• Featured in Houston Chronicle, Build Performance Association</li>
+                    <li>• Active network of 11,500+ industry professionals</li>
+                    <li>• 15 years navigating every market shift</li>
+                </ul>
+                
+                <p>
+                    But here's what matters to you: I've developed a systematic approach to tracking the entire clean energy landscape—patent filings, regulatory changes, financial movements, competitive shifts—that reveals patterns before they become headlines.
+                </p>
+                
+                <div class="metrics-bar">
+                    <div class="metric-item">
+                        <span class="metric-value">$2.2B</span>
+                        <span class="metric-label">Lumio Valuation</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">15yr</span>
+                        <span class="metric-label">Industry Experience</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-value">11.5K</span>
+                        <span class="metric-label">Industry Network</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section style="padding: 60px 0;">
+        <div class="container-narrow">
+            <h2>The Cost of Information Overload Without Intelligence</h2>
+            
+            <p class="lead-text">
+                You're drowning in information but starving for intelligence. Every week brings critical changes:
+            </p>
+            
+            <ul style="margin-bottom: 32px;">
+                <li>New utility interconnection rules that change project economics overnight</li>
+                <li>Regulatory shifts that open (or close) entire markets</li>
+                <li>Technology breakthroughs that make your approach obsolete</li>
+                <li>Competitors pivoting into your space with VC backing</li>
+                <li>Supply chain disruptions visible in shipping data weeks before announcements</li>
+            </ul>
+            
+            <p style="font-size: 20px; text-align: center; color: var(--text-primary);">
+                <strong>The difference between leaders and followers? Systematic intelligence vs. random discovery.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Proof Story -->
+    <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="display-text">THE 45-DAY PIVOT</h2>
+                <p class="lead-text">From Market Collapse to New Opportunity Through Strategic Intelligence</p>
+            </div>
+            
+            <div class="card card-accent">
+                <h3 style="color: var(--crimson); margin-bottom: 24px;">CRISIS: 45 DAYS TO FIND A NEW BUSINESS MODEL</h3>
+                
+                <p style="font-size: 19px; margin-bottom: 20px;">
+                    <strong>The collapse was swift and brutal.</strong> A successful renewable natural gas company watched their core market implode—prices crashed from $200 to just $40 per unit. Investors imposed a spending freeze. The board delivered an ultimatum: find a viable new business model in 45 days or face dissolution.
+                </p>
+                
+                <p style="margin-bottom: 28px;">
+                    <strong>"We're reading the same 3-12 month old reports as everyone else. From there, it's basically our gut. I just don't think we can do it fast enough."</strong>
+                </p>
+                
+                <p style="margin-bottom: 28px;">
+                    They were caught in a classic paradox: the crisis demanded world-class strategic insight, but the financial constraints blocked the very consultants they would typically hire. They were drowning in recycled information, unable to find the clean market signal needed to make their next move.
+                </p>
+                
+                <h3>In 5 Days, My System Analyzed:</h3>
+                
+                <ul style="margin: 24px 0;">
+                    <li>Alternative feedstock economics across 12 categories</li>
+                    <li>200+ regulatory changes creating new market opportunities</li>
+                    <li>Emerging applications in adjacent sectors</li>
+                    <li>Geographic markets with favorable policy support</li>
+                    <li>Competitor positioning and capability gaps</li>
+                </ul>
+                
+                <h3 style="margin-top: 32px;">The Pivot Path We Discovered:</h3>
+                
+                <p style="font-size: 19px; margin: 20px 0;">
+                    European sustainable aviation fuel regulations were creating massive demand for renewable gas inputs. Their existing technology, with modifications, could serve this premium market at significantly higher margins than their collapsed RNG business.
+                </p>
+                
+                <p style="font-size: 19px; margin-bottom: 24px;">
+                    <strong>The board approved the pivot strategy. Today they're actively developing their SAF pathway and building aviation partnerships.</strong>
+                </p>
+                
+                <div style="text-align: center; padding: 24px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; margin-top: 32px;">
+                    <p style="font-size: 20px; font-weight: 700; color: var(--emerald-light); margin: 0;">
+                        The intelligence wasn't magic. It was systematic analysis of fragmented information they didn't have bandwidth to synthesize during crisis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Explanation -->
+    <section style="padding: 60px 0;">
+        <div class="container-narrow">
+            <h2 class="display-text" style="text-align: center;">THE CLARITY ENGINE™</h2>
+            <p class="lead-text" style="text-align: center;">Your 24/7 Strategic Intelligence System</p>
+            
+            <div class="card">
+                <h3>What Makes This Different From Google, ChatGPT, or Industry Reports</h3>
+                
+                <p style="margin-bottom: 24px;">
+                    The Clarity Engine systematically monitors patent databases, regulatory filings, financial reports, technical journals, and shipping data—all analyzed, cross-referenced, and synthesized. While BloombergNEF gives you quarterly reports, I give you weekly intelligence on what matters to YOUR business.
+                </p>
+                
+                <p style="margin-bottom: 24px;">
+                    <strong>You're in complete control.</strong> You direct the intelligence priorities. This isn't a generic newsletter or automated dashboard—it's YOUR strategic questions answered systematically, with my personal review of every finding.
+                </p>
+                
+                <h3>Your Strategic Question → Actionable Intelligence in 48 Hours:</h3>
+                
+                <ul style="margin: 24px 0;">
+                    <li><strong>Frame:</strong> We turn your challenge into specific intelligence requirements</li>
+                    <li><strong>Deploy:</strong> Systematic scanning across regulatory, patent, financial, and competitive sources</li>
+                    <li><strong>Validate:</strong> Every finding is personally reviewed—no automated reports you have to fact-check</li>
+                    <li><strong>Synthesize:</strong> My 15 years of experience adds context databases can't provide</li>
+                    <li><strong>Deliver:</strong> You get clear recommendations with specific next steps</li>
+                </ul>
+                
+                <p style="margin-top: 24px;">
+                    <strong>This isn't another dashboard you'll never log into.</strong> It's active intelligence work, delivered weekly, focused on your specific challenges.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Value -->
+    <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container-narrow">
+            <h2>Beyond the System: My Direct Involvement</h2>
+            
+            <div class="card">
+                <p style="font-size: 19px; margin-bottom: 24px;">
+                    <strong>You set the priorities. The system delivers intelligence. I provide expertise.</strong>
+                </p>
+                
+                <p>As a founding partner, you get:</p>
+                
+                <ul style="margin: 20px 0;">
+                    <li><strong>Weekly Strategy Sessions (1 hour):</strong> We review intelligence together and plan actions</li>
+                    <li><strong>Private Slack Channel:</strong> Direct access when urgent situations arise</li>
+                    <li><strong>Strategic Context:</strong> Industry dynamics and implications that pure data misses</li>
+                    <li><strong>Network Introductions:</strong> 11,500 connections, one message away</li>
+                    <li><strong>Quarterly Implementation Reviews:</strong> Ensuring intelligence becomes action</li>
+                </ul>
+                
+                <p style="margin-top: 24px;">
+                    <strong>I invest 10-15 hours per week on your intelligence. You invest 1 hour.</strong> One good introduction can save months. One pattern recognized early can save millions. This isn't just about information—it's about actionable advantage.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Stack -->
+    <section class="value-section">
+        <div class="container-narrow">
+            <h2 style="text-align: center;">THE REAL-WORLD VALUE</h2>
+            
+            <div class="value-stack">
+                <div class="value-item">
+                    <div class="value-description">
+                        <span class="value-name">Strategic Intelligence System</span>
+                        <span class="value-detail">Systematic monitoring across patents, regulatory, financial sources</span>
+                    </div>
+                    <span class="value-amount">$15,000/mo</span>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-description">
+                        <span class="value-name">Weekly Strategic Consultation</span>
+                        <span class="value-detail">1-hour sessions with 15+ years expertise</span>
+                    </div>
+                    <span class="value-amount">up to $15,000/mo</span>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-description">
+                        <span class="value-name">Proprietary Market Database</span>
+                        <span class="value-detail">10+ years of clean energy intelligence—deals, pivots, patterns</span>
+                    </div>
+                    <span class="value-amount">$5,000/mo</span>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-description">
+                        <span class="value-name">Direct Network Access</span>
+                        <span class="value-detail">11,500+ connections via private Slack channel</span>
+                    </div>
+                    <span class="value-amount">$3,000/mo</span>
+                </div>
+                
+                <div class="value-item">
+                    <div class="value-description">
+                        <span class="value-name">Quarterly Implementation</span>
+                        <span class="value-detail">90-minute deep dives to ensure execution</span>
+                    </div>
+                    <span class="value-amount">$2,000/mo</span>
+                </div>
+                
+                <div class="value-total">
+                    <span style="font-size: 18px; color: var(--text-secondary);">Total Monthly Value</span>
+                    <span class="value-total-amount">up to $40,000/mo</span>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 18px; margin-top: 32px;">
+                BloombergNEF starts at $20,000/month. McKinsey won't touch projects under $250,000.<br>
+                You're getting comparable value for a fraction of the cost...
+            </p>
+        </div>
+    </section>
+
+    <!-- Price Reveal -->
+    <section class="price-section">
+        <div class="container-narrow">
+            <h2 class="display-text">THE FOUNDING PARTNER INVESTMENT</h2>
+            
+            <p style="font-size: 19px; margin-bottom: 24px;">
+                I need founding partners to help perfect the system. Your real challenges shape the intelligence framework. Your feedback drives which processes get automated versus which require human expertise.
+            </p>
+            
+            <p style="font-size: 19px; margin-bottom: 24px;">
+                <strong>As founding partners, you're not just clients—you're collaborators building the future of market intelligence.</strong>
+            </p>
+            
+            <p style="font-size: 22px; margin: 24px 0;">
+                Founding Partner Investment:
+            </p>
+            
+            <span class="price-actual">$5,000/mo</span>
+            
+            <p style="font-size: 20px; margin-top: 24px;">
+                Up to $40,000 in value for $5,000/month.<br>
+                An exceptional rate for founding partners who help shape the system.
+            </p>
+            
+            <div class="price-terms">
+                <ul>
+                    <li>✓ 3-month initial commitment ($15,000 total)</li>
+                    <li>✓ Month-to-month thereafter</li>
+                    <li>✓ Cancel anytime after initial period</li>
+                    <li>✓ Rate locked forever</li>
+                    <li>✓ Direct access throughout</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scarcity -->
+    <section class="urgency-section">
+        <div class="container-narrow">
+            <h2>Why Only 3 Founding Partners</h2>
+            
+            <div class="card">
+                <p style="font-size: 19px; margin-bottom: 20px;">
+                    <strong>This isn't fully automated software—it's intelligence work augmented by systematic tools.</strong>
+                </p>
+                
+                <p>Each founding partner requires:</p>
+                <ul>
+                    <li>Initial system configuration: 10 hours</li>
+                    <li>Weekly strategy sessions: 1 hour</li>
+                    <li>Research & analysis: 5-8 hours/week</li>
+                    <li>Ad-hoc support: 2-3 hours/week</li>
+                </ul>
+                
+                <p style="margin-top: 20px;">
+                    That's 10-15 hours per week per partner of active intelligence work. I can do this properly for 3 companies while building the automated infrastructure. No more.
+                </p>
+            </div>
+            
+            <div class="deadline-box">
+                <h3>The September 1st Start Date</h3>
+                <span class="deadline-date">12 Days Remaining</span>
+                <p>
+                    Onboarding begins September 1st. Q4 intelligence gathering starts immediately. By October, you'll see what others won't understand until January.
+                </p>
+                <p style="margin-top: 16px; font-weight: 600; color: var(--text-primary);">
+                    After September 1st, the next cohort won't open until January 2026.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualification -->
+    <section class="qual-section">
+        <div class="container">
+            <h2 style="text-align: center;">Is This Right For You?</h2>
+            
+            <div class="qual-grid">
+                <div class="qual-box qual-ideal">
+                    <h3 style="color: var(--emerald-light);">This Works Best For:</h3>
+                    <ul style="list-style: none;">
+                        <li style="padding-left: 28px;">✓ $5-50 million clean energy companies</li>
+                        <li style="padding-left: 28px;">✓ Making strategic decisions (expansion, pivots)</li>
+                        <li style="padding-left: 28px;">✓ Value systematic intelligence over random discovery</li>
+                        <li style="padding-left: 28px;">✓ Can implement insights quickly</li>
+                        <li style="padding-left: 28px;">✓ Ready to invest in competitive advantage</li>
+                    </ul>
+                </div>
+                
+                <div class="qual-box qual-not">
+                    <h3 style="color: var(--steel);">Not Necessary If:</h3>
+                    <ul style="list-style: none;">
+                        <li style="padding-left: 28px;">× Happy with current information sources</li>
+                        <li style="padding-left: 28px;">× In crisis mode (no bandwidth to implement)</li>
+                        <li style="padding-left: 28px;">× Need committee approval for everything</li>
+                        <li style="padding-left: 28px;">× Prefer to wait and see</li>
+                        <li style="padding-left: 28px;">× Think Google is sufficient</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 32px; font-size: 17px;">
+                Not sure? That's what the 15-minute call is for.
+            </p>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container-narrow">
+            <div class="guarantee-box">
+                <h3>30-DAY VALUE GUARANTEE</h3>
+                <p>
+                    Within 30 days, The Clarity Engine will surface strategic intelligence that fundamentally changes your understanding of a market opportunity or threat.
+                </p>
+                <p>
+                    <strong>If it doesn't deliver clear value, I refund that month entirely.</strong>
+                </p>
+                <p style="margin-top: 16px; font-size: 15px;">
+                    Simple. Clear. Guaranteed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="secure-spot">
+        <div class="container-narrow">
+            <h2 class="display-text">READY TO STOP REACTING?</h2>
+            
+            <div class="cta-main">
+                <p style="margin-bottom: 24px; font-size: 18px;">
+                    Three spots. Twelve days. Your decision.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqlCa6lLjRcpMvPZSp4FaEEYDo6Js6d92VihQU0fiTGovVjw/viewform?usp=dialog" class="btn btn-primary" style="font-size: 18px; padding: 18px 40px;">
+                    RESERVE YOUR FOUNDING PARTNER SPOT →
+                  </a>
+                <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">
+                    Secure your spot now. Onboarding call within 48 hours.
+                </p>
+            </div>
+    </section>
+
+    <!-- Decision -->
+    <section class="decision-section">
+        <div class="container-narrow">
+            <h2>The Simple Math</h2>
+            
+            <div class="decision-points">
+                <div class="decision-point">Up to $40,000 value for $5,000 investment</div>
+                <div class="decision-point">Systematic intelligence vs random discovery</div>
+                <div class="decision-point">15 years experience + proprietary system</div>
+                <div class="decision-point">Three founding partner spots</div>
+                <div class="decision-point">Next cohort not until January 2026</div>
+            </div>
+            
+            <p style="text-align: center; font-size: 20px; font-weight: 600; margin: 32px 0; color: var(--text-primary);">
+                The opportunity cost of waiting is higher than the investment.
+            </p>
+            
+            <div style="text-align: center;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqlCa6lLjRcpMvPZSp4FaEEYDo6Js6d92VihQU0fiTGovVjw/viewform?usp=dialog" class="btn btn-primary" style="font-size: 18px; padding: 18px 40px;">
+                    CLAIM YOUR SPOT →
+                  </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature -->
+    <section class="signature">
+        <div class="container-narrow">
+            <div class="signature-name">— Jamie Skaar</div>
+            <p style="color: var(--text-muted); margin: 0;">Building the intelligence system every clean energy CEO needs.</p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
