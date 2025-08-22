@@ -90,6 +90,70 @@
             font-size: 18px;
         }
 
+        /* Mobile Sticky Navigation */
+        .mobile-nav {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: var(--midnight);
+                border-top: 1px solid rgba(16, 185, 129, 0.3);
+                padding: 12px;
+                z-index: 999;
+                justify-content: space-around;
+                gap: 8px;
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .mobile-nav.visible {
+                transform: translateY(0);
+            }
+            
+            .mobile-nav .btn {
+                padding: 10px 16px;
+                font-size: 14px;
+                flex: 1;
+            }
+        }
+
+        /* Progress Indicator Desktop Only */
+        .progress-dots {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: none;
+        }
+
+        @media (min-width: 1200px) {
+            .progress-dots {
+                display: block;
+            }
+        }
+
+        .progress-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--slate);
+            border-radius: 50%;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .progress-dot.active {
+            background: var(--emerald);
+            transform: scale(1.5);
+        }
+
         /* Sticky CTA Button */
         .sticky-cta {
             position: fixed;
@@ -883,8 +947,7 @@
             }
 
             .sticky-cta {
-                right: 12px;
-                bottom: 12px;
+                display: none; /* Hide sticky CTA on mobile since we have mobile nav */
             }
 
             .sticky-cta .btn {
@@ -897,6 +960,10 @@
                 min-height: 56px;
                 width: 100%;
                 font-size: 18px;
+            }
+            
+            body {
+                padding-bottom: 65px; /* Space for mobile nav */
             }
         }
 
@@ -929,6 +996,32 @@
     </style>
 </head>
 <body>
+    <!-- Mobile Navigation (appears after scroll) -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#" class="btn btn-secondary" style="font-size: 13px; padding: 10px;">↑ Top</a>
+        <a href="#value-section" class="btn btn-secondary" style="font-size: 13px; padding: 10px;">Value</a>
+        <a href="#apply-now" class="btn btn-primary" style="font-size: 13px; padding: 10px;">Apply →</a>
+    </div>
+
+    <!-- Progress Indicator (Desktop Only) -->
+    <div class="progress-dots" id="progressDots">
+        <div class="progress-dot" data-section="1"></div>
+        <div class="progress-dot" data-section="2"></div>
+        <div class="progress-dot" data-section="3"></div>
+        <div class="progress-dot" data-section="4"></div>
+        <div class="progress-dot" data-section="5"></div>
+        <div class="progress-dot" data-section="6"></div>
+        <div class="progress-dot" data-section="7"></div>
+        <div class="progress-dot" data-section="8"></div>
+        <div class="progress-dot" data-section="9"></div>
+        <div class="progress-dot" data-section="10"></div>
+        <div class="progress-dot" data-section="11"></div>
+        <div class="progress-dot" data-section="12"></div>
+        <div class="progress-dot" data-section="13"></div>
+        <div class="progress-dot" data-section="14"></div>
+        <div class="progress-dot" data-section="15"></div>
+    </div>
+
     <!-- Sticky CTA (appears after scroll) -->
     <div class="sticky-cta" id="stickyCTA">
         <a href="#apply-now" class="btn btn-primary" aria-label="Apply for founding partner spot">
@@ -991,26 +1084,6 @@
         </div>
     </section>
 
-    <!-- Early Testimonial Bar -->
-    <div class="testimonial-bar">
-        <div class="container">
-            <div class="testimonial-content">
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"The SAF pivot insight saved our company"</div>
-                    <div class="testimonial-author">Energy Executive</div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"Better intelligence than Bloomberg at 1/4 the cost"</div>
-                    <div class="testimonial-author">Clean Tech CFO</div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"Jamie sees patterns we miss entirely"</div>
-                    <div class="testimonial-author">Series B Founder</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Credibility Section -->
     <section style="padding: 60px 0; background: var(--midnight);">
         <div class="container-narrow">
@@ -1056,6 +1129,10 @@
                     </div>
                 </div>
             </div>
+            
+            <p style="text-align: center; margin-top: 24px; color: var(--emerald-light); font-weight: 600;">
+                Interview slots filling quickly
+            </p>
         </div>
     </section>
 
@@ -1073,7 +1150,7 @@
                 <li>Regulatory shifts that open (or close) entire markets</li>
                 <li>Technology breakthroughs that make your approach obsolete</li>
                 <li>Competitors pivoting into your space with VC backing</li>
-                <li>Supply chain disruptions visible in shipping data weeks before announcements</li>
+                <li>Supply chain disruptions becoming visible through vendor announcements</li>
             </ul>
             
             <p style="font-size: 20px; text-align: center; color: var(--text-primary);">
@@ -1082,8 +1159,60 @@
         </div>
     </section>
 
-    <!-- Proof Story -->
+    <!-- Opportunities Section -->
     <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container-narrow">
+            <h2>The Opportunities Hiding in Your Market</h2>
+            
+            <div class="card">
+                <p style="font-size: 20px; margin-bottom: 24px;">
+                    <strong>You're smart enough to see them. You just don't have time to look.</strong>
+                </p>
+                
+                <p style="margin-bottom: 20px;">
+                    Running your company takes everything you've got. While you're managing operations, serving customers, and leading your team, critical market signals go unnoticed:
+                </p>
+                
+                <ul style="margin-bottom: 24px;">
+                    <li>Competitors leaving service gaps that customers complain about</li>
+                    <li>New regulations creating demand for specific solutions</li>
+                    <li>Customer segments everyone ignores because "that's not how it's done"</li>
+                    <li>Price points and positioning that would cut acquisition costs in half</li>
+                </ul>
+                
+                <p style="margin-bottom: 20px;">
+                    <strong>Your competitors operate on gut feeling and industry momentum.</strong> They do what everyone else does because they don't have bandwidth to analyze alternatives.
+                </p>
+                
+                <p style="margin-bottom: 24px;">
+                    <strong>Intelligence changes the game:</strong> We analyze thousands of sources—contractor websites, customer reviews, regulatory filings, industry news—finding patterns you'd spot instantly if you had time to look.
+                </p>
+                
+                <div style="padding: 20px; background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--emerald); border-radius: 4px; margin: 24px 0;">
+                    <p style="margin: 0; font-style: italic;">
+                        Example: Every contractor in a market chases the same commercial projects. Intelligence reveals property managers complaining about emergency response times—a service gap worth millions that no one's addressing.
+                    </p>
+                </div>
+                
+                <p style="font-size: 20px; text-align: center; margin-top: 24px; margin-bottom: 0;">
+                    <strong>You don't need to be smarter or work harder.<br>You need clear intelligence doing the analysis while you run your business.</strong>
+                </p>
+            </div>
+            
+            <p style="text-align: center; margin-top: 24px; color: var(--emerald-light); font-weight: 600;">
+                Two founding partner spots already in final discussions
+            </p>
+            
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="#apply-now" class="btn btn-primary" aria-label="See how The Clarity Engine finds opportunities">
+                    See How The Clarity Engine Finds Your Hidden Opportunities →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Story -->
+    <section style="padding: 60px 0;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
                 <h2 class="display-text">THE 45-DAY PIVOT</h2>
@@ -1122,7 +1251,7 @@
                 </p>
                 
                 <p style="font-size: 19px; margin-bottom: 24px;">
-                    <strong>The board approved the pivot strategy. They're now actively developing their SAF pathway with a decision on full implementation coming this September.</strong>
+                    <strong>The board approved the pivot strategy. They're now actively developing their SAF pathway.</strong>
                 </p>
                 
                 <div style="text-align: center; padding: 24px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; margin-top: 32px;">
@@ -1133,24 +1262,21 @@
             </div>
             
             <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-secondary" aria-label="See how The Clarity Engine works">
-                    See How The Clarity Engine Works →
+                <a href="#apply-now" class="btn btn-primary" aria-label="Get intelligence like this">
+                    Get Intelligence Like This for Your Business →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- System Explanation -->
-    <section style="padding: 60px 0;">
+    <!-- How It Works Combined Section -->
+    <section style="padding: 60px 0;" id="benefits">
         <div class="container-narrow">
-            <h2 class="display-text" style="text-align: center;">THE CLARITY ENGINE™</h2>
-            <p class="lead-text" style="text-align: center;">Your 24/7 Strategic Intelligence System</p>
+            <h2 class="display-text" style="text-align: center;">HOW THE CLARITY ENGINE™ WORKS FOR YOU</h2>
             
             <div class="card">
-                <h3>What Makes This Different From Google, ChatGPT, or Industry Reports</h3>
-                
                 <p style="margin-bottom: 24px;">
-                    The Clarity Engine systematically monitors patent databases, regulatory filings, financial reports, technical journals, and shipping data—all analyzed, cross-referenced, and synthesized. While BloombergNEF gives you quarterly reports, I give you weekly intelligence on what matters to YOUR business.
+                    The Clarity Engine systematically monitors patent databases, regulatory filings, financial reports, and technical journals—all analyzed, cross-referenced, and synthesized. While BloombergNEF gives you quarterly reports, I give you weekly intelligence on what matters to YOUR business.
                 </p>
                 
                 <p style="margin-bottom: 24px;">
@@ -1167,21 +1293,10 @@
                     <li><strong>Deliver:</strong> You get clear recommendations with specific next steps</li>
                 </ul>
                 
-                <p style="margin-top: 24px;">
-                    <strong>This isn't another dashboard you'll never log into.</strong> It's active intelligence work, delivered weekly, focused on your specific challenges.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal Value -->
-    <section style="padding: 60px 0; background: var(--midnight);">
-        <div class="container-narrow">
-            <h2>Beyond the System: My Direct Involvement</h2>
-            
-            <div class="card">
-                <p style="font-size: 19px; margin-bottom: 24px;">
-                    <strong>You set the priorities. The system delivers intelligence. I provide expertise.</strong>
+                <h3 style="margin-top: 32px;">Plus My Direct Involvement:</h3>
+                
+                <p style="margin-bottom: 20px;">
+                    You set the priorities. The system delivers intelligence. I provide expertise.
                 </p>
                 
                 <p>As a founding partner, you get:</p>
@@ -1195,9 +1310,30 @@
                 </ul>
                 
                 <p style="margin-top: 24px;">
-                    <strong>I invest 10-15 hours per week on your intelligence. You invest 1 hour.</strong> One good introduction can save months. One pattern recognized early can save millions. This isn't just about information—it's about actionable advantage.
+                    <strong>You get 100+ hours of research distilled into 1 hour of strategic insight.</strong> One good introduction can save months. One pattern recognized early can save millions.
+                </p>
+                
+                <p style="margin-top: 24px;">
+                    This isn't another dashboard you'll never log into. It's active intelligence work combined with direct expertise, focused on your specific challenges.
                 </p>
             </div>
+            
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="#apply-now" class="btn btn-primary" aria-label="Start your intelligence system">
+                    Start Your Intelligence System →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini Break -->
+    <section style="padding: 60px 0; background: var(--midnight); text-align: center;">
+        <div class="container-narrow">
+            <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--emerald-light); line-height: 1.3; margin-bottom: 0;">
+                10,000+ sources analyzed weekly.<br>
+                100+ hours of research.<br>
+                1 hour of your time.
+            </h2>
         </div>
     </section>
 
@@ -1231,8 +1367,28 @@
         </div>
     </section>
 
+    <!-- Testimonial Bar (Breaking up heavy sections) -->
+    <div class="testimonial-bar">
+        <div class="container">
+            <div class="testimonial-content">
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"The SAF pivot insight saved our company"</div>
+                    <div class="testimonial-author">Energy Executive</div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"Better intelligence than Bloomberg at 1/4 the cost"</div>
+                    <div class="testimonial-author">Clean Tech CFO</div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"Jamie sees patterns we miss entirely"</div>
+                    <div class="testimonial-author">Series B Founder</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Value Stack -->
-    <section class="value-section">
+    <section class="value-section" id="value-section">
         <div class="container-narrow">
             <h2 style="text-align: center;">THE REAL-WORLD VALUE</h2>
             
@@ -1327,6 +1483,24 @@
         </div>
     </section>
 
+    <!-- Guarantee (Moved up for early risk reversal) -->
+    <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container-narrow">
+            <div class="guarantee-box">
+                <h3>30-DAY VALUE GUARANTEE</h3>
+                <p>
+                    Within 30 days, The Clarity Engine will surface strategic intelligence that fundamentally changes your understanding of a market opportunity or threat.
+                </p>
+                <p>
+                    <strong>If it doesn't deliver clear value, I refund that month entirely.</strong>
+                </p>
+                <p style="margin-top: 16px; font-size: 15px;">
+                    Simple. Clear. Guaranteed.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Urgency Section -->
     <section class="urgency-section">
         <div class="container-narrow">
@@ -1346,7 +1520,7 @@
                 </ul>
                 
                 <p style="margin-top: 20px;">
-                    That's 10-15 hours per week per partner of active intelligence work. I can do this properly for 3 companies while building the automated infrastructure. No more.
+                    That's significant weekly intelligence work for each partner. I can do this properly for 3 companies while building the automated infrastructure. No more.
                 </p>
             </div>
             
@@ -1404,12 +1578,6 @@
                         <li style="padding-left: 28px; color: var(--text-secondary);">× Think Google is sufficient</li>
                     </ul>
                 </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-secondary" aria-label="Check if you qualify">
-                    Check If You Qualify →
-                </a>
             </div>
         </div>
     </section>
@@ -1481,24 +1649,6 @@
         </div>
     </section>
 
-    <!-- Guarantee -->
-    <section style="padding: 60px 0; background: var(--midnight);">
-        <div class="container-narrow">
-            <div class="guarantee-box">
-                <h3>30-DAY VALUE GUARANTEE</h3>
-                <p>
-                    Within 30 days, The Clarity Engine will surface strategic intelligence that fundamentally changes your understanding of a market opportunity or threat.
-                </p>
-                <p>
-                    <strong>If it doesn't deliver clear value, I refund that month entirely.</strong>
-                </p>
-                <p style="margin-top: 16px; font-size: 15px;">
-                    Simple. Clear. Guaranteed.
-                </p>
-            </div>
-        </div>
-    </section>
-
     <!-- Form Section -->
     <section class="form-section" id="apply-now">
         <div class="container-narrow">
@@ -1526,13 +1676,16 @@
             <p style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
                 🔒 Your information is secure and will never be shared.
             </p>
+            <p style="text-align: center; margin-top: 12px; color: var(--emerald-light); font-weight: 600;">
+                Applications reviewed in order received
+            </p>
         </div>
     </section>
 
-    <!-- Decision Section -->
+    <!-- Your Decision (Combined Section) -->
     <section class="decision-section">
         <div class="container-narrow">
-            <h2>The Simple Math</h2>
+            <h2>Your Decision</h2>
             
             <div class="decision-points">
                 <div class="decision-point">Up to $40,000 value for $5,000 investment</div>
@@ -1551,14 +1704,11 @@
                     CLAIM YOUR SPOT →
                 </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Signature -->
-    <section class="signature">
-        <div class="container-narrow">
-            <div class="signature-name">— Jamie Skaar</div>
-            <p style="color: var(--text-muted); margin: 0;">Turning market chaos into competitive advantage.</p>
+            
+            <div style="text-align: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(203, 213, 224, 0.1);">
+                <div class="signature-name">— Jamie Skaar</div>
+                <p style="color: var(--text-muted); margin: 0;">Turning market chaos into competitive advantage.</p>
+            </div>
         </div>
     </section>
 
@@ -1578,7 +1728,11 @@
                 document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
                 document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
             } else {
-                document.getElementById('countdownTimer').innerHTML = '<span style="color: var(--crimson); font-size: 24px; font-weight: 700;">Applications Closed</span>';
+                // Timer has expired - hide countdown and show message
+                const countdownElement = document.getElementById('countdownTimer');
+                if (countdownElement) {
+                    countdownElement.style.display = 'none';
+                }
             }
         }
         
@@ -1591,9 +1745,10 @@
         window.addEventListener('scroll', function() {
             const scrollPercent = (window.scrollY / document.body.scrollHeight) * 100;
             const stickyCTA = document.getElementById('stickyCTA');
+            const mobileNav = document.getElementById('mobileNav');
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             
-            // Show after 25% scroll, but hide when scrolling up on mobile to not block content
+            // Show sticky CTA after 25% scroll
             if (scrollPercent > 25) {
                 if (window.innerWidth > 768) {
                     stickyCTA.classList.add('visible');
@@ -1609,19 +1764,74 @@
                 stickyCTA.classList.remove('visible');
             }
             
+            // Mobile navigation visibility
+            if (window.innerWidth <= 768) {
+                if (scrollPercent > 20) {
+                    mobileNav.classList.add('visible');
+                } else {
+                    mobileNav.classList.remove('visible');
+                }
+            }
+            
+            // Update progress dots on desktop
+            if (window.innerWidth >= 1200) {
+                updateProgressDots();
+            }
+            
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+        
+        // Update progress dots based on scroll position
+        function updateProgressDots() {
+            const sections = document.querySelectorAll('section');
+            const dots = document.querySelectorAll('.progress-dot');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            
+            sections.forEach((section, index) => {
+                if (index < dots.length) {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        dots[index].classList.add('active');
+                    } else {
+                        dots[index].classList.remove('active');
+                    }
+                }
+            });
+        }
+        
+        // Progress dot click navigation
+        document.querySelectorAll('.progress-dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                const sections = document.querySelectorAll('section');
+                if (sections[index]) {
+                    sections[index].scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
         
         // Smooth scroll for all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
                     });
+                } else {
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 }
             });
         });
