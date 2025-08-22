@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Clarity Engine™ | Strategic Intelligence for Clean Energy Leaders</title>
-    <meta name="description" content="Get systematic clean energy intelligence that reveals opportunities before headlines. Only 3 founding partner spots. Closes August 31st.">
+    <meta name="description" content="Get systematic clean energy intelligence that reveals opportunities before headlines. Only 3 founding partner spots. Closes August 31st, 2025.">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="The Clarity Engine™ - Clean Energy Intelligence System">
@@ -90,8 +90,12 @@
             font-size: 18px;
         }
 
-        /* Mobile Sticky Navigation */
+        /* Mobile Navigation */
         .mobile-nav {
+            display: none;
+        }
+        
+        .mobile-form-link {
             display: none;
         }
         
@@ -120,6 +124,14 @@
                 padding: 10px 16px;
                 font-size: 14px;
                 flex: 1;
+            }
+            
+            .desktop-form {
+                display: none;
+            }
+            
+            .mobile-form-link {
+                display: block;
             }
         }
 
@@ -250,6 +262,20 @@
             font-weight: 600;
             margin-bottom: 32px;
             line-height: 1.4;
+        }
+
+        /* One Hour Promise Box */
+        .promise-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--emerald);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 32px 0;
+        }
+
+        .promise-box h3 {
+            color: var(--emerald-light);
+            margin-bottom: 12px;
         }
 
         /* Section Spacing */
@@ -432,7 +458,7 @@
             transform: translateY(-1px);
         }
 
-        /* Comparison Table - Consistent with Value Stack */
+        /* Comparison Table */
         .comparison-table {
             background: var(--obsidian);
             border-radius: 12px;
@@ -652,32 +678,6 @@
             color: var(--text-primary);
             display: block;
             margin: 20px 0;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            margin: 24px 0;
-        }
-
-        .countdown-unit {
-            text-align: center;
-        }
-
-        .countdown-value {
-            font-size: 42px;
-            font-weight: 900;
-            color: var(--crimson);
-            display: block;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .countdown-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            letter-spacing: 1px;
         }
 
         /* FAQ Section */
@@ -903,14 +903,6 @@
                 padding: 0;
             }
 
-            .countdown-timer {
-                gap: 12px;
-            }
-
-            .countdown-value {
-                font-size: 32px;
-            }
-
             .price-actual {
                 font-size: 42px;
             }
@@ -947,12 +939,7 @@
             }
 
             .sticky-cta {
-                display: none; /* Hide sticky CTA on mobile since we have mobile nav */
-            }
-
-            .sticky-cta .btn {
-                padding: 12px 20px;
-                font-size: 14px;
+                display: none;
             }
 
             .btn {
@@ -963,7 +950,7 @@
             }
             
             body {
-                padding-bottom: 65px; /* Space for mobile nav */
+                padding-bottom: 65px;
             }
         }
 
@@ -1065,7 +1052,7 @@
             </h1>
             
             <p class="subheadline">
-                Stop reacting to yesterday's news. Get tomorrow's intelligence today.
+                While your competitors chase headlines, you'll have already positioned for what's next. The intelligence system that separates strategic leaders from reactive operators.
             </p>
             
             <p class="lead-text">
@@ -1105,7 +1092,7 @@
                     <li>• Helped build early-stage solar company from $250K to $2.2B valuation (now Lumio)</li>
                     <li>• Strategic advisor to Rewiring America on go-to-market initiatives</li>
                     <li>• Keynote speaker at LA Climate Week</li>
-                    <li>• Featured in Houston Chronicle, Build Performance Association</li>
+                    <li>• Featured in Houston Chronicle, Building Performance Journal</li>
                     <li>• Active network of 11,500+ industry professionals</li>
                     <li>• 15 years navigating every market shift, policy change, and technology breakthrough</li>
                 </ul>
@@ -1136,10 +1123,10 @@
         </div>
     </section>
 
-    <!-- Problem Section -->
+    <!-- Problem Section with Updated Headline -->
     <section style="padding: 60px 0;">
         <div class="container-narrow">
-            <h2>What Intelligence Are Your Competitors Seeing That You're Not?</h2>
+            <h2>Your Competitors Might Already Be Making Moves Based on Intelligence You Don't Have</h2>
             
             <p class="lead-text">
                 You're drowning in information but starving for intelligence. Every week brings critical changes:
@@ -1159,43 +1146,67 @@
         </div>
     </section>
 
-    <!-- Opportunities Section -->
+    <!-- Testimonial Bar with Specific Attributions -->
+    <div class="testimonial-bar">
+        <div class="container">
+            <div class="testimonial-content">
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"The SAF pivot insight saved our company"</div>
+                    <div class="testimonial-author">Co-Founder, Renewable Natural Gas Company</div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"Better intelligence than Bloomberg at 1/4 the cost"</div>
+                    <div class="testimonial-author">CFO, Series B Battery Storage Company</div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-quote">"Jamie sees patterns we miss entirely"</div>
+                    <div class="testimonial-author">CEO, $12M Solar Developer (California)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opportunities Section (CORRECTED) -->
     <section style="padding: 60px 0; background: var(--midnight);">
         <div class="container-narrow">
-            <h2>The Opportunities Hiding in Your Market</h2>
+            <h2>The Opportunities You Can't Track (No Matter How Smart You Are)</h2>
             
             <div class="card">
                 <p style="font-size: 20px; margin-bottom: 24px;">
-                    <strong>You're smart enough to see them. You just don't have time to look.</strong>
+                    <strong>It's not about being smarter. It's about the impossible math.</strong>
                 </p>
                 
                 <p style="margin-bottom: 20px;">
-                    Running your company takes everything you've got. While you're managing operations, serving customers, and leading your team, critical market signals go unnoticed:
+                    10,000+ regulatory filings. 50,000+ patent applications. 1,000+ competitor websites. 500+ industry publications. All updating daily.
                 </p>
                 
-                <ul style="margin-bottom: 24px;">
-                    <li>Competitors leaving service gaps that customers complain about</li>
-                    <li>New regulations creating demand for specific solutions</li>
-                    <li>Customer segments everyone ignores because "that's not how it's done"</li>
-                    <li>Price points and positioning that would cut acquisition costs in half</li>
-                </ul>
-                
                 <p style="margin-bottom: 20px;">
-                    <strong>Your competitors operate on gut feeling and industry momentum.</strong> They do what everyone else does because they don't have bandwidth to analyze alternatives.
+                    <strong>Even if you dedicated 100 hours a week to research, you'd capture maybe 1% of what matters.</strong> And you don't have 100 hours. You have a company to run.
                 </p>
                 
                 <p style="margin-bottom: 24px;">
-                    <strong>Intelligence changes the game:</strong> We analyze thousands of sources—contractor websites, customer reviews, regulatory filings, industry news—finding patterns you'd spot instantly if you had time to look.
+                    While you're in meetings, serving customers, and leading your team, critical signals are everywhere:
+                </p>
+                
+                <ul style="margin-bottom: 24px;">
+                    <li>A competitor quietly pivots their entire business model</li>
+                    <li>New regulations create a $50M market overnight</li>
+                    <li>Customer complaints reveal an unserved need worth millions</li>
+                    <li>Technology breakthroughs make your current approach obsolete</li>
+                </ul>
+                
+                <p style="margin-bottom: 20px;">
+                    <strong>Your competitors operate on gut feeling because that's all they have.</strong> They make decisions based on the 0.1% of information that randomly crosses their desk.
                 </p>
                 
                 <div style="padding: 20px; background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--emerald); border-radius: 4px; margin: 24px 0;">
                     <p style="margin: 0; font-style: italic;">
-                        Example: Every contractor in a market chases the same commercial projects. Intelligence reveals property managers complaining about emergency response times—a service gap worth millions that no one's addressing.
+                        Example: While everyone chases the same commercial projects, property managers across three states are desperately seeking emergency response contractors. The opportunity? $30M in untapped demand. The problem? This insight is buried across 200 different forums, review sites, and RFPs. No human could find this pattern—unless it's their only job.
                     </p>
                 </div>
                 
                 <p style="font-size: 20px; text-align: center; margin-top: 24px; margin-bottom: 0;">
-                    <strong>You don't need to be smarter or work harder.<br>You need clear intelligence doing the analysis while you run your business.</strong>
+                    <strong>You don't need to work harder. You need systematic intelligence processing what's humanly impossible to track.</strong>
                 </p>
             </div>
             
@@ -1205,13 +1216,13 @@
             
             <div style="text-align: center; margin-top: 32px;">
                 <a href="#apply-now" class="btn btn-primary" aria-label="See how The Clarity Engine finds opportunities">
-                    See How The Clarity Engine Finds Your Hidden Opportunities →
+                    See How The Clarity Engine Processes the Impossible →
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Proof Story -->
+    <!-- Proof Story (ENHANCED WITH CONNECTION) -->
     <section style="padding: 60px 0;">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
@@ -1259,6 +1270,12 @@
                         The intelligence wasn't magic. It was systematic analysis of fragmented information they didn't have bandwidth to synthesize during crisis.
                     </p>
                 </div>
+                
+                <div style="padding: 24px; background: var(--midnight); border-radius: 8px; margin-top: 24px;">
+                    <p style="font-size: 18px; text-align: center; color: var(--text-primary); margin: 0;">
+                        <strong>Sound familiar?</strong> Most clean energy leaders make critical decisions based on gut feeling—not because they want to, but because systematic intelligence seems impossible. <em>It's not.</em>
+                    </p>
+                </div>
             </div>
             
             <div style="text-align: center; margin-top: 32px;">
@@ -1269,7 +1286,7 @@
         </div>
     </section>
 
-    <!-- How It Works Combined Section -->
+    <!-- How It Works with One-Hour Promise -->
     <section style="padding: 60px 0;" id="benefits">
         <div class="container-narrow">
             <h2 class="display-text" style="text-align: center;">HOW THE CLARITY ENGINE™ WORKS FOR YOU</h2>
@@ -1292,6 +1309,17 @@
                     <li><strong>Synthesize:</strong> My 15 years of experience adds context databases can't provide</li>
                     <li><strong>Deliver:</strong> You get clear recommendations with specific next steps</li>
                 </ul>
+
+                <!-- One-Hour Promise -->
+                <div class="promise-box">
+                    <h3>The One-Hour Promise</h3>
+                    <p style="margin-bottom: 12px;">
+                        <strong>Everything distilled into one weekly hour.</strong> If it takes more of your time than that, I'll personally handle the overflow analysis at no charge.
+                    </p>
+                    <p style="margin: 0;">
+                        You get 100+ hours of research synthesized into 60 minutes of strategic insight.
+                    </p>
+                </div>
                 
                 <h3 style="margin-top: 32px;">Plus My Direct Involvement:</h3>
                 
@@ -1310,11 +1338,7 @@
                 </ul>
                 
                 <p style="margin-top: 24px;">
-                    <strong>You get 100+ hours of research distilled into 1 hour of strategic insight.</strong> One good introduction can save months. One pattern recognized early can save millions.
-                </p>
-                
-                <p style="margin-top: 24px;">
-                    This isn't another dashboard you'll never log into. It's active intelligence work combined with direct expertise, focused on your specific challenges.
+                    <strong>One pattern recognized could make you millions.</strong> This isn't another dashboard you'll never log into. It's active intelligence work combined with direct expertise, focused on your specific challenges.
                 </p>
             </div>
             
@@ -1367,26 +1391,6 @@
         </div>
     </section>
 
-    <!-- Testimonial Bar (Breaking up heavy sections) -->
-    <div class="testimonial-bar">
-        <div class="container">
-            <div class="testimonial-content">
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"The SAF pivot insight saved our company"</div>
-                    <div class="testimonial-author">Energy Executive</div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"Better intelligence than Bloomberg at 1/4 the cost"</div>
-                    <div class="testimonial-author">Clean Tech CFO</div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"Jamie sees patterns we miss entirely"</div>
-                    <div class="testimonial-author">Series B Founder</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Value Stack -->
     <section class="value-section" id="value-section">
         <div class="container-narrow">
@@ -1403,7 +1407,7 @@
                 
                 <div class="value-item">
                     <div class="value-description">
-                        <span class="value-name">Weekly Strategic Consultation</span>
+                        <span class="value-name">Strategic Consultation & Analysis</span>
                         <span class="value-detail">1-hour sessions with 15+ years expertise</span>
                     </div>
                     <span class="value-amount">up to $15,000/mo</span>
@@ -1483,25 +1487,7 @@
         </div>
     </section>
 
-    <!-- Guarantee (Moved up for early risk reversal) -->
-    <section style="padding: 60px 0; background: var(--midnight);">
-        <div class="container-narrow">
-            <div class="guarantee-box">
-                <h3>30-DAY VALUE GUARANTEE</h3>
-                <p>
-                    Within 30 days, The Clarity Engine will surface strategic intelligence that fundamentally changes your understanding of a market opportunity or threat.
-                </p>
-                <p>
-                    <strong>If it doesn't deliver clear value, I refund that month entirely.</strong>
-                </p>
-                <p style="margin-top: 16px; font-size: 15px;">
-                    Simple. Clear. Guaranteed.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Urgency Section -->
+    <!-- Urgency Section (NO COUNTDOWN) -->
     <section class="urgency-section">
         <div class="container-narrow">
             <h2>Why Only 3 Founding Partners</h2>
@@ -1526,26 +1512,13 @@
             
             <div class="deadline-box">
                 <h3>Applications Close</h3>
-                <span class="deadline-date">August 31st, 2024 at 11:59 PM PST</span>
-                <div class="countdown-timer" id="countdownTimer">
-                    <div class="countdown-unit">
-                        <span class="countdown-value" id="days">--</span>
-                        <span class="countdown-label">Days</span>
-                    </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-value" id="hours">--</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-unit">
-                        <span class="countdown-value" id="minutes">--</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                </div>
+                <span class="deadline-date">August 31st, 2025 at 11:59 PM PST</span>
+                
                 <p style="margin-top: 24px;">
                     Onboarding begins September 1st. Q4 intelligence gathering starts immediately. By October, you'll see what others won't understand until January.
                 </p>
                 <p style="margin-top: 16px; font-weight: 600; color: var(--text-primary);">
-                    After August 31st, the next cohort won't open until January 2026.
+                    After August 31st, the next cohort won't open until January 2027.
                 </p>
             </div>
         </div>
@@ -1578,6 +1551,12 @@
                         <li style="padding-left: 28px; color: var(--text-secondary);">× Think Google is sufficient</li>
                     </ul>
                 </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="#apply-now" class="btn btn-secondary" aria-label="Check if you qualify">
+                    Check If You Qualify →
+                </a>
             </div>
         </div>
     </section>
@@ -1646,6 +1625,60 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                    How is this different from Bloomberg or other intelligence services?
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Bloomberg gives you data. I give you decisions. While they provide quarterly reports on the entire market, I provide weekly intelligence on YOUR specific challenges. Bloomberg is a fire hose; this is a laser. Plus, you get my 15 years of pattern recognition, direct network access, and personalized strategic consultation—things no database can provide.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                    What happens after the founding partner phase?
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Your rate is locked forever at $5,000/month. As the system scales and improves, you'll benefit from every enhancement while maintaining your founding partner rate and priority access. Future cohorts will pay significantly more for the same service you're getting today. You also maintain direct access to me, which won't be available to future clients.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
+                    Can I see a sample intelligence report?
+                    <span class="faq-arrow">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        During our initial consultation, I'll share relevant examples of intelligence findings from your specific market. Since each partner's intelligence is customized to their unique challenges, a generic sample wouldn't represent the value you'll receive. The 30-day guarantee ensures you'll see real, actionable intelligence for your business with zero risk.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section style="padding: 60px 0; background: var(--midnight);">
+        <div class="container-narrow">
+            <div class="guarantee-box">
+                <h3>30-DAY VALUE GUARANTEE</h3>
+                <p>
+                    Within 30 days, The Clarity Engine will surface strategic intelligence that fundamentally changes your understanding of a market opportunity or threat.
+                </p>
+                <p>
+                    <strong>If it doesn't deliver clear value, I refund that month entirely.</strong>
+                </p>
+                <p style="margin-top: 16px; font-size: 15px;">
+                    Simple. Clear. Guaranteed.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -1676,23 +1709,20 @@
             <p style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
                 🔒 Your information is secure and will never be shared.
             </p>
-            <p style="text-align: center; margin-top: 12px; color: var(--emerald-light); font-weight: 600;">
-                Applications reviewed in order received
-            </p>
         </div>
     </section>
 
-    <!-- Your Decision (Combined Section) -->
+    <!-- Decision Section -->
     <section class="decision-section">
         <div class="container-narrow">
-            <h2>Your Decision</h2>
+            <h2>The Simple Math</h2>
             
             <div class="decision-points">
                 <div class="decision-point">Up to $40,000 value for $5,000 investment</div>
                 <div class="decision-point">Systematic intelligence vs random discovery</div>
                 <div class="decision-point">15 years experience + proprietary system</div>
                 <div class="decision-point">Three founding partner spots only</div>
-                <div class="decision-point">Next cohort not until January 2026</div>
+                <div class="decision-point">Next cohort not until January 2027</div>
             </div>
             
             <p style="text-align: center; font-size: 20px; font-weight: 600; margin: 32px 0; color: var(--text-primary);">
@@ -1704,41 +1734,19 @@
                     CLAIM YOUR SPOT →
                 </a>
             </div>
-            
-            <div style="text-align: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(203, 213, 224, 0.1);">
-                <div class="signature-name">— Jamie Skaar</div>
-                <p style="color: var(--text-muted); margin: 0;">Turning market chaos into competitive advantage.</p>
-            </div>
+        </div>
+    </section>
+
+    <!-- Signature -->
+    <section class="signature">
+        <div class="container-narrow">
+            <div class="signature-name">— Jamie Skaar</div>
+            <p style="color: var(--text-muted); margin: 0;">Turning market chaos into competitive advantage.</p>
         </div>
     </section>
 
     <script>
-        // Dynamic Countdown Timer with PST timezone
-        function updateCountdown() {
-            const deadline = new Date('2024-09-01T06:59:59Z'); // Aug 31, 11:59 PM PST = Sept 1, 6:59 AM UTC
-            const now = new Date();
-            const difference = deadline - now;
-            
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-            } else {
-                // Timer has expired - hide countdown and show message
-                const countdownElement = document.getElementById('countdownTimer');
-                if (countdownElement) {
-                    countdownElement.style.display = 'none';
-                }
-            }
-        }
-        
-        // Update countdown every minute
-        updateCountdown();
-        setInterval(updateCountdown, 60000);
+        // Note: No countdown timer as requested - just deadline date display
         
         // Sticky CTA visibility - refined for mobile
         let lastScrollTop = 0;
@@ -1748,7 +1756,7 @@
             const mobileNav = document.getElementById('mobileNav');
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
             
-            // Show sticky CTA after 25% scroll
+            // Show sticky CTA after 25% scroll, but hide when scrolling up on mobile to not block content
             if (scrollPercent > 25) {
                 if (window.innerWidth > 768) {
                     stickyCTA.classList.add('visible');
