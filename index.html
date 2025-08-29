@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cortex Momentum | Strategic Intelligence for Founders</title>
-    <meta name="description" content="We combine advanced AI intelligence with expert human guidance to turn your biggest challenges—fundraising, market entry, and GTM—into your most decisive wins.">
+    <meta name="description" content="Turn market chaos into competitive advantage. Cortex Momentum provides AI-powered strategic intelligence for founders—from fundraising to GTM. Book your session today.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -252,12 +253,13 @@
             text-align: left;
         }
         
-        .case-study h4 {
+        .case-study .case-label { /* UPDATED */
             color: var(--emerald-light);
             font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             margin-bottom: 12px;
+            font-weight: 600;
         }
         
         .case-study p {
@@ -463,6 +465,11 @@
             border: none;
             text-align: center;
         }
+        
+        .btn:focus-visible { /* UPDATED */
+            outline: 2px solid var(--emerald-light);
+            outline-offset: 2px;
+        }
 
         .btn-primary {
             background: var(--emerald);
@@ -564,6 +571,15 @@
             max-width: 600px;
         }
         
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(203, 213, 224, 0.1);
+        }
+        
         /* Mobile Responsive */
         @media (max-width: 1024px) {
             .track-grid {
@@ -628,345 +644,355 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <a href="#">
-                    <img src="logo.png" alt="Cortex Momentum - Strategic Intelligence for Founders" style="width: 80px;" loading="eager">
-                </a>
-                <a href="#pricing" class="btn btn-secondary">See Pricing</a>
+    <header role="banner">
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#">
+                        <img src="https://placehold.co/125x40/0F1419/F7FAFC?text=Cortex" alt="Cortex Momentum - Strategic Intelligence for Founders" style="width: 80px;" loading="eager">
+                    </a>
+                    <a href="#pricing" class="btn btn-secondary">See Pricing</a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="sub-heading">For Ambitious Founders & CEOs</div>
-                <h1 class="display-text">Stop Guessing.<br>De-Risk Your Next Move.</h1>
-                <p class="lead-text">Cortex Momentum is the strategic co-pilot for founders. We combine advanced AI intelligence with expert human guidance to turn your biggest challenges—fundraising, market entry, and GTM—into your most decisive wins.</p>
-                <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Book a Strategic Mapping Session →</a>
-                <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">
-                    30 minutes. We'll tackle one of your strategic challenges live on the call.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Bar -->
-    <div class="trust-bar">
-        <div class="container">
-            <div class="trust-content">
-                <span class="trust-label">As Seen In</span>
-                <span class="trust-item">Houston Chronicle</span>
-                <span class="trust-item">•</span>
-                <span class="trust-item">Building Performance Journal</span>
-                <span class="trust-item">•</span>
-                <span class="trust-item">LA Climate Week Speaker</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Problem Section -->
-    <section>
-        <div class="container-narrow section-center">
-            <h2>It's So Hard to Distinguish Between the Signal and the Noise Right Now.</h2>
-            <p>You're in the <strong>"crunch phase,"</strong> trying to move from an "email and spreadsheets messy business" to a scalable company. But you don't have the bandwidth to dive into the weeds, and you live with the fear of "building something for nobody."</p>
-            <p>The stakes couldn't be higher. A wrong turn could mean burning through your runway. The difference between market leaders and everyone else? <strong>Systematic intelligence vs. random discovery.</strong></p>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section style="background: var(--midnight);">
-        <div class="container">
-            <div class="section-center">
-                <h2>From Chaos to Actionable Assets</h2>
-                <p class="lead-text" style="max-width: 700px;">We deliver targeted intelligence that de-risks your most critical decisions. Here’s how we create the strategic assets you need to win.</p>
-            </div>
-            
-            <div class="case-study-grid">
-                <div class="case-study">
-                    <h4>THE PIVOT SPRINT</h4>
-                    <h3>A New Market in 5 Days</h3>
-                    <p><strong>The Asset Delivered:</strong> A board-ready presentation detailing a <strong>$50M European SAF feedstock opportunity</strong>, including market size, margin analysis, and a pivot plan.</p>
-                    <a href="javascript:void(0);" class="expandable-link" data-target="case1">[+] Read the full 45-day pivot story</a>
-                    <div class="expandable-content" id="case1">
-                        <h4>THE CHALLENGE</h4>
-                        <p>A renewable natural gas company's market collapsed. The board gave them 45 days to find a viable new business model or shut down.</p>
-                        <h4>THE INTELLIGENCE</h4>
-                        <p>In 5 days, our system analyzed alternative feedstock economics, 200+ regulatory changes, and emerging applications to identify a clear path forward.</p>
-                        <h4>THE OUTCOME</h4>
-                        <p>The analysis revealed massive demand for their exact inputs from European sustainable aviation fuel (SAF) regulations. The board approved the pivot, turning a crisis into a confident, multi-million dollar opportunity.</p>
-                    </div>
+    <main role="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="sub-heading">For Ambitious Founders & CEOs</div>
+                    <h1 class="display-text">Stop Guessing.<br>De-Risk Your Next Move.</h1>
+                    <p class="lead-text">Cortex Momentum is the strategic co-pilot for founders. We combine advanced AI intelligence with expert human guidance to turn your biggest challenges—fundraising, market entry, and GTM—into your most decisive wins.</p>
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Book a Strategic Mapping Session →</a>
+                    <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">
+                        30 minutes. We'll tackle one of your strategic challenges live on the call.
+                    </p>
                 </div>
+            </div>
+        </section>
 
-                <div class="case-study">
-                    <h4>THE INVESTOR SPRINT</h4>
-                    <h3>A Targeted Capital Roadmap</h3>
-                    <p><strong>The Asset Delivered:</strong> A 40-page strategic dossier on 25 validated investors, including their thesis, key partners to approach, and specific talking points for each.</p>
-                     <a href="javascript:void(0);" class="expandable-link" data-target="case2">[+] See how this saved 200+ hours</a>
-                     <div class="expandable-content" id="case2">
-                        <h4>THE CHALLENGE</h4>
-                        <p>A renewable energy manufacturer had a $30M sales pipeline but no time to waste on fruitless investor meetings. They needed to find the right capital partners, fast.</p>
-                        <h4>THE INTELLIGENCE</h4>
-                        <p>The system analyzed 500+ VC, Private Equity, and Family Office investment theses and network maps to find the warmest path in.</p>
-                        <h4>THE OUTCOME</h4>
-                        <p>Instead of a generic list of VCs, they received a validated shortlist. This saved the executive team an estimated 200 hours of manual research and allows them to walk into every meeting with a decisive advantage.</p>
-                    </div>
-                </div>
-
-                <div class="case-study">
-                    <h4>COMPETITIVE INTELLIGENCE SPRINT</h4>
-                    <h3>From Commodity to Premium</h3>
-                    <p><strong>The Asset Delivered:</strong> A new market position as "The Clean & Transparent Electricians," a targeted marketing plan for three underserved zip codes, and a new pricing model based on value.</p>
-                    <a href="javascript:void(0);" class="expandable-link" data-target="case3">[+] See the 90-day transformation</a>
-                    <div class="expandable-content" id="case3">
-                        <h4>THE CHALLENGE</h4>
-                        <p>A regional electrical contractor was bleeding margin competing on price. Growth meant losing money faster.</p>
-                        <h4>THE INTELLIGENCE</h4>
-                        <p>AI analysis of 3,000+ customer reviews across 47 competitors revealed that 73% of complaints were about "messy work" and "surprise fees"—not price.</p>
-                        <h4>THE OUTCOME</h4>
-                        <p>The company repositioned, launched a targeted marketing campaign, and saw a 64% lower customer acquisition cost and 47% higher close rates, all while charging a premium.</p>
-                    </div>
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+            <div class="container">
+                <div class="trust-content">
+                    <span class="trust-label">As Seen In</span>
+                    <span class="trust-item">Houston Chronicle</span>
+                    <span class="trust-item">•</span>
+                    <span class="trust-item">Building Performance Journal</span>
+                    <span class="trust-item">•</span>
+                    <span class="trust-item">LA Climate Week Speaker</span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Applications Section -->
-    <section>
-        <div class="container">
-            <div class="section-center">
-                <h2>An Intelligence Engine for Every Business Challenge</h2>
-                <p class="lead-text" style="max-width: 700px;">Whether you're preparing for a board meeting or a sales meeting, our system is designed to give you a decisive advantage.</p>
+        <!-- Problem Section -->
+        <section>
+            <div class="container-narrow section-center">
+                <h2>It's So Hard to Distinguish Between the Signal and the Noise Right Now.</h2>
+                <p>You're in the <strong>"crunch phase,"</strong> trying to move from an "email and spreadsheets messy business" to a scalable company. But you don't have the bandwidth to dive into the weeds, and you live with the fear of "building something for nobody."</p>
+                <p>The stakes couldn't be higher. A wrong turn could mean burning through your runway. The difference between market leaders and everyone else? <strong>Systematic intelligence vs. random discovery.</strong></p>
             </div>
-            <div class="applications-grid">
-                <div class="application-card">
-                    <h3>For Founders & Investors</h3>
-                    <ul>
-                        <li>Fundraising & Investor Targeting</li>
-                        <li>Go-to-Market Strategy</li>
-                        <li>M&A Due Diligence</li>
-                    </ul>
-                </div>
-                <div class="application-card">
-                    <h3>For Operators & Teams</h3>
-                    <ul>
-                        <li>Pricing & Margin Analysis</li>
-                        <li>Competitive Benchmarking</li>
-                        <li>Customer Retention Strategy</li>
-                    </ul>
-                </div>
-                <div class="application-card">
-                    <h3>For Growth & Market Leaders</h3>
-                    <ul>
-                        <li>Market Entry & Expansion</li>
-                        <li>New Product/Service Validation</li>
-                        <li>Identifying New Revenue Streams</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Testimonial Divider -->
-    <section style="padding: 60px 0; background: var(--midnight);">
-        <div class="container-narrow section-center">
-             <p style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.5; color: var(--text-primary);">
-                "It's not just data; it's the 'so what' that matters. The human-in-the-loop model meant we didn't just get a report, we got an actionable strategy."
-            </p>
-            <p style="margin-top: 16px; color: var(--text-muted);">- Founder, Clean Energy SaaS Company</p>
-        </div>
-    </section>
-
-    <!-- Validation Section -->
-    <section>
-        <div class="container-narrow">
-            <div class="section-center">
-                <h2>Go Beyond Intelligence. Achieve Certainty.</h2>
-                <p class="lead-text" style="max-width: 700px;">Every founder's biggest challenge is answering one question: "Does the freaking thing work?" Our validation engine is designed to give you that answer before you commit your resources.</p>
-            </div>
-            
-            <div style="margin-top: 32px;">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>The Intelligent Co-Pilot</h4>
-                        <p>Think of our AI as a <strong>world-class quantitative researcher</strong>. It can synthesize 10,000+ sources to find patterns, but it lacks real-world field experience. It provides the initial hypothesis.</p>
-                    </div>
-                </div>
-                 <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h4>We Add Context & Nuance</h4>
-                        <p>Through a 1-hour strategy call, your team's expertise and my 15 years of experience provide the critical context and direction. We refine the AI's hypothesis into a sharp, testable market thesis.</p>
-                    </div>
-                </div>
-                 <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h4>We Test for Market Resonance</h4>
-                        <p>This is our greatest differentiator. We <strong>deploy strategic content designed to elicit responses</strong> from key stakeholders. We then <strong>capture and analyze authentic stakeholder feedback</strong> to validate your thesis against real-world opinion.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h4>We Build Your Compounding Asset</h4>
-                        <p>This feedback loop creates a compounding intelligence asset. As one founder put it, we've "already built all the pipes so you can just plug into it."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-     <!-- Subheading Divider -->
-    <section style="padding: 40px 0; background: var(--midnight);">
-        <div class="container-narrow section-center">
-             <h2 style="font-size: 28px; margin-bottom: 0;">The Result: An Unfair Advantage.</h2>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section>
-        <div class="container">
-            <div class="section-center">
-                <h2>The Alternatives: A Clear Comparison</h2>
-                <p class="lead-text" style="max-width: 700px;">Before you invest, see how we stack up against traditional options. We're built for founder velocity.</p>
-            </div>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Criteria</th>
-                        <th>In-House Analyst</th>
-                        <th>Consulting Firm</th>
-                        <th class="highlight">Cortex Momentum</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Criteria"><strong>Speed</strong></td>
-                        <td data-label="In-House Analyst">Slow ramp-up</td>
-                        <td data-label="Consulting Firm">3-6 month projects</td>
-                        <td data-label="Cortex Momentum" class="highlight"><strong>Insights in days</strong></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Criteria"><strong>Cost</strong></td>
-                        <td data-label="In-House Analyst">$120k+ / year</td>
-                        <td data-label="Consulting Firm">$250k+ / project</td>
-                        <td data-label="Cortex Momentum" class="highlight"><strong>Predictable monthly</strong></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Criteria"><strong>Scope</strong></td>
-                        <td data-label="In-House Analyst">Limited by one person</td>
-                        <td data-label="Consulting Firm">Narrow project scope</td>
-                        <td data-label="Cortex Momentum" class="highlight"><strong>Holistic & ongoing</strong></td>
-                    </tr>
-                    <tr>
-                        <td data-label="Criteria"><strong>Validation</strong></td>
-                        <td data-label="In-House Analyst">No</td>
-                        <td data-label="Consulting Firm">No</td>
-                        <td data-label="Cortex Momentum" class="highlight"><strong>Built-in</strong></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    
-    <!-- Testimonial Divider -->
-    <section style="padding: 60px 0;">
-        <div class="container-narrow section-center">
-             <p style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.5; color: var(--text-primary);">
-                "The gap for me is investors. This is I do not know how to do this well."
-            </p>
-            <p style="margin-top: 16px; color: var(--text-muted);">- Founder, Renewable Energy Manufacturer</p>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" style="background: var(--midnight);">
-        <div class="container">
-            <div class="section-center">
-                <h2>Three Paths to Strategic Advantage</h2>
-                <p class="lead-text" style="max-width: 700px;">It's late August. Before you lock in your 2026 budget and Q4 priorities, ensure you're placing your bets on the right markets, customers, and strategy.</p>
-            </div>
-            
-            <div class="track-grid">
-                <div class="track-card">
-                    <h3>Intelligence Sprint</h3>
-                    <div class="track-price">$3,000 <span>/ one-time</span></div>
-                    <p>Go from question to actionable strategy in 30 days. Perfect for de-risking a single, high-stakes decision.</p>
-                    <ul>
-                        <li>Focus on <strong>one</strong> critical area</li>
-                        <li>AI analysis of thousands of data points</li>
-                        <li>Two 60-minute strategy sessions</li>
-                        <li>Comprehensive findings report</li>
-                        <li>30-day Strategic Clarity Guarantee</li>
-                    </ul>
-                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-secondary">Start Your Sprint →</a>
-                </div>
-
-                <div class="track-card premium">
-                    <div class="track-badge">Recommended for Founders</div>
-                    <h3>Continuous Partnership</h3>
-                    <div class="track-price">$5,000 <span>/ month</span></div>
-                    <p>The Sprint gives you an answer; <strong>the Partnership builds your competitive moat.</strong></p>
-                    <ul>
-                        <li><strong>Ongoing</strong> monitoring of all strategic areas</li>
-                        <li><strong>Weekly</strong> 60-minute strategy sessions</li>
-                        <li>Direct Slack access for urgent questions</li>
-                        <li>Warm introductions to my 11,500+ network</li>
-                        <li>Quarterly deep-dive opportunity reports</li>
-                        <li>Rate locked in forever for founding partners</li>
-                    </ul>
-                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Become a Partner →</a>
+        <!-- Case Studies Section -->
+        <section style="background: var(--midnight);">
+            <div class="container">
+                <div class="section-center">
+                    <h2>From Chaos to Actionable Assets</h2>
+                    <p class="lead-text" style="max-width: 700px;">We deliver targeted intelligence that de-risks your most critical decisions. Here’s how we create the strategic assets you need to win.</p>
                 </div>
                 
-                <div class="track-card">
-                    <h3>Dedicated Intelligence Partner</h3>
-                    <div class="tier-audience">For Corporate & PE-Backed Ventures</div>
-                    <div class="track-price">$15k+ <span>/ month</span></div>
-                    <p>A fully integrated, outsourced intelligence function for teams that require the deepest insights.</p>
-                    <ul>
-                        <li>Everything in Partnership, plus:</li>
-                        <li><strong>Includes a dedicated budget for premium data sources</strong> (e.g., PitchBook, custom APIs)</li>
-                        <li>Full leadership team access</li>
-                        <li>Proactive opportunity briefing</li>
-                        <li>Direct & unlimited access</li>
-                    </ul>
-                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-secondary">Book a Consultation</a>
+                <div class="case-study-grid">
+                    <div class="case-study">
+                        <h3 class="case-label">THE PIVOT SPRINT</h3>
+                        <h4>A New Market in 5 Days</h4>
+                        <p><strong>The Asset Delivered:</strong> A board-ready presentation detailing a <strong>$50M European SAF feedstock opportunity</strong>, including market size, margin analysis, and a pivot plan.</p>
+                        <a href="javascript:void(0);" class="expandable-link" data-target="case1" role="button" aria-expanded="false" aria-controls="case1">[+] Read the full 45-day pivot story</a>
+                        <div class="expandable-content" id="case1">
+                            <h4>THE CHALLENGE</h4>
+                            <p>A renewable natural gas company's market collapsed. The board gave them 45 days to find a viable new business model or shut down.</p>
+                            <h4>THE INTELLIGENCE</h4>
+                            <p>In 5 days, our system analyzed alternative feedstock economics, 200+ regulatory changes, and emerging applications to identify a clear path forward.</p>
+                            <h4>THE OUTCOME</h4>
+                            <p>The analysis revealed massive demand for their exact inputs from European sustainable aviation fuel (SAF) regulations. The board approved the pivot, turning a crisis into a confident, multi-million dollar opportunity.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-study">
+                        <h3 class="case-label">THE INVESTOR SPRINT</h3>
+                        <h4>A Targeted Capital Roadmap</h4>
+                        <p><strong>The Asset Delivered:</strong> A 40-page strategic dossier on 25 validated investors, including their thesis, key partners to approach, and specific talking points for each.</p>
+                         <a href="javascript:void(0);" class="expandable-link" data-target="case2" role="button" aria-expanded="false" aria-controls="case2">[+] See how this saved 200+ hours</a>
+                         <div class="expandable-content" id="case2">
+                            <h4>THE CHALLENGE</h4>
+                            <p>A renewable energy manufacturer had a $30M sales pipeline but no time to waste on fruitless investor meetings. They needed to find the right capital partners, fast.</p>
+                            <h4>THE INTELLIGENCE</h4>
+                            <p>The system analyzed 500+ VC, Private Equity, and Family Office investment theses and network maps to find the warmest path in.</p>
+                            <h4>THE OUTCOME</h4>
+                            <p>Instead of a generic list of VCs, they received a validated shortlist. This saved the executive team an estimated 200 hours of manual research and allows them to walk into every meeting with a decisive advantage.</p>
+                        </div>
+                    </div>
+
+                    <div class="case-study">
+                        <h3 class="case-label">COMPETITIVE INTELLIGENCE SPRINT</h3>
+                        <h4>From Commodity to Premium</h4>
+                        <p><strong>The Asset Delivered:</strong> A new market position as "The Clean & Transparent Electricians," a targeted marketing plan for three underserved zip codes, and a new pricing model based on value.</p>
+                        <a href="javascript:void(0);" class="expandable-link" data-target="case3" role="button" aria-expanded="false" aria-controls="case3">[+] See the 90-day transformation</a>
+                        <div class="expandable-content" id="case3">
+                            <h4>THE CHALLENGE</h4>
+                            <p>A regional electrical contractor was bleeding margin competing on price. Growth meant losing money faster.</p>
+                            <h4>THE INTELLIGENCE</h4>
+                            <p>AI analysis of 3,000+ customer reviews across 47 competitors revealed that 73% of complaints were about "messy work" and "surprise fees"—not price.</p>
+                            <h4>THE OUTCOME</h4>
+                            <p>The company repositioned, launched a targeted marketing campaign, and saw a 64% lower customer acquisition cost and 47% higher close rates, all while charging a premium.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- FAQ Section -->
-    <section>
-        <div class="container-narrow">
-            <h2 class="section-center">Common Questions</h2>
-            <div style="margin-top: 32px; text-align: left;">
-                <a href="javascript:void(0);" class="expandable-link" data-target="faq1" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">What happens after the founding partner phase?</a>
-                <div class="expandable-content" id="faq1"><p>Founding partners lock in their current rates permanently. Future cohorts will be subject to price increases as the system and its capabilities expand. Your early partnership is rewarded with preferential, lifetime pricing.</p></div>
+        </section>
 
-                <a href="javascript:void(0);" class="expandable-link" data-target="faq2" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">How do you protect confidential information?</a>
-                <div class="expandable-content" id="faq2"><p>Your security and confidentiality are our highest priority. We operate under a mutual confidentiality agreement from day one. All client data is segregated and encrypted, and our system is designed to analyze public and licensed data sources, not access your private company information. Your strategic questions are kept in the strictest confidence, and the intelligence we deliver is your proprietary asset.</p></div>
-
-                <a href="javascript:void(0);" class="expandable-link" data-target="faq3" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">Can I pause during busy periods?</a>
-                <div class="expandable-content" id="faq3"><p>Yes. Continuous Partnership clients can pause their subscription for one month per calendar year after the initial three-month commitment. We understand that implementation and operational demands can sometimes take priority.</p></div>
+        <!-- Applications Section -->
+        <section>
+            <div class="container">
+                <div class="section-center">
+                    <h2>An Intelligence Engine for Every Business Challenge</h2>
+                    <p class="lead-text" style="max-width: 700px;">Whether you're preparing for a board meeting or a sales meeting, our system is designed to give you a decisive advantage.</p>
+                </div>
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <h3>For Founders & Investors</h3>
+                        <ul>
+                            <li>Fundraising & Investor Targeting</li>
+                            <li>Go-to-Market Strategy</li>
+                            <li>M&A Due Diligence</li>
+                        </ul>
+                    </div>
+                    <div class="application-card">
+                        <h3>For Operators & Teams</h3>
+                        <ul>
+                            <li>Pricing & Margin Analysis</li>
+                            <li>Competitive Benchmarking</li>
+                            <li>Customer Retention Strategy</li>
+                        </ul>
+                    </div>
+                    <div class="application-card">
+                        <h3>For Growth & Market Leaders</h3>
+                        <ul>
+                            <li>Market Entry & Expansion</li>
+                            <li>New Product/Service Validation</li>
+                            <li>Identifying New Revenue Streams</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta section-center" id="apply">
-        <div class="container-narrow">
-            <h2>Turn Market Chaos Into Your Decisive Advantage.</h2>
-            <p class="lead-text">While your competitors react to yesterday's news, you'll already be positioned for tomorrow's opportunities. Take the first step toward decisive clarity.</p>
-            <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Book a Strategic Mapping Session →</a>
-            <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">Bring your biggest challenge. We'll map out a solution and show you the system in action.</p>
+        <!-- Testimonial Divider -->
+        <section style="padding: 60px 0; background: var(--midnight);">
+            <div class="container-narrow section-center">
+                 <p style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.5; color: var(--text-primary);">
+                    "It's not just data; it's the 'so what' that matters. The human-in-the-loop model meant we didn't just get a report, we got an actionable strategy."
+                </p>
+                <p style="margin-top: 16px; color: var(--text-muted);">- Founder, Clean Energy SaaS Company</p>
+            </div>
+        </section>
+
+        <!-- Validation Section -->
+        <section>
+            <div class="container-narrow">
+                <div class="section-center">
+                    <h2>Go Beyond Intelligence. Achieve Certainty.</h2>
+                    <p class="lead-text" style="max-width: 700px;">Every founder's biggest challenge is answering one question: "Does the freaking thing work?" Our validation engine is designed to give you that answer before you commit your resources.</p>
+                </div>
+                
+                <div style="margin-top: 32px;">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>The Intelligent Co-Pilot</h4>
+                            <p>Think of our AI as a <strong>world-class quantitative researcher</strong>. It can synthesize 10,000+ sources to find patterns, but it lacks real-world field experience. It provides the initial hypothesis.</p>
+                        </div>
+                    </div>
+                     <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>We Add Context & Nuance</h4>
+                            <p>Through a 1-hour strategy call, your team's expertise and my 15 years of experience provide the critical context and direction. We refine the AI's hypothesis into a sharp, testable market thesis.</p>
+                        </div>
+                    </div>
+                     <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>We Test for Market Resonance</h4>
+                            <p>This is our greatest differentiator. We <strong>deploy strategic content designed to elicit responses</strong> from key stakeholders. We then <strong>capture and analyze authentic stakeholder feedback</strong> to validate your thesis against real-world opinion.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>We Build Your Compounding Asset</h4>
+                            <p>This feedback loop creates a compounding intelligence asset. As one founder put it, we've "already built all the pipes so you can just plug into it."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Subheading Divider -->
+        <section style="padding: 40px 0; background: var(--midnight);">
+            <div class="container-narrow section-center">
+                 <h2 style="font-size: 28px; margin-bottom: 0;">The Result: An Unfair Advantage.</h2>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section>
+            <div class="container">
+                <div class="section-center">
+                    <h2>The Alternatives: A Clear Comparison</h2>
+                    <p class="lead-text" style="max-width: 700px;">Before you invest, see how we stack up against traditional options. We're built for founder velocity.</p>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Criteria</th>
+                            <th>In-House Analyst</th>
+                            <th>Consulting Firm</th>
+                            <th class="highlight">Cortex Momentum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Criteria"><strong>Speed</strong></td>
+                            <td data-label="In-House Analyst">Slow ramp-up</td>
+                            <td data-label="Consulting Firm">3-6 month projects</td>
+                            <td data-label="Cortex Momentum" class="highlight"><strong>Insights in days</strong></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criteria"><strong>Cost</strong></td>
+                            <td data-label="In-House Analyst">$120k+ / year</td>
+                            <td data-label="Consulting Firm">$250k+ / project</td>
+                            <td data-label="Cortex Momentum" class="highlight"><strong>Predictable monthly</strong></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criteria"><strong>Scope</strong></td>
+                            <td data-label="In-House Analyst">Limited by one person</td>
+                            <td data-label="Consulting Firm">Narrow project scope</td>
+                            <td data-label="Cortex Momentum" class="highlight"><strong>Holistic & ongoing</strong></td>
+                        </tr>
+                        <tr>
+                            <td data-label="Criteria"><strong>Validation</strong></td>
+                            <td data-label="In-House Analyst">No</td>
+                            <td data-label="Consulting Firm">No</td>
+                            <td data-label="Cortex Momentum" class="highlight"><strong>Built-in</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- Testimonial Divider -->
+        <section style="padding: 60px 0;">
+            <div class="container-narrow section-center">
+                 <p style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.5; color: var(--text-primary);">
+                    "The gap for me is investors. This is I do not know how to do this well."
+                </p>
+                <p style="margin-top: 16px; color: var(--text-muted);">- Founder, Renewable Energy Manufacturer</p>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" style="background: var(--midnight);">
+            <div class="container">
+                <div class="section-center">
+                    <h2>Three Paths to Strategic Advantage</h2>
+                    <p class="lead-text" style="max-width: 700px;">Before you lock in next year's budget and Q4 priorities, ensure you're placing your bets on the right markets, customers, and strategy.</p>
+                </div>
+                
+                <div class="track-grid">
+                    <div class="track-card">
+                        <h3>Intelligence Sprint</h3>
+                        <div class="track-price">$3,000 <span>/ one-time</span></div>
+                        <p>Go from question to actionable strategy in 30 days. Perfect for de-risking a single, high-stakes decision.</p>
+                        <ul>
+                            <li>Focus on <strong>one</strong> critical area</li>
+                            <li>AI analysis of thousands of data points</li>
+                            <li>Two 60-minute strategy sessions</li>
+                            <li>Comprehensive findings report</li>
+                            <li>30-day Strategic Clarity Guarantee</li>
+                        </ul>
+                        <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-secondary">Start Your Sprint →</a>
+                    </div>
+
+                    <div class="track-card premium">
+                        <div class="track-badge">Recommended for Founders</div>
+                        <h3>Continuous Partnership</h3>
+                        <div class="track-price">$5,000 <span>/ month</span></div>
+                        <p>The Sprint gives you an answer; <strong>the Partnership builds your competitive moat.</strong></p>
+                        <ul>
+                            <li><strong>Ongoing</strong> monitoring of all strategic areas</li>
+                            <li><strong>Weekly</strong> 60-minute strategy sessions</li>
+                            <li>Direct Slack access for urgent questions</li>
+                            <li>Warm introductions to my 11,500+ network</li>
+                            <li>Quarterly deep-dive opportunity reports</li>
+                            <li>Rate locked in forever for founding partners</li>
+                        </ul>
+                        <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Become a Partner →</a>
+                    </div>
+                    
+                    <div class="track-card">
+                        <h3>Dedicated Intelligence Partner</h3>
+                        <div class="tier-audience">For Corporate & PE-Backed Ventures</div>
+                        <div class="track-price">$15k+ <span>/ month</span></div>
+                        <p>A fully integrated, outsourced intelligence function for teams that require the deepest insights.</p>
+                        <ul>
+                            <li>Everything in Partnership, plus:</li>
+                            <li><strong>Includes a dedicated budget for premium data sources</strong> (e.g., PitchBook, custom APIs)</li>
+                            <li>Full leadership team access</li>
+                            <li>Proactive opportunity briefing</li>
+                            <li>Direct & unlimited access</li>
+                        </ul>
+                        <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-secondary">Book a Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section>
+            <div class="container-narrow">
+                <h2 class="section-center">Common Questions</h2>
+                <div style="margin-top: 32px; text-align: left;">
+                    <a href="javascript:void(0);" class="expandable-link" data-target="faq1" role="button" aria-expanded="false" aria-controls="faq1" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">What happens after the founding partner phase?</a>
+                    <div class="expandable-content" id="faq1"><p>Founding partners lock in their current rates permanently. Future cohorts will be subject to price increases as the system and its capabilities expand. Your early partnership is rewarded with preferential, lifetime pricing.</p></div>
+
+                    <a href="javascript:void(0);" class="expandable-link" data-target="faq2" role="button" aria-expanded="false" aria-controls="faq2" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">How do you protect confidential information?</a>
+                    <div class="expandable-content" id="faq2"><p>Your security and confidentiality are our highest priority. We operate under a mutual confidentiality agreement from day one. All client data is segregated and encrypted, and our system is designed to analyze public and licensed data sources, not access your private company information. Your strategic questions are kept in the strictest confidence, and the intelligence we deliver is your proprietary asset.</p></div>
+
+                    <a href="javascript:void(0);" class="expandable-link" data-target="faq3" role="button" aria-expanded="false" aria-controls="faq3" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">Can I pause during busy periods?</a>
+                    <div class="expandable-content" id="faq3"><p>Yes. Continuous Partnership clients can pause their subscription for one month per calendar year after the initial three-month commitment. We understand that implementation and operational demands can sometimes take priority.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta section-center" id="apply">
+            <div class="container-narrow">
+                <h2>Turn Market Chaos Into Your Decisive Advantage.</h2>
+                <p class="lead-text">While your competitors react to yesterday's news, you'll already be positioned for tomorrow's opportunities. Take the first step toward decisive clarity.</p>
+                <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Book a Strategic Mapping Session →</a>
+                <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">Bring your biggest challenge. We'll map out a solution and show you the system in action.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Cortex Momentum. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
     <script>
         document.querySelectorAll('.expandable-link').forEach(link => {
@@ -976,7 +1002,8 @@
                 const content = document.getElementById(targetId);
                 
                 if (content) {
-                    content.classList.toggle('show');
+                    const isExpanded = content.classList.toggle('show');
+                    link.setAttribute('aria-expanded', isExpanded);
                     if(link.textContent.startsWith('[+]')) {
                         link.textContent = link.textContent.replace('[+]', '[-]');
                     } else if (link.textContent.startsWith('[-]')) {
