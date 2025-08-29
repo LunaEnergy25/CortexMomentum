@@ -160,106 +160,21 @@
 
         /* Header */
         header {
-            padding: 24px 0;
+            padding: 16px 0; /* UPDATED */
             background: var(--obsidian);
             position: sticky;
             top: 0;
             z-index: 100;
             border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+            backdrop-filter: blur(8px); /* Optional: nice blur effect */
+            -webkit-backdrop-filter: blur(8px); /* Safari support */
+            background-color: rgba(15, 20, 25, 0.8); /* Semi-transparent background */
         }
         
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Space Grotesk', sans-serif; 
-            font-size: 24px; 
-            font-weight: 700; 
-            color: var(--text-primary);
-            text-decoration: none;
-        }
-        
-        .logo span {
-            color: var(--emerald-light);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: var(--premium-gradient);
-            position: relative;
-            text-align: center;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content .lead-text {
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-testimonial {
-            margin: 32px auto 0;
-            max-width: 500px;
-            padding-left: 16px;
-            border-left: 3px solid var(--emerald);
-            font-style: italic;
-            font-size: 16px;
-            color: var(--text-secondary);
-            text-align: left;
-        }
-        
-        .hero-testimonial span {
-            display: block;
-            font-style: normal;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-top: 8px;
-        }
-
-        /* Trust Bar */
-        .trust-bar {
-            background: var(--obsidian);
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        .trust-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .trust-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
-        .trust-item {
-            font-size: 14px;
-            color: var(--text-secondary);
-            white-space: nowrap;
         }
         
         /* Case Study Cards */
@@ -656,9 +571,11 @@
     </style>
 </head>
 <body>
-    <header style="padding: 24px 0;">
+    <header>
         <div class="container">
-            <img src="logo.png" alt="Cortex Momentum - Clean Energy Intelligence Platform" style="width: 125px;" loading="eager">
+            <div class="header-content">
+                <a href="#">
+                    <img src="https://placehold.co/125x40/0F1419/F7FAFC?text=Cortex" alt="Cortex Momentum - Strategic Intelligence for Founders" style="width: 125px;" loading="eager">
                 </a>
                 <a href="#pricing" class="btn btn-secondary">See Pricing</a>
             </div>
