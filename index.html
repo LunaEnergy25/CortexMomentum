@@ -3,41 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Clarity Engine™ | Strategic Intelligence for Clean Energy Leaders</title>
-    <meta name="description" content="Get systematic clean energy intelligence that reveals opportunities before headlines. Only 3 founding partner spots. Closes August 31st, 2025.">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="The Clarity Engine™ - Clean Energy Intelligence System">
-    <meta property="og:description" content="Stop reacting to yesterday's news. Get systematic intelligence for clean energy leaders. 3 founding spots available.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://clarityengine.com">
-    <meta property="og:image" content="https://clarityengine.com/og-image.jpg">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The Clarity Engine™">
-    <meta name="twitter:description" content="Strategic intelligence system for clean energy CEOs. 3 founding partner spots.">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "The Clarity Engine",
-      "description": "Strategic intelligence system for clean energy companies",
-      "provider": {
-        "@type": "Person",
-        "name": "Jamie Skaar",
-        "jobTitle": "Clean Energy Intelligence Expert"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "5000",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/LimitedAvailability"
-      }
-    }
-    </script>
+    <title>Cortex Momentum | Strategic Intelligence for Founders</title>
+    <meta name="description" content="We combine advanced AI intelligence with expert human guidance to turn your biggest challenges—fundraising, market entry, and GTM—into your most decisive wins.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,6 +47,10 @@
             --emerald-gradient: linear-gradient(135deg, #10B981 0%, #059669 100%);
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', -apple-system, system-ui, sans-serif;
             background: var(--obsidian);
@@ -90,105 +61,6 @@
             font-size: 18px;
         }
 
-        /* Mobile Navigation */
-        .mobile-nav {
-            display: none;
-        }
-        
-        .mobile-form-link {
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .mobile-nav {
-                display: flex;
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: var(--midnight);
-                border-top: 1px solid rgba(16, 185, 129, 0.3);
-                padding: 12px;
-                z-index: 999;
-                justify-content: space-around;
-                gap: 8px;
-                transform: translateY(100%);
-                transition: transform 0.3s ease;
-            }
-            
-            .mobile-nav.visible {
-                transform: translateY(0);
-            }
-            
-            .mobile-nav .btn {
-                padding: 10px 16px;
-                font-size: 14px;
-                flex: 1;
-            }
-            
-            .desktop-form {
-                display: none;
-            }
-            
-            .mobile-form-link {
-                display: block;
-            }
-        }
-
-        /* Progress Indicator Desktop Only */
-        .progress-dots {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 100;
-            display: none;
-        }
-
-        @media (min-width: 1200px) {
-            .progress-dots {
-                display: block;
-            }
-        }
-
-        .progress-dot {
-            width: 10px;
-            height: 10px;
-            background: var(--slate);
-            border-radius: 50%;
-            margin: 8px 0;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .progress-dot.active {
-            background: var(--emerald);
-            transform: scale(1.5);
-        }
-
-        /* Sticky CTA Button */
-        .sticky-cta {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 1000;
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .sticky-cta.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .sticky-cta .btn {
-            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
-            padding: 14px 24px;
-            font-size: 15px;
-        }
-
         /* Container System */
         .container {
             max-width: 1200px;
@@ -197,7 +69,7 @@
         }
 
         .container-narrow {
-            max-width: 720px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 24px;
         }
@@ -205,37 +77,43 @@
         /* Typography */
         .display-text {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(36px, 5vw, 56px);
+            font-size: clamp(40px, 5.5vw, 64px);
             font-weight: 700;
             line-height: 1.1;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.025em;
             margin-bottom: 24px;
             color: var(--text-primary);
+        }
+
+        h1, h2, h3, h4 {
+             font-family: 'Space Grotesk', sans-serif;
+             color: var(--text-primary);
+             line-height: 1.2;
         }
 
         h1 {
             font-size: clamp(28px, 4vw, 42px);
-            font-weight: 900;
-            line-height: 1.2;
-            letter-spacing: -0.01em;
+            font-weight: 700;
             margin-bottom: 24px;
-            color: var(--text-primary);
         }
 
         h2 {
-            font-size: clamp(24px, 3.5vw, 32px);
-            font-weight: 800;
-            line-height: 1.25;
-            margin-bottom: 20px;
-            color: var(--text-primary);
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
         }
 
         h3 {
             font-size: clamp(20px, 3vw, 24px);
             font-weight: 700;
-            line-height: 1.3;
             margin-bottom: 16px;
-            color: var(--text-primary);
+        }
+        
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
 
         p {
@@ -250,44 +128,70 @@
         }
 
         .lead-text {
-            font-size: 20px;
+            font-size: clamp(18px, 2vw, 20px);
             line-height: 1.6;
             color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-
-        .subheadline {
-            font-size: 22px;
-            color: var(--emerald-light);
-            font-weight: 600;
             margin-bottom: 32px;
-            line-height: 1.4;
+            max-width: 600px;
         }
-
-        /* One Hour Promise Box */
-        .promise-box {
-            background: rgba(16, 185, 129, 0.08);
-            border-left: 4px solid var(--emerald);
-            padding: 24px;
-            border-radius: 8px;
-            margin: 32px 0;
-        }
-
-        .promise-box h3 {
+        
+        .sub-heading {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
             color: var(--emerald-light);
-            margin-bottom: 12px;
+            margin-bottom: 16px;
         }
 
         /* Section Spacing */
         section {
-            padding: 60px 0;
+            padding: 80px 0;
+        }
+        
+        .section-center {
+            text-align: center;
+        }
+        
+        .section-center h2, .section-center p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header */
+        header {
+            padding: 24px 0;
+            background: var(--obsidian);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: 24px; 
+            font-weight: 700; 
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--emerald-light);
         }
 
         /* Hero Section */
         .hero {
-            padding: 80px 0 60px;
+            padding: 80px 0;
             background: var(--premium-gradient);
             position: relative;
+            text-align: center;
         }
 
         .hero::before {
@@ -297,7 +201,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 40%);
         }
 
         .hero-content {
@@ -305,62 +209,51 @@
             z-index: 2;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--crimson);
-            color: var(--pure);
-            padding: 8px 20px;
-            border-radius: 100px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: 24px;
+        .hero-content .lead-text {
+            margin-left: auto;
+            margin-right: auto;
         }
-
-        .hero-badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background: var(--pure);
-            border-radius: 50%;
-            animation: blink 2s infinite;
+        
+        .hero-testimonial {
+            margin: 32px auto 0;
+            max-width: 500px;
+            padding-left: 16px;
+            border-left: 3px solid var(--emerald);
+            font-style: italic;
+            font-size: 16px;
+            color: var(--text-secondary);
+            text-align: left;
         }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .highlight-number {
-            color: var(--emerald-light);
-            font-weight: 900;
+        
+        .hero-testimonial span {
+            display: block;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 8px;
         }
 
         /* Trust Bar */
         .trust-bar {
-            background: var(--midnight);
+            background: var(--obsidian);
             padding: 20px 0;
             border-bottom: 1px solid rgba(203, 213, 224, 0.1);
-            text-align: center;
         }
 
         .trust-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 24px;
+            gap: 20px;
             flex-wrap: wrap;
         }
 
         .trust-label {
-            font-size: 11px;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--text-muted);
-            margin-right: 12px;
+            font-weight: 600;
         }
 
         .trust-item {
@@ -368,61 +261,225 @@
             color: var(--text-secondary);
             white-space: nowrap;
         }
-
-        /* Testimonial Bar */
-        .testimonial-bar {
-            background: rgba(16, 185, 129, 0.08);
-            padding: 24px 0;
-            margin: 32px 0;
-            border-left: 4px solid var(--emerald);
+        
+        /* Case Study Cards */
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
         }
-
-        .testimonial-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            gap: 32px;
-            flex-wrap: wrap;
-        }
-
-        .testimonial-item {
-            text-align: center;
-            flex: 1;
-            min-width: 240px;
-            padding: 0 16px;
-        }
-
-        .testimonial-quote {
-            font-size: 16px;
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 8px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        /* Cards - Consistent Styling */
-        .card {
+        
+        .case-study {
             background: var(--midnight);
             border-radius: 12px;
             padding: 32px;
-            margin: 24px 0;
+            border: 1px solid rgba(203, 213, 224, 0.1);
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        
+        .case-study h4 {
+            color: var(--emerald-light);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+        
+        .case-study p {
+            font-size: 16px;
+        }
+        
+        .case-study strong {
+            color: var(--text-primary);
+        }
+        
+        /* Applications Grid */
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .application-card {
+            background: var(--midnight);
+            border-radius: 12px;
+            padding: 24px;
             border: 1px solid rgba(203, 213, 224, 0.1);
         }
+        .application-card h3 {
+            font-size: 18px;
+            color: var(--emerald-light);
+        }
+        .application-card ul {
+            margin-bottom: 0;
+        }
+        .application-card li {
+            padding: 6px 0 6px 24px;
+            font-size: 15px;
+        }
+        .application-card li::before {
+            content: '›';
+            font-size: 20px;
+        }
 
-        .card-accent {
-            border-left: 4px solid var(--emerald);
-            padding-left: 28px;
+
+        /* Process Section */
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
+            text-align: left;
+        }
+        
+        .process-step:first-child {
+            padding-top: 0;
+        }
+
+        .process-step:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .step-number {
+            background: var(--emerald);
+            color: var(--obsidian);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .step-content p {
+            margin-bottom: 0;
+            color: var(--text-secondary);
+        }
+
+        /* Comparison Table Section */
+        .comparison-table {
+            width: 100%;
+            margin-top: 48px;
+            border-collapse: collapse;
+            border: 1px solid rgba(203, 213, 224, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th, .comparison-table td {
+            text-align: center;
+            padding: 20px;
+            font-size: 16px;
+            border-left: 1px solid rgba(203, 213, 224, 0.1);
+        }
+        .comparison-table th:first-child, .comparison-table td:first-child {
+            text-align: left;
+            border-left: none;
+        }
+        .comparison-table thead {
+            background: var(--midnight);
+        }
+        .comparison-table th {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        .comparison-table tbody tr {
+            border-top: 1px solid rgba(203, 213, 224, 0.1);
+        }
+        .comparison-table tbody tr:nth-child(even) {
+            background-color: rgba(26, 31, 46, 0.3);
+        }
+        .comparison-table .highlight {
+            background-color: rgba(16, 185, 129, 0.05);
+        }
+        .comparison-table .highlight strong {
+            color: var(--emerald-light);
+        }
+
+        /* Pricing Section */
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 48px auto 0;
+            max-width: 1200px;
+        }
+
+        .track-card {
+            background: var(--midnight);
+            border-radius: 12px;
+            padding: 32px;
+            border: 1px solid rgba(203, 213, 224, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .track-card.premium {
+            border: 2px solid var(--emerald);
+            transform: scale(1.02);
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.15);
+        }
+
+        .track-badge {
+            position: absolute;
+            top: -14px;
+            right: 24px;
+            background: var(--emerald);
+            color: var(--obsidian);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .track-price {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .track-price span {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+        
+        .track-card ul {
+            margin-top: 24px;
+            flex-grow: 1;
+        }
+        
+        .track-card .btn {
+            margin-top: 32px;
+        }
+        
+        .track-card .tier-audience {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            min-height: 21px;
         }
 
         /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             padding: 16px 32px;
             border-radius: 8px;
@@ -433,7 +490,6 @@
             cursor: pointer;
             border: none;
             text-align: center;
-            justify-content: center;
         }
 
         .btn-primary {
@@ -443,10 +499,10 @@
 
         .btn-primary:hover {
             background: var(--emerald-dark);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
         }
-
+        
         .btn-secondary {
             background: transparent;
             color: var(--emerald-light);
@@ -455,82 +511,7 @@
 
         .btn-secondary:hover {
             background: rgba(16, 185, 129, 0.1);
-            transform: translateY(-1px);
-        }
-
-        /* Comparison Table */
-        .comparison-table {
-            background: var(--obsidian);
-            border-radius: 12px;
-            overflow: hidden;
-            margin: 32px 0;
-            border: 2px solid var(--emerald);
-            padding: 20px;
-        }
-
-        .comparison-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 20px;
-            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        .comparison-row:last-child {
-            border-bottom: none;
-        }
-
-        .comparison-row.highlighted {
-            background: rgba(16, 185, 129, 0.1);
-            margin: -2px;
-            padding: 22px;
-            border: 2px solid var(--emerald);
-            border-radius: 8px;
-        }
-
-        .comparison-label {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .comparison-value {
-            text-align: right;
-            color: var(--text-secondary);
-        }
-
-        .comparison-row.highlighted .comparison-value {
-            color: var(--emerald-light);
-            font-weight: 700;
-        }
-
-        /* Metrics Bar */
-        .metrics-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 24px;
-            margin: 32px 0;
-            padding: 24px 0;
-            border-top: 1px solid rgba(203, 213, 224, 0.1);
-            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        .metric-item {
-            text-align: center;
-        }
-
-        .metric-value {
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--emerald-light);
-            display: block;
-            margin-bottom: 4px;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .metric-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
+            transform: translateY(-2px);
         }
 
         /* Lists */
@@ -541,1333 +522,475 @@
         }
 
         li {
-            padding: 10px 0;
+            padding: 8px 0;
             padding-left: 28px;
             position: relative;
             color: var(--text-secondary);
             line-height: 1.6;
+            font-size: 16px;
         }
 
         li::before {
-            content: '•';
+            content: '✓';
             position: absolute;
             left: 0;
             color: var(--emerald-light);
             font-weight: bold;
-            font-size: 20px;
-            line-height: 1.2;
-        }
-
-        .bullet-list li {
-            padding: 8px 0;
-        }
-
-        /* Value Stack */
-        .value-section {
-            padding: 60px 0;
-            background: var(--midnight);
-        }
-
-        .value-stack {
-            background: var(--obsidian);
-            border-radius: 12px;
-            padding: 40px;
-            margin: 32px 0;
-            border: 2px solid var(--emerald);
-        }
-
-        .value-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        .value-item:last-of-type {
-            border-bottom: none;
-        }
-
-        .value-description {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .value-name {
             font-size: 18px;
-            color: var(--text-primary);
+        }
+
+        /* FAQ Section & Progressive Disclosure */
+        .expandable-link {
+            color: var(--emerald-light);
             font-weight: 600;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .value-detail {
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        .value-amount {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--text-primary);
-            font-family: 'Space Grotesk', sans-serif;
-            white-space: nowrap;
-        }
-
-        .value-total {
-            margin-top: 24px;
-            padding-top: 24px;
-            border-top: 2px solid var(--emerald);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .value-total-amount {
-            font-size: 32px;
-            font-weight: 900;
-            color: var(--emerald-light);
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        /* Price Section */
-        .price-section {
-            padding: 80px 0;
-            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, transparent 50%), var(--obsidian);
-            text-align: center;
-        }
-
-        .price-actual {
-            font-size: clamp(48px, 6vw, 64px);
-            font-weight: 900;
-            color: var(--emerald-light);
-            font-family: 'Space Grotesk', sans-serif;
-            display: inline-block;
-            margin: 24px 0;
-        }
-
-        .price-terms {
-            background: var(--midnight);
-            border-radius: 8px;
-            padding: 24px;
-            max-width: 450px;
-            margin: 32px auto;
-            text-align: left;
-        }
-
-        /* Urgency Section */
-        .urgency-section {
-            padding: 60px 0;
-            background: var(--midnight);
-        }
-
-        .deadline-box {
-            background: var(--obsidian);
-            border: 2px solid var(--crimson);
-            border-radius: 12px;
-            padding: 32px;
-            margin: 32px auto;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .deadline-date {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-primary);
-            display: block;
-            margin: 20px 0;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 60px 0;
-            background: var(--obsidian);
-        }
-
-        .faq-item {
-            background: var(--midnight);
-            border-radius: 8px;
-            margin-bottom: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        .faq-question {
-            padding: 20px 24px;
             cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-primary);
-            font-weight: 600;
-            transition: background 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 16px;
+        }
+        
+        .expandable-link:hover {
+            text-decoration: underline;
         }
 
-        .faq-question:hover {
-            background: rgba(16, 185, 129, 0.05);
-        }
-
-        .faq-arrow {
-            transition: transform 0.3s ease;
-            color: var(--emerald);
-            font-size: 18px;
-        }
-
-        .faq-item.active .faq-arrow {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
+        .expandable-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: max-height 0.5s ease-in-out;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(203, 213, 224, 0.1);
+            text-align: left;
         }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
+        
+        .expandable-content.show {
+            max-height: 2000px; /* Adjust as needed */
         }
-
-        .faq-answer-content {
-            padding: 0 24px 20px;
-            color: var(--text-secondary);
+        
+        .expandable-content p, .expandable-content ul {
+            font-size: 16px;
         }
-
-        /* Embedded Form */
-        .form-section {
-            padding: 80px 0;
-            background: var(--midnight);
-            text-align: center;
-        }
-
-        .form-container {
-            max-width: 100%;
-            margin: 32px auto;
-            background: var(--obsidian);
-            border-radius: 12px;
-            padding: 20px;
-            border: 2px solid var(--emerald);
-        }
-
-        .form-info {
-            font-size: 14px;
+        
+        .expandable-content h4 {
             color: var(--emerald-light);
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-
-        .form-container iframe {
-            width: 100%;
-            max-width: 640px;
-            border: none;
-            border-radius: 8px;
-        }
-
-        /* Qualification Grid */
-        .qual-section {
-            padding: 60px 0;
-            background: var(--obsidian);
-        }
-
-        .qual-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 32px 0;
-        }
-
-        .qual-box {
-            padding: 32px;
-            border-radius: 12px;
-        }
-
-        .qual-ideal {
-            background: rgba(16, 185, 129, 0.08);
-            border: 2px solid var(--emerald);
-        }
-
-        .qual-not {
-            background: var(--midnight);
-            border: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        /* Guarantee */
-        .guarantee-box {
-            background: var(--emerald);
-            color: var(--obsidian);
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .guarantee-box h3 {
-            color: var(--obsidian);
-            font-size: 28px;
-            margin-bottom: 16px;
-        }
-
-        .guarantee-box p {
-            color: var(--obsidian);
-            font-size: 17px;
-            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 12px;
         }
 
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
+        /* Final CTA */
+        .final-cta {
             background: var(--premium-gradient);
-            text-align: center;
         }
-
-        .cta-main {
-            margin: 32px 0;
+        
+        .final-cta .btn {
+            margin-top: 24px;
         }
-
-        /* Decision Section */
-        .decision-section {
-            padding: 60px 0;
-            background: var(--obsidian);
-            text-align: center;
+        
+        .final-cta p {
+            max-width: 600px;
         }
-
-        .decision-points {
-            max-width: 500px;
-            margin: 32px auto;
-            text-align: left;
-        }
-
-        .decision-point {
-            display: flex;
-            align-items: center;
-            padding: 12px 0;
-            font-size: 17px;
-            color: var(--text-primary);
-            border-bottom: 1px solid rgba(203, 213, 224, 0.1);
-        }
-
-        .decision-point::before {
-            content: '→';
-            color: var(--emerald-light);
-            font-weight: bold;
-            margin-right: 12px;
-            font-size: 18px;
-        }
-
-        /* Signature */
-        .signature {
-            text-align: center;
-            padding: 40px 0;
-            background: var(--midnight);
-        }
-
-        .signature-name {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--emerald-light);
-            margin-bottom: 8px;
-        }
-
+        
         /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .track-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .track-card.premium {
+                transform: scale(1);
+            }
+        }
         @media (max-width: 768px) {
             section {
-                padding: 40px 0;
-            }
-
-            .card, .value-stack, .price-terms {
-                padding: 24px;
-            }
-
-            .metrics-bar {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .qual-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .comparison-row {
-                padding: 16px;
-            }
-
-            .testimonial-content {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            .testimonial-item {
-                min-width: 100%;
-                padding: 0;
-            }
-
-            .price-actual {
-                font-size: 42px;
-            }
-
-            .value-item {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .value-description {
-                padding-right: 0;
-            }
-
-            h1 {
-                font-size: 26px;
-            }
-
-            .display-text {
-                font-size: 32px;
-            }
-
-            .deadline-date {
-                font-size: 20px;
-            }
-
-            .trust-content {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .trust-label {
-                margin-right: 0;
-                margin-bottom: 8px;
-            }
-
-            .sticky-cta {
-                display: none;
-            }
-
-            .btn {
-                padding: 20px 40px;
-                min-height: 56px;
-                width: 100%;
-                font-size: 18px;
+                padding: 60px 0;
             }
             
-            body {
-                padding-bottom: 65px;
+            .display-text {
+                font-size: 36px;
             }
-        }
-
-        /* Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
+            
+            h2 {
+                font-size: 28px;
             }
-        }
 
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        /* Focus indicators for accessibility */
-        .btn:focus-visible,
-        .faq-question:focus-visible {
-            outline: 3px solid var(--emerald);
-            outline-offset: 2px;
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content .btn {
+                display: none;
+            }
+            .comparison-table {
+                display: block;
+                width: 100%;
+            }
+            .comparison-table thead, .comparison-table tbody, .comparison-table tr, .comparison-table th, .comparison-table td {
+                display: block;
+            }
+            .comparison-table thead {
+                display: none;
+            }
+            .comparison-table tbody tr {
+                padding: 16px 0;
+            }
+            .comparison-table td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+                border: none;
+            }
+            .comparison-table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 16px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 600;
+                color: var(--text-primary);
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Mobile Navigation (appears after scroll) -->
-    <div class="mobile-nav" id="mobileNav">
-        <a href="#" class="btn btn-secondary" style="font-size: 13px; padding: 10px;">↑ Top</a>
-        <a href="#value-section" class="btn btn-secondary" style="font-size: 13px; padding: 10px;">Value</a>
-        <a href="#apply-now" class="btn btn-primary" style="font-size: 13px; padding: 10px;">Apply →</a>
-    </div>
-
-    <!-- Progress Indicator (Desktop Only) -->
-    <div class="progress-dots" id="progressDots">
-        <div class="progress-dot" data-section="1"></div>
-        <div class="progress-dot" data-section="2"></div>
-        <div class="progress-dot" data-section="3"></div>
-        <div class="progress-dot" data-section="4"></div>
-        <div class="progress-dot" data-section="5"></div>
-        <div class="progress-dot" data-section="6"></div>
-        <div class="progress-dot" data-section="7"></div>
-        <div class="progress-dot" data-section="8"></div>
-        <div class="progress-dot" data-section="9"></div>
-        <div class="progress-dot" data-section="10"></div>
-        <div class="progress-dot" data-section="11"></div>
-        <div class="progress-dot" data-section="12"></div>
-        <div class="progress-dot" data-section="13"></div>
-        <div class="progress-dot" data-section="14"></div>
-        <div class="progress-dot" data-section="15"></div>
-    </div>
-
-    <!-- Sticky CTA (appears after scroll) -->
-    <div class="sticky-cta" id="stickyCTA">
-        <a href="#apply-now" class="btn btn-primary" aria-label="Apply for founding partner spot">
-            Reserve Your Spot →
-        </a>
-    </div>
-
     <header style="padding: 24px 0;">
         <div class="container">
             <img src="logo.png" alt="Cortex Momentum - Clean Energy Intelligence Platform" style="width: 125px;" loading="eager">
+                </a>
+                <a href="#pricing" class="btn btn-secondary">See Pricing</a>
+            </div>
         </div>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="sub-heading">For Ambitious Founders & CEOs</div>
+                <h1 class="display-text">Stop Guessing.<br>De-Risk Your Next Move.</h1>
+                <p class="lead-text">Cortex Momentum is the strategic co-pilot for founders. We combine advanced AI intelligence with expert human guidance to turn your biggest challenges—fundraising, market entry, and GTM—into your most decisive wins.</p>
+                <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Book a Strategic Mapping Session →</a>
+                <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">
+                    30 minutes. We'll tackle one of your strategic challenges live on the call.
+                </p>
+            </div>
+        </div>
+    </section>
 
     <!-- Trust Bar -->
     <div class="trust-bar">
         <div class="container">
             <div class="trust-content">
-                <span class="trust-label">Featured In</span>
+                <span class="trust-label">As Seen In</span>
                 <span class="trust-item">Houston Chronicle</span>
                 <span class="trust-item">•</span>
                 <span class="trust-item">Building Performance Journal</span>
                 <span class="trust-item">•</span>
-                <span class="trust-item">National Insulation Institute</span>
-                <span class="trust-item">•</span>
                 <span class="trust-item">LA Climate Week Speaker</span>
-                <span class="trust-item">•</span>
-                <span class="trust-item">Rewiring America</span>
             </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container-narrow hero-content">
-            <span class="hero-badge">
-                Limited: 3 Founding Partners Only
-            </span>
-            
-            <h1>
-                <span class="highlight-number">Three</span> Clean Energy CEOs Will Have Systematic Intelligence While Others React to Headlines
-            </h1>
-            
-            <p class="subheadline">
-                While your competitors chase headlines, you'll have already positioned for what's next. The intelligence system that separates strategic leaders from reactive operators.
-            </p>
-            
-            <p class="lead-text">
-                Every week, critical information affects your business. You find out when everyone else does—through press releases and LinkedIn posts. By then, the opportunity is gone or the threat is real.
-            </p>
-            
-            <p class="lead-text">
-                I'm Jamie Skaar. For 15 years, I've navigated every shift in clean energy. Now I'm offering 3 founding partners access to my strategic intelligence system—enterprise-level market awareness at a fraction of the cost.
-            </p>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-primary" aria-label="Reserve your founding partner spot">
-                    Reserve Your Founding Partner Spot →
-                </a>
-            </div>
+    <!-- Problem Section -->
+    <section>
+        <div class="container-narrow section-center">
+            <h2>It's So Hard to Distinguish Between the Signal and the Noise Right Now.</h2>
+            <p>You're in the <strong>"crunch phase,"</strong> trying to move from an "email and spreadsheets messy business" to a scalable company. But you don't have the bandwidth to dive into the weeds, and you live with the fear of "building something for nobody."</p>
+            <p>The stakes couldn't be higher. A wrong turn could mean burning through your runway. The difference between market leaders and everyone else? <strong>Systematic intelligence vs. random discovery.</strong></p>
         </div>
     </section>
 
-    <!-- Credibility Section -->
-    <section style="padding: 60px 0; background: var(--midnight);">
-        <div class="container-narrow">
-            <h2>The Intelligence Gap Between Systematic and Random</h2>
-            
-            <div class="card">
-                <p style="font-size: 20px; margin-bottom: 24px;">
-                    <strong>If you follow my LinkedIn, you see market observations. This system is what creates those observations.</strong>
-                </p>
-                
-                <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 20px;">
-                    <img src="headshot.jpeg" alt="Jamie Skaar - Clean Energy Intelligence Expert" style="width: 100px; height: 100px; border-radius: 50%;" loading="lazy">
-                    <p style="margin: 0; font-size: 18px;">
-                        <strong>I've spent 15 years on the front lines of the clean energy transition. Here are a few highlights:</strong>
-                    </p>
-                </div>
-                
-                <ul class="bullet-list" style="margin-bottom: 24px;">
-                    <li>• Helped build early-stage solar company from $250K to $2.2B valuation (now Lumio)</li>
-                    <li>• Strategic advisor to Rewiring America on go-to-market initiatives</li>
-                    <li>• Keynote speaker at LA Climate Week</li>
-                    <li>• Featured in Houston Chronicle, Building Performance Journal</li>
-                    <li>• Active network of 11,500+ industry professionals</li>
-                    <li>• 15 years navigating every market shift, policy change, and technology breakthrough</li>
-                </ul>
-                
-                <p>
-                    But here's what matters to you: I've developed a systematic approach to tracking the entire clean energy landscape—patent filings, regulatory changes, financial movements, competitive shifts—that reveals patterns before they become headlines.
-                </p>
-                
-                <div class="metrics-bar">
-                    <div class="metric-item">
-                        <span class="metric-value">$2.2B</span>
-                        <span class="metric-label">Company Valuation</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-value">15yr</span>
-                        <span class="metric-label">Industry Experience</span>
-                    </div>
-                    <div class="metric-item">
-                        <span class="metric-value">11.5K</span>
-                        <span class="metric-label">Industry Network</span>
-                    </div>
-                </div>
-            </div>
-            
-            <p style="text-align: center; margin-top: 24px; color: var(--emerald-light); font-weight: 600;">
-                Interview slots filling quickly
-            </p>
-        </div>
-    </section>
-
-    <!-- Problem Section with Updated Headline -->
-    <section style="padding: 60px 0;">
-        <div class="container-narrow">
-            <h2>Your Competitors Might Already Be Making Moves Based on Intelligence You Don't Have</h2>
-            
-            <p class="lead-text">
-                You're drowning in information but starving for intelligence. Every week brings critical changes:
-            </p>
-            
-            <ul style="margin-bottom: 32px;">
-                <li>New utility interconnection rules that change project economics overnight</li>
-                <li>Regulatory shifts that open (or close) entire markets</li>
-                <li>Technology breakthroughs that make your approach obsolete</li>
-                <li>Competitors pivoting into your space with VC backing</li>
-                <li>Supply chain disruptions becoming visible through vendor announcements</li>
-            </ul>
-            
-            <p style="font-size: 20px; text-align: center; color: var(--text-primary);">
-                <strong>The difference between leaders and followers? Systematic intelligence vs. random discovery.</strong>
-            </p>
-        </div>
-    </section>
-
-    <!-- Testimonial Bar with Specific Attributions -->
-    <div class="testimonial-bar">
+    <!-- Case Studies Section -->
+    <section style="background: var(--midnight);">
         <div class="container">
-            <div class="testimonial-content">
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"The SAF pivot insight saved our company"</div>
-                    <div class="testimonial-author">Co-Founder, Renewable Natural Gas Company</div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"Better intelligence than Bloomberg at 1/4 the cost"</div>
-                    <div class="testimonial-author">CFO, Series B Battery Storage Company</div>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-quote">"Jamie sees patterns we miss entirely"</div>
-                    <div class="testimonial-author">CEO, $12M Solar Developer (California)</div>
-                </div>
+            <div class="section-center">
+                <h2>From Chaos to Actionable Assets</h2>
+                <p class="lead-text" style="max-width: 700px;">We deliver targeted intelligence that de-risks your most critical decisions. Here’s how we create the strategic assets you need to win.</p>
             </div>
-        </div>
-    </div>
+            
+            <div class="case-study-grid">
+                <div class="case-study">
+                    <h4>THE PIVOT SPRINT</h4>
+                    <h3>A New Market in 5 Days</h3>
+                    <p><strong>The Asset Delivered:</strong> A board-ready presentation detailing a <strong>$50M European SAF feedstock opportunity</strong>, including market size, margin analysis, and a pivot plan.</p>
+                    <a href="javascript:void(0);" class="expandable-link" data-target="case1">[+] Read the full 45-day pivot story</a>
+                    <div class="expandable-content" id="case1">
+                        <h4>THE CHALLENGE</h4>
+                        <p>A renewable natural gas company's market collapsed. The board gave them 45 days to find a viable new business model or shut down.</p>
+                        <h4>THE INTELLIGENCE</h4>
+                        <p>In 5 days, our system analyzed alternative feedstock economics, 200+ regulatory changes, and emerging applications to identify a clear path forward.</p>
+                        <h4>THE OUTCOME</h4>
+                        <p>The analysis revealed massive demand for their exact inputs from European sustainable aviation fuel (SAF) regulations. The board approved the pivot, turning a crisis into a confident, multi-million dollar opportunity.</p>
+                    </div>
+                </div>
 
-    <!-- Opportunities Section (CORRECTED) -->
-    <section style="padding: 60px 0; background: var(--midnight);">
-        <div class="container-narrow">
-            <h2>The Opportunities You Can't Track (No Matter How Smart You Are)</h2>
-            
-            <div class="card">
-                <p style="font-size: 20px; margin-bottom: 24px;">
-                    <strong>It's not about being smarter. It's about the impossible math.</strong>
-                </p>
-                
-                <p style="margin-bottom: 20px;">
-                    10,000+ regulatory filings. 50,000+ patent applications. 1,000+ competitor websites. 500+ industry publications. All updating daily.
-                </p>
-                
-                <p style="margin-bottom: 20px;">
-                    <strong>Even if you dedicated 100 hours a week to research, you'd capture maybe 1% of what matters.</strong> And you don't have 100 hours. You have a company to run.
-                </p>
-                
-                <p style="margin-bottom: 24px;">
-                    While you're in meetings, serving customers, and leading your team, critical signals are everywhere:
-                </p>
-                
-                <ul style="margin-bottom: 24px;">
-                    <li>A competitor quietly pivots their entire business model</li>
-                    <li>New regulations create a $50M market overnight</li>
-                    <li>Customer complaints reveal an unserved need worth millions</li>
-                    <li>Technology breakthroughs make your current approach obsolete</li>
-                </ul>
-                
-                <p style="margin-bottom: 20px;">
-                    <strong>Your competitors operate on gut feeling because that's all they have.</strong> They make decisions based on the 0.1% of information that randomly crosses their desk.
-                </p>
-                
-                <div style="padding: 20px; background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--emerald); border-radius: 4px; margin: 24px 0;">
-                    <p style="margin: 0; font-style: italic;">
-                        Example: While everyone chases the same commercial projects, property managers across three states are desperately seeking emergency response contractors. The opportunity? $30M in untapped demand. The problem? This insight is buried across 200 different forums, review sites, and RFPs. No human could find this pattern—unless it's their only job.
-                    </p>
+                <div class="case-study">
+                    <h4>THE INVESTOR SPRINT</h4>
+                    <h3>A Targeted Capital Roadmap</h3>
+                    <p><strong>The Asset Delivered:</strong> A 40-page strategic dossier on 25 validated investors, including their thesis, key partners to approach, and specific talking points for each.</p>
+                     <a href="javascript:void(0);" class="expandable-link" data-target="case2">[+] See how this saved 200+ hours</a>
+                     <div class="expandable-content" id="case2">
+                        <h4>THE CHALLENGE</h4>
+                        <p>A renewable energy manufacturer had a $30M sales pipeline but no time to waste on fruitless investor meetings. They needed to find the right capital partners, fast.</p>
+                        <h4>THE INTELLIGENCE</h4>
+                        <p>The system analyzed 500+ VC, Private Equity, and Family Office investment theses and network maps to find the warmest path in.</p>
+                        <h4>THE OUTCOME</h4>
+                        <p>Instead of a generic list of VCs, they received a validated shortlist. This saved the executive team an estimated 200 hours of manual research and allows them to walk into every meeting with a decisive advantage.</p>
+                    </div>
                 </div>
-                
-                <p style="font-size: 20px; text-align: center; margin-top: 24px; margin-bottom: 0;">
-                    <strong>You don't need to work harder. You need systematic intelligence processing what's humanly impossible to track.</strong>
-                </p>
-            </div>
-            
-            <p style="text-align: center; margin-top: 24px; color: var(--emerald-light); font-weight: 600;">
-                Two founding partner spots already in final discussions
-            </p>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-primary" aria-label="See how The Clarity Engine finds opportunities">
-                    See How The Clarity Engine Processes the Impossible →
-                </a>
+
+                <div class="case-study">
+                    <h4>COMPETITIVE INTELLIGENCE SPRINT</h4>
+                    <h3>From Commodity to Premium</h3>
+                    <p><strong>The Asset Delivered:</strong> A new market position as "The Clean & Transparent Electricians," a targeted marketing plan for three underserved zip codes, and a new pricing model based on value.</p>
+                    <a href="javascript:void(0);" class="expandable-link" data-target="case3">[+] See the 90-day transformation</a>
+                    <div class="expandable-content" id="case3">
+                        <h4>THE CHALLENGE</h4>
+                        <p>A regional electrical contractor was bleeding margin competing on price. Growth meant losing money faster.</p>
+                        <h4>THE INTELLIGENCE</h4>
+                        <p>AI analysis of 3,000+ customer reviews across 47 competitors revealed that 73% of complaints were about "messy work" and "surprise fees"—not price.</p>
+                        <h4>THE OUTCOME</h4>
+                        <p>The company repositioned, launched a targeted marketing campaign, and saw a 64% lower customer acquisition cost and 47% higher close rates, all while charging a premium.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Proof Story (ENHANCED WITH CONNECTION) -->
-    <section style="padding: 60px 0;">
+    <!-- Applications Section -->
+    <section>
         <div class="container">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <h2 class="display-text">THE 45-DAY PIVOT</h2>
-                <p class="lead-text">From Market Collapse to New Opportunity Through Strategic Intelligence</p>
+            <div class="section-center">
+                <h2>An Intelligence Engine for Every Business Challenge</h2>
+                <p class="lead-text" style="max-width: 700px;">Whether you're preparing for a board meeting or a sales meeting, our system is designed to give you a decisive advantage.</p>
             </div>
-            
-            <div class="card card-accent">
-                <h3 style="color: var(--crimson); margin-bottom: 24px;">CRISIS: 45 DAYS TO FIND A NEW BUSINESS MODEL</h3>
-                
-                <p style="font-size: 19px; margin-bottom: 20px;">
-                    <strong>The collapse was swift and brutal.</strong> A successful renewable natural gas company watched their core market implode—prices crashed from $200 to just $40 per unit. Investors imposed a spending freeze. The board delivered an ultimatum: find a viable new business model in 45 days or face dissolution.
-                </p>
-                
-                <p style="margin-bottom: 28px;">
-                    <strong>"We're reading the same 3-12 month old reports as everyone else. From there, it's basically our gut. I just don't think we can do it fast enough."</strong>
-                </p>
-                
-                <p style="margin-bottom: 28px;">
-                    They were caught in a classic paradox: the crisis demanded world-class strategic insight, but the financial constraints blocked the very consultants they would typically hire. They were drowning in recycled information, unable to find the clean market signal needed to make their next move.
-                </p>
-                
-                <h3>In 5 Days, My System Analyzed:</h3>
-                
-                <ul style="margin: 24px 0;">
-                    <li>Alternative feedstock economics across 12 categories</li>
-                    <li>200+ regulatory changes creating new market opportunities</li>
-                    <li>Emerging applications in adjacent sectors</li>
-                    <li>Geographic markets with favorable policy support</li>
-                    <li>Competitor positioning and capability gaps</li>
-                </ul>
-                
-                <h3 style="margin-top: 32px;">The Pivot Path We Discovered:</h3>
-                
-                <p style="font-size: 19px; margin: 20px 0;">
-                    European sustainable aviation fuel regulations were creating massive demand for renewable gas inputs. Their existing technology, with modifications, could serve this premium market at significantly higher margins than their collapsed RNG business.
-                </p>
-                
-                <p style="font-size: 19px; margin-bottom: 24px;">
-                    <strong>The board approved the pivot strategy. They're now actively developing their SAF pathway.</strong>
-                </p>
-                
-                <div style="text-align: center; padding: 24px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; margin-top: 32px;">
-                    <p style="font-size: 20px; font-weight: 700; color: var(--emerald-light); margin: 0;">
-                        The intelligence wasn't magic. It was systematic analysis of fragmented information they didn't have bandwidth to synthesize during crisis.
-                    </p>
-                </div>
-                
-                <div style="padding: 24px; background: var(--midnight); border-radius: 8px; margin-top: 24px;">
-                    <p style="font-size: 18px; text-align: center; color: var(--text-primary); margin: 0;">
-                        <strong>Sound familiar?</strong> Most clean energy leaders make critical decisions based on gut feeling—not because they want to, but because systematic intelligence seems impossible. <em>It's not.</em>
-                    </p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-primary" aria-label="Get intelligence like this">
-                    Get Intelligence Like This for Your Business →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works with One-Hour Promise -->
-    <section style="padding: 60px 0;" id="benefits">
-        <div class="container-narrow">
-            <h2 class="display-text" style="text-align: center;">HOW THE CLARITY ENGINE™ WORKS FOR YOU</h2>
-            
-            <div class="card">
-                <p style="margin-bottom: 24px;">
-                    The Clarity Engine systematically monitors patent databases, regulatory filings, financial reports, and technical journals—all analyzed, cross-referenced, and synthesized. While BloombergNEF gives you quarterly reports, I give you weekly intelligence on what matters to YOUR business.
-                </p>
-                
-                <p style="margin-bottom: 24px;">
-                    <strong>You're in complete control.</strong> You direct the intelligence priorities. This isn't a generic newsletter or automated dashboard—it's YOUR strategic questions answered systematically, with my personal review of every finding.
-                </p>
-                
-                <h3>Your Strategic Question → Actionable Intelligence in 48 Hours:</h3>
-                
-                <ul style="margin: 24px 0;">
-                    <li><strong>Frame:</strong> We turn your challenge into specific intelligence requirements</li>
-                    <li><strong>Deploy:</strong> Systematic scanning across regulatory, patent, financial, and competitive sources</li>
-                    <li><strong>Validate:</strong> Every finding is personally reviewed—no automated reports you have to fact-check</li>
-                    <li><strong>Synthesize:</strong> My 15 years of experience adds context databases can't provide</li>
-                    <li><strong>Deliver:</strong> You get clear recommendations with specific next steps</li>
-                </ul>
-
-                <!-- One-Hour Promise -->
-                <div class="promise-box">
-                    <h3>The One-Hour Promise</h3>
-                    <p style="margin-bottom: 12px;">
-                        <strong>Everything distilled into one weekly hour.</strong> If it takes more of your time than that, I'll personally handle the overflow analysis at no charge.
-                    </p>
-                    <p style="margin: 0;">
-                        You get 100+ hours of research synthesized into 60 minutes of strategic insight.
-                    </p>
-                </div>
-                
-                <h3 style="margin-top: 32px;">Plus My Direct Involvement:</h3>
-                
-                <p style="margin-bottom: 20px;">
-                    You set the priorities. The system delivers intelligence. I provide expertise.
-                </p>
-                
-                <p>As a founding partner, you get:</p>
-                
-                <ul style="margin: 20px 0;">
-                    <li><strong>Weekly Strategy Sessions (1 hour):</strong> We review intelligence together and plan actions</li>
-                    <li><strong>Private Slack Channel:</strong> Direct access when urgent situations arise</li>
-                    <li><strong>Strategic Context:</strong> Industry dynamics and implications that pure data misses</li>
-                    <li><strong>Network Introductions:</strong> 11,500 connections, one message away</li>
-                    <li><strong>Quarterly Implementation Reviews:</strong> Ensuring intelligence becomes action</li>
-                </ul>
-                
-                <p style="margin-top: 24px;">
-                    <strong>One pattern recognized could make you millions.</strong> This isn't another dashboard you'll never log into. It's active intelligence work combined with direct expertise, focused on your specific challenges.
-                </p>
-            </div>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-primary" aria-label="Start your intelligence system">
-                    Start Your Intelligence System →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mini Break -->
-    <section style="padding: 60px 0; background: var(--midnight); text-align: center;">
-        <div class="container-narrow">
-            <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--emerald-light); line-height: 1.3; margin-bottom: 0;">
-                10,000+ sources analyzed weekly.<br>
-                100+ hours of research.<br>
-                1 hour of your time.
-            </h2>
-        </div>
-    </section>
-
-    <!-- Comparison Table -->
-    <section style="padding: 60px 0;">
-        <div class="container-narrow">
-            <h2 style="text-align: center;">The Investment Gap: Intelligence vs. Uncertainty</h2>
-            
-            <div class="comparison-table">
-                <div class="comparison-row">
-                    <span class="comparison-label">McKinsey Strategic Consulting</span>
-                    <span class="comparison-value">$250,000+ minimum</span>
-                </div>
-                <div class="comparison-row">
-                    <span class="comparison-label">BloombergNEF Intelligence</span>
-                    <span class="comparison-value">$20,000/month</span>
-                </div>
-                <div class="comparison-row">
-                    <span class="comparison-label">Industry Consultant</span>
-                    <span class="comparison-value">$15,000/month</span>
-                </div>
-                <div class="comparison-row">
-                    <span class="comparison-label">In-House Senior Analyst</span>
-                    <span class="comparison-value">$10,000+/month</span>
-                </div>
-            </div>
-            
-            <p style="text-align: center; margin-top: 24px; font-size: 18px;">
-                <strong>Fortune 500 intelligence for ambitious growth companies.</strong>
-            </p>
-        </div>
-    </section>
-
-    <!-- Value Stack -->
-    <section class="value-section" id="value-section">
-        <div class="container-narrow">
-            <h2 style="text-align: center;">THE REAL-WORLD VALUE</h2>
-            
-            <div class="value-stack">
-                <div class="value-item">
-                    <div class="value-description">
-                        <span class="value-name">Strategic Intelligence System</span>
-                        <span class="value-detail">Systematic monitoring across patents, regulatory, financial sources</span>
-                    </div>
-                    <span class="value-amount">$15,000/mo</span>
-                </div>
-                
-                <div class="value-item">
-                    <div class="value-description">
-                        <span class="value-name">Strategic Consultation & Analysis</span>
-                        <span class="value-detail">1-hour sessions with 15+ years expertise</span>
-                    </div>
-                    <span class="value-amount">up to $15,000/mo</span>
-                </div>
-                
-                <div class="value-item">
-                    <div class="value-description">
-                        <span class="value-name">Proprietary Market Database</span>
-                        <span class="value-detail">10+ years of clean energy intelligence—deals, pivots, patterns</span>
-                    </div>
-                    <span class="value-amount">$5,000/mo</span>
-                </div>
-                
-                <div class="value-item">
-                    <div class="value-description">
-                        <span class="value-name">Direct Network Access</span>
-                        <span class="value-detail">11,500+ connections via private Slack channel</span>
-                    </div>
-                    <span class="value-amount">$3,000/mo</span>
-                </div>
-                
-                <div class="value-item">
-                    <div class="value-description">
-                        <span class="value-name">Quarterly Implementation</span>
-                        <span class="value-detail">90-minute deep dives to ensure execution</span>
-                    </div>
-                    <span class="value-amount">$2,000/mo</span>
-                </div>
-                
-                <div class="value-total">
-                    <span style="font-size: 18px; color: var(--text-secondary);">Total Monthly Value</span>
-                    <span class="value-total-amount">up to $40,000/mo</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Price Reveal -->
-    <section class="price-section">
-        <div class="container-narrow">
-            <h2 class="display-text">THE FOUNDING PARTNER INVESTMENT</h2>
-            
-            <p style="font-size: 19px; margin-bottom: 24px;">
-                I need founding partners to help perfect the system. Your real challenges shape the intelligence framework. Your feedback drives which processes get automated versus which require human expertise.
-            </p>
-            
-            <p style="font-size: 19px; margin-bottom: 24px;">
-                <strong>As founding partners, you're not just clients—you're collaborators building the future of market intelligence.</strong>
-            </p>
-            
-            <p style="font-size: 22px; margin: 24px 0;">
-                Founding Partner Investment:
-            </p>
-            
-            <span class="price-actual">$5,000/mo</span>
-            
-            <p style="font-size: 20px; margin-top: 24px;">
-                Up to $40,000 in value for $5,000/month.<br>
-                An exceptional rate for founding partners who help shape the system.
-            </p>
-            
-            <div class="price-terms">
-                <ul>
-                    <li>✓ 3-month initial commitment ($15,000 total)</li>
-                    <li>✓ Month-to-month thereafter</li>
-                    <li>✓ Cancel anytime after initial period</li>
-                    <li>✓ Rate locked forever</li>
-                    <li>✓ Direct access throughout</li>
-                </ul>
-            </div>
-            
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-primary" aria-label="Lock in founding partner rate">
-                    Lock In Your Founding Rate →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Urgency Section (NO COUNTDOWN) -->
-    <section class="urgency-section">
-        <div class="container-narrow">
-            <h2>Why Only 3 Founding Partners</h2>
-            
-            <div class="card">
-                <p style="font-size: 19px; margin-bottom: 20px;">
-                    <strong>This isn't fully automated software—it's intelligence work augmented by systematic tools.</strong>
-                </p>
-                
-                <p>Each founding partner requires:</p>
-                <ul>
-                    <li>Initial system configuration: 10 hours</li>
-                    <li>Weekly strategy sessions: 1 hour</li>
-                    <li>Research & analysis: 5-8 hours/week</li>
-                    <li>Ad-hoc support: 2-3 hours/week</li>
-                </ul>
-                
-                <p style="margin-top: 20px;">
-                    That's significant weekly intelligence work for each partner. I can do this properly for 3 companies while building the automated infrastructure. No more.
-                </p>
-            </div>
-            
-            <div class="deadline-box">
-                <h3>Applications Close</h3>
-                <span class="deadline-date">August 31st, 2025 at 11:59 PM PST</span>
-                
-                <p style="margin-top: 24px;">
-                    Onboarding begins September 1st. Q4 intelligence gathering starts immediately. By October, you'll see what others won't understand until January.
-                </p>
-                <p style="margin-top: 16px; font-weight: 600; color: var(--text-primary);">
-                    After August 31st, the next cohort won't open until January 2026.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Qualification -->
-    <section class="qual-section">
-        <div class="container">
-            <h2 style="text-align: center;">Is This Right For You?</h2>
-            
-            <div class="qual-grid">
-                <div class="qual-box qual-ideal">
-                    <h3 style="color: var(--emerald-light);">This Works Best For:</h3>
-                    <ul style="list-style: none;">
-                        <li style="padding-left: 28px;">✓ $5-50 million clean energy companies</li>
-                        <li style="padding-left: 28px;">✓ Making strategic decisions (expansion, pivots)</li>
-                        <li style="padding-left: 28px;">✓ Value systematic intelligence over random discovery</li>
-                        <li style="padding-left: 28px;">✓ Can implement insights quickly</li>
-                        <li style="padding-left: 28px;">✓ Ready to invest in competitive advantage</li>
+            <div class="applications-grid">
+                <div class="application-card">
+                    <h3>For Founders & Investors</h3>
+                    <ul>
+                        <li>Fundraising & Investor Targeting</li>
+                        <li>Go-to-Market Strategy</li>
+                        <li>M&A Due Diligence</li>
                     </ul>
                 </div>
-                
-                <div class="qual-box qual-not">
-                    <h3 style="color: var(--cloud);">Not Necessary If:</h3>
-                    <ul style="list-style: none;">
-                        <li style="padding-left: 28px; color: var(--text-secondary);">× Happy with current information sources</li>
-                        <li style="padding-left: 28px; color: var(--text-secondary);">× In crisis mode (no bandwidth to implement)</li>
-                        <li style="padding-left: 28px; color: var(--text-secondary);">× Need committee approval for everything</li>
-                        <li style="padding-left: 28px; color: var(--text-secondary);">× Prefer to wait and see</li>
-                        <li style="padding-left: 28px; color: var(--text-secondary);">× Think Google is sufficient</li>
+                <div class="application-card">
+                    <h3>For Operators & Teams</h3>
+                    <ul>
+                        <li>Pricing & Margin Analysis</li>
+                        <li>Competitive Benchmarking</li>
+                        <li>Customer Retention Strategy</li>
+                    </ul>
+                </div>
+                <div class="application-card">
+                    <h3>For Growth & Market Leaders</h3>
+                    <ul>
+                        <li>Market Entry & Expansion</li>
+                        <li>New Product/Service Validation</li>
+                        <li>Identifying New Revenue Streams</li>
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Validation Section -->
+    <section style="background: var(--midnight);">
+        <div class="container-narrow">
+            <div class="section-center">
+                <h2>Go Beyond Intelligence. Achieve Certainty.</h2>
+                <p class="lead-text" style="max-width: 700px;">Every founder's biggest challenge is answering one question: "Does the freaking thing work?" Our validation engine is designed to give you that answer before you commit your resources.</p>
+            </div>
             
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#apply-now" class="btn btn-secondary" aria-label="Check if you qualify">
-                    Check If You Qualify →
-                </a>
+            <div style="margin-top: 32px;">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>The Intelligent Co-Pilot</h4>
+                        <p>Think of our AI as a <strong>world-class quantitative researcher</strong>. It can synthesize 10,000+ sources to find patterns, but it lacks real-world field experience. It provides the initial hypothesis.</p>
+                    </div>
+                </div>
+                 <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>We Add Context & Nuance</h4>
+                        <p>Through a 1-hour strategy call, your team's expertise and my 15 years of experience provide the critical context and direction. We refine the AI's hypothesis into a sharp, testable market thesis.</p>
+                    </div>
+                </div>
+                 <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>We Test for Market Resonance</h4>
+                        <p>This is our greatest differentiator. We <strong>deploy strategic content designed to elicit responses</strong> from key stakeholders. We then <strong>capture and analyze authentic stakeholder feedback</strong> to validate your thesis against real-world opinion.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>We Build Your Compounding Asset</h4>
+                        <p>This feedback loop creates a compounding intelligence asset. As one founder put it, we've "already built all the pipes so you can just plug into it."</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Comparison Section -->
+    <section>
+        <div class="container">
+            <div class="section-center">
+                <h2>The Alternatives: A Clear Comparison</h2>
+                <p class="lead-text" style="max-width: 700px;">Before you invest, see how we stack up against traditional options. We're built for founder velocity.</p>
+            </div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>In-House Analyst</th>
+                        <th>Consulting Firm</th>
+                        <th class="highlight">Cortex Momentum</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Criteria"><strong>Speed</strong></td>
+                        <td data-label="In-House Analyst">Slow ramp-up</td>
+                        <td data-label="Consulting Firm">3-6 month projects</td>
+                        <td data-label="Cortex Momentum" class="highlight"><strong>Insights in days</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Criteria"><strong>Cost</strong></td>
+                        <td data-label="In-House Analyst">$120k+ / year</td>
+                        <td data-label="Consulting Firm">$250k+ / project</td>
+                        <td data-label="Cortex Momentum" class="highlight"><strong>Predictable monthly</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Criteria"><strong>Scope</strong></td>
+                        <td data-label="In-House Analyst">Limited by one person</td>
+                        <td data-label="Consulting Firm">Narrow project scope</td>
+                        <td data-label="Cortex Momentum" class="highlight"><strong>Holistic & ongoing</strong></td>
+                    </tr>
+                    <tr>
+                        <td data-label="Criteria"><strong>Validation</strong></td>
+                        <td data-label="In-House Analyst">No</td>
+                        <td data-label="Consulting Firm">No</td>
+                        <td data-label="Cortex Momentum" class="highlight"><strong>Built-in</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!-- Testimonial Divider -->
+    <section style="padding: 60px 0;">
+        <div class="container-narrow section-center">
+             <p style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto; line-height: 1.5; color: var(--text-primary);">
+                "The gap for me is investors. This is I do not know how to do this well."
+            </p>
+            <p style="margin-top: 16px; color: var(--text-muted);">- Founder, Renewable Energy Manufacturer</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" style="background: var(--midnight);">
+        <div class="container">
+            <div class="section-center">
+                <h2>Three Paths to Strategic Advantage</h2>
+                <p class="lead-text" style="max-width: 700px;">It's late August. Before you lock in your 2026 budget and Q4 priorities, ensure you're placing your bets on the right markets, customers, and strategy.</p>
+            </div>
+            
+            <div class="track-grid">
+                <div class="track-card">
+                    <h3>Intelligence Sprint</h3>
+                    <div class="track-price">$3,000 <span>/ one-time</span></div>
+                    <p>Go from question to actionable strategy in 30 days. Perfect for de-risking a single, high-stakes decision.</p>
+                    <ul>
+                        <li>Focus on <strong>one</strong> critical area</li>
+                        <li>AI analysis of thousands of data points</li>
+                        <li>Two 60-minute strategy sessions</li>
+                        <li>Comprehensive findings report</li>
+                        <li>30-day Strategic Clarity Guarantee</li>
+                    </ul>
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-secondary">Start Your Sprint →</a>
+                </div>
+
+                <div class="track-card premium">
+                    <div class="track-badge">Recommended for Founders</div>
+                    <h3>Continuous Partnership</h3>
+                    <div class="track-price">$5,000 <span>/ month</span></div>
+                    <p>The Sprint gives you an answer; <strong>the Partnership builds your competitive moat.</strong></p>
+                    <ul>
+                        <li><strong>Ongoing</strong> monitoring of all strategic areas</li>
+                        <li><strong>Weekly</strong> 60-minute strategy sessions</li>
+                        <li>Direct Slack access for urgent questions</li>
+                        <li>Warm introductions to my 11,500+ network</li>
+                        <li>Quarterly deep-dive opportunity reports</li>
+                        <li>Rate locked in forever for founding partners</li>
+                    </ul>
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Become a Partner →</a>
+                </div>
+                
+                <div class="track-card">
+                    <h3>Dedicated Intelligence Partner</h3>
+                    <div class="tier-audience">For Corporate & PE-Backed Ventures</div>
+                    <div class="track-price">$15k+ <span>/ month</span></div>
+                    <p>A fully integrated, outsourced intelligence function for teams that require the deepest insights.</p>
+                    <ul>
+                        <li>Everything in Partnership, plus:</li>
+                        <li><strong>Includes a dedicated budget for premium data sources</strong> (e.g., PitchBook, custom APIs)</li>
+                        <li>Full leadership team access</li>
+                        <li>Proactive opportunity briefing</li>
+                        <li>Direct & unlimited access</li>
+                    </ul>
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-secondary">Book a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- FAQ Section -->
-    <section class="faq-section">
+    <section>
         <div class="container-narrow">
-            <h2 style="text-align: center;">Common Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    What if I'm not ready for all the intelligence?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        You control the focus. We start with your most pressing challenge and expand as you're ready. The weekly sessions ensure intelligence is digestible and actionable, not overwhelming. Many partners start with one specific area (like regulatory tracking) and expand over time.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    Can I pause during busy periods?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        After the initial 3-month commitment, you can pause for up to 30 days while maintaining your founding partner rate. This recognizes that sometimes you need to focus on execution rather than new intelligence. Your spot and rate are protected.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    What makes this different from hiring an analyst?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        An analyst costs $120K+ annually and takes 6 months to train. They lack my 15 years of pattern recognition, 11,500-person network, and systematic intelligence tools. Plus, they're a fixed cost whether you need intelligence that week or not. This gives you better intelligence, on-demand, at half the cost.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    How quickly will I see value?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Most partners identify a significant opportunity or threat within the first 2 weeks. The 30-day guarantee ensures you'll see clear, actionable intelligence that changes your strategic perspective within the first month, or that month is refunded entirely.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    How do you protect confidential information?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Each founding partner's intelligence priorities and insights are completely siloed. I never share specific intelligence between partners, and all communication happens through secure, private channels. Your strategic questions and the intelligence findings remain strictly confidential. Think of it as having your own private intelligence analyst with enterprise-grade confidentiality.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    How is this different from Bloomberg or other intelligence services?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Bloomberg gives you data. I give you decisions. While they provide quarterly reports on the entire market, I provide weekly intelligence on YOUR specific challenges. Bloomberg is a fire hose; this is a laser. Plus, you get my 15 years of pattern recognition, direct network access, and personalized strategic consultation—things no database can provide.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    What happens after the founding partner phase?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Your rate is locked forever at $5,000/month. As the system scales and improves, you'll benefit from every enhancement while maintaining your founding partner rate and priority access. Future cohorts will pay significantly more for the same service you're getting today. You also maintain direct access to me, which won't be available to future clients.
-                    </div>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" tabindex="0" role="button" aria-expanded="false">
-                    Can I see a sample intelligence report?
-                    <span class="faq-arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        During our initial consultation, I'll share relevant examples of intelligence findings from your specific market. Since each partner's intelligence is customized to their unique challenges, a generic sample wouldn't represent the value you'll receive. The 30-day guarantee ensures you'll see real, actionable intelligence for your business with zero risk.
-                    </div>
-                </div>
+            <h2 class="section-center">Common Questions</h2>
+            <div style="margin-top: 32px; text-align: left;">
+                <a href="javascript:void(0);" class="expandable-link" data-target="faq1" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">What happens after the founding partner phase?</a>
+                <div class="expandable-content" id="faq1"><p>Founding partners lock in their current rates permanently. Future cohorts will be subject to price increases as the system and its capabilities expand. Your early partnership is rewarded with preferential, lifetime pricing.</p></div>
+
+                <a href="javascript:void(0);" class="expandable-link" data-target="faq2" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">How do you protect confidential information?</a>
+                <div class="expandable-content" id="faq2"><p>Your security and confidentiality are our highest priority. We operate under a mutual confidentiality agreement from day one. All client data is segregated and encrypted, and our system is designed to analyze public and licensed data sources, not access your private company information. Your strategic questions are kept in the strictest confidence, and the intelligence we deliver is your proprietary asset.</p></div>
+
+                <a href="javascript:void(0);" class="expandable-link" data-target="faq3" style="display: block; padding: 16px 0; border-bottom: 1px solid rgba(203, 213, 224, 0.1);">Can I pause during busy periods?</a>
+                <div class="expandable-content" id="faq3"><p>Yes. Continuous Partnership clients can pause their subscription for one month per calendar year after the initial three-month commitment. We understand that implementation and operational demands can sometimes take priority.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Guarantee -->
-    <section style="padding: 60px 0; background: var(--midnight);">
+    <!-- Final CTA -->
+    <section class="final-cta section-center" id="apply">
         <div class="container-narrow">
-            <div class="guarantee-box">
-                <h3>30-DAY VALUE GUARANTEE</h3>
-                <p>
-                    Within 30 days, The Clarity Engine will surface strategic intelligence that fundamentally changes your understanding of a market opportunity or threat.
-                </p>
-                <p>
-                    <strong>If it doesn't deliver clear value, I refund that month entirely.</strong>
-                </p>
-                <p style="margin-top: 16px; font-size: 15px;">
-                    Simple. Clear. Guaranteed.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section" id="apply-now">
-        <div class="container-narrow">
-            <h2 class="display-text">SECURE YOUR FOUNDING PARTNER SPOT</h2>
-            <p style="margin-bottom: 24px; font-size: 18px;">
-                Three spots. Limited time. Your competitive advantage awaits.
-            </p>
-            
-            <div class="form-info">
-                ⏱️ Under 60 seconds
-            </div>
-            
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqlCa6lLjRcpMvPZSp4FaEEYDo6Js6d92VihQU0fiTGovVjw/viewform?embedded=true" 
-                        width="640" 
-                        height="1682" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0"
-                        title="Founding Partner Application Form">
-                    Loading…
-                </iframe>
-            </div>
-            
-            <p style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
-                🔒 Your information is secure and will never be shared.
-            </p>
-        </div>
-    </section>
-
-    <!-- Decision Section -->
-    <section class="decision-section">
-        <div class="container-narrow">
-            <h2>The Simple Math</h2>
-            
-            <div class="decision-points">
-                <div class="decision-point">Up to $40,000 value for $5,000 investment</div>
-                <div class="decision-point">Systematic intelligence vs random discovery</div>
-                <div class="decision-point">15 years experience + proprietary system</div>
-                <div class="decision-point">Three founding partner spots only</div>
-                <div class="decision-point">Next cohort not until January 2027</div>
-            </div>
-            
-            <p style="text-align: center; font-size: 20px; font-weight: 600; margin: 32px 0; color: var(--text-primary);">
-                <strong>The cost of missing one opportunity exceeds the entire investment.</strong>
-            </p>
-            
-            <div style="text-align: center;">
-                <a href="#apply-now" class="btn btn-primary" aria-label="Claim your founding partner spot">
-                    CLAIM YOUR SPOT →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Signature -->
-    <section class="signature">
-        <div class="container-narrow">
-            <div class="signature-name">— Jamie Skaar</div>
-            <p style="color: var(--text-muted); margin: 0;">Turning market chaos into competitive advantage.</p>
+            <h2>Turn Market Chaos Into Your Decisive Advantage.</h2>
+            <p class="lead-text">While your competitors react to yesterday's news, you'll already be positioned for tomorrow's opportunities. Take the first step toward decisive clarity.</p>
+            <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" target="_blank" class="btn btn-primary">Book a Strategic Mapping Session →</a>
+            <p style="margin-top: 16px; font-size: 14px; color: var(--text-muted);">Bring your biggest challenge. We'll map out a solution and show you the system in action.</p>
         </div>
     </section>
 
     <script>
-        // Note: No countdown timer as requested - just deadline date display
-        
-        // Sticky CTA visibility - refined for mobile
-        let lastScrollTop = 0;
-        window.addEventListener('scroll', function() {
-            const scrollPercent = (window.scrollY / document.body.scrollHeight) * 100;
-            const stickyCTA = document.getElementById('stickyCTA');
-            const mobileNav = document.getElementById('mobileNav');
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // Show sticky CTA after 25% scroll, but hide when scrolling up on mobile to not block content
-            if (scrollPercent > 25) {
-                if (window.innerWidth > 768) {
-                    stickyCTA.classList.add('visible');
-                } else {
-                    // On mobile, only show when scrolling down
-                    if (currentScroll > lastScrollTop) {
-                        stickyCTA.classList.remove('visible');
-                    } else {
-                        stickyCTA.classList.add('visible');
-                    }
-                }
-            } else {
-                stickyCTA.classList.remove('visible');
-            }
-            
-            // Mobile navigation visibility
-            if (window.innerWidth <= 768) {
-                if (scrollPercent > 20) {
-                    mobileNav.classList.add('visible');
-                } else {
-                    mobileNav.classList.remove('visible');
-                }
-            }
-            
-            // Update progress dots on desktop
-            if (window.innerWidth >= 1200) {
-                updateProgressDots();
-            }
-            
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        });
-        
-        // Update progress dots based on scroll position
-        function updateProgressDots() {
-            const sections = document.querySelectorAll('section');
-            const dots = document.querySelectorAll('.progress-dot');
-            const scrollPosition = window.scrollY + window.innerHeight / 2;
-            
-            sections.forEach((section, index) => {
-                if (index < dots.length) {
-                    const sectionTop = section.offsetTop;
-                    const sectionBottom = sectionTop + section.offsetHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                        dots[index].classList.add('active');
-                    } else {
-                        dots[index].classList.remove('active');
-                    }
-                }
-            });
-        }
-        
-        // Progress dot click navigation
-        document.querySelectorAll('.progress-dot').forEach((dot, index) => {
-            dot.addEventListener('click', function() {
-                const sections = document.querySelectorAll('section');
-                if (sections[index]) {
-                    sections[index].scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Smooth scroll for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        document.querySelectorAll('.expandable-link').forEach(link => {
+            link.addEventListener('click', (e) => {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                } else {
-                    const target = document.querySelector(targetId);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
+                const targetId = link.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                
+                if (content) {
+                    content.classList.toggle('show');
+                    if(link.textContent.startsWith('[+]')) {
+                        link.textContent = link.textContent.replace('[+]', '[-]');
+                    } else if (link.textContent.startsWith('[-]')) {
+                        link.textContent = link.textContent.replace('[-]', '[+]');
                     }
-                }
-            });
-        });
-        
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const faqItem = this.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                    item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-                });
-                
-                // Open clicked item if it wasn't already open
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                    this.setAttribute('aria-expanded', 'true');
-                }
-            });
-            
-            // Keyboard accessibility
-            question.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.click();
                 }
             });
         });
