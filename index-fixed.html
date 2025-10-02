@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortex Momentum | GTM Intelligence</title>
+
+    <meta name="description" content="We use market intelligence to turn your B2B content and expertise into a predictable sales pipeline. Stop guessing and start growing with data-driven GTM strategies.">
+    <meta name="theme-color" content="#0A0A0A">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Cortex Momentum">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:title" content="Cortex Momentum | GTM Intelligence - Predictable B2B Sales Pipeline">
+    <meta property="og:description" content="We use market intelligence to turn your B2B content and expertise into a predictable sales pipeline.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cortexmomentum.com">
+    <meta property="og:site_name" content="Cortex Momentum">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://cortexmomentum.com/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://cortexmomentum.com/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="A graphic showing data points connecting to a sales pipeline for Cortex Momentum.">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cortexmomentum">
+    <meta name="twitter:creator" content="@cortexmomentum">
+    <meta name="twitter:title" content="Cortex Momentum | GTM Intelligence - Predictable B2B Sales Pipeline">
+    <meta name="twitter:description" content="We use market intelligence to turn your B2B content and expertise into a predictable sales pipeline.">
+    <meta name="twitter:image" content="https://cortexmomentum.com/og-image.jpg">
+    <meta name="twitter:image:alt" content="A graphic showing data points connecting to a sales pipeline for Cortex Momentum.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="script" href="https://cdn.tailwindcss.com">
+    <link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js">
+
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js" defer></script>
+
+    <style>
+        /* 1. Critical "Above-the-Fold" CSS */
+        body { font-family: 'Inter', sans-serif; background-color: #0A0A0A; color: #E2E2E2; margin: 0; }
+        .hero-bg { min-height: 100vh; background-color: #0A0A0A; background-image: radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%), radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 0.1) 0px, transparent 50%), radial-gradient(at 52% 99%, hsla(355, 98%, 72%, 0.1) 0px, transparent 50%), radial-gradient(at 10% 29%, hsla(256, 96%, 68%, 0.1) 0px, transparent 50%), radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 0.1) 0px, transparent 50%), radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.1) 0px, transparent 50%), radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.1) 0px, transparent 50%); }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
+        [x-cloak] { display: none !important; }
+
+        /* 2. General Styles & Animations */
+        .gradient-text { background: linear-gradient(90deg, #A5B4FC, #C7D2FE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card { background-color: rgba(23, 23, 23, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); transition: all 0.3s ease; }
+        .card:hover { border-color: rgba(165, 180, 252, 0.5); transform: translateY(-5px); }
+        .cta-button { transition: all 0.3s ease; }
+        .cta-button:hover { box-shadow: 0 0 25px rgba(165, 180, 252, 0.4); }
+        .icon-glow { filter: drop-shadow(0 0 5px rgba(199, 210, 254, 0.5)); }
+
+        /* 3. Accessibility Enhancements */
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+        .skip-link:focus { clip: auto; height: auto; width: auto; position: fixed; top: 10px; left: 10px; z-index: 999999; background-color: #0A0A0A; color: white; padding: 8px 12px; border-radius: 6px; border: 1px solid #A5B4FC;}
+        a:focus-visible, button:focus-visible, [tabindex]:not([tabindex="-1"]):focus-visible { outline: 2px solid #A5B4FC; outline-offset: 3px; border-radius: 4px; }
+
+        /* 4. Mobile-First & Fluid Typography */
+        html { -webkit-text-size-adjust: 100%; -webkit-overflow-scrolling: touch; }
+        h1 { font-size: clamp(2rem, 5vw + 1rem, 4rem); }
+        h2 { font-size: clamp(1.75rem, 4vw + 1rem, 3rem); }
+        h3 { font-size: clamp(1.25rem, 2vw + 1rem, 1.75rem); }
+        p, a, li { font-size: clamp(1rem, 1vw + 0.5rem, 1.125rem); line-height: 1.7; }
+
+        @media (max-width: 767px) {
+            a, button, [role="button"] { min-height: 48px; min-width: 48px; display: inline-flex; align-items: center; justify-content: center; }
+            nav a { margin: 8px 0; }
+        }
+
+        /* 5. Tablet-Specific Optimizations */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container { max-width: 90%; }
+            .md\:grid-cols-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* 6. Loading States */
+        .loading { position: relative; pointer-events: none; opacity: 0.6; }
+        .loading::after { content: ""; position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; margin: -10px 0 0 -10px; border: 2px solid #A5B4FC; border-radius: 50%; border-top-color: transparent; animation: spinner 0.6s linear infinite; }
+        @keyframes spinner { to { transform: rotate(360deg); } }
+
+        /* 7. Logo & Header Improvements */
+        .logo-container { display: flex; align-items: center; gap: 1rem; }
+        .logo-image { height: 48px; width: auto; object-fit: contain; }
+        .header-container { backdrop-filter: blur(20px); }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://cortexmomentum.com/#organization",
+          "name": "Cortex Momentum",
+          "url": "https://cortexmomentum.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cortexmomentum.com/logo.png",
+            "width": 120,
+            "height": 48
+          },
+          "description": "We use market intelligence to turn your B2B content and expertise into a predictable sales pipeline.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "jamie@cortexmomentum.com",
+            "contactType": "Sales",
+            "areaServed": "Worldwide"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/cortexmomentum",
+            "https://twitter.com/cortexmomentum"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://cortexmomentum.com/#website",
+          "url": "https://cortexmomentum.com",
+          "name": "Cortex Momentum",
+          "publisher": { "@id": "https://cortexmomentum.com/#organization" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://cortexmomentum.com/#webpage",
+          "url": "https://cortexmomentum.com",
+          "name": "Cortex Momentum | GTM Intelligence - Predictable B2B Sales Pipeline",
+          "isPartOf": { "@id": "https://cortexmomentum.com/#website" },
+          "about": { "@id": "https://cortexmomentum.com/#organization" },
+          "description": "We use market intelligence to turn your B2B content and expertise into a predictable sales pipeline. Stop guessing and start growing with data-driven GTM strategies.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Service",
+          "serviceType": "GTM Intelligence & B2B Marketing Strategy",
+          "provider": { "@id": "https://cortexmomentum.com/#organization" },
+          "areaServed": "Worldwide",
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "B2B Companies"
+          },
+          "offers": [
+            { "@type": "Offer", "name": "Content-to-Pipeline Sprint", "description": "Transform existing content into strategic assets for lead generation", "category": "Inbound Marketing" },
+            { "@type": "Offer", "name": "Strategic Connector Service", "description": "Secure warm introductions with qualified decision-makers", "category": "Outbound Sales" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body
+    class="antialiased"
+    x-data="{ mobileMenuOpen: false, scrolled: false }"
+    @scroll.window="scrolled = (window.pageYOffset > 50)"
+    x-init="$watch('mobileMenuOpen', value => { document.body.style.overflow = value ? 'hidden' : '' })">
+
+    <a href="#main-content" class="skip-link sr-only">Skip to main content</a>
+    <div aria-live="polite" aria-atomic="true" class="sr-only" id="announcement-region"></div>
+
+    <header
+        role="banner"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        :class="scrolled ? 'bg-black/50 backdrop-blur-lg shadow-lg' : 'bg-black/30 backdrop-blur-md'">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="logo.png" alt="Cortex Momentum - Strategic Intelligence for Founders" class="h-12 w-auto" loading="eager">
+                <a href="index.html" class="text-xl font-bold text-white tracking-wider hidden sm:block">CORTEX MOMENTUM</a>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8" aria-label="Main Navigation">
+                <a href="#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
+                <a href="case-studies.html" class="text-gray-300 hover:text-white transition-colors">Case Studies</a>
+                <a href="#how-it-works" class="text-gray-300 hover:text-white transition-colors">How It Works</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+            </nav>
+            <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="hidden md:inline-block bg-indigo-400/80 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-400 transition-colors">
+                Start a Conversation
+            </a>
+
+            <div class="md:hidden">
+                <button
+                    @click="mobileMenuOpen = !mobileMenuOpen"
+                    class="text-white focus:outline-none"
+                    aria-controls="mobile-menu"
+                    :aria-expanded="mobileMenuOpen.toString()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        <path x-show="mobileMenuOpen" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" x-show="mobileMenuOpen" x-cloak @click.away="mobileMenuOpen = false"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 transform -translate-y-4"
+             x-transition:enter-end="opacity-100 transform translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 transform translate-y-0"
+             x-transition:leave-end="opacity-0 transform -translate-y-4"
+             class="md:hidden bg-gray-900/90 backdrop-blur-lg absolute top-full left-0 right-0">
+            <nav class="flex flex-col items-center space-y-4 py-8">
+                <a href="#services" @click="mobileMenuOpen = false" class="text-gray-300 hover:text-white transition-colors text-lg px-6 py-3">Services</a>
+                <a href="case-studies.html" @click="mobileMenuOpen = false" class="text-gray-300 hover:text-white transition-colors text-lg px-6 py-3">Case Studies</a>
+                <a href="#how-it-works" @click="mobileMenuOpen = false" class="text-gray-300 hover:text-white transition-colors text-lg px-6 py-3">How It Works</a>
+                <a href="#contact" @click="mobileMenuOpen = false" class="text-gray-300 hover:text-white transition-colors text-lg px-6 py-3">Contact</a>
+                <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" @click="mobileMenuOpen = false" class="mt-4 inline-block bg-indigo-400/80 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-400 transition-colors">
+                    Start a Conversation
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero-bg pt-24 pb-12 sm:pt-28 sm:pb-16" role="region" aria-labelledby="hero-heading">
+            <div class="container mx-auto px-6 text-center">
+                <h1 id="hero-heading" class="text-4xl md:text-6xl font-bold leading-tight text-white">
+                    Stop Guessing. <span class="gradient-text">Start Growing.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mt-6">
+                    We use market intelligence to turn your B2B content and expertise into a predictable sales pipeline.
+                </p>
+                <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="cta-button mt-10 inline-block bg-indigo-500 text-white font-bold text-lg px-8 py-4 rounded-lg">
+                    Discuss a Gateway Project
+                </a>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-20" role="region" aria-labelledby="problem-heading">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 id="problem-heading" class="text-3xl md:text-4xl font-bold text-white">Is Your GTM Based on Data or Assumptions?</h2>
+                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Many B2B leaders operate with an incomplete picture, leading to common pipeline challenges.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <div class="text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-indigo-300 icon-glow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Untapped Content ROI</h3>
+                        <p class="text-gray-400 mt-2">Valuable webinars and podcasts sit unused, generating no long-term pipeline value.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-indigo-300 icon-glow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.962 0L14.25 6h5.25M4.5 19.5v-15a2.25 2.25 0 012.25-2.25h3.75m-5.25 15h10.5a2.25 2.25 0 002.25-2.25v-3.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 13.5v3.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Unpredictable Pipeline</h3>
+                        <p class="text-gray-400 mt-2">Struggling to get in front of qualified decision-makers consistently and at scale.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12 text-indigo-300 icon-glow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 01-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 013.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 013.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 01-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 21.75l-.648-1.188a2.25 2.25 0 01-1.423-1.423L13.5 18.75l1.188-.648a2.25 2.25 0 011.423-1.423L16.25 15l.648 1.188a2.25 2.25 0 011.423 1.423L18.75 18l-1.188.648a2.25 2.25 0 01-1.423 1.423z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white">Messaging Mismatch</h3>
+                        <p class="text-gray-400 mt-2">Unsure if your marketing message truly resonates with your ideal buyers' core motivations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 sm:py-20 bg-black/20" role="region" aria-labelledby="services-heading">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 id="services-heading" class="text-3xl md:text-4xl font-bold text-white">Our Gateway Services</h2>
+                    <p class="text-lg text-gray-400 mt-4 max-w-4xl mx-auto">We solve your most immediate pipeline challenges with two focused, fixed-scope projects. They are designed to accelerate your growth, whether your priority is attracting customers with valuable content <span class="text-indigo-300 font-semibold">(inbound)</span> or directly engaging ideal buyers <span class="text-indigo-300 font-semibold">(outbound)</span>.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                    <div class="card p-8 rounded-2xl flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">For Inbound Growth & Market Authority</h3>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Content-to-Pipeline Sprint</h4>
+                        <p class="text-gray-400 mt-3 flex-grow">We transform your best existing content (like webinars and podcasts) into a suite of strategic assets designed to attract your ideal buyers and build a long-term lead generation engine.</p>
+                        <div class="mt-6">
+                            <a href="case-studies.html" class="font-semibold text-white bg-white/10 px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">See a Case Study &rarr;</a>
+                        </div>
+                    </div>
+                    <div class="card p-8 rounded-2xl flex flex-col">
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">For Outbound Growth & Direct Engagement</h3>
+                        </div>
+                        <h4 class="text-2xl font-bold text-white">Strategic Connector Service</h4>
+                        <p class="text-gray-400 mt-3 flex-grow">We secure warm introductions with qualified, in-market decision-makers on your behalf. We handle the intelligence, messaging, and outreach to fill your calendar with high-value meetings.</p>
+                        <div class="mt-6">
+                            <a href="case-studies.html" class="font-semibold text-white bg-white/10 px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">See a Case Study &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="py-16 sm:py-24" role="region" aria-labelledby="how-it-works-heading">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 id="how-it-works-heading" class="text-3xl md:text-4xl font-bold text-white">Powered by the <span class="gradient-text">Cortex Intelligence Engine</span></h2>
+                    <p class="text-lg text-gray-400 mt-6">
+                        Our services are not guesswork. They are powered by a proprietary intelligence platform that analyzes 47+ data sources in real-time. This is our process for turning scattered market data into your decisive competitive advantage.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto mt-20 text-center">
+                    <div>
+                        <div class="text-5xl font-bold gradient-text mb-4">1</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Market Intelligence Analysis</h3>
+                        <p class="text-gray-400">We start with a forensic examination of your market, analyzing your competitors' digital footprints and synthesizing customer reviews to understand market-wide sentiment.</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold gradient-text mb-4">2</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Strategic Opportunity Mapping</h3>
+                        <p class="text-gray-400">We translate raw data into strategic insights. We identify service gaps, underserved niches, and the core pain points your messaging must address to win.</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold gradient-text mb-4">3</div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Actionable GTM Blueprint</h3>
+                        <p class="text-gray-400">The output is a clear, data-driven action plan. We provide the precise messaging, targeting, and offers needed to build a predictable pipeline and accelerate your growth.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <a href="case-studies.html" class="font-semibold text-indigo-300 hover:text-white transition-colors">See the Results of Our Process &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 sm:py-20 bg-black/20" role="region" aria-labelledby="contact-heading">
+            <div class="container mx-auto px-6 text-center">
+                <h2 id="contact-heading" class="text-4xl md:text-5xl font-bold text-white">Ready to Build Your Advantage?</h2>
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mt-6">
+                    Let's start with a focused gateway project to prove our value and solve an immediate pipeline challenge.
+                </p>
+                <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="cta-button mt-10 inline-block bg-indigo-500 text-white font-bold text-lg px-8 py-4 rounded-lg">
+                    Start a Conversation
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10" role="contentinfo">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <p>&copy; 2025 Cortex Momentum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // -- Performance Monitoring: Core Web Vitals --
+            const logVitals = () => {
+                if (!window.PerformanceObserver) return;
+
+                // Largest Contentful Paint (LCP)
+                new PerformanceObserver(entryList => {
+                    const entries = entryList.getEntries();
+                    const lastEntry = entries[entries.length - 1];
+                    console.log('LCP:', lastEntry.renderTime || lastEntry.loadTime);
+                }).observe({ type: 'largest-contentful-paint', buffered: true });
+
+                // First Input Delay (FID)
+                new PerformanceObserver(entryList => {
+                    entryList.getEntries().forEach(entry => console.log('FID:', entry.processingStart - entry.startTime));
+                }).observe({ type: 'first-input', buffered: true });
+
+                // Cumulative Layout Shift (CLS)
+                let clsScore = 0;
+                new PerformanceObserver(entryList => {
+                    for (const entry of entryList.getEntries()) {
+                        if (!entry.hadRecentInput) {
+                            clsScore += entry.value;
+                        }
+                    }
+                    console.log('CLS:', clsScore);
+                }).observe({ type: 'layout-shift', buffered: true });
+            };
+
+            // -- Performance: Prefetch on hover --
+            const prefetchLinks = () => {
+                const links = document.querySelectorAll('a[href^="/"], a[href^="case-studies"]');
+                const prefetcher = e => {
+                    const href = e.currentTarget.getAttribute('href');
+                    if (href && !document.querySelector(`link[rel="prefetch"][href="${href}"]`)) {
+                        const link = document.createElement('link');
+                        link.rel = 'prefetch';
+                        link.href = href;
+                        document.head.appendChild(link);
+                    }
+                };
+                links.forEach(link => {
+                    link.addEventListener('mouseenter', prefetcher, { once: true, passive: true });
+                });
+            };
+
+            // -- PWA: Register Service Worker --
+            const registerServiceWorker = () => {
+                if ('serviceWorker' in navigator) {
+                    window.addEventListener('load', () => {
+                        navigator.serviceWorker.register('/sw.js')
+                            .then(reg => console.log('Service Worker registered successfully.'))
+                            .catch(err => console.log('Service Worker registration failed:', err));
+                    });
+                }
+            };
+
+            // Run all scripts
+            logVitals();
+            prefetchLinks();
+            registerServiceWorker();
+        });
+    </script>
+</body>
+</html>

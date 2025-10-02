@@ -1,0 +1,11 @@
+<svg width="120" height="48" viewBox="0 0 120 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#A5B4FC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C7D2FE;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="120" height="48" rx="6" fill="url(#logoGradient)"/>
+  <text x="60" y="18" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">CORTEX</text>
+  <text x="60" y="34" text-anchor="middle" fill="white" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="500">MOMENTUM</text>
+</svg>
