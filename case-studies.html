@@ -144,19 +144,19 @@
         role="banner"
         class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         :class="scrolled ? 'bg-black/50 backdrop-blur-lg shadow-lg' : 'bg-black/30 backdrop-blur-md'">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
                 <img src="logo.png" alt="Cortex Momentum - Strategic Intelligence for Founders" class="h-12 w-auto" loading="eager">
                 <a href="index.html" class="text-xl font-bold text-white tracking-wider hidden sm:block">CORTEX MOMENTUM</a>
             </div>
 
-            <nav class="hidden md:flex items-center space-x-8" aria-label="Main Navigation">
+            <nav class="hidden md:flex items-center space-x-6" aria-label="Main Navigation">
                 <a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">Services</a>
                 <a href="case-studies.html" class="gradient-text font-semibold" aria-current="page">Case Studies</a>
                 <a href="index.html#how-it-works" class="text-gray-300 hover:text-white transition-colors">How It Works</a>
                 <a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
             </nav>
-            <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="hidden md:inline-block bg-indigo-400/80 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-400 transition-colors">
+            <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="hidden md:flex items-center justify-center bg-indigo-400/80 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-400 transition-colors">
                 Start a Conversation
             </a>
 
@@ -202,17 +202,17 @@
             </div>
         </section>
 
-        <section class="pb-8" aria-label="Case Study Filters" x-data="{ activeFilter: 'All' }">
+        <section class="pb-8" aria-label="Case Study Filters">
             <div class="container mx-auto px-6">
                 <div class="mb-8">
                     <p class="text-lg text-gray-300 mb-4">Find Your Situation:</p>
                     <div class="flex flex-wrap gap-3">
-                        <button @click="activeFilter = 'All'" :class="activeFilter === 'All' ? 'bg-indigo-500 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'" class="px-4 py-2 rounded-lg font-semibold transition-colors">All</button>
-                        <button @click="activeFilter = 'Pre-Revenue'" :class="activeFilter === 'Pre-Revenue' ? 'bg-indigo-500 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'" class="px-4 py-2 rounded-lg font-semibold transition-colors">Pre-Revenue</button>
-                        <button @click="activeFilter = 'Growth Stage'" :class="activeFilter === 'Growth Stage' ? 'bg-indigo-500 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'" class="px-4 py-2 rounded-lg font-semibold transition-colors">Growth Stage</button>
-                        <button @click="activeFilter = 'Crisis/Pivot'" :class="activeFilter === 'Crisis/Pivot' ? 'bg-indigo-500 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'" class="px-4 py-2 rounded-lg font-semibold transition-colors">Crisis/Pivot</button>
-                        <button @click="activeFilter = 'SaaS'" :class="activeFilter === 'SaaS' ? 'bg-indigo-500 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'" class="px-4 py-2 rounded-lg font-semibold transition-colors">SaaS</button>
-                        <button @click="activeFilter = 'Professional Services'" :class="activeFilter === 'Professional Services' ? 'bg-indigo-500 text-white' : 'bg-white/10 text-gray-300 hover:bg-white/20'" class="px-4 py-2 rounded-lg font-semibold transition-colors">Professional Services</button>
+                        <a href="#case-pre-revenue" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Pre-Revenue</a>
+                        <a href="#case-b2b-consulting" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Growth Stage</a>
+                        <a href="#case-rng-pivot" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Crisis/Pivot</a>
+                        <a href="#case-investor-sprint" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Investor Readiness</a>
+                        <a href="#case-market-entry" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">International Expansion</a>
+                        <a href="#case-wind-pricing" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Pricing Strategy</a>
                     </div>
                 </div>
             </div>
@@ -224,12 +224,12 @@
                     <h2 id="gateway-heading" class="text-3xl font-bold text-white">Quick Wins (2-12 Weeks)</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <article class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                    <article id="case-pre-revenue" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
                         <div class="flex flex-wrap gap-2 mb-4" role="list">
                             <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">GATEWAY PROJECT - INBOUND</span>
                         </div>
 
-                        <h4 class="text-2xl font-bold text-white mb-2">PRE-REVENUE SAAS → FIRST CUSTOMERS IN 6 MONTHS</h4>
+                        <h4 class="text-2xl font-bold text-white mb-2">PRE-REVENUE SAAS → FROM 0% CONVERSION CAMPAIGN TO FIRST CUSTOMERS</h4>
                         <p class="text-indigo-300 italic mb-4">"Market data revealed our buyers cared about deal velocity, not cost savings"</p>
 
                         <div class="flex-grow space-y-4">
@@ -264,7 +264,7 @@
 
                         <div class="mt-6 pt-6 border-t border-white/20">
                             <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-1" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
-                                <span x-text="expanded ? 'Expand for detailed methodology →' : '↑ Collapse'"></span>
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
                         <div id="details-1" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
@@ -278,7 +278,7 @@
                         </div>
                     </article>
 
-                    <article class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                    <article id="case-b2b-consulting" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
                         <div class="flex flex-wrap gap-2 mb-4" role="list">
                             <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">GATEWAY PROJECT - OUTBOUND</span>
                         </div>
@@ -318,7 +318,7 @@
 
                         <div class="mt-6 pt-6 border-t border-white/20">
                             <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-2" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
-                                <span x-text="expanded ? 'Expand for detailed methodology →' : '↑ Collapse'"></span>
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
                         <div id="details-2" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
@@ -341,7 +341,7 @@
                     <h2 id="core-heading" class="text-3xl font-bold text-white">Strategic Pivots (30-90 Days)</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                    <article id="case-rng-pivot" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
                         <div class="flex flex-wrap gap-2 mb-4" role="list">
                             <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">STRATEGIC PIVOT</span>
                         </div>
@@ -381,7 +381,7 @@
 
                         <div class="mt-6 pt-6 border-t border-white/20">
                             <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-3" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
-                                <span x-text="expanded ? 'Expand for detailed methodology →' : '↑ Collapse'"></span>
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
                         <div id="details-3" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
@@ -391,6 +391,168 @@
                                 <li>Capability Gap Analysis: Validated existing technology could serve premium market with minor modifications</li>
                                 <li>Strategic Certainty: Replaced board's "gut feel" with data-backed decision framework</li>
                                 <li>Timeline: 5-day intelligence sprint vs. 3-6 month traditional consulting timeline</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article id="case-investor-sprint" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">INVESTOR READINESS</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">RENEWABLE ENERGY MANUFACTURER → FROM $30M PIPELINE TO TARGETED INVESTOR ROADMAP</h4>
+                        <p class="text-indigo-300 italic mb-4">"A validated shortlist of 25 high-fit capital partners replaced six months of random meetings"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">Proven product with $30M pipeline hitting cash flow wall. Needed right investors without wasting six months on fruitless meetings.</p>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
+                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
+                                    <li><strong class="text-gray-200">Investment Thesis Analysis:</strong> Analyzed 500+ VC, PE, and Family Office investment theses</li>
+                                    <li><strong class="text-gray-200">Network Mapping:</strong> Identified warmest paths to key partners at target funds</li>
+                                    <li><strong class="text-gray-200">Strategic Investor Discovery:</strong> Found three strategic investors they hadn't considered</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Validated shortlist: 25 high-fit capital partners with detailed dossiers</li>
+                                    <li>Network intelligence: Warm introduction paths identified</li>
+                                    <li>Outcome: Hyper-targeted capital raise, months of wasted effort saved</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
+                                <p class="text-gray-400">Targeted investor roadmap with partner dossiers, recent investment analysis, and strategic questions preparation</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-4" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-4" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Analyzed recent funding announcements in adjacent hardware and software sectors</li>
+                                <li>Mapped public statements and market focus of potential strategic investors</li>
+                                <li>Created network maps showing warmest introduction paths</li>
+                                <li>Identified specific strategic questions investors were likely to ask</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article id="case-market-entry" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">INTERNATIONAL EXPANSION</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">UK RENEWABLE ENERGY CO → US VS. SINGAPORE MARKET ENTRY STRATEGY</h4>
+                        <p class="text-indigo-300 italic mb-4">"Singapore beachhead strategy to fund larger US entry in 18-24 months"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">Successful UK company faced critical choice: US or Singapore for international expansion. Wrong decision would burn millions.</p>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
+                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
+                                    <li><strong class="text-gray-200">Incentive Analysis:</strong> State/federal US incentives vs. Singapore free trade zone benefits</li>
+                                    <li><strong class="text-gray-200">Competitive Landscape:</strong> Saturation levels and competitive intensity in both regions</li>
+                                    <li><strong class="text-gray-200">Supply Chain Mapping:</strong> Logistics pathways from UK manufacturing base</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Strategic insight: Singapore offered faster path to profitability</li>
+                                    <li>Phased approach: Establish profitable Singapore beachhead first</li>
+                                    <li>Outcome: Board approved data-driven multi-million dollar expansion decision</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
+                                <p class="text-gray-400">Complete market entry strategy with regulatory analysis, competitive positioning, and phased expansion roadmap</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-5" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-5" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Analyzed top 10 US markets state and federal incentive structures</li>
+                                <li>Assessed regulatory and policy stability in each potential market</li>
+                                <li>Quantified competitive saturation and market entry barriers</li>
+                                <li>Modeled supply chain costs and logistics from UK base to each market</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article id="case-wind-pricing" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">PRICING STRATEGY</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">WIND ENERGY STARTUP → PRICING A DISRUPTIVE TECHNOLOGY</h4>
+                        <p class="text-indigo-300 italic mb-4">"$38-$42/MWh competitive price point anchored financial models for gigawatt-scale projects"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">Tech executive founder with breakthrough wind technology facing opportunity overload. Needed pricing strategy, ICP, and sales playbook while consumed by financing round.</p>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
+                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
+                                    <li><strong class="text-gray-200">Market Analysis:</strong> Analyzed Texas ERCOT market for competitive pricing benchmarks</li>
+                                    <li><strong class="text-gray-200">Value Positioning:</strong> Confirmed speed-to-deployment as most powerful competitive advantage</li>
+                                    <li><strong class="text-gray-200">Risk-Adjusted Strategy:</strong> Balanced first-of-a-kind technology risk with pricing</li>
+                                </ol>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Competitive pricing: $38-$42/MWh benchmark for 2027 projects</li>
+                                    <li>Risk mitigation: 15-25% discount strategy for flagship projects</li>
+                                    <li>Outcome: Concrete numbers for financial models and investor discussions</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
+                                <p class="text-gray-400">Data-backed pricing framework, competitive positioning analysis, and sales playbook foundation</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-6" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-6" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Analyzed hyperscaler, data center, and Department of Defense market opportunities</li>
+                                <li>Validated customer segmentation for first-of-a-kind technology adoption</li>
+                                <li>Identified primary customer concern (technology risk) and mitigation strategies</li>
+                                <li>Demonstrated repeatable process for building complete sales playbook</li>
                             </ul>
                         </div>
                     </article>
@@ -404,7 +566,7 @@
                     <h2 id="credibility-heading" class="text-3xl font-bold text-white mb-8">Our Track Record</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                         <div>
-                            <p class="text-4xl font-bold gradient-text">50+</p>
+                            <p class="text-4xl font-bold gradient-text">500+</p>
                             <p class="text-gray-400 mt-2">Market intelligence analyses delivered since 2021</p>
                         </div>
                         <div>
@@ -412,7 +574,7 @@
                             <p class="text-gray-400 mt-2">Pipeline growth (outbound projects)</p>
                         </div>
                         <div>
-                            <p class="text-4xl font-bold gradient-text">30-90</p>
+                            <p class="text-4xl font-bold gradient-text">14-28</p>
                             <p class="text-gray-400 mt-2">Days to first customer (inbound projects)</p>
                         </div>
                     </div>
@@ -447,16 +609,13 @@
                         </div>
                     </div>
 
-                    <div class="mt-12 flex justify-center gap-4 flex-wrap">
-                        <a href="#contact" class="bg-indigo-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-indigo-600 transition-colors">Describe Your Challenge</a>
-                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="py-20 sm:py-24 bg-black/20" aria-labelledby="cta-heading">
             <div class="container mx-auto px-6 text-center">
-                <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold text-white">Ready to Start?</h2>
+                <h2 id="cta-heading" class="text-4xl md:text-5xl font-bold text-white mb-8">Ready to Build Your Pipeline Blueprint?</h2>
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mt-6">
                     Book a 20-minute discovery call to:<br><br>
                     • Discuss your specific pipeline or market challenge<br>
@@ -464,8 +623,11 @@
                     • Determine if our intelligence process is a fit
                 </p>
                 <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="cta-button mt-10 inline-block bg-indigo-500 text-white font-bold text-lg px-8 py-4 rounded-lg">
-                    Book Discovery Call
+                    Get My Free Market Analysis
                 </a>
+                <div class="mt-6">
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="text-indigo-300 hover:text-white transition-colors">Or book a 20-min discovery call →</a>
+                </div>
                 <p class="text-gray-400 text-sm mt-6">
                     No sales pitch. No pressure. Just a conversation about whether<br>our data-driven approach matches your needs.
                 </p>
