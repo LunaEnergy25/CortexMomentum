@@ -207,138 +207,19 @@
                 <div class="mb-8">
                     <p class="text-lg text-gray-300 mb-4">Find Your Situation:</p>
                     <div class="flex flex-wrap gap-3">
-                        <a href="#case-pre-revenue" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Pre-Revenue</a>
-                        <a href="#case-b2b-consulting" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Growth Stage</a>
-                        <a href="#case-rng-pivot" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Crisis/Pivot</a>
-                        <a href="#case-investor-sprint" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Investor Readiness</a>
-                        <a href="#case-market-entry" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">International Expansion</a>
-                        <a href="#case-wind-pricing" class="bg-white/10 text-gray-300 hover:bg-indigo-500 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors">Pricing Strategy</a>
+                        <a href="#tier-crisis" class="bg-red-900/30 text-red-300 hover:bg-red-600 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors border border-red-700/50">⚠️ Crisis/Urgent Timeline</a>
+                        <a href="#tier-growth" class="bg-blue-900/30 text-blue-300 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors border border-blue-700/50">📈 Accelerating Growth</a>
+                        <a href="#tier-strategic" class="bg-purple-900/30 text-purple-300 hover:bg-purple-600 hover:text-white px-4 py-2 rounded-lg font-semibold transition-colors border border-purple-700/50">🎯 Strategic Expansion</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="pb-16" aria-labelledby="gateway-heading">
-            <div class="container mx-auto px-6">
-                <div class="mb-12">
-                    <h2 id="gateway-heading" class="text-3xl font-bold text-white">Quick Wins (2-12 Weeks)</h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <article id="case-pre-revenue" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
-                        <div class="flex flex-wrap gap-2 mb-4" role="list">
-                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">GATEWAY PROJECT - INBOUND</span>
-                        </div>
-
-                        <h4 class="text-2xl font-bold text-white mb-2">PRE-REVENUE SAAS → FROM 0% CONVERSION CAMPAIGN TO FIRST CUSTOMERS</h4>
-                        <p class="text-indigo-300 italic mb-4">"Market data revealed our buyers cared about deal velocity, not cost savings"</p>
-
-                        <div class="flex-grow space-y-4">
-                            <div>
-                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
-                                <p class="text-gray-400">Founder with 6 months runway, drowning in conflicting data, unable to identify path to first customers.</p>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
-                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">Market Analysis:</strong> Filtered noise to identify Brownfield redevelopment as high-potential niche</li>
-                                    <li><strong class="text-gray-200">Buyer Research:</strong> Uncovered that deal velocity (not cost) was primary decision driver</li>
-                                    <li><strong class="text-gray-200">GTM Blueprint:</strong> Created messaging framework with quantified hooks</li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
-                                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                                    <li>Market niche: Brownfield redevelopment microgrids (previously overlooked)</li>
-                                    <li>Messaging shift: From "cost savings" to "3-5x faster deal closure"</li>
-                                    <li>Outcome: Clear path from MVP to first revenue</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
-                                <p class="text-gray-400">GTM blueprint with 3 core sales hooks, buyer persona framework, and 90-day execution roadmap</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 pt-6 border-t border-white/20">
-                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-1" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
-                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
-                            </button>
-                        </div>
-                        <div id="details-1" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
-                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
-                            <ul class="list-disc list-inside space-y-2">
-                                <li>Analyzed 200+ project RFPs to identify timing patterns</li>
-                                <li>Interviewed 12 potential buyers to validate velocity hypothesis</li>
-                                <li>Mapped 15 competitor positioning strategies</li>
-                                <li>Identified 3 underserved sub-niches within Brownfield category</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article id="case-b2b-consulting" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
-                        <div class="flex flex-wrap gap-2 mb-4" role="list">
-                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">GATEWAY PROJECT - OUTBOUND</span>
-                        </div>
-
-                        <h4 class="text-2xl font-bold text-white mb-2">B2B CONSULTING FIRM → 2x PIPELINE IN 90 DAYS</h4>
-                        <p class="text-indigo-300 italic mb-4">"Multi-channel outreach delivered 6+ qualified meetings per month"</p>
-
-                        <div class="flex-grow space-y-4">
-                            <div>
-                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
-                                <p class="text-gray-400">Consulting firm had a powerful offer but no predictable way to get in front of qualified decision-makers.</p>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
-                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">ICP Analysis:</strong> Shifted focus to established firms ($1M-$5M revenue) already investing in growth</li>
-                                    <li><strong class="text-gray-200">Offer Design:</strong> Created low-risk starter offer (customer list reactivation) to prove value in under 30 days</li>
-                                    <li><strong class="text-gray-200">Multi-Channel Outreach:</strong> Secured warm introductions through targeted outreach strategy</li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Key Metrics:</h5>
-                                <ul class="list-disc list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">From:</strong> Inconsistent outreach → <strong class="text-gray-200">To:</strong> 6+ qualified meetings/month</li>
-                                    <li><strong class="text-gray-200">Pipeline growth:</strong> 2x in 90 days</li>
-                                    <li><strong class="text-gray-200">Time to first meeting:</strong> 14 days</li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
-                                <p class="text-gray-400">Consistent pipeline of 6+ qualified meetings per month with multi-channel outreach playbook</p>
-                            </div>
-                        </div>
-
-                        <div class="mt-6 pt-6 border-t border-white/20">
-                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-2" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
-                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
-                            </button>
-                        </div>
-                        <div id="details-2" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
-                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
-                            <ul class="list-disc list-inside space-y-2">
-                                <li>Identified 200+ target companies matching refined ICP criteria</li>
-                                <li>Developed value-anchored pricing that made core offer 40% more accessible</li>
-                                <li>Implemented multi-channel strategy: LinkedIn + Email + Strategic Partners</li>
-                                <li>Created "Fast Win" proof-of-concept offer with 30-day delivery timeline</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16" aria-labelledby="core-heading">
-            <div class="container mx-auto px-6">
-                <div class="mb-12">
-                    <h2 id="core-heading" class="text-3xl font-bold text-white">Strategic Pivots (30-90 Days)</h2>
+        <section id="tier-crisis" class="pb-16 bg-red-950/10" aria-labelledby="crisis-heading">
+            <div class="container mx-auto px-6 pt-16">
+                <div class="mb-12 text-center">
+                    <h2 id="crisis-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">When Time is Critical</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">Crisis situations demand rapid, data-driven solutions. These companies faced existential threats and tight deadlines—traditional consulting wasn't an option.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <article id="case-rng-pivot" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
@@ -346,45 +227,49 @@
                             <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">STRATEGIC PIVOT</span>
                         </div>
 
-                        <h4 class="text-2xl font-bold text-white mb-2">RENEWABLE GAS COMPANY → MARKET PIVOT IN 45 DAYS</h4>
-                        <p class="text-indigo-300 italic mb-4">"Regulatory analysis identified SAF opportunity before market collapse"</p>
+                        <h4 class="text-2xl font-bold text-white mb-2">45-DAY ULTIMATUM, 5-DAY SOLUTION: RNG COMPANY PIVOTS AFTER MARKET COLLAPSE</h4>
+                        <p class="text-red-300 italic mb-4">"Bypassing a $120k, 3-month consultant study, we delivered a board-ready plan in 5 days"</p>
 
                         <div class="flex-grow space-y-4">
                             <div>
-                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
-                                <p class="text-gray-400">Core market collapsed, 45-day board ultimatum, company needed new business model to survive.</p>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
-                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">Regulatory Analysis:</strong> Analyzed 200+ regulatory changes in 5 days to identify SAF opportunity</li>
-                                    <li><strong class="text-gray-200">Capability Mapping:</strong> Confirmed existing technology could serve premium SAF market with modifications</li>
-                                    <li><strong class="text-gray-200">Pivot Blueprint:</strong> Created data-backed strategic pivot path for board approval</li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
                                 <ul class="list-disc list-inside space-y-2 text-gray-400">
-                                    <li>Market opportunity: Sustainable Aviation Fuel (SAF) high-margin sector identified</li>
-                                    <li>Analysis speed: 5 days vs. months of traditional consulting</li>
-                                    <li>Outcome: Board-approved pivot that saved the company</li>
+                                    <li>Delivered Actionable Pivot Strategy in 5 Days</li>
+                                    <li>Identified High-Demand Sustainable Aviation Fuel (SAF) Market</li>
+                                    <li>Avoided Prohibitive $120k, 3-Month Consultant Study</li>
+                                    <li>Provided Clear, Board-Ready Action Plan</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
-                                <p class="text-gray-400">Complete market pivot strategy with regulatory analysis, capability assessment, and growth roadmap</p>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">A $50M renewable natural gas company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days or face dissolution.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Imminent Extinction:</strong> 45-day deadline from the board</li>
+                                    <li><strong class="text-gray-200">Outdated Intelligence:</strong> Industry reports 3-12 months old</li>
+                                    <li><strong class="text-gray-200">Prohibitive Costs:</strong> Traditional consulting quoted 3 months and $120k</li>
+                                    <li><strong class="text-gray-200">Strategic Paralysis:</strong> Drowning in complex variables with no clear signal</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">Through a full strategic engagement, we deployed The Clarity Engine to conduct rapid analysis of global markets, alternative technologies, and regulatory landscapes.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">High-Potential Market Identified:</strong> European SAF regulations creating massive demand</li>
+                                    <li><strong class="text-gray-200">Clear Pivot Pathway:</strong> Existing technology could serve premium market with modifications</li>
+                                    <li><strong class="text-gray-200">Comprehensive Risk Assessment:</strong> Deep dives into alternative feedstocks and 200+ regulatory changes</li>
+                                    <li><strong class="text-gray-200">Board-Ready Strategy:</strong> Clear plan with go/no-go recommendations within 45-day window</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="mt-6 pt-6 border-t border-white/20">
-                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-3" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-1" class="text-red-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
                                 <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
-                        <div id="details-3" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                        <div id="details-1" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
                             <h5 class="font-bold text-white">Detailed Analysis:</h5>
                             <ul class="list-disc list-inside space-y-2">
                                 <li>Signal Identification: European SAF regulations revealed massive immediate demand for renewable gas inputs</li>
@@ -395,110 +280,250 @@
                         </div>
                     </article>
 
-                    <article id="case-investor-sprint" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                    <article id="case-pre-revenue" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
                         <div class="flex flex-wrap gap-2 mb-4" role="list">
-                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">INVESTOR READINESS</span>
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">PRE-REVENUE SAAS</span>
                         </div>
 
-                        <h4 class="text-2xl font-bold text-white mb-2">RENEWABLE ENERGY MANUFACTURER → FROM $30M PIPELINE TO TARGETED INVESTOR ROADMAP</h4>
-                        <p class="text-indigo-300 italic mb-4">"A validated shortlist of 25 high-fit capital partners replaced six months of random meetings"</p>
+                        <h4 class="text-2xl font-bold text-white mb-2">6 MONTHS OF RUNWAY LEFT: GO-TO-MARKET PLAN FOR PRE-REVENUE SAAS</h4>
+                        <p class="text-red-300 italic mb-4">"We identified an underserved niche and uncovered the true buyer motivation—deal velocity, not cost"</p>
 
                         <div class="flex-grow space-y-4">
                             <div>
-                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
-                                <p class="text-gray-400">Proven product with $30M pipeline hitting cash flow wall. Needed right investors without wasting six months on fruitless meetings.</p>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
-                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">Investment Thesis Analysis:</strong> Analyzed 500+ VC, PE, and Family Office investment theses</li>
-                                    <li><strong class="text-gray-200">Network Mapping:</strong> Identified warmest paths to key partners at target funds</li>
-                                    <li><strong class="text-gray-200">Strategic Investor Discovery:</strong> Found three strategic investors they hadn't considered</li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
                                 <ul class="list-disc list-inside space-y-2 text-gray-400">
-                                    <li>Validated shortlist: 25 high-fit capital partners with detailed dossiers</li>
-                                    <li>Network intelligence: Warm introduction paths identified</li>
-                                    <li>Outcome: Hyper-targeted capital raise, months of wasted effort saved</li>
+                                    <li>Pinpointed a High-Potential Niche Market</li>
+                                    <li>Uncovered Core Buyer Motivations</li>
+                                    <li>Developed Data-Backed Messaging & Sales Hooks</li>
+                                    <li>Created a Clear Path to Inbound Leads</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
-                                <p class="text-gray-400">Targeted investor roadmap with partner dossiers, recent investment analysis, and strategic questions preparation</p>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">A pre-revenue, engineer-led cleantech SaaS startup with a promising MVP for microgrid developers had only six months of runway to find its first real customers.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Market Confusion:</strong> Drowning in conflicting industry news, unable to separate signal from noise</li>
+                                    <li><strong class="text-gray-200">Messaging Uncertainty:</strong> Didn't know what content or sales hooks would resonate with target buyers</li>
+                                    <li><strong class="text-gray-200">Urgent Need for Validation:</strong> Required design partner before funding ran out</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">In a single Strategic Sprint, we deployed our AI-powered intelligence platform to analyze their target market and filter through industry noise.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">High-Potential Niche:</strong> Brownfield redevelopment projects as underserved niche</li>
+                                    <li><strong class="text-gray-200">Core Buyer Motivation:</strong> #1 driver was deal velocity, not cost savings</li>
+                                    <li><strong class="text-gray-200">Top 3 Messaging Pillars:</strong> Speed, Compliance, and Guarantees</li>
+                                    <li><strong class="text-gray-200">10+ Sales Hooks:</strong> Data-backed messaging like "Close deals 3-5x faster"</li>
+                                    <li><strong class="text-gray-200">Path to Inbound:</strong> Framework to shift from cold outreach to content-led approach</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="mt-6 pt-6 border-t border-white/20">
-                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-4" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-2" class="text-red-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-2" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Analyzed 200+ project RFPs to identify timing patterns</li>
+                                <li>Interviewed 12 potential buyers to validate velocity hypothesis</li>
+                                <li>Mapped 15 competitor positioning strategies</li>
+                                <li>Identified 3 underserved sub-niches within Brownfield category</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article id="case-hvac-agency" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">HVAC AGENCY</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">6,000 FAILED EMAILS TO FIRST CLIENTS: PLAYBOOK THAT SAVED A NEW HVAC AGENCY</h4>
+                        <p class="text-red-300 italic mb-4">"Wrong clients, wrong offer. We provided a new ICP, a 'fast win' service, and value-based pricing"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>0% to Positive ROI on Outreach</li>
+                                    <li>Identified High-Value Customer Profile</li>
+                                    <li>Created a "Fast Win" Low-Risk Offer</li>
+                                    <li>Delivered a Complete Go-to-Market Playbook</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">A new two-person digital marketing agency, founded by an expert with over six years of HVAC industry experience, was struggling to land its first clients despite deep industry knowledge.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Zero ROI:</strong> 6,000+ cold emails over two months with 0% conversion rate</li>
+                                    <li><strong class="text-gray-200">Wrong Targets:</strong> Focusing on small, offline contractors requiring education</li>
+                                    <li><strong class="text-gray-200">High-Friction Offer:</strong> Complex website builds created immediate resistance</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">In a single Strategic Sprint, we diagnosed root causes and provided a complete operational blueprint to attract high-value clients.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">High-Value ICP:</strong> Shifted to established companies ($1M-$5M revenue) already investing in growth</li>
+                                    <li><strong class="text-gray-200">"Fast Win" Starter Offer:</strong> Customer list reactivation to prove value in under 30 days</li>
+                                    <li><strong class="text-gray-200">Value-Anchored Pricing:</strong> Redesigned packages with high-ticket premium option</li>
+                                    <li><strong class="text-gray-200">Relationship-Building Strategy:</strong> Provide value upfront with relevant industry insights</li>
+                                    <li><strong class="text-gray-200">Urgent Timeline:</strong> Identified critical 45-day seasonal window for HVAC deals</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-3" class="text-red-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-3" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Identified 200+ target companies matching refined ICP criteria</li>
+                                <li>Developed value-anchored pricing that made core offer 40% more accessible</li>
+                                <li>Implemented multi-channel strategy: LinkedIn + Email + Strategic Partners</li>
+                                <li>Created "Fast Win" proof-of-concept offer with 30-day delivery timeline</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors">
+                        Get Your Emergency Strategy Session
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tier-growth" class="py-16 bg-blue-950/10" aria-labelledby="growth-heading">
+            <div class="container mx-auto px-6">
+                <div class="mb-12 text-center">
+                    <h2 id="growth-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">Accelerating Growth</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">Working but not optimal. These companies sought competitive advantages and scalable systems to dominate their markets.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article id="case-electrical-contractor" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">COMPETITIVE STRATEGY</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">CONTRACTOR DITCHED 20+ BIDDERS AND RAISED PRICES BY 15%</h4>
+                        <p class="text-blue-300 italic mb-4">"We found and dominated the 'soft spots' everyone else was ignoring"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Achieved 15% Strategic Price Increase</li>
+                                    <li>Eliminated Competition from 20+ Bidders</li>
+                                    <li>Identified Untapped Geographic "Soft Spots"</li>
+                                    <li>Lowered Customer Acquisition Costs</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">An established electrical contractor serving a major metropolitan area was facing stalling growth in a hyper-competitive market.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Crushed Margins:</strong> Regularly bidding against 20+ competitors for same jobs</li>
+                                    <li><strong class="text-gray-200">Wasted Marketing:</strong> Rising ad costs yielding fewer qualified leads</li>
+                                    <li><strong class="text-gray-200">Commoditized Service:</strong> Trapped in cycle of competing solely on price</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">In a single Strategic Sprint, we deployed our AI-powered platform to analyze the market and focus on competitor blind spots.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Geographic "Soft Spots":</strong> Mapped underserved area codes and neighborhoods with lower competition</li>
+                                    <li><strong class="text-gray-200">Top 3 Customer Pains:</strong> Messy cleanup, late arrivals, unexpected price increases</li>
+                                    <li><strong class="text-gray-200">Powerful Messaging:</strong> Guarantees to directly resolve all three pain points</li>
+                                    <li><strong class="text-gray-200">Precision Targeting:</strong> Shifted ad spend to underserved "soft spots"</li>
+                                    <li><strong class="text-gray-200">Strategic Price Increase:</strong> Bypassed bidding wars with 15% price increase</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-4" class="text-blue-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
                                 <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
                         <div id="details-4" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
                             <h5 class="font-bold text-white">Detailed Analysis:</h5>
                             <ul class="list-disc list-inside space-y-2">
-                                <li>Analyzed recent funding announcements in adjacent hardware and software sectors</li>
-                                <li>Mapped public statements and market focus of potential strategic investors</li>
-                                <li>Created network maps showing warmest introduction paths</li>
-                                <li>Identified specific strategic questions investors were likely to ask</li>
+                                <li>Analyzed hundreds of competitor reviews to identify universal complaints</li>
+                                <li>Mapped competitive landscape with street-level precision</li>
+                                <li>Created differentiated messaging addressing all three major pain points</li>
+                                <li>Developed precision-targeted marketing strategy for underserved zones</li>
                             </ul>
                         </div>
                     </article>
 
-                    <article id="case-market-entry" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                    <article id="case-solar-hardware" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
                         <div class="flex flex-wrap gap-2 mb-4" role="list">
-                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">INTERNATIONAL EXPANSION</span>
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">GROWTH BLUEPRINT</span>
                         </div>
 
-                        <h4 class="text-2xl font-bold text-white mb-2">UK RENEWABLE ENERGY CO → US VS. SINGAPORE MARKET ENTRY STRATEGY</h4>
-                        <p class="text-indigo-300 italic mb-4">"Singapore beachhead strategy to fund larger US entry in 18-24 months"</p>
+                        <h4 class="text-2xl font-bold text-white mb-2">FROM 'INVOLUNTARY NONPROFIT' TO 40% MARGIN: SOLAR HARDWARE STARTUP</h4>
+                        <p class="text-blue-300 italic mb-4">"We focused scattered nationwide efforts on 3 high-potential metro areas with sustainable pricing"</p>
 
                         <div class="flex-grow space-y-4">
                             <div>
-                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
-                                <p class="text-gray-400">Successful UK company faced critical choice: US or Singapore for international expansion. Wrong decision would burn millions.</p>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
-                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">Incentive Analysis:</strong> State/federal US incentives vs. Singapore free trade zone benefits</li>
-                                    <li><strong class="text-gray-200">Competitive Landscape:</strong> Saturation levels and competitive intensity in both regions</li>
-                                    <li><strong class="text-gray-200">Supply Chain Mapping:</strong> Logistics pathways from UK manufacturing base</li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
                                 <ul class="list-disc list-inside space-y-2 text-gray-400">
-                                    <li>Strategic insight: Singapore offered faster path to profitability</li>
-                                    <li>Phased approach: Establish profitable Singapore beachhead first</li>
-                                    <li>Outcome: Board approved data-driven multi-million dollar expansion decision</li>
+                                    <li>Focused Sales from Nationwide to 3 Key Markets</li>
+                                    <li>Achieved Sustainable ~40% Profit Margin</li>
+                                    <li>Identified Lever to Unlock 70% of the Market</li>
+                                    <li>Outlined Low-Cost Customer Acquisition Strategy</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
-                                <p class="text-gray-400">Complete market entry strategy with regulatory analysis, competitive positioning, and phased expansion roadmap</p>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">A pioneering three-person solar hardware startup with no formal business background had an innovative product but no clear path to market.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Scattered Efforts:</strong> Selling to early adopters nationwide with no market focus</li>
+                                    <li><strong class="text-gray-200">Unsustainable Model:</strong> Thin margins with no budget for customer acquisition</li>
+                                    <li><strong class="text-gray-200">Strategic Paralysis:</strong> Overwhelmed by options and slow-moving regulatory changes</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">In a single Strategic Sprint, we analyzed the entire US market to turn years of potential trial-and-error into a confident action plan.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Top 3 Markets:</strong> Pinpointed exact metros with best combination of income, EV adoption, and incentives</li>
+                                    <li><strong class="text-gray-200">High-Value Target:</strong> Identified ideal first customer profile</li>
+                                    <li><strong class="text-gray-200">Sustainable Pricing:</strong> Recommended price increase to achieve ~40% margin</li>
+                                    <li><strong class="text-gray-200">Growth Lever:</strong> Offering financing could unlock 70% of addressable market</li>
+                                    <li><strong class="text-gray-200">Low-Cost Acquisition:</strong> Target customers who showed intent via permit data</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="mt-6 pt-6 border-t border-white/20">
-                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-5" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-5" class="text-blue-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
                                 <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
                         <div id="details-5" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
                             <h5 class="font-bold text-white">Detailed Analysis:</h5>
                             <ul class="list-disc list-inside space-y-2">
-                                <li>Analyzed top 10 US markets state and federal incentive structures</li>
-                                <li>Assessed regulatory and policy stability in each potential market</li>
-                                <li>Quantified competitive saturation and market entry barriers</li>
-                                <li>Modeled supply chain costs and logistics from UK base to each market</li>
+                                <li>Analyzed entire US market for optimal geographic targeting</li>
+                                <li>Identified specific customer profile for initial market penetration</li>
+                                <li>Developed sustainable pricing model creating self-funding growth engine</li>
+                                <li>Outlined financing strategy to dramatically expand addressable market</li>
                             </ul>
                         </div>
                     </article>
@@ -508,41 +533,45 @@
                             <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">PRICING STRATEGY</span>
                         </div>
 
-                        <h4 class="text-2xl font-bold text-white mb-2">WIND ENERGY STARTUP → PRICING A DISRUPTIVE TECHNOLOGY</h4>
-                        <p class="text-indigo-300 italic mb-4">"$38-$42/MWh competitive price point anchored financial models for gigawatt-scale projects"</p>
+                        <h4 class="text-2xl font-bold text-white mb-2">ANSWERING A BILLION-DOLLAR QUESTION: PRICING FIRST-OF-ITS-KIND WIND PROJECT</h4>
+                        <p class="text-blue-300 italic mb-4">"$38-$42/MWh for Texas ERCOT market, validated speed-to-deployment as key advantage"</p>
 
                         <div class="flex-grow space-y-4">
                             <div>
-                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
-                                <p class="text-gray-400">Tech executive founder with breakthrough wind technology facing opportunity overload. Needed pricing strategy, ICP, and sales playbook while consumed by financing round.</p>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Our Intelligence Process:</h5>
-                                <ol class="list-decimal list-inside space-y-2 text-gray-400">
-                                    <li><strong class="text-gray-200">Market Analysis:</strong> Analyzed Texas ERCOT market for competitive pricing benchmarks</li>
-                                    <li><strong class="text-gray-200">Value Positioning:</strong> Confirmed speed-to-deployment as most powerful competitive advantage</li>
-                                    <li><strong class="text-gray-200">Risk-Adjusted Strategy:</strong> Balanced first-of-a-kind technology risk with pricing</li>
-                                </ol>
-                            </div>
-
-                            <div>
-                                <h5 class="font-bold text-white mb-2">Key Results:</h5>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
                                 <ul class="list-disc list-inside space-y-2 text-gray-400">
-                                    <li>Competitive pricing: $38-$42/MWh benchmark for 2027 projects</li>
-                                    <li>Risk mitigation: 15-25% discount strategy for flagship projects</li>
-                                    <li>Outcome: Concrete numbers for financial models and investor discussions</li>
+                                    <li>Delivered Competitive Price Point ($38-$42/MWh)</li>
+                                    <li>Validated Data Centers as Primary Target Market</li>
+                                    <li>Formulated Risk-Adjusted Pricing Strategy</li>
+                                    <li>Provided Repeatable Market Intelligence Process</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <h5 class="font-bold text-white mb-2">Deliverable:</h5>
-                                <p class="text-gray-400">Data-backed pricing framework, competitive positioning analysis, and sales playbook foundation</p>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">The founder of a disruptive wind energy startup developed breakthrough technology that could build gigawatt-scale projects years faster than competitors.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Opportunity Overload:</strong> Unsure which multi-billion dollar market to pursue first</li>
+                                    <li><strong class="text-gray-200">No Sales Playbook:</strong> Needed to hire sales leader but lacked defined ICP and messaging</li>
+                                    <li><strong class="text-gray-200">Critical Pricing:</strong> Needed competitive price point for 2027 ERCOT market</li>
+                                    <li><strong class="text-gray-200">Bandwidth Constraints:</strong> CEO consumed by critical financing round</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">In a single Strategic Sprint, we analyzed the complex energy market to deliver a clear, data-driven answer and framework for future decisions.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Competitive Pricing:</strong> Analyzed ERCOT market, recommended $38-$42 per MWh</li>
+                                    <li><strong class="text-gray-200">Validated Positioning:</strong> Confirmed speed-to-deployment as most powerful advantage</li>
+                                    <li><strong class="text-gray-200">Risk-Adjusted Strategy:</strong> 15-25% discount to secure initial flagship projects</li>
+                                    <li><strong class="text-gray-200">Repeatable Process:</strong> Demonstrated method for building complete sales playbook</li>
+                                </ul>
                             </div>
                         </div>
 
                         <div class="mt-6 pt-6 border-t border-white/20">
-                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-6" class="text-indigo-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-6" class="text-blue-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
                                 <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
                             </button>
                         </div>
@@ -556,6 +585,143 @@
                             </ul>
                         </div>
                     </article>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors">
+                        Build Your 90-Day Pipeline Blueprint
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tier-strategic" class="py-16 bg-purple-950/10" aria-labelledby="strategic-heading">
+            <div class="container mx-auto px-6">
+                <div class="mb-12 text-center">
+                    <h2 id="strategic-heading" class="text-3xl md:text-4xl font-bold text-white mb-4">Strategic Expansion</h2>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">Mature companies making complex, high-stakes decisions requiring comprehensive strategic intelligence and risk mitigation.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article id="case-canadian-saas" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">INTERNATIONAL EXPANSION</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">USA OR GLOBAL? DATA VETTED TWO INTERNATIONAL MARKETS FOR SAAS PROVIDER</h4>
+                        <p class="text-purple-300 italic mb-4">"We identified UK and Ireland as prime targets and designed a 'grant-aligned' acquisition model"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Resolved "Either/Or" Dilemma with Dual-Path Strategy</li>
+                                    <li>Vetted 2 Prime Global Markets (UK & Ireland)</li>
+                                    <li>Quantified Opportunity with Government Funding Data</li>
+                                    <li>Designed New, Hyper-Efficient Acquisition Model</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">A niche Canadian SaaS provider for non-profit crisis helplines faced a critical decision after seeing volatility in their primary US market.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Strategic Indecision:</strong> Where to focus limited resources for growth</li>
+                                    <li><strong class="text-gray-200">Inefficient Spend:</strong> Wasting full-time employee salary on underperforming cold-calling</li>
+                                    <li><strong class="text-gray-200">Global Uncertainty:</strong> Lacked data on which international markets met criteria</li>
+                                    <li><strong class="text-gray-200">Competitive Risk:</strong> Feared being blocked by entrenched competitors</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">Our process began with a preliminary Market Intelligence Summary, then evolved into a full strategic engagement to build a multi-faceted global growth plan.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Dual-Path Strategy:</strong> Parallel approach—pivot within US to adjacent sectors while exploring international</li>
+                                    <li><strong class="text-gray-200">Two Vetted Markets:</strong> Identified UK (£6M funding) and Ireland (€67M funding) as prime targets</li>
+                                    <li><strong class="text-gray-200">Efficient Acquisition:</strong> Replaced cold-calling with "grant-aligned" strategy targeting funded organizations</li>
+                                    <li><strong class="text-gray-200">Competitive Advantage:</strong> Confirmed specialized software advantage over generalist competitors</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-7" class="text-purple-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-7" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Analyzed both US adjacent verticals and international market opportunities</li>
+                                <li>Quantified funding availability in target markets with specific government data</li>
+                                <li>Assessed competitive landscape in UK and Irish markets</li>
+                                <li>Developed acquisition model aligned with grant funding cycles</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article id="case-investor-readiness" class="card p-8 rounded-2xl flex flex-col" x-data="{ expanded: false }">
+                        <div class="flex flex-wrap gap-2 mb-4" role="list">
+                            <span class="tag text-xs font-semibold px-2 py-1 rounded-full" role="listitem">INVESTOR READINESS</span>
+                        </div>
+
+                        <h4 class="text-2xl font-bold text-white mb-2">HOW WE CUT A 250-INVESTOR LIST BY 90% TO TARGET THE 25 MOST LIKELY TO FUND</h4>
+                        <p class="text-purple-300 italic mb-4">"We replaced 'spray and pray' with data-driven strategy aligned to each family office's interests"</p>
+
+                        <div class="flex-grow space-y-4">
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Impact at a Glance:</h5>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400">
+                                    <li>Cut Outreach List from 250 Investors to 25 High-Probability Targets</li>
+                                    <li>Analyzed Investor Profiles for Perfectly Aligned Messaging</li>
+                                    <li>Identified Competitive Investment Data to Create Investor FOMO</li>
+                                    <li>Replaced Inefficient Outreach with Data-Driven Playbook</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Challenge:</h5>
+                                <p class="text-gray-400">A deep-tech company, built on 15 years of R&D, was stuck in the difficult phase between Seed and Series A funding.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">The "Funding Gap":</strong> Too mature for seed but lacking consistent revenue for Series A</li>
+                                    <li><strong class="text-gray-200">Ineffective Outreach:</strong> Preparing to pitch generic deck to 250+ investors</li>
+                                    <li><strong class="text-gray-200">Lack of Network:</strong> Operating in a "void," unable to reach right decision-makers</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h5 class="font-bold text-white mb-2">The Solution:</h5>
+                                <p class="text-gray-400">In a single Strategic Sprint, we replaced inefficient "spray and pray" with a data-driven intelligence strategy.</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-400 mt-2">
+                                    <li><strong class="text-gray-200">Hyper-Targeted List:</strong> Replaced 250 VCs with 25 family offices whose profiles matched their sector</li>
+                                    <li><strong class="text-gray-200">Competitive Intelligence:</strong> Identified gaps and opportunities to leverage investors' FOMO</li>
+                                    <li><strong class="text-gray-200">Perfectly Aligned Messaging:</strong> Developed tailored messaging for each of 25 targets</li>
+                                    <li><strong class="text-gray-200">Data-Driven Playbook:</strong> Complete strategy for engaging right investors at right time</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <button @click="expanded = !expanded" :aria-expanded="expanded.toString()" aria-controls="details-8" class="text-purple-300 font-semibold text-sm hover:text-white transition-colors flex items-center">
+                                <span x-text="expanded ? '↑ Collapse' : 'Expand for detailed methodology →'"></span>
+                            </button>
+                        </div>
+                        <div id="details-8" x-show="expanded" x-collapse x-cloak class="mt-4 pt-4 border-t border-white/10 text-sm text-gray-300 space-y-2">
+                            <h5 class="font-bold text-white">Detailed Analysis:</h5>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Analyzed recent funding announcements in adjacent hardware and software sectors</li>
+                                <li>Mapped public statements and market focus of potential strategic investors</li>
+                                <li>Created network maps showing warmest introduction paths</li>
+                                <li>Identified specific strategic questions investors were likely to ask</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="https://calendar.app.google/DmXNgS19mdu8NCBT9" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors">
+                        Request Strategic Intelligence Brief
+                    </a>
                 </div>
             </div>
         </section>
