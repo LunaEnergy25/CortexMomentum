@@ -13,7 +13,7 @@ export default function Hero() {
           Most capitalized deep-tech and energy companies don’t fail because their physics are flawed. They fail because B2B buying committees view 'new' as a financial risk.
         </p>
         <Link 
-          href="#intake-form"
+          href="#diagnostic-booking"
           className="bg-slate-50 text-navy-900 px-8 py-4 font-bold text-lg hover:bg-slate-200 transition-colors shadow-md transform hover:-translate-y-0.5"
         >
           Initiate a Pipeline Diagnostic

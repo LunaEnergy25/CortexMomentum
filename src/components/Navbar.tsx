@@ -11,7 +11,7 @@ export default function Navbar() {
         <Link href="/case-studies" className="hover:text-slate-300 transition-colors">Deep-Tech Case Studies</Link>
         <Link href="/#architecture" className="hover:text-slate-300 transition-colors">The Architecture</Link>
         <Link 
-          href="/#intake-form"
+          href="/#diagnostic-booking"
           className="bg-slate-50 text-navy-900 px-5 py-2 hover:bg-slate-200 transition-colors font-semibold shadow-sm"
         >
           Initiate Diagnostic

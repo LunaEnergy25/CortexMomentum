@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ThreePathsServices from "@/components/sections/ThreePathsServices";
-import TranslationGapIntakeForm from "@/components/forms/TranslationGapIntakeForm";
+import DiagnosticBookingCTA from "@/components/sections/DiagnosticBookingCTA";
 
 export default function Home() {
   return (
@@ -45,9 +45,9 @@ export default function Home() {
 
       <ThreePathsServices />
 
-      <section className="bg-slate-200 py-24 px-4 border-t border-slate-300 mt-auto">
-        <TranslationGapIntakeForm id="intake-form" />
-      </section>
+      <div className="bg-slate-200 border-t border-slate-300 mt-auto py-12 px-4">
+        <DiagnosticBookingCTA />
+      </div>
     </main>
   );
 }
