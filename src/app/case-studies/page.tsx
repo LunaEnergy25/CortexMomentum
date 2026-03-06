@@ -8,93 +8,142 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
-    pillar: "Investor Readiness",
-    client: "EarthGrid",
-    challenge: "Needed to validate grid tech commercial viability within a 48 hour diligence window.",
-    architecture: "Proprietary Signal Mapping to align engineering data with investor thesis requirements.",
-    metric: "Validated in 48 Hours",
-  },
-  {
-    pillar: "Investor Readiness",
-    client: "Deep-Tech SaaS",
-    challenge: "Overwhelming noise and lack of focus targeting 250 generalized VCs for the next round.",
-    architecture: "Targeted Account Mapping narrowing the list to highly qualified deep-tech investors.",
-    metric: "250-to-25 VCs",
-  },
-  {
-    pillar: "Pipeline Velocity",
+    pillar: "Advanced PCB Manufacturing",
     client: "Elephantech",
-    challenge: "Struggling to sell premium green materials purely on environmental benefits.",
-    architecture: "Repositioned value proposition to emphasize supply chain resilience and cost parity.",
-    metric: "Escaping the Green Premium Trap",
+    context: "Elephantech developed a revolutionary additive manufacturing process. They successfully secured early capital based on the brilliance of their physics and aggressively pursued the enterprise market to scale operations.",
+    problem: "The commercial pipeline stalled. The sales team utilized a monolithic pitch focused on a \"70% Material Reduction\" and \"Sustainability.\" Enterprise procurement—incentivized by cost reduction and supply chain stability rather than carbon reduction—blocked the technology as an unnecessary \"Green Premium\" expense. Simultaneously, Quality Engineers viewed the drastic reduction in copper not as an efficiency gain, but as a severe risk to system reliability, assuming less copper equated to weaker traces.",
+    approach: "Cortex Momentum deployed a Strategic GTM Architecture sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don't buy \"Better\"—they buy \"Safer,\" we moved \"Sustainability\" from the primary hook to a secondary validator. The new commercial engine was built around \"Silver Volatility Hedging\" for financial buyers, positioning the printed copper innovation as the only safe harbor against supply chain chaos.",
+    outcome: "The narrative shift from \"Green Tech\" to \"Supply Chain Risk\" generated 60% higher engagement from executive decision-makers. Internal GTM friction was eliminated, allowing the team to achieve commercial readiness significantly faster.",
+    impact: "We replaced \"Sales Breath\" with problem awareness. By diagnosing real risk and positioning the solution as the safest path forward, the buyer sold it internally. Fear of F*cking Up (FOFU) was successfully neutralized.",
+    quote: "Deep Tech doesn't fail because the technology is bad. It fails because the narrative asks buyers to take a risk on 'New,' rather than positioning 'New' as the only way to eliminate risk."
   },
   {
-    pillar: "Pipeline Velocity",
+    pillar: "$50M RNG Company Pivot",
     client: "RNG Energy Co.",
-    challenge: "Pivot from legacy energy model to RNG required a complete go-to-market overhaul.",
-    architecture: "New commercial architecture aligning the financial narrative with mid-market buyers.",
-    metric: "$50M RNG Company Pivot",
+    context: "A renewable natural gas (RNG) company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days or face dissolution.",
+    problem: "The sales team utilized outdated market data. Enterprise procurement blocked deals because the ROI timeline of the RNG offering misaligned with the buyers' fiscal year requirements. They were drowning in complex variables and legacy consulting reports that were too slow to execute.",
+    approach: "Bypassing a prohibitive $120k, 3-month traditional consulting study, Cortex Momentum deployed a 5-day intelligence sprint, mapping regulatory and compliance drivers across the sector.",
+    outcome: "We delivered a board-ready pivot strategy in just 5 days. We identified the European Sustainable Aviation Fuel (SAF) regulations as a massive, immediate demand driver aligning perfectly with their existing capabilities.",
+    impact: "By aligning their output with the buyer's strict internal compliance mandates, we established immediate commercial readiness, unlocking a stalled $50M pipeline.",
+    quote: ""
   },
   {
-    pillar: "Commercial Scaling",
-    client: "Wind Project ERCOT",
-    challenge: "Scaling sales operations and navigating complex energy regulations in Texas.",
-    architecture: "Regulatory-compliant sales roadmap bypassing procurement friction.",
-    metric: "Accelerated ERCOT Interconnection",
+    pillar: "Market Validation for Plasma Boring",
+    client: "Climate Hive x EarthGrid",
+    context: "ClimateHive, a premier strategic agency, was leading a highly visible capital raise campaign for EarthGrid's proprietary plasma boring technology, generating strong initial financial interest from VCs.",
+    problem: "A critical \"Investor Skepticism\" gap emerged. VCs were listening, but the actual end customers (Utilities and Developers) were missing from the conversation. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk \"Science Project.\"",
+    approach: "ClimateHive deployed Cortex Momentum to execute a 48-Hour Market Validation Sprint. Activating a proprietary network of Utility VPs and Regulators, we invited specific experts to a technical debate on physics versus economics, extracting exact market objections (e.g., Reactive Power issues).",
+    outcome: "In 48 hours, the sprint generated 4,999 organic impressions with zero ad spend and achieved a 1:1 comment-to-like debate ratio. Direct dialogue was initiated with 103 vetted decision-makers, including a VP of Transmission who stepped out of a critical grid operator meeting to participate.",
+    impact: "The campaign acted as a live market stress-test, proving to investors that the technology was highly relevant to grid operators. The intelligence gathered allowed EarthGrid to achieve immediate GTM clarity, shifting their sales hook from \"Boring Cost\" to \"Permitting Speed.\"",
+    quote: "I wanted to reach industry folks... You have a captured audience and authoritative voice that I thought would give us that extra bump. It did for sure. — Kevin Drolet, Founder, ClimateHive"
   },
   {
-    pillar: "Commercial Scaling",
+    pillar: "Pre-Revenue Cleantech SaaS Go-To-Market",
+    client: "Cleantech SaaS Startup",
+    context: "A pre-revenue, engineer-led cleantech SaaS startup developed a highly promising MVP for microgrid developers.",
+    problem: "The startup had only six months of runway left to find its first real customers. Drowning in conflicting industry noise, they were unable to separate signal from noise, and did not know what sales hooks would actually resonate.",
+    approach: "Cortex Momentum deployed our intelligence platform to analyze their target market. We analyzed over 200 project RFPs to identify timing patterns, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers.",
+    outcome: "We achieved total GTM clarity, pinpointing Brownfield redevelopment projects as a highly lucrative niche. We uncovered that the #1 driver for these developers was deal velocity, not cost savings.",
+    impact: "We rebuilt their messaging architecture entirely around Speed, Compliance, and Guarantees, creating a clear path to shift from ineffective cold outreach to a high-converting inbound approach, establishing commercial readiness well before runway expired.",
+    quote: ""
+  },
+  {
+    pillar: "Pricing First-of-its-Kind Wind Project",
+    client: "Texas ERCOT Startup",
+    context: "A disruptive wind energy startup developed a breakthrough technology capable of building gigawatt-scale projects faster than legacy competitors.",
+    problem: "The CEO was consumed by a critical financing round and lacked the bandwidth to build a defined ICP. They needed a highly competitive, data-backed price point for the 2027 Texas ERCOT market, but lacked the GTM clarity to execute it.",
+    approach: "Cortex Momentum analyzed the complex energy market, evaluating hyperscaler, data center, and Department of Defense market opportunities.",
+    outcome: "We delivered a highly competitive, risk-adjusted price point of $38-$42/MWh for the Texas ERCOT market, validating data centers as the primary target market based on \"speed-to-deployment.\"",
+    impact: "We formulated a risk-adjusted pricing strategy and provided a repeatable market intelligence process, achieving total commercial readiness for their upcoming hires.",
+    quote: ""
+  },
+  {
+    pillar: "Targeted Investor Readiness (250 to 25 VCs)",
+    client: "Deep-Tech Company",
+    context: "A deep-tech company was navigating the difficult \"Funding Gap\" between Seed and Series A funding.",
+    problem: "Operating in a strategic void, they were preparing to pitch a generic, monolithic deck to a scattered list of over 250+ investors, risking alienation of conservative capital.",
+    approach: "We replaced their inefficient outreach with a data-driven intelligence strategy, analyzing recent funding announcements and mapping public statements of potential strategic investors.",
+    outcome: "We successfully cut their outreach list from 250 general VCs down to 25 highly targeted family offices whose profiles perfectly matched their sector.",
+    impact: "By developing precisely aligned messaging for each target, we delivered a data-driven playbook, massively accelerating their path to commercial readiness and capitalization.",
+    quote: ""
+  },
+  {
+    pillar: "Solar Hardware Startup Margin Optimization",
     client: "Solar Hardware Mfg",
-    challenge: "Hardware commoditization shrinking margins against overseas competitors.",
-    architecture: "Identified soft spots in competitor supply chains to position local reliability as premium edge.",
-    metric: "Solar Hardware Soft Spots Identified",
+    context: "A pioneering three-person solar hardware startup had no formal business background and no clear path to market.",
+    problem: "Their sales efforts were scattered nationwide to early adopters, resulting in incredibly thin margins and no budget for customer acquisition.",
+    approach: "Cortex Momentum analyzed the entire US market to pinpoint optimal geographic targeting based on income, EV adoption, and local incentives.",
+    outcome: "We pinpointed exactly 3 high-potential metro areas. We identified their ideal first customer profile and recommended a strategic price increase that achieved a sustainable ~40% profit margin.",
+    impact: "We transformed their GTM from a scattered guessing game into a highly focused, self-funding growth engine.",
+    quote: ""
   }
 ];
 
 export default function CaseStudiesPage() {
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16 text-center">
+    <div className="bg-slate-50 min-h-screen text-slate-900 py-24 font-sans">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="mb-24 text-center">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Enterprise Architecture In Action</h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Review our empirical deployments across Capitalized Deep-Tech, Energy, and Industrial sectors.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="space-y-32">
           {caseStudies.map((caseStudy, index) => (
-            <div key={index} className="bg-white p-8 border border-slate-200 shadow-sm flex flex-col hover:shadow-md transition-shadow">
-              <span className="text-sm font-bold tracking-wider uppercase text-slate-500 mb-4 inline-block">
-                {caseStudy.pillar}
-              </span>
-              <h3 className="text-2xl font-serif font-bold text-navy-900 mb-4">{caseStudy.client}</h3>
+            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-slate-200 pt-16">
+              <div className="lg:col-span-4">
+                <span className="text-sm font-bold tracking-wider uppercase text-slate-500 mb-4 inline-block">
+                  Case Study 0{index + 1}
+                </span>
+                <h2 className="text-3xl font-serif font-bold text-navy-900 mb-6 leading-snug">{caseStudy.client}</h2>
+                <div className="bg-white p-6 border border-slate-200 shadow-sm text-sm">
+                  <strong className="block text-navy-900 mb-2 uppercase tracking-wide">Context</strong>
+                  <p className="text-slate-600 leading-relaxed">{caseStudy.context}</p>
+                </div>
+              </div>
               
-              <div className="mb-4">
-                <strong className="block text-slate-800 mb-1">The Challenge</strong>
-                <p className="text-slate-600">{caseStudy.challenge}</p>
-              </div>
+              <div className="lg:col-span-8 space-y-8 text-lg text-slate-800 leading-relaxed">
+                <div>
+                  <strong className="block font-serif text-2xl mb-4 text-navy-900 border-b border-slate-200 pb-2">Problem</strong>
+                  <p>{caseStudy.problem}</p>
+                </div>
 
-              <div className="mb-6 flex-grow">
-                <strong className="block text-slate-800 mb-1">The Architecture</strong>
-                <p className="text-slate-600">{caseStudy.architecture}</p>
-              </div>
+                <div>
+                  <strong className="block font-serif text-2xl mb-4 text-navy-900 border-b border-slate-200 pb-2">Approach</strong>
+                  <p>{caseStudy.approach}</p>
+                </div>
 
-              <div className="pt-6 border-t border-slate-100">
-                <strong className="block text-slate-900 uppercase text-xs tracking-wider mb-1">The Metric</strong>
-                <span className="text-lg font-bold text-slate-900">{caseStudy.metric}</span>
+                <div>
+                  <strong className="block font-serif text-2xl mb-4 text-navy-900 border-b border-slate-200 pb-2">Outcome</strong>
+                  <p>{caseStudy.outcome}</p>
+                </div>
+
+                <div className="bg-white p-8 border border-slate-200 shadow-sm relative">
+                  <strong className="block font-serif text-xl mb-4 text-navy-900">Strategic Impact</strong>
+                  <p className="text-slate-700">{caseStudy.impact}</p>
+                </div>
+
+                {caseStudy.quote && (
+                  <blockquote className="italic font-serif text-xl text-slate-600 border-l-4 border-navy-900 pl-6 mt-12 bg-slate-100 p-6">
+                    &quot;{caseStudy.quote}&quot;
+                  </blockquote>
+                )}
               </div>
             </div>
           ))}
         </div>
         
-        <div className="mt-20 text-center">
-            <Link 
-              href="/#diagnostic-booking"
-              className="inline-block bg-navy-900 text-white px-8 py-4 font-bold text-lg hover:bg-slate-800 transition-colors shadow-md border border-navy-800"
+        <div className="mt-32 text-center pb-24">
+            <a
+              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-navy-900 text-white px-10 py-5 font-bold text-xl hover:bg-slate-800 transition-colors shadow-lg border border-navy-800 w-full md:w-auto transform hover:-translate-y-0.5"
             >
-              Initiate a Pipeline Diagnostic
-            </Link>
+              Initiate Pipeline Diagnostic
+            </a>
         </div>
       </div>
     </div>

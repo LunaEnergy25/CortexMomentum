@@ -5,17 +5,16 @@ export default function Hero() {
     <section className="bg-slate-50 text-slate-900 py-32 md:py-48 px-4 md:px-8 text-center border-b border-slate-200">
       <div className="max-w-5xl mx-auto flex flex-col items-center">
         <h1 className="text-5xl font-serif text-slate-900 font-bold leading-tight mb-8">
-          Strategic Advisor to Deep Tech, Energy & Industrial Leaders | <br className="hidden md:block" />
-          <span className="text-navy-900">Bridging the Translation Gap to Unblock Enterprise Pipelines</span>
+          Your physics are flawless. So why is the commercial pipeline stalling in procurement?
         </h1>
-        <p className="text-lg md:text-xl text-slate-700 max-w-3xl mb-12 leading-relaxed">
-          Most capitalized deep-tech and energy companies don’t fail because their physics are flawed. They fail because B2B buying committees view 'new' as a financial risk.
+        <p className="text-lg md:text-xl text-slate-700 max-w-3xl mb-12 leading-relaxed font-sans">
+          Capitalized deep-tech and energy companies don’t fail because of their engineering. They fail because enterprise buying committees view &quot;new&quot; as a financial risk. We bridge the translation gap between brilliant technology and commercial readiness, shortening your internal GTM development cycles so your team is fully armed to unblock 7-figure enterprise deals.
         </p>
         <Link 
           href="#diagnostic-booking"
           className="bg-navy-900 text-white px-8 py-4 font-bold text-lg hover:bg-slate-800 transition-colors shadow-md transform hover:-translate-y-0.5"
         >
-          Initiate a Pipeline Diagnostic
+          Initiate Pipeline Diagnostic
         </Link>
       </div>
     </section>
