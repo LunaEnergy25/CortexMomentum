@@ -1,109 +1,102 @@
-import Navbar from "@/components/Navbar";
-import CaseStudyPillar from "@/components/sections/CaseStudyPillar";
+import Link from "next/link";
+import { Metadata } from "next";
 
-export default function CaseStudies() {
-  const caseStudies = [
-    {
-      pillar: "Investor Readiness & Capital De-Risking",
-      cases: [
-        {
-          company: "EarthGrid",
-          headline: "Solving the 'Investor Skepticism' Gap: Validating Complex Grid Tech in 48 Hours.",
-          friction: "Investors demanded commercial validation from guarded Utility operators before deploying capital.",
-          architecture: "Deployed a 48-Hour Market Validation Sprint using proprietary asymmetric signal mapping to initiate a peer-to-peer technical debate on grid physics.",
-          outcome: "Extracted exact due-diligence objections, proving 'Permitting Speed' was the critical commercial unlock. Initiated dialogue with 103 vetted decision-makers."
-        },
-        {
-          company: "Series A Target List",
-          headline: "How We Cut a 250-Investor List by 90% to Target the 25 Most Likely to Fund.",
-          friction: "Founders were wasting 6+ months pitching misaligned generalist funds instead of deep-tech specialists.",
-          architecture: "Mapped fund thesis mandates against precise technology maturity and exact Capex constraints.",
-          outcome: "Reduced outreach volume by 90% while doubling successful partner meetings, leading to an oversubscribed round."
-        }
-      ]
-    },
-    {
-      pillar: "Pipeline Velocity & Deal Rescue",
-      cases: [
-        {
-          company: "Elephantech - FLAGSHIP",
-          headline: "Escaping the 'Green Premium' Trap: Unblocking a Stalled Deep-Tech Pipeline.",
-          friction: "Quality Engineers viewed '70% Material Reduction' as a reliability risk. Procurement blocked the 'Green Premium'.",
-          architecture: "Deployed a Bifurcated GTM Architecture. Armed the Champion with a 'Silver Volatility Index' and a 'Visual Physics Brief'.",
-          outcome: "Compressed consensus cycle, elevated entry point to VP/Director, achieved 2.4x deal size increase."
-        },
-        {
-          company: "$50M RNG Company",
-          headline: "The 45-Day Ultimatum: Pivoting a $50M Energy Model After a Market Collapse.",
-          friction: "Regulatory shifts destroyed the primary revenue assumption mid-deal, freezing a critical joint venture.",
-          architecture: "Rapid intervention to map secondary revenue streams and formulate a de-risked contingency architecture for the buying committee.",
-          outcome: "Saved the joint venture within 45 days, locking in alternative off-take agreements to satisfy credit committees."
-        }
-      ]
-    },
-    {
-      pillar: "Commercial Scaling & Pricing Strategy",
-      cases: [
-        {
-          company: "Wind Project ERCOT",
-          headline: "Strategic Pricing for Gigawatt Scale: Answering a Billion-Dollar Question.",
-          friction: "Uncertainty around interconnection queue friction and curtailment risks stalled pricing model finalizing.",
-          architecture: "Developed a dynamic pricing model mapped to specific nodal volatility risks and specific interconnection milestones.",
-          outcome: "Secured anchor PPA with premium pricing based on transparent, tiered risk reduction."
-        },
-        {
-          company: "Solar Hardware",
-          headline: "Margin Expansion via Geographic 'Soft Spots': Achieving 40% Margin.",
-          friction: "Commoditization from Tier 1 imports destroyed margins in legacy utility markets.",
-          architecture: "Identified middle-market EPCs in specific geographic 'soft spots' where local compliance and speed outweighed slight hardware premiums.",
-          outcome: "Achieved sustained 40% gross margins by avoiding direct price wars via systemic strategic positioning."
-        }
-      ]
-    }
-  ];
+export const metadata: Metadata = {
+  title: "Deep-Tech Case Studies | Cortex Momentum",
+  description: "Explore our frameworks applied to capitalized deep-tech, energy, and industrial companies.",
+};
 
+const caseStudies = [
+  {
+    pillar: "Investor Readiness",
+    client: "EarthGrid",
+    challenge: "Needed to validate grid tech commercial viability within a 48 hour diligence window.",
+    architecture: "Proprietary Signal Mapping to align engineering data with investor thesis requirements.",
+    metric: "Validated in 48 Hours",
+  },
+  {
+    pillar: "Investor Readiness",
+    client: "Deep-Tech SaaS",
+    challenge: "Overwhelming noise and lack of focus targeting 250 generalized VCs for the next round.",
+    architecture: "Targeted Account Mapping narrowing the list to highly qualified deep-tech investors.",
+    metric: "250-to-25 VCs",
+  },
+  {
+    pillar: "Pipeline Velocity",
+    client: "Elephantech",
+    challenge: "Struggling to sell premium green materials purely on environmental benefits.",
+    architecture: "Repositioned value proposition to emphasize supply chain resilience and cost parity.",
+    metric: "Escaping the Green Premium Trap",
+  },
+  {
+    pillar: "Pipeline Velocity",
+    client: "RNG Energy Co.",
+    challenge: "Pivot from legacy energy model to RNG required a complete go-to-market overhaul.",
+    architecture: "New commercial architecture aligning the financial narrative with mid-market buyers.",
+    metric: "$50M RNG Company Pivot",
+  },
+  {
+    pillar: "Commercial Scaling",
+    client: "Wind Project ERCOT",
+    challenge: "Scaling sales operations and navigating complex energy regulations in Texas.",
+    architecture: "Regulatory-compliant sales roadmap bypassing procurement friction.",
+    metric: "Accelerated ERCOT Interconnection",
+  },
+  {
+    pillar: "Commercial Scaling",
+    client: "Solar Hardware Mfg",
+    challenge: "Hardware commoditization shrinking margins against overseas competitors.",
+    architecture: "Identified soft spots in competitor supply chains to position local reliability as premium edge.",
+    metric: "Solar Hardware Soft Spots Identified",
+  }
+];
+
+export default function CaseStudiesPage() {
   return (
-    <main className="min-h-screen flex flex-col font-sans bg-slate-50">
-      <Navbar />
-      
-      <div className="bg-navy-900 text-slate-50 py-24 px-4 text-center border-b border-navy-800 mb-24">
-        <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">Deep-Tech Case Studies</h1>
-        <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-          Architecting consensus for complex technical sales. 
-          De-risking capital for deep technology.
-        </p>
-      </div>
+    <div className="bg-slate-50 min-h-screen text-slate-900 py-24">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-16 text-center">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Enterprise Architecture In Action</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            Review our empirical deployments across Capitalized Deep-Tech, Energy, and Industrial sectors.
+          </p>
+        </div>
 
-      <div className="flex-grow">
-        {caseStudies.map((pillarData, idx) => (
-          <CaseStudyPillar key={idx} title={pillarData.pillar}>
-            {pillarData.cases.map((study, studyIdx) => (
-              <div key={studyIdx} className="bg-white p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-sm font-bold text-navy-900 mb-2 uppercase tracking-wide">
-                  {study.company}
-                </div>
-                <h3 className="text-2xl font-serif text-slate-900 font-bold mb-6">
-                  {study.headline}
-                </h3>
-                <div className="space-y-4 text-slate-700">
-                  <div>
-                    <strong className="text-slate-900 block mb-1 font-serif text-sm uppercase tracking-wider">The Friction:</strong>
-                    <p>{study.friction}</p>
-                  </div>
-                  <div className="border-t border-slate-100 pt-4">
-                    <strong className="text-navy-900 block mb-1 font-serif text-sm uppercase tracking-wider">The Architecture:</strong>
-                    <p>{study.architecture}</p>
-                  </div>
-                  <div className="border-t border-slate-100 pt-4">
-                    <strong className="text-emerald-800 block mb-1 font-serif text-sm uppercase tracking-wider">The Outcome:</strong>
-                    <p className="font-semibold text-slate-800">{study.outcome}</p>
-                  </div>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {caseStudies.map((caseStudy, index) => (
+            <div key={index} className="bg-white p-8 border border-slate-200 shadow-sm flex flex-col hover:shadow-md transition-shadow">
+              <span className="text-sm font-bold tracking-wider uppercase text-slate-500 mb-4 inline-block">
+                {caseStudy.pillar}
+              </span>
+              <h3 className="text-2xl font-serif font-bold text-navy-900 mb-4">{caseStudy.client}</h3>
+              
+              <div className="mb-4">
+                <strong className="block text-slate-800 mb-1">The Challenge</strong>
+                <p className="text-slate-600">{caseStudy.challenge}</p>
               </div>
-            ))}
-          </CaseStudyPillar>
-        ))}
+
+              <div className="mb-6 flex-grow">
+                <strong className="block text-slate-800 mb-1">The Architecture</strong>
+                <p className="text-slate-600">{caseStudy.architecture}</p>
+              </div>
+
+              <div className="pt-6 border-t border-slate-100">
+                <strong className="block text-slate-900 uppercase text-xs tracking-wider mb-1">The Metric</strong>
+                <span className="text-lg font-bold text-slate-900">{caseStudy.metric}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-20 text-center">
+            <Link 
+              href="/#diagnostic-booking"
+              className="inline-block bg-navy-900 text-white px-8 py-4 font-bold text-lg hover:bg-slate-800 transition-colors shadow-md border border-navy-800"
+            >
+              Initiate a Pipeline Diagnostic
+            </Link>
+        </div>
       </div>
-    </main>
+    </div>
   );
 }

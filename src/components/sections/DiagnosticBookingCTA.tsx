@@ -1,7 +1,7 @@
 export default function DiagnosticBookingCTA() {
   return (
-    <section id="diagnostic-booking" className="max-w-4xl mx-auto my-24 bg-navy-900 text-slate-50 p-8 md:p-12 shadow-xl border border-navy-800">
-      <div className="text-center">
+    <section id="diagnostic-booking" className="w-full bg-slate-900 text-white py-24 px-4">
+      <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-serif mb-6">Initiate a Pipeline Diagnostic</h2>
         <p className="text-lg text-slate-200 mb-8">
           This 30-minute diagnostic is strictly for the commercial leaders of capitalized deep-tech, energy, and industrial companies.
