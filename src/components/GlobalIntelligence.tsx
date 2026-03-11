@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 interface Dot {
   theta: number;
   phi: number;
+  colorType: number; // 0 for cyan, 1 for indigo
 }
 
 interface Arc {
@@ -14,6 +15,7 @@ interface Arc {
   life: number;
   maxLife: number;
   segments: { x: number; y: number }[];
+  intensity: number;
 }
 
 function project(
@@ -27,7 +29,11 @@ function project(
   const x = radius * Math.sin(phi) * Math.cos(theta + rotation);
   const y = radius * Math.cos(phi);
   const z = radius * Math.sin(phi) * Math.sin(theta + rotation);
-  return { x: cx + x, y: cy + y, z };
+  // Add a slight tilt to the globe for a more dynamic angle
+  const tiltX = x;
+  const tiltY = y * Math.cos(-0.3) - z * Math.sin(-0.3);
+  const tiltZ = y * Math.sin(-0.3) + z * Math.cos(-0.3);
+  return { x: cx + tiltX, y: cy + tiltY, z: tiltZ };
 }
 
 function generateLightningPath(
@@ -42,7 +48,8 @@ function generateLightningPath(
   const dy = (y2 - y1) / segments;
 
   for (let i = 1; i < segments; i++) {
-    const jitter = (Math.random() - 0.5) * 40; // more pronounced jaggedness
+    // Extreme jaggedness for aggressive "edgy" look
+    const jitter = (Math.random() - 0.5) * 60; 
     const perpX = -(y2 - y1) / Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
     const perpY = (x2 - x1) / Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
     points.push({
@@ -64,19 +71,20 @@ export default function GlobalIntelligence() {
     if (!ctx) return;
 
     let animationId: number;
-    let rotation = 0;
+    // Faster, more aggressive base rotation
+    let rotation = 0; 
 
-    // Generate dots on a sphere
-    const dotCount = 300; // Increased density
+    // High density dots
+    const dotCount = 350; 
     const dots: Dot[] = [];
     for (let i = 0; i < dotCount; i++) {
       dots.push({
         theta: Math.random() * Math.PI * 2,
         phi: Math.acos(2 * Math.random() - 1),
+        colorType: Math.random() > 0.8 ? 1 : 0 // 20% accent dots
       });
     }
 
-    // Active arcs
     const arcs: Arc[] = [];
     let arcTimer = 0;
 
@@ -84,7 +92,8 @@ export default function GlobalIntelligence() {
       const parent = canvas.parentElement;
       if (!parent) return;
       const size = Math.min(parent.offsetWidth, parent.offsetHeight);
-      canvas.width = size * 2; // retina
+      // Boost resolution for crisp extreme contrast rendering
+      canvas.width = size * 2; 
       canvas.height = size * 2;
       canvas.style.width = `${size}px`;
       canvas.style.height = `${size}px`;
@@ -95,79 +104,89 @@ export default function GlobalIntelligence() {
       const h = canvas.height;
       const cx = w / 2;
       const cy = h / 2;
-      const radius = Math.min(w, h) * 0.42; // Larger sphere
+      // Push radius to the absolute edge of container
+      const radius = Math.min(w, h) * 0.45; 
 
       ctx.clearRect(0, 0, w, h);
 
-      // Subtle outer glow
-      const glow = ctx.createRadialGradient(cx, cy, radius * 0.5, cx, cy, radius * 1.3);
-      glow.addColorStop(0, "rgba(180, 200, 240, 0.1)");
-      glow.addColorStop(1, "rgba(180, 200, 240, 0)");
+      // Deep intense electric halo
+      const glow = ctx.createRadialGradient(cx, cy, radius * 0.4, cx, cy, radius * 1.4);
+      glow.addColorStop(0, "rgba(0, 150, 255, 0.15)");
+      glow.addColorStop(0.5, "rgba(100, 50, 255, 0.05)");
+      glow.addColorStop(1, "rgba(0, 150, 255, 0)");
       ctx.fillStyle = glow;
       ctx.fillRect(0, 0, w, h);
 
-      // Project and draw dots
       const projected = dots.map((d) =>
-        project(d.theta, d.phi, rotation, radius, cx, cy)
+        ({ ...project(d.theta, d.phi, rotation, radius, cx, cy), colorType: d.colorType })
       );
 
+      // Draw dots
       for (let i = 0; i < projected.length; i++) {
         const p = projected[i];
         const depthFactor = (p.z + radius) / (2 * radius);
-        const alpha = 0.25 + depthFactor * 0.75; // brighter dots
-        const size = 1.5 + depthFactor * 3.0; // thicker dots
+        // Harsh dropoff to make the front pop aggressively
+        if (depthFactor < 0.1) continue; 
+        
+        const alpha = 0.3 + depthFactor * 0.7;
+        const size = 1.5 + depthFactor * 3.5; // Thicker dots up front
 
         ctx.beginPath();
-        ctx.fillStyle = `rgba(220, 230, 255, ${alpha})`; // whiter
+        // Cyan core or electric indigo accent
+        if (p.colorType === 0) {
+          ctx.fillStyle = `rgba(0, 240, 255, ${alpha})`;
+          ctx.shadowColor = `rgba(0, 240, 255, ${alpha})`;
+        } else {
+          ctx.fillStyle = `rgba(140, 80, 255, ${alpha})`;
+          ctx.shadowColor = `rgba(140, 80, 255, ${alpha})`;
+        }
+        ctx.shadowBlur = depthFactor > 0.8 ? 10 : 0; // Only bloom front dots
         ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
         ctx.fill();
+        ctx.shadowBlur = 0; // Reset
       }
 
-      // Spawn new arcs slightly faster
+      // Spawn arcs aggressively
       arcTimer++;
-      if (arcTimer > 35) {
+      if (arcTimer > 15) { // Spawn much faster (was 35)
         arcTimer = 0;
-        // Pick two front-facing dots
         const frontDots = projected
           .map((p, i) => ({ ...p, i }))
-          .filter((p) => p.z > -radius * 0.2)
+          .filter((p) => p.z > -radius * 0.1) // Only front facing
           .sort(() => Math.random() - 0.5);
 
         if (frontDots.length >= 2) {
           const from = frontDots[0];
           const to = frontDots[1];
-          const dist = Math.sqrt(
-            (from.x - to.x) ** 2 + (from.y - to.y) ** 2
-          );
-          if (dist > 40 && dist < radius * 1.6) {
-            const segments = generateLightningPath(
-              from.x,
-              from.y,
-              to.x,
-              to.y,
-              10
-            );
+          const dist = Math.sqrt((from.x - to.x) ** 2 + (from.y - to.y) ** 2);
+          
+          if (dist > 50 && dist < radius * 1.8) {
+            const segments = generateLightningPath(from.x, from.y, to.x, to.y, 12);
             arcs.push({
               from: from.i,
               to: to.i,
               progress: 0,
               life: 0,
-              maxLife: 60,
+              maxLife: 40, // Die faster for strobe effect
               segments,
+              intensity: Math.random() > 0.8 ? 2 : 1 // Some bolts are ultra-thick
             });
           }
         }
       }
 
-      // Draw and update arcs
+      // Draw arcs
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+
       for (let i = arcs.length - 1; i >= 0; i--) {
         const arc = arcs[i];
         arc.life++;
-        arc.progress = Math.min(arc.life / 10, 1); // faster bolt travel
+        arc.progress = Math.min(arc.life / 8, 1); // Extremely fast travel
 
-        const fadeIn = Math.min(arc.life / 8, 1);
-        const fadeOut = Math.max(0, 1 - (arc.life - arc.maxLife * 0.6) / (arc.maxLife * 0.4));
-        const alpha = Math.min(fadeIn, fadeOut) * 0.9; // brighter arcs
+        const fadeIn = Math.min(arc.life / 5, 1);
+        const fadeOut = Math.max(0, 1 - (arc.life - arc.maxLife * 0.5) / (arc.maxLife * 0.5));
+        const alpha = Math.min(fadeIn, fadeOut) * 1.0; 
 
         if (alpha <= 0) {
           arcs.splice(i, 1);
@@ -177,22 +196,22 @@ export default function GlobalIntelligence() {
         const segCount = Math.floor(arc.segments.length * arc.progress);
         if (segCount < 2) continue;
 
-        // Main bolt
+        // Intense core bolt
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(210, 230, 255, ${alpha})`;
-        ctx.lineWidth = 3;
-        ctx.shadowColor = `rgba(210, 230, 255, ${alpha * 0.9})`;
-        ctx.shadowBlur = 15;
+        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`; // Pure white core
+        ctx.lineWidth = 3 * arc.intensity;
+        ctx.shadowColor = `rgba(0, 240, 255, ${alpha})`; // Cyan bloom
+        ctx.shadowBlur = 20 * arc.intensity;
         ctx.moveTo(arc.segments[0].x, arc.segments[0].y);
         for (let s = 1; s < segCount; s++) {
           ctx.lineTo(arc.segments[s].x, arc.segments[s].y);
         }
         ctx.stroke();
 
-        // Glow pass
+        // Secondary cyan halo bolt
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(230, 245, 255, ${alpha * 0.4})`;
-        ctx.lineWidth = 8;
+        ctx.strokeStyle = `rgba(0, 240, 255, ${alpha * 0.5})`;
+        ctx.lineWidth = 8 * arc.intensity;
         ctx.moveTo(arc.segments[0].x, arc.segments[0].y);
         for (let s = 1; s < segCount; s++) {
           ctx.lineTo(arc.segments[s].x, arc.segments[s].y);
@@ -201,18 +220,21 @@ export default function GlobalIntelligence() {
 
         ctx.shadowBlur = 0;
 
-        // Bright dots at endpoints
+        // Endpoint flash impacts
         if (arc.progress >= 1) {
           for (const seg of [arc.segments[0], arc.segments[arc.segments.length - 1]]) {
             ctx.beginPath();
-            ctx.fillStyle = `rgba(240, 250, 255, ${alpha})`;
-            ctx.arc(seg.x, seg.y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+            ctx.shadowColor = `rgba(0, 240, 255, ${alpha})`;
+            ctx.shadowBlur = 25;
+            ctx.arc(seg.x, seg.y, 6 * arc.intensity, 0, Math.PI * 2);
             ctx.fill();
+            ctx.shadowBlur = 0;
           }
         }
       }
 
-      rotation += 0.003;
+      rotation += 0.005; // Sped up rotation
       animationId = requestAnimationFrame(draw);
     };
 
@@ -230,7 +252,7 @@ export default function GlobalIntelligence() {
     <canvas
       ref={canvasRef}
       className="mx-auto"
-      style={{ width: "100%", aspectRatio: "1" }} // Dynamic sizing based on container
+      style={{ width: "100%", aspectRatio: "1" }}
       aria-hidden="true"
     />
   );
