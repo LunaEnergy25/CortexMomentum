@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { Metadata } from "next";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Deep-Tech Case Studies | Cortex Momentum",
@@ -81,52 +81,53 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="bg-slate-50 min-h-screen text-slate-900 py-24 font-sans">
-      <div className="max-w-6xl mx-auto px-6">
+    <div className="bg-slate-950 min-h-screen text-slate-300 font-sans">
+      <Navbar />
+      <div className="max-w-6xl mx-auto px-6 py-24">
         <div className="mb-24 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-6">Enterprise Architecture In Action</h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 tracking-tight">Enterprise Architecture In Action</h1>
+          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
             Review our empirical deployments across Capitalized Deep-Tech, Energy, and Industrial sectors.
           </p>
         </div>
 
         <div className="space-y-32">
           {caseStudies.map((caseStudy, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-slate-200 pt-16">
+            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-slate-800 pt-16">
               <div className="lg:col-span-4">
                 <span className="text-sm font-bold tracking-wider uppercase text-slate-500 mb-4 inline-block">
                   Case Study 0{index + 1}
                 </span>
-                <h2 className="text-3xl font-serif font-bold text-navy-900 mb-6 leading-snug">{caseStudy.client}</h2>
-                <div className="bg-white p-6 border border-slate-200 shadow-sm text-sm">
-                  <strong className="block text-navy-900 mb-2 uppercase tracking-wide">Context</strong>
-                  <p className="text-slate-600 leading-relaxed">{caseStudy.context}</p>
+                <h2 className="text-3xl font-serif font-bold text-white mb-6 leading-snug">{caseStudy.client}</h2>
+                <div className="bg-slate-900 p-6 border border-slate-800 shadow-2xl text-sm rounded-sm">
+                  <strong className="block text-slate-500 mb-2 uppercase tracking-wide">Context</strong>
+                  <p className="text-slate-400 leading-relaxed">{caseStudy.context}</p>
                 </div>
               </div>
               
-              <div className="lg:col-span-8 space-y-8 text-lg text-slate-800 leading-relaxed">
+              <div className="lg:col-span-8 space-y-8 text-lg text-slate-300 leading-relaxed">
                 <div>
-                  <strong className="block font-serif text-2xl mb-4 text-navy-900 border-b border-slate-200 pb-2">Problem</strong>
+                  <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2">Problem</strong>
                   <p>{caseStudy.problem}</p>
                 </div>
 
                 <div>
-                  <strong className="block font-serif text-2xl mb-4 text-navy-900 border-b border-slate-200 pb-2">Approach</strong>
+                  <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2">Approach</strong>
                   <p>{caseStudy.approach}</p>
                 </div>
 
                 <div>
-                  <strong className="block font-serif text-2xl mb-4 text-navy-900 border-b border-slate-200 pb-2">Outcome</strong>
+                  <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2">Outcome</strong>
                   <p>{caseStudy.outcome}</p>
                 </div>
 
-                <div className="bg-white p-8 border border-slate-200 shadow-sm relative">
-                  <strong className="block font-serif text-xl mb-4 text-navy-900">Strategic Impact</strong>
-                  <p className="text-slate-700">{caseStudy.impact}</p>
+                <div className="bg-slate-900 p-8 border border-slate-800 shadow-2xl relative rounded-sm">
+                  <strong className="block font-serif text-xl mb-4 text-white">Strategic Impact</strong>
+                  <p className="text-slate-400">{caseStudy.impact}</p>
                 </div>
 
                 {caseStudy.quote && (
-                  <blockquote className="italic font-serif text-xl text-slate-600 border-l-4 border-navy-900 pl-6 mt-12 bg-slate-100 p-6">
+                  <blockquote className="italic font-serif text-xl text-slate-400 border-l-4 border-white pl-6 mt-12 bg-slate-900 p-6 border border-slate-800 rounded-sm">
                     &quot;{caseStudy.quote}&quot;
                   </blockquote>
                 )}
@@ -140,7 +141,7 @@ export default function CaseStudiesPage() {
               href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-navy-900 text-white px-10 py-5 font-bold text-xl hover:bg-slate-800 transition-colors shadow-lg border border-navy-800 w-full md:w-auto transform hover:-translate-y-0.5"
+              className="inline-block bg-white text-slate-950 px-10 py-5 font-bold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-2xl w-full md:w-auto transform hover:-translate-y-0.5"
             >
               Initiate Pipeline Diagnostic
             </a>

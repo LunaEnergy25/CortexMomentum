@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${merriweather.variable} antialiased selection:bg-navy-900 selection:text-white`}>
+      <body className={`${inter.variable} ${merriweather.variable} bg-slate-950 text-slate-300 antialiased selection:bg-white selection:text-slate-900`}>
         {children}
       </body>
     </html>

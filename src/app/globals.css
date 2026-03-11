@@ -7,12 +7,13 @@
   --color-slate-200: #e2e8f0;
   --color-slate-800: #1e293b;
   --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
   
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-merriweather), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 body {
-  background-color: var(--color-slate-50);
-  color: var(--color-slate-900);
+  background-color: var(--color-slate-950);
+  color: #cbd5e1;
 }
