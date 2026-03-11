@@ -37,27 +37,40 @@ function project(
 }
 
 function generateLightningPath(
-  x1: number,
-  y1: number,
-  x2: number,
-  y2: number,
+  p1: { x: number; y: number; z: number },
+  p2: { x: number; y: number; z: number },
   segments: number
-): { x: number; y: number }[] {
-  const points: { x: number; y: number }[] = [{ x: x1, y: y1 }];
-  const dx = (x2 - x1) / segments;
-  const dy = (y2 - y1) / segments;
-
-  for (let i = 1; i < segments; i++) {
-    // Extreme jaggedness for aggressive "edgy" look
-    const jitter = (Math.random() - 0.5) * 60; 
-    const perpX = -(y2 - y1) / Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
-    const perpY = (x2 - x1) / Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+): { x: number; y: number; z: number }[] {
+  const points: { x: number; y: number; z: number }[] = [];
+  
+  for (let i = 0; i <= segments; i++) {
+    const t = i / segments;
+    
+    // Spherical interpolation (Slerp) approximation for smooth arcing across the globe
+    // Elevate the arc slightly off the surface
+    const arcHeight = 0.2; // How high the arc goes off the surface
+    const elevation = Math.sin(t * Math.PI) * arcHeight;
+    
+    // Linear interpolation of the raw coordinates
+    const lerpX = p1.x + (p2.x - p1.x) * t;
+    const lerpY = p1.y + (p2.y - p1.y) * t;
+    const lerpZ = p1.z + (p2.z - p1.z) * t;
+    
+    // Normalize to get spherical shape
+    const len = Math.sqrt(lerpX * lerpX + lerpY * lerpY + lerpZ * lerpZ);
+    
+    // Re-apply radius and add elevation
+    // Assuming base radius of the globe is roughly average length of points
+    const baseRadius = Math.sqrt(p1.x * p1.x + p1.y * p1.y + p1.z * p1.z);
+    const elevatedRadius = baseRadius * (1 + elevation);
+    
     points.push({
-      x: x1 + dx * i + perpX * jitter,
-      y: y1 + dy * i + perpY * jitter,
+      x: (lerpX / len) * elevatedRadius,
+      y: (lerpY / len) * elevatedRadius,
+      z: (lerpZ / len) * elevatedRadius
     });
   }
-  points.push({ x: x2, y: y2 });
+  
   return points;
 }
 
@@ -132,15 +145,15 @@ export default function GlobalIntelligence() {
         const size = 1.5 + depthFactor * 3.5; // Thicker dots up front
 
         ctx.beginPath();
-        // Cyan core or electric indigo accent
+        // Cyan core or electric indigo accent - softened for enterprise
         if (p.colorType === 0) {
-          ctx.fillStyle = `rgba(0, 240, 255, ${alpha})`;
-          ctx.shadowColor = `rgba(0, 240, 255, ${alpha})`;
+          ctx.fillStyle = `rgba(14, 165, 233, ${alpha})`; // sky-500
+          ctx.shadowColor = `rgba(14, 165, 233, ${alpha})`;
         } else {
-          ctx.fillStyle = `rgba(140, 80, 255, ${alpha})`;
-          ctx.shadowColor = `rgba(140, 80, 255, ${alpha})`;
+          ctx.fillStyle = `rgba(99, 102, 241, ${alpha})`; // indigo-500
+          ctx.shadowColor = `rgba(99, 102, 241, ${alpha})`;
         }
-        ctx.shadowBlur = depthFactor > 0.8 ? 10 : 0; // Only bloom front dots
+        ctx.shadowBlur = depthFactor > 0.8 ? 5 : 0; // Softer bloom
         ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
         ctx.fill();
         ctx.shadowBlur = 0; // Reset
@@ -150,26 +163,49 @@ export default function GlobalIntelligence() {
       arcTimer++;
       if (arcTimer > 50) { // Spawn slower (was 40)
         arcTimer = 0;
-        const frontDots = projected
-          .map((p, i) => ({ ...p, i }))
+        const frontDots = dots
+          .map((d, i) => ({ ...d, i, ...project(d.theta, d.phi, rotation, radius, cx, cy) }))
           .filter((p) => p.z > -radius * 0.1) // Only front facing
           .sort(() => Math.random() - 0.5);
 
         if (frontDots.length >= 2) {
-          const from = frontDots[0];
-          const to = frontDots[1];
-          const dist = Math.sqrt((from.x - to.x) ** 2 + (from.y - to.y) ** 2);
+          // Get raw 3D coordinates relative to center
+          const getRawComp = (theta: number, phi: number) => {
+             const x = radius * Math.sin(phi) * Math.cos(theta + rotation);
+             const y = radius * Math.cos(phi);
+             const z = radius * Math.sin(phi) * Math.sin(theta + rotation);
+             return { x, y, z };
+          };
+
+          const fromP = frontDots[0];
+          const toP = frontDots[1];
+          const dist = Math.sqrt((fromP.x - toP.x) ** 2 + (fromP.y - toP.y) ** 2);
           
           if (dist > 50 && dist < radius * 1.8) {
-            const segments = generateLightningPath(from.x, from.y, to.x, to.y, 12);
+            // Generate 3D arc segments first
+            const rawSegments = generateLightningPath(
+              getRawComp(dots[fromP.i].theta, dots[fromP.i].phi), 
+              getRawComp(dots[toP.i].theta, dots[toP.i].phi), 
+              20 // smoother resolution
+            );
+
+            // Project 3D segments to 2D screen coordinates
+            const screenSegments = rawSegments.map(seg => {
+              // Apply the same tilt as the dots
+              const tiltX = seg.x;
+              const tiltY = seg.y * Math.cos(-0.3) - seg.z * Math.sin(-0.3);
+              const tiltZ = seg.y * Math.sin(-0.3) + seg.z * Math.cos(-0.3);
+              return { x: cx + tiltX, y: cy + tiltY };
+            });
+
             arcs.push({
-              from: from.i,
-              to: to.i,
+              from: fromP.i,
+              to: toP.i,
               progress: 0,
               life: 0,
               maxLife: 100, // Live even longer for slower tracking
-              segments,
-              intensity: Math.random() > 0.8 ? 2 : 1 // Some bolts are ultra-thick
+              segments: screenSegments,
+              intensity: Math.random() > 0.8 ? 1.5 : 0.8 // Softer intensity
             });
           }
         }
@@ -196,22 +232,22 @@ export default function GlobalIntelligence() {
         const segCount = Math.floor(arc.segments.length * arc.progress);
         if (segCount < 2) continue;
 
-        // Intense core bolt
+        // Intense core bolt - softened
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha})`; // Pure white core
-        ctx.lineWidth = 3 * arc.intensity;
-        ctx.shadowColor = `rgba(0, 240, 255, ${alpha})`; // Cyan bloom
-        ctx.shadowBlur = 20 * arc.intensity;
+        ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.8})`; // Off-white core
+        ctx.lineWidth = 1.5 * arc.intensity;
+        ctx.shadowColor = `rgba(14, 165, 233, ${alpha})`; // sky-500 bloom
+        ctx.shadowBlur = 10 * arc.intensity;
         ctx.moveTo(arc.segments[0].x, arc.segments[0].y);
         for (let s = 1; s < segCount; s++) {
           ctx.lineTo(arc.segments[s].x, arc.segments[s].y);
         }
         ctx.stroke();
 
-        // Secondary cyan halo bolt
+        // Secondary cyan halo bolt - softened
         ctx.beginPath();
-        ctx.strokeStyle = `rgba(0, 240, 255, ${alpha * 0.5})`;
-        ctx.lineWidth = 8 * arc.intensity;
+        ctx.strokeStyle = `rgba(14, 165, 233, ${alpha * 0.3})`;
+        ctx.lineWidth = 4 * arc.intensity;
         ctx.moveTo(arc.segments[0].x, arc.segments[0].y);
         for (let s = 1; s < segCount; s++) {
           ctx.lineTo(arc.segments[s].x, arc.segments[s].y);
@@ -220,14 +256,14 @@ export default function GlobalIntelligence() {
 
         ctx.shadowBlur = 0;
 
-        // Endpoint flash impacts
+        // Endpoint flash impacts - softened
         if (arc.progress >= 1) {
           for (const seg of [arc.segments[0], arc.segments[arc.segments.length - 1]]) {
             ctx.beginPath();
-            ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-            ctx.shadowColor = `rgba(0, 240, 255, ${alpha})`;
-            ctx.shadowBlur = 25;
-            ctx.arc(seg.x, seg.y, 6 * arc.intensity, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.8})`;
+            ctx.shadowColor = `rgba(14, 165, 233, ${alpha})`;
+            ctx.shadowBlur = 15;
+            ctx.arc(seg.x, seg.y, 3 * arc.intensity, 0, Math.PI * 2);
             ctx.fill();
             ctx.shadowBlur = 0;
           }
