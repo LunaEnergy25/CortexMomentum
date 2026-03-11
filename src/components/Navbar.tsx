@@ -17,19 +17,19 @@ export default function Navbar() {
             Cortex Momentum
           </span>
         </Link>
-      </div>
-      <div className="hidden md:flex gap-8 items-center text-sm font-medium tracking-wide">
-        <Link href="/#services" className="text-slate-300 hover:text-white transition-colors">Services</Link>
-        <Link href="/case-studies" className="text-slate-300 hover:text-white transition-colors">Deep-Tech Case Studies</Link>
-        <Link href="/#architecture" className="text-slate-300 hover:text-white transition-colors">The Architecture</Link>
-        <a
-          href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-white text-slate-950 px-5 py-2 hover:bg-slate-200 transition-all duration-300 font-semibold tracking-wide rounded-sm"
-        >
-          Initiate Diagnostic
-        </a>
+        <div className="hidden md:flex gap-8 items-center text-sm font-medium tracking-wide">
+          <Link href="/#services" className="text-slate-300 hover:text-white transition-colors">Services</Link>
+          <Link href="/case-studies" className="text-slate-300 hover:text-white transition-colors">Deep-Tech Case Studies</Link>
+          <Link href="/#architecture" className="text-slate-300 hover:text-white transition-colors">The Architecture</Link>
+          <a
+            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-slate-950 px-5 py-2 hover:bg-slate-200 transition-all duration-300 font-semibold tracking-wide rounded-sm"
+          >
+            Initiate Diagnostic
+          </a>
+        </div>
       </div>
     </nav>
   );

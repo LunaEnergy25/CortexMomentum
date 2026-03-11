@@ -146,9 +146,9 @@ export default function GlobalIntelligence() {
         ctx.shadowBlur = 0; // Reset
       }
 
-      // Spawn arcs aggressively, but 50% slower per user request
+      // Spawn arcs aggressively, but 25% slower again per user request
       arcTimer++;
-      if (arcTimer > 40) { // Spawn slower (was 15)
+      if (arcTimer > 50) { // Spawn slower (was 40)
         arcTimer = 0;
         const frontDots = projected
           .map((p, i) => ({ ...p, i }))
@@ -167,7 +167,7 @@ export default function GlobalIntelligence() {
               to: to.i,
               progress: 0,
               life: 0,
-              maxLife: 80, // Live twice as long
+              maxLife: 100, // Live even longer for slower tracking
               segments,
               intensity: Math.random() > 0.8 ? 2 : 1 // Some bolts are ultra-thick
             });
@@ -182,9 +182,9 @@ export default function GlobalIntelligence() {
       for (let i = arcs.length - 1; i >= 0; i--) {
         const arc = arcs[i];
         arc.life++;
-        arc.progress = Math.min(arc.life / 20, 1); // 50% slower travel
+        arc.progress = Math.min(arc.life / 25, 1); // 25% slower travel again
 
-        const fadeIn = Math.min(arc.life / 10, 1);
+        const fadeIn = Math.min(arc.life / 12, 1);
         const fadeOut = Math.max(0, 1 - (arc.life - arc.maxLife * 0.5) / (arc.maxLife * 0.5));
         const alpha = Math.min(fadeIn, fadeOut) * 1.0; 
 
@@ -234,7 +234,7 @@ export default function GlobalIntelligence() {
         }
       }
 
-      rotation += 0.002; // Slower, calmer rotation
+      rotation += 0.0015; // Even slower, calmer rotation
 
       animationId = requestAnimationFrame(draw);
     };
