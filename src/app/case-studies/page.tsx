@@ -81,31 +81,31 @@ const caseStudies = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="bg-slate-950 min-h-screen text-slate-300 font-sans">
+    <div className="bg-slate-950 min-h-screen text-slate-200 font-sans">
       <Navbar />
-      <div className="max-w-6xl mx-auto px-6 py-24">
-        <div className="mb-24 text-center">
+      <div className="max-w-6xl mx-auto px-6 py-24 mt-20">
+        <div className="mb-20 text-center">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 tracking-tight">Enterprise Architecture In Action</h1>
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed">
             Review our empirical deployments across Capitalized Deep-Tech, Energy, and Industrial sectors.
           </p>
         </div>
 
         <div className="space-y-32">
           {caseStudies.map((caseStudy, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-t border-slate-800 pt-16">
+            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 border-t border-slate-800 pt-16">
               <div className="lg:col-span-4">
-                <span className="text-sm font-bold tracking-wider uppercase text-slate-500 mb-4 inline-block">
+                <span className="text-xs font-bold tracking-wider uppercase text-cyan-500 mb-4 inline-block">
                   Case Study 0{index + 1}
                 </span>
                 <h2 className="text-3xl font-serif font-bold text-white mb-6 leading-snug">{caseStudy.client}</h2>
-                <div className="bg-slate-900 p-6 border border-slate-800 shadow-2xl text-sm rounded-sm">
-                  <strong className="block text-slate-500 mb-2 uppercase tracking-wide">Context</strong>
-                  <p className="text-slate-400 leading-relaxed">{caseStudy.context}</p>
+                <div className="bg-slate-900 p-6 border border-slate-800 shadow-xl text-base rounded-sm">
+                  <strong className="block text-slate-400 mb-2 uppercase tracking-wide text-xs">Context</strong>
+                  <p className="text-slate-200 leading-relaxed font-medium">{caseStudy.context}</p>
                 </div>
               </div>
               
-              <div className="lg:col-span-8 space-y-8 text-lg text-slate-300 leading-relaxed">
+              <div className="lg:col-span-8 space-y-8 text-lg text-slate-200 leading-relaxed font-medium">
                 <div>
                   <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2">Problem</strong>
                   <p>{caseStudy.problem}</p>
@@ -121,13 +121,13 @@ export default function CaseStudiesPage() {
                   <p>{caseStudy.outcome}</p>
                 </div>
 
-                <div className="bg-slate-900 p-8 border border-slate-800 shadow-2xl relative rounded-sm">
-                  <strong className="block font-serif text-xl mb-4 text-white">Strategic Impact</strong>
-                  <p className="text-slate-400">{caseStudy.impact}</p>
+                <div className="bg-slate-900/50 p-8 border-l-4 border-l-indigo-500 border-y border-r border-slate-800 shadow-2xl relative rounded-sm">
+                  <strong className="block font-serif text-2xl mb-4 text-white">Strategic Impact</strong>
+                  <p className="text-slate-100">{caseStudy.impact}</p>
                 </div>
 
                 {caseStudy.quote && (
-                  <blockquote className="italic font-serif text-xl text-slate-400 border-l-4 border-white pl-6 mt-12 bg-slate-900 p-6 border border-slate-800 rounded-sm">
+                  <blockquote className="italic font-serif text-xl text-white border-l-4 border-cyan-500 pl-6 mt-12 bg-slate-900 py-8 px-6 border-y border-r border-slate-800 rounded-sm shadow-xl">
                     &quot;{caseStudy.quote}&quot;
                   </blockquote>
                 )}
@@ -141,7 +141,7 @@ export default function CaseStudiesPage() {
               href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-white text-slate-950 px-10 py-5 font-bold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-2xl w-full md:w-auto transform hover:-translate-y-0.5"
+              className="inline-block bg-white text-slate-950 px-10 py-5 font-bold text-lg tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-2xl w-full md:w-auto transform hover:-translate-y-0.5"
             >
               Initiate Pipeline Diagnostic
             </a>

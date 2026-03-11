@@ -9,11 +9,11 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Cortex Momentum Logo"
-            width={32}
-            height={32}
-            className="w-8 h-8 object-contain"
+            width={64}
+            height={64}
+            className="w-16 h-16 object-contain"
           />
-          <span className="font-serif font-bold text-xl tracking-tight text-white group-hover:text-slate-300 transition-colors">
+          <span className="font-serif font-bold text-xl md:text-2xl tracking-tight text-white group-hover:text-slate-300 transition-colors">
             Cortex Momentum
           </span>
         </Link>
