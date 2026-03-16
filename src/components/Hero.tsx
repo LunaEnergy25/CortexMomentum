@@ -13,11 +13,11 @@ export default function Hero() {
         </div>
 
         <h1 className="text-white text-4xl sm:text-5xl lg:text-7xl font-serif font-bold leading-[1.05] tracking-tight mb-8">
-          Your physics are flawless.<br className="hidden md:block"/> So why is the commercial pipeline stalling?
+          Your physics are flawless.<br className="hidden md:block"/> But flawless physics do not survive enterprise procurement.
         </h1>
 
         <p className="text-slate-100 text-lg lg:text-2xl font-medium max-w-3xl leading-relaxed font-sans mb-12">
-          Capitalized deep-tech companies don&apos;t fail because of engineering. They fail because enterprise buyers view &quot;new&quot; as a financial risk. We bridge the gap between brilliant technology and commercial readiness so your team can unblock 7-figure deals.
+          We engineer Asymmetric Commercial Architectures to rescue live enterprise pipeline from Pilot Purgatory and radically compress your Time-to-Signal.
         </p>
 
         <a
@@ -28,6 +28,16 @@ export default function Hero() {
         >
           Initiate Pipeline Diagnostic
         </a>
+        <p className="text-slate-400 text-sm mt-4 max-w-xl leading-relaxed">
+          30 Minutes. Peer-to-peer. Mapping the gatekeepers blocking your stalled deals. No sales pitch.
+        </p>
+      </div>
+
+      {/* Trust Bar */}
+      <div className="relative z-10 mt-16 md:mt-20 max-w-4xl mx-auto text-center">
+        <p className="text-slate-500 text-sm tracking-wide leading-relaxed">
+          Intelligence infrastructure trusted by leaders in Advanced PCB Manufacturing, Renewable Natural Gas, and FOAK Private Credit.
+        </p>
       </div>
     </section>
   );
