@@ -1,150 +1,269 @@
-import { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 
-export const metadata: Metadata = {
-  title: "Deep-Tech Case Studies | Cortex Momentum",
-  description: "Explore our frameworks applied to capitalized deep-tech, energy, and industrial companies.",
-};
+/* ────────────────────────────────────────────────────────────
+   STEP 1: DATA ARCHITECTURE
+   ──────────────────────────────────────────────────────────── */
 
-const caseStudies = [
+interface CaseStudy {
+  id: string;
+  category: string;
+  badge: string;
+  client: string;
+  metric: string;
+  result: string;
+  friction: string;
+  pivot: string;
+}
+
+const caseStudiesData: CaseStudy[] = [
+  /* ── FLAGSHIP DOSSIERS ── */
   {
-    pillar: "Advanced PCB Manufacturing",
+    id: "elephantech",
+    category: "Deep-Tech & Advanced Manufacturing",
+    badge: "DEEP-TECH & ADVANCED MANUFACTURING",
     client: "Elephantech",
-    context: "Elephantech developed a revolutionary additive manufacturing process. They successfully secured early capital based on the brilliance of their physics and aggressively pursued the enterprise market to scale operations.",
-    problem: "The commercial pipeline stalled. The sales team utilized a monolithic pitch focused on a \"70% Material Reduction\" and \"Sustainability.\" Enterprise procurement—incentivized by cost reduction and supply chain stability rather than carbon reduction—blocked the technology as an unnecessary \"Green Premium\" expense. Simultaneously, Quality Engineers viewed the drastic reduction in copper not as an efficiency gain, but as a severe risk to system reliability, assuming less copper equated to weaker traces.",
-    approach: "Cortex Momentum deployed a Strategic GTM Architecture sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don't buy \"Better\"—they buy \"Safer,\" we moved \"Sustainability\" from the primary hook to a secondary validator. The new commercial engine was built around \"Silver Volatility Hedging\" for financial buyers, positioning the printed copper innovation as the only safe harbor against supply chain chaos.",
-    outcome: "The narrative shift from \"Green Tech\" to \"Supply Chain Risk\" generated 60% higher engagement from executive decision-makers. Internal GTM friction was eliminated, allowing the team to achieve commercial readiness significantly faster.",
-    impact: "We replaced \"Sales Breath\" with problem awareness. By diagnosing real risk and positioning the solution as the safest path forward, the buyer sold it internally. Fear of F*cking Up (FOFU) was successfully neutralized.",
-    quote: "Deep Tech doesn't fail because the technology is bad. It fails because the narrative asks buyers to take a risk on 'New,' rather than positioning 'New' as the only way to eliminate risk."
+    metric: "60%",
+    result: "60% higher executive engagement by neutralizing transition risk.",
+    friction:
+      "Your engineering is flawless, but the buyer\u2019s CFO is actively blocking the deal. Deep-tech startups attempt to sell \u201cenvironmental virtue\u201d or \u201cinnovation\u201d to procurement. To a CFO, unmitigated innovation equals transition risk.",
+    pivot:
+      "Engineered a Bifurcated Commercial Architecture. Shifted the executive narrative away from environmental impact, anchoring strictly to Volatility Hedging to protect their CAC payback period.",
   },
   {
-    pillar: "$50M RNG Company Pivot",
+    id: "earthgrid",
+    category: "Energy & Gigawatt Infrastructure",
+    badge: "ENERGY & GIGAWATT INFRASTRUCTURE",
+    client: "EarthGrid",
+    metric: "48 Hours",
+    result: "From zero to 103 engaged decision-makers in 48 hours.",
+    friction:
+      "Your pilot was highly successful, but the enterprise rollout is trapped in committee purgatory. The internal Champion lacks the specialized vocabulary to defend premium pricing against legacy incumbents.",
+    pivot:
+      "Deployed the Champion Track. Armed the internal buyer with Lowest-Bidder Defense Dossiers and mapped the exact internal gatekeepers, validating the commercial architecture at unprecedented speed.",
+  },
+  {
+    id: "analytica-advisors",
+    category: "Private Equity & FOAK Capital",
+    badge: "PRIVATE EQUITY & FOAK CAPITAL",
+    client: "Analytica Advisors (Valley of Death)",
+    metric: "Months to Days",
+    result:
+      "Compressed Time-to-Signal, engineering deal velocity where none previously existed.",
+    friction:
+      'A FOAK Private Credit fund offered a lower cost of capital, yet the market actively filtered out its term sheets. Standard diagnostics failed due to the B2B "Observer Effect" (market posturing).',
+    pivot:
+      'Tracked "Dark Funnel" intent to bypass sanitized data. Exposed opposing boardroom fears: Founders terrified of cap table dilution vs. PE Gatekeepers terrified of execution failure. Engineered a Dual-Payload Architecture: "Cap Table Protection" for Founders, and "Impedance Matching" for PE Gatekeepers.',
+  },
+
+  /* ── LEGACY CASE STUDIES ── */
+  {
+    id: "rng-energy",
+    category: "Energy & Gigawatt Infrastructure",
+    badge: "RENEWABLE NATURAL GAS",
     client: "RNG Energy Co.",
-    context: "A renewable natural gas (RNG) company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days or face dissolution.",
-    problem: "The sales team utilized outdated market data. Enterprise procurement blocked deals because the ROI timeline of the RNG offering misaligned with the buyers' fiscal year requirements. They were drowning in complex variables and legacy consulting reports that were too slow to execute.",
-    approach: "Bypassing a prohibitive $120k, 3-month traditional consulting study, Cortex Momentum deployed a 5-day intelligence sprint, mapping regulatory and compliance drivers across the sector.",
-    outcome: "We delivered a board-ready pivot strategy in just 5 days. We identified the European Sustainable Aviation Fuel (SAF) regulations as a massive, immediate demand driver aligning perfectly with their existing capabilities.",
-    impact: "By aligning their output with the buyer's strict internal compliance mandates, we established immediate commercial readiness, unlocking a stalled $50M pipeline.",
-    quote: ""
+    metric: "5 Days",
+    result:
+      "Board-ready pivot strategy delivered in 5 days, unlocking a stalled $50M pipeline.",
+    friction:
+      "A $50M renewable natural gas company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days or face dissolution. The sales team relied on outdated market data, and enterprise procurement blocked deals because the ROI timeline misaligned with buyers\u2019 fiscal year requirements.",
+    pivot:
+      "Bypassing a prohibitive $120k, 3-month traditional consulting study, Cortex Momentum deployed a 5-day intelligence sprint. Mapped regulatory and compliance drivers across the sector and identified European Sustainable Aviation Fuel (SAF) regulations as a massive, immediate demand driver aligning perfectly with their existing capabilities.",
   },
   {
-    pillar: "Market Validation for Plasma Boring",
+    id: "climatehive-earthgrid",
+    category: "Energy & Gigawatt Infrastructure",
+    badge: "PLASMA BORING MARKET VALIDATION",
     client: "Climate Hive x EarthGrid",
-    context: "ClimateHive, a premier strategic agency, was leading a highly visible capital raise campaign for EarthGrid's proprietary plasma boring technology, generating strong initial financial interest from VCs.",
-    problem: "A critical \"Investor Skepticism\" gap emerged. VCs were listening, but the actual end customers (Utilities and Developers) were missing from the conversation. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk \"Science Project.\"",
-    approach: "ClimateHive deployed Cortex Momentum to execute a 48-Hour Market Validation Sprint. Activating a proprietary network of Utility VPs and Regulators, we invited specific experts to a technical debate on physics versus economics, extracting exact market objections (e.g., Reactive Power issues).",
-    outcome: "In 48 hours, the sprint generated 4,999 organic impressions with zero ad spend and achieved a 1:1 comment-to-like debate ratio. Direct dialogue was initiated with 103 vetted decision-makers, including a VP of Transmission who stepped out of a critical grid operator meeting to participate.",
-    impact: "The campaign acted as a live market stress-test, proving to investors that the technology was highly relevant to grid operators. The intelligence gathered allowed EarthGrid to achieve immediate GTM clarity, shifting their sales hook from \"Boring Cost\" to \"Permitting Speed.\"",
-    quote: "I wanted to reach industry folks... You have a captured audience and authoritative voice that I thought would give us that extra bump. It did for sure. — Kevin Drolet, Founder, ClimateHive"
+    metric: "103",
+    result:
+      "103 vetted decision-makers engaged with zero ad spend in 48 hours.",
+    friction:
+      'ClimateHive was leading a capital raise campaign for EarthGrid\u2019s plasma boring technology, generating strong initial financial interest. A critical "Investor Skepticism" gap emerged: VCs were listening, but end customers (Utilities and Developers) were missing from the conversation. Without industry experts to verify the physics, conservative investors viewed it as a high-risk "Science Project."',
+    pivot:
+      "Executed a 48-Hour Market Validation Sprint. Activated a proprietary network of Utility VPs and Regulators, inviting specific experts to a technical debate on physics versus economics. Generated 4,999 organic impressions, a 1:1 comment-to-like debate ratio, and direct dialogue with 103 decision-makers\u2014including a VP of Transmission who stepped out of a critical grid operator meeting to participate.",
   },
   {
-    pillar: "Pre-Revenue Cleantech SaaS Go-To-Market",
+    id: "cleantech-saas",
+    category: "Deep-Tech & Advanced Manufacturing",
+    badge: "CLEANTECH SAAS GTM",
     client: "Cleantech SaaS Startup",
-    context: "A pre-revenue, engineer-led cleantech SaaS startup developed a highly promising MVP for microgrid developers.",
-    problem: "The startup had only six months of runway left to find its first real customers. Drowning in conflicting industry noise, they were unable to separate signal from noise, and did not know what sales hooks would actually resonate.",
-    approach: "Cortex Momentum deployed our intelligence platform to analyze their target market. We analyzed over 200 project RFPs to identify timing patterns, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers.",
-    outcome: "We achieved total GTM clarity, pinpointing Brownfield redevelopment projects as a highly lucrative niche. We uncovered that the #1 driver for these developers was deal velocity, not cost savings.",
-    impact: "We rebuilt their messaging architecture entirely around Speed, Compliance, and Guarantees, creating a clear path to shift from ineffective cold outreach to a high-converting inbound approach, establishing commercial readiness well before runway expired.",
-    quote: ""
+    metric: "200+",
+    result:
+      "Analyzed over 200 project RFPs to achieve total GTM clarity before runway expired.",
+    friction:
+      "A pre-revenue, engineer-led cleantech SaaS startup had only six months of runway left to find its first real customers. Drowning in conflicting industry noise, the team was unable to separate signal from noise and had no idea what sales hooks would actually resonate.",
+    pivot:
+      "Deployed our intelligence platform to analyze 200+ project RFPs, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers. Pinpointed Brownfield redevelopment projects as a lucrative niche and uncovered that the #1 driver for developers was deal velocity, not cost savings. Rebuilt messaging around Speed, Compliance, and Guarantees.",
   },
   {
-    pillar: "Pricing First-of-its-Kind Wind Project",
+    id: "texas-ercot",
+    category: "Energy & Gigawatt Infrastructure",
+    badge: "FOAK WIND PRICING",
     client: "Texas ERCOT Startup",
-    context: "A disruptive wind energy startup developed a breakthrough technology capable of building gigawatt-scale projects faster than legacy competitors.",
-    problem: "The CEO was consumed by a critical financing round and lacked the bandwidth to build a defined ICP. They needed a highly competitive, data-backed price point for the 2027 Texas ERCOT market, but lacked the GTM clarity to execute it.",
-    approach: "Cortex Momentum analyzed the complex energy market, evaluating hyperscaler, data center, and Department of Defense market opportunities.",
-    outcome: "We delivered a highly competitive, risk-adjusted price point of $38-$42/MWh for the Texas ERCOT market, validating data centers as the primary target market based on \"speed-to-deployment.\"",
-    impact: "We formulated a risk-adjusted pricing strategy and provided a repeatable market intelligence process, achieving total commercial readiness for their upcoming hires.",
-    quote: ""
+    metric: "$38\u2013$42",
+    result:
+      "Risk-adjusted price point of $38\u2013$42/MWh validated for the Texas ERCOT market.",
+    friction:
+      "A disruptive wind energy startup with breakthrough technology capable of building gigawatt-scale projects faster than legacy competitors. The CEO was consumed by a critical financing round and lacked the bandwidth to build a defined ICP or competitive pricing strategy for the 2027 Texas ERCOT market.",
+    pivot:
+      "Analyzed the complex energy market, evaluating hyperscaler, data center, and Department of Defense opportunities. Delivered a competitive, risk-adjusted price point and validated data centers as the primary target based on speed-to-deployment. Provided a repeatable market intelligence process for commercial readiness.",
   },
   {
-    pillar: "Targeted Investor Readiness (250 to 25 VCs)",
+    id: "deep-tech-investor",
+    category: "Private Equity & FOAK Capital",
+    badge: "TARGETED INVESTOR READINESS",
     client: "Deep-Tech Company",
-    context: "A deep-tech company was navigating the difficult \"Funding Gap\" between Seed and Series A funding.",
-    problem: "Operating in a strategic void, they were preparing to pitch a generic, monolithic deck to a scattered list of over 250+ investors, risking alienation of conservative capital.",
-    approach: "We replaced their inefficient outreach with a data-driven intelligence strategy, analyzing recent funding announcements and mapping public statements of potential strategic investors.",
-    outcome: "We successfully cut their outreach list from 250 general VCs down to 25 highly targeted family offices whose profiles perfectly matched their sector.",
-    impact: "By developing precisely aligned messaging for each target, we delivered a data-driven playbook, massively accelerating their path to commercial readiness and capitalization.",
-    quote: ""
+    metric: "250 \u2192 25",
+    result:
+      "Cut investor outreach from 250 general VCs to 25 highly targeted family offices.",
+    friction:
+      'A deep-tech company was navigating the "Funding Gap" between Seed and Series A. Operating in a strategic void, they were preparing to pitch a generic, monolithic deck to 250+ scattered investors, risking alienation of conservative capital.',
+    pivot:
+      "Replaced inefficient outreach with a data-driven intelligence strategy. Analyzed recent funding announcements and mapped public statements of potential strategic investors. Cut the list to 25 highly targeted family offices with precisely aligned messaging for each target.",
   },
   {
-    pillar: "Solar Hardware Startup Margin Optimization",
+    id: "solar-hardware",
+    category: "Deep-Tech & Advanced Manufacturing",
+    badge: "SOLAR HARDWARE MARGIN OPT",
     client: "Solar Hardware Mfg",
-    context: "A pioneering three-person solar hardware startup had no formal business background and no clear path to market.",
-    problem: "Their sales efforts were scattered nationwide to early adopters, resulting in incredibly thin margins and no budget for customer acquisition.",
-    approach: "Cortex Momentum analyzed the entire US market to pinpoint optimal geographic targeting based on income, EV adoption, and local incentives.",
-    outcome: "We pinpointed exactly 3 high-potential metro areas. We identified their ideal first customer profile and recommended a strategic price increase that achieved a sustainable ~40% profit margin.",
-    impact: "We transformed their GTM from a scattered guessing game into a highly focused, self-funding growth engine.",
-    quote: ""
-  }
+    metric: "~40%",
+    result:
+      "Achieved a sustainable ~40% profit margin through strategic price increase and geographic targeting.",
+    friction:
+      "A pioneering three-person solar hardware startup had no formal business background and no clear path to market. Sales efforts were scattered nationwide to early adopters, resulting in incredibly thin margins and no budget for customer acquisition.",
+    pivot:
+      "Analyzed the entire US market to pinpoint optimal geographic targeting based on income, EV adoption, and local incentives. Identified exactly 3 high-potential metro areas, their ideal first customer profile, and recommended a strategic price increase. Transformed their GTM from a scattered guessing game into a focused, self-funding growth engine.",
+  },
 ];
 
+/* ────────────────────────────────────────────────────────────
+   COMPONENT
+   ──────────────────────────────────────────────────────────── */
+
 export default function CaseStudiesPage() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  /* Derive unique categories for the filter bar */
+  const categories = [
+    "All",
+    ...Array.from(new Set(caseStudiesData.map((cs) => cs.category))),
+  ];
+
+  /* Filter */
+  const filtered =
+    activeCategory === "All"
+      ? caseStudiesData
+      : caseStudiesData.filter((cs) => cs.category === activeCategory);
+
   return (
     <div className="bg-slate-950 min-h-screen text-slate-200 font-sans">
       <Navbar />
-      <div className="max-w-6xl mx-auto px-6 py-24 mt-20">
-        <div className="mb-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-semibold text-white mb-6 tracking-tight">Enterprise Architecture In Action</h1>
-          <p className="text-xl text-slate-200 max-w-3xl mx-auto font-medium leading-relaxed">
-            Review our empirical deployments across Capitalized Deep-Tech, Energy, and Industrial sectors.
+      <div className="max-w-7xl mx-auto px-6 py-24 mt-20">
+        {/* ── Header ── */}
+        <div className="mb-16 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white mb-6 tracking-tight">
+            Diagnostic Index
+          </h1>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            Declassified enterprise architecture deployments across deep-tech,
+            energy, and private equity sectors.
           </p>
         </div>
 
-        <div className="space-y-32">
-          {caseStudies.map((caseStudy, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 border-t border-slate-800 pt-16">
-              <div className="lg:col-span-4">
-                <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-4 inline-block">
-                  Case Study 0{index + 1}
+        {/* ── STEP 2: FILTER BAR ── */}
+        <div className="flex flex-wrap gap-4 mb-16 justify-center">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`text-sm font-medium tracking-wide uppercase pb-2 transition-colors duration-200 cursor-pointer ${
+                activeCategory === cat
+                  ? "text-white border-b border-white"
+                  : "text-slate-500 hover:text-slate-300 border-b border-transparent"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* ── STEP 3: DOSSIER STACK ── */}
+        <div className="space-y-0">
+          {filtered.map((cs) => (
+            <div
+              key={cs.id}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 pb-16 border-b border-slate-800/50 mb-16"
+            >
+              {/* Left Column — Metrics / Badge */}
+              <div className="col-span-1 lg:col-span-4 space-y-6">
+                <span className="inline-block text-xs font-semibold tracking-widest uppercase text-slate-400 border border-slate-700 px-3 py-1.5 rounded-sm">
+                  {cs.badge}
                 </span>
-                <h2 className="text-3xl font-serif font-semibold text-white mb-6 leading-snug">{caseStudy.client}</h2>
-                <div className="bg-slate-900/60 p-6 border border-slate-800 shadow-lg text-base rounded-sm">
-                  <strong className="block text-slate-400 mb-2 uppercase tracking-wide text-xs">Context</strong>
-                  <p className="text-slate-200 leading-relaxed">{caseStudy.context}</p>
+                <h2 className="text-3xl font-serif font-semibold text-white leading-snug">
+                  {cs.client}
+                </h2>
+                <div>
+                  <span className="block text-5xl lg:text-6xl font-light text-white tracking-tight leading-none">
+                    {cs.metric}
+                  </span>
+                  <p className="text-slate-300 text-base mt-3 leading-relaxed">
+                    {cs.result}
+                  </p>
                 </div>
               </div>
-              
-              <div className="lg:col-span-8 space-y-8 text-lg md:text-xl text-slate-200 leading-relaxed">
+
+              {/* Right Column — Narrative */}
+              <div className="col-span-1 lg:col-span-8 space-y-8">
                 <div>
-                  <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2 font-semibold">Problem</strong>
-                  <p>{caseStudy.problem}</p>
+                  <strong className="block font-serif text-xl mb-3 text-white border-b border-slate-800 pb-2 font-semibold">
+                    Friction
+                  </strong>
+                  <p className="text-slate-300 leading-relaxed text-lg">
+                    {cs.friction}
+                  </p>
                 </div>
-
                 <div>
-                  <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2 font-semibold">Approach</strong>
-                  <p>{caseStudy.approach}</p>
+                  <strong className="block font-serif text-xl mb-3 text-white border-b border-slate-800 pb-2 font-semibold">
+                    Pivot
+                  </strong>
+                  <p className="text-slate-300 leading-relaxed text-lg">
+                    {cs.pivot}
+                  </p>
                 </div>
-
-                <div>
-                  <strong className="block font-serif text-2xl mb-4 text-white border-b border-slate-800 pb-2 font-semibold">Outcome</strong>
-                  <p>{caseStudy.outcome}</p>
-                </div>
-
-                <div className="bg-slate-900/50 p-8 border-l-4 border-l-slate-500 border-y border-r border-slate-800 shadow-xl relative rounded-sm">
-                  <strong className="block font-serif text-2xl mb-4 text-white font-semibold">Strategic Impact</strong>
-                  <p className="text-slate-100">{caseStudy.impact}</p>
-                </div>
-
-                {caseStudy.quote && (
-                  <blockquote className="text-xl text-slate-200 border-l-4 border-slate-600 pl-6 mt-12 bg-slate-900/30 py-8 px-6 border-y border-r border-slate-800 rounded-sm shadow-lg font-serif">
-                    &quot;{caseStudy.quote}&quot;
-                  </blockquote>
-                )}
               </div>
             </div>
           ))}
         </div>
-        
-        <div className="mt-32 text-center pb-24">
-            <a
-              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-slate-900 px-10 py-5 font-semibold text-lg tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-0.5"
-            >
-              Initiate Pipeline Diagnostic
-            </a>
+
+        {/* ── STEP 4: DIAGNOSTIC GATE FOOTER CTA ── */}
+        <div className="mt-16 text-center space-y-10 pb-24">
+          <h2 className="text-4xl md:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">
+            Unblock Your Enterprise Pipeline
+          </h2>
+
+          <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-red-900/60 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-red-700/80"></div>
+            <p className="text-xl text-white leading-relaxed font-medium mb-4">
+              Exclusively for capitalized deep-tech and energy companies with
+              live enterprise pipeline.
+            </p>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Do not initiate this diagnostic if you are pre-revenue or seeking
+              top-of-funnel PR.
+            </p>
+          </div>
+
+          <a
+            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"
+          >
+            Initiate Pipeline Diagnostic
+          </a>
         </div>
       </div>
     </div>
