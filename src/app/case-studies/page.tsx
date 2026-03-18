@@ -8,135 +8,127 @@ import Navbar from "@/components/Navbar";
    ──────────────────────────────────────────────────────────── */
 
 interface CaseStudy {
-  id: string;
+  id: number;
   category: string;
   badge: string;
-  client: string;
   metric: string;
   result: string;
-  friction: string;
-  pivot: string;
+  content: React.ReactNode;
 }
 
 const caseStudiesData: CaseStudy[] = [
-  /* ── FLAGSHIP DOSSIERS ── */
   {
-    id: "elephantech",
-    category: "Deep-Tech & Advanced Manufacturing",
-    badge: "DEEP-TECH & ADVANCED MANUFACTURING",
-    client: "Elephantech",
-    metric: "60%",
-    result: "60% higher executive engagement by neutralizing transition risk.",
-    friction:
-      "Your engineering is flawless, but the buyer\u2019s CFO is actively blocking the deal. Deep-tech startups attempt to sell \u201cenvironmental virtue\u201d or \u201cinnovation\u201d to procurement. To a CFO, unmitigated innovation equals transition risk.",
-    pivot:
-      "Engineered a Bifurcated Commercial Architecture. Shifted the executive narrative away from environmental impact, anchoring strictly to Volatility Hedging to protect their CAC payback period.",
+    id: 1,
+    category: 'Private Equity & Capital',
+    badge: 'PRIVATE EQUITY & FOAK CAPITAL',
+    metric: 'Months to Days',
+    result: 'Compressed Time-to-Signal, engineering deal velocity where none previously existed.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> A FOAK Private Credit fund offered a lower cost of capital, yet the market actively filtered out its term sheets. Standard diagnostics failed to uncover why due to the B2B &quot;Observer Effect&quot;&mdash;developers posture rather than reveal their true bottlenecks to capital providers.</p>
+        <p><strong className="text-white">The Architecture:</strong> We deployed comparative analytics to track &quot;Dark Funnel&quot; intent, bypassing sanitized market data. The root cause was exposed: the market was frozen between opposing boardroom fears. Founders were terrified of cap table dilution, while PE Gatekeepers were terrified of execution failure.</p>
+        <p><strong className="text-white">The Impact:</strong> We engineered a Dual-Payload Architecture. The facility was repositioned as &quot;Cap Table Protection&quot; for Founders, and strict &quot;Impedance Matching&quot; for PE Gatekeepers. This neutralized the specific fears blocking the deal, compressing Time-to-Signal from months to days.</p>
+      </div>
+    )
   },
   {
-    id: "earthgrid",
-    category: "Energy & Gigawatt Infrastructure",
-    badge: "ENERGY & GIGAWATT INFRASTRUCTURE",
-    client: "EarthGrid",
-    metric: "48 Hours",
-    result: "From zero to 103 engaged decision-makers in 48 hours.",
-    friction:
-      "Your pilot was highly successful, but the enterprise rollout is trapped in committee purgatory. The internal Champion lacks the specialized vocabulary to defend premium pricing against legacy incumbents.",
-    pivot:
-      "Deployed the Champion Track. Armed the internal buyer with Lowest-Bidder Defense Dossiers and mapped the exact internal gatekeepers, validating the commercial architecture at unprecedented speed.",
+    id: 2,
+    category: 'Deep-Tech & Manufacturing',
+    badge: 'DEEP-TECH & ADVANCED MANUFACTURING',
+    metric: '60%',
+    result: '60% higher executive engagement by neutralizing transition risk.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> Elephantech secured early capital based on flawless physics, but the enterprise pipeline stalled. The sales team relied on a monolithic pitch focused on &quot;Sustainability.&quot; Enterprise procurement&mdash;incentivized by supply chain stability&mdash;blocked the technology as an unnecessary &quot;Green Premium.&quot; Simultaneously, Quality Engineers viewed the drastic reduction in copper as a severe risk to system reliability.</p>
+        <p><strong className="text-white">The Architecture:</strong> Cortex Momentum deployed a Strategic GTM sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don&apos;t buy &quot;Better&quot;&mdash;they buy &quot;Safer,&quot; we moved &quot;Sustainability&quot; to a secondary validator. The commercial engine was anchored entirely to &quot;Silver Volatility Hedging,&quot; positioning the innovation as a safe harbor against supply chain chaos.</p>
+        <p><strong className="text-white">The Impact:</strong> The narrative shift from &quot;Green Tech&quot; to strict &quot;Supply Chain Risk&quot; generated 60% higher engagement from executives. By diagnosing actual operational risk, the buyer sold it internally, successfully neutralizing personal career risk and achieving rapid commercial readiness.</p>
+      </div>
+    )
   },
   {
-    id: "analytica-advisors",
-    category: "Private Equity & FOAK Capital",
-    badge: "PRIVATE EQUITY & FOAK CAPITAL",
-    client: "Analytica Advisors (Valley of Death)",
-    metric: "Months to Days",
-    result:
-      "Compressed Time-to-Signal, engineering deal velocity where none previously existed.",
-    friction:
-      'A FOAK Private Credit fund offered a lower cost of capital, yet the market actively filtered out its term sheets. Standard diagnostics failed due to the B2B "Observer Effect" (market posturing).',
-    pivot:
-      'Tracked "Dark Funnel" intent to bypass sanitized data. Exposed opposing boardroom fears: Founders terrified of cap table dilution vs. PE Gatekeepers terrified of execution failure. Engineered a Dual-Payload Architecture: "Cap Table Protection" for Founders, and "Impedance Matching" for PE Gatekeepers.',
-  },
-
-  /* ── LEGACY CASE STUDIES ── */
-  {
-    id: "rng-energy",
-    category: "Energy & Gigawatt Infrastructure",
-    badge: "RENEWABLE NATURAL GAS",
-    client: "RNG Energy Co.",
-    metric: "5 Days",
-    result:
-      "Board-ready pivot strategy delivered in 5 days, unlocking a stalled $50M pipeline.",
-    friction:
-      "A $50M renewable natural gas company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days or face dissolution. The sales team relied on outdated market data, and enterprise procurement blocked deals because the ROI timeline misaligned with buyers\u2019 fiscal year requirements.",
-    pivot:
-      "Bypassing a prohibitive $120k, 3-month traditional consulting study, Cortex Momentum deployed a 5-day intelligence sprint. Mapped regulatory and compliance drivers across the sector and identified European Sustainable Aviation Fuel (SAF) regulations as a massive, immediate demand driver aligning perfectly with their existing capabilities.",
+    id: 3,
+    category: 'Energy & Infrastructure',
+    badge: 'PLASMA BORING MARKET VALIDATION',
+    metric: '48 Hours',
+    result: 'From zero to 103 engaged decision-makers in 48 hours.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> ClimateHive was leading a highly visible capital raise for EarthGrid&apos;s proprietary plasma boring technology. A critical &quot;Investor Skepticism&quot; gap emerged: VCs were listening, but end customers (Utilities and Developers) were missing. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk &quot;Science Project.&quot;</p>
+        <p><strong className="text-white">The Architecture:</strong> We executed a 48-Hour Market Validation Sprint. Activating a proprietary network of Utility VPs and Regulators, we engineered a technical debate on physics versus economics, bypassing standard PR to extract exact market objections.</p>
+        <p><strong className="text-white">The Impact:</strong> In 48 hours, the intelligence sprint generated 4,999 organic impressions with a 1:1 comment-to-like debate ratio. Direct dialogue was initiated with 103 vetted decision-makers. This live stress-test proved absolute relevance to grid operators, shifting their sales hook from &quot;Boring Cost&quot; to &quot;Permitting Speed.&quot;</p>
+      </div>
+    )
   },
   {
-    id: "climatehive-earthgrid",
-    category: "Energy & Gigawatt Infrastructure",
-    badge: "PLASMA BORING MARKET VALIDATION",
-    client: "Climate Hive x EarthGrid",
-    metric: "103",
-    result:
-      "103 vetted decision-makers engaged with zero ad spend in 48 hours.",
-    friction:
-      'ClimateHive was leading a capital raise campaign for EarthGrid\u2019s plasma boring technology, generating strong initial financial interest. A critical "Investor Skepticism" gap emerged: VCs were listening, but end customers (Utilities and Developers) were missing from the conversation. Without industry experts to verify the physics, conservative investors viewed it as a high-risk "Science Project."',
-    pivot:
-      "Executed a 48-Hour Market Validation Sprint. Activated a proprietary network of Utility VPs and Regulators, inviting specific experts to a technical debate on physics versus economics. Generated 4,999 organic impressions, a 1:1 comment-to-like debate ratio, and direct dialogue with 103 decision-makers\u2014including a VP of Transmission who stepped out of a critical grid operator meeting to participate.",
+    id: 4,
+    category: 'Energy & Infrastructure',
+    badge: 'RENEWABLE NATURAL GAS',
+    metric: '5 Days',
+    result: 'Board-ready pivot strategy delivered in 5 days, unlocking a stalled $50M pipeline.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> A renewable natural gas (RNG) company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days. The sales team relied on outdated market data, while enterprise procurement blocked deals because the ROI timeline misaligned with buyers&apos; requirements.</p>
+        <p><strong className="text-white">The Architecture:</strong> Bypassing a prohibitive $120k, 3-month consulting study, Cortex Momentum deployed a 5-day intelligence sprint. We mapped regulatory and compliance drivers across the sector to uncover hidden, high-velocity demand.</p>
+        <p><strong className="text-white">The Impact:</strong> We delivered a board-ready pivot strategy in 5 days, identifying European Sustainable Aviation Fuel (SAF) regulations as a massive, immediate demand driver. By aligning output with strict internal compliance mandates, we established immediate commercial readiness and unlocked a stalled $50M pipeline.</p>
+      </div>
+    )
   },
   {
-    id: "cleantech-saas",
-    category: "Deep-Tech & Advanced Manufacturing",
-    badge: "CLEANTECH SAAS GTM",
-    client: "Cleantech SaaS Startup",
-    metric: "200+",
-    result:
-      "Analyzed over 200 project RFPs to achieve total GTM clarity before runway expired.",
-    friction:
-      "A pre-revenue, engineer-led cleantech SaaS startup had only six months of runway left to find its first real customers. Drowning in conflicting industry noise, the team was unable to separate signal from noise and had no idea what sales hooks would actually resonate.",
-    pivot:
-      "Deployed our intelligence platform to analyze 200+ project RFPs, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers. Pinpointed Brownfield redevelopment projects as a lucrative niche and uncovered that the #1 driver for developers was deal velocity, not cost savings. Rebuilt messaging around Speed, Compliance, and Guarantees.",
+    id: 5,
+    category: 'Cleantech & SaaS',
+    badge: 'CLEANTECH SAAS GTM',
+    metric: '200+',
+    result: 'Analyzed over 200 project RFPs to achieve total GTM clarity before runway expired.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> A pre-revenue, engineer-led cleantech SaaS startup developed a promising MVP for microgrid developers but had only six months of runway remaining. Drowning in industry noise, they were unable to separate signal from noise and lacked the commercial hooks that actually resonate with enterprise buyers.</p>
+        <p><strong className="text-white">The Architecture:</strong> We deployed our intelligence platform to analyze their target market. We processed over 200 project RFPs to identify timing patterns, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers.</p>
+        <p><strong className="text-white">The Impact:</strong> We pinpointed Brownfield redevelopment projects as a highly lucrative niche. Uncovering that the #1 driver for these developers was deal velocity, not cost savings, we rebuilt their messaging architecture entirely around Speed, Compliance, and Guarantees.</p>
+      </div>
+    )
   },
   {
-    id: "texas-ercot",
-    category: "Energy & Gigawatt Infrastructure",
-    badge: "FOAK WIND PRICING",
-    client: "Texas ERCOT Startup",
-    metric: "$38\u2013$42",
-    result:
-      "Risk-adjusted price point of $38\u2013$42/MWh validated for the Texas ERCOT market.",
-    friction:
-      "A disruptive wind energy startup with breakthrough technology capable of building gigawatt-scale projects faster than legacy competitors. The CEO was consumed by a critical financing round and lacked the bandwidth to build a defined ICP or competitive pricing strategy for the 2027 Texas ERCOT market.",
-    pivot:
-      "Analyzed the complex energy market, evaluating hyperscaler, data center, and Department of Defense opportunities. Delivered a competitive, risk-adjusted price point and validated data centers as the primary target based on speed-to-deployment. Provided a repeatable market intelligence process for commercial readiness.",
+    id: 6,
+    category: 'Energy & Infrastructure',
+    badge: 'FOAK WIND PRICING',
+    metric: '$38\u2013$42',
+    result: 'Risk-adjusted price point of $38\u2013$42/MWh validated for the Texas ERCOT market.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> A disruptive wind energy startup developed technology to build gigawatt-scale projects faster than legacy competitors. The CEO was consumed by financing rounds and lacked the bandwidth to build a data-backed price point for the 2027 Texas ERCOT market.</p>
+        <p><strong className="text-white">The Architecture:</strong> Cortex Momentum analyzed the complex energy market, specifically evaluating hyperscaler, data center, and Department of Defense market opportunities to map the path of least commercial resistance.</p>
+        <p><strong className="text-white">The Impact:</strong> We delivered a competitive, risk-adjusted price point of $38\u2013$42/MWh, validating data centers as the primary target based on &quot;speed-to-deployment.&quot; This achieved total commercial readiness for their upcoming hires.</p>
+      </div>
+    )
   },
   {
-    id: "deep-tech-investor",
-    category: "Private Equity & FOAK Capital",
-    badge: "TARGETED INVESTOR READINESS",
-    client: "Deep-Tech Company",
-    metric: "250 \u2192 25",
-    result:
-      "Cut investor outreach from 250 general VCs to 25 highly targeted family offices.",
-    friction:
-      'A deep-tech company was navigating the "Funding Gap" between Seed and Series A. Operating in a strategic void, they were preparing to pitch a generic, monolithic deck to 250+ scattered investors, risking alienation of conservative capital.',
-    pivot:
-      "Replaced inefficient outreach with a data-driven intelligence strategy. Analyzed recent funding announcements and mapped public statements of potential strategic investors. Cut the list to 25 highly targeted family offices with precisely aligned messaging for each target.",
+    id: 7,
+    category: 'Private Equity & Capital',
+    badge: 'TARGETED INVESTOR READINESS',
+    metric: '250 \u2192 25',
+    result: 'Cut investor outreach from 250 general VCs to 25 highly targeted family offices.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> A deep-tech company was navigating the &quot;Funding Gap&quot; between Seed and Series A. Operating in a strategic void, they were preparing to pitch a generic, monolithic deck to over 250+ investors, risking alienation of conservative capital.</p>
+        <p><strong className="text-white">The Architecture:</strong> We replaced inefficient outreach with a data-driven intelligence strategy, mapping public statements of potential strategic investors to explicitly filter out misaligned capital.</p>
+        <p><strong className="text-white">The Impact:</strong> We cut their outreach list from 250 general VCs down to 25 highly targeted family offices. By developing precisely aligned messaging for each target, we delivered a playbook that massively accelerated their path to capitalization.</p>
+      </div>
+    )
   },
   {
-    id: "solar-hardware",
-    category: "Deep-Tech & Advanced Manufacturing",
-    badge: "SOLAR HARDWARE MARGIN OPT",
-    client: "Solar Hardware Mfg",
-    metric: "~40%",
-    result:
-      "Achieved a sustainable ~40% profit margin through strategic price increase and geographic targeting.",
-    friction:
-      "A pioneering three-person solar hardware startup had no formal business background and no clear path to market. Sales efforts were scattered nationwide to early adopters, resulting in incredibly thin margins and no budget for customer acquisition.",
-    pivot:
-      "Analyzed the entire US market to pinpoint optimal geographic targeting based on income, EV adoption, and local incentives. Identified exactly 3 high-potential metro areas, their ideal first customer profile, and recommended a strategic price increase. Transformed their GTM from a scattered guessing game into a focused, self-funding growth engine.",
-  },
+    id: 8,
+    category: 'Deep-Tech & Manufacturing',
+    badge: 'SOLAR HARDWARE MARGIN OPTIMIZATION',
+    metric: '~40%',
+    result: 'Achieved a sustainable ~40% profit margin through strategic targeting.',
+    content: (
+      <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
+        <p><strong className="text-white">The Friction:</strong> A pioneering solar hardware startup had no formal commercial background and no clear path to market. Sales efforts were scattered nationwide to early adopters, resulting in thin margins, high friction, and no budget for customer acquisition.</p>
+        <p><strong className="text-white">The Architecture:</strong> Cortex Momentum analyzed the entire US market to pinpoint optimal geographic targeting based on income brackets, EV adoption rates, and local compliance incentives.</p>
+        <p><strong className="text-white">The Impact:</strong> We pinpointed exactly 3 high-potential metro areas. By identifying their ideal first customer profile and recommending a strategic price increase, we transformed their GTM into a focused, self-funding growth engine with a sustainable ~40% profit margin.</p>
+      </div>
+    )
+  }
 ];
 
 /* ────────────────────────────────────────────────────────────
@@ -202,9 +194,6 @@ export default function CaseStudiesPage() {
                 <span className="inline-block text-xs font-semibold tracking-widest uppercase text-slate-400 border border-slate-700 px-3 py-1.5 rounded-sm">
                   {cs.badge}
                 </span>
-                <h2 className="text-3xl font-serif font-semibold text-white leading-snug">
-                  {cs.client}
-                </h2>
                 <div>
                   <span className="block text-5xl lg:text-6xl font-light text-white tracking-tight leading-none">
                     {cs.metric}
@@ -216,23 +205,8 @@ export default function CaseStudiesPage() {
               </div>
 
               {/* Right Column — Narrative */}
-              <div className="col-span-1 lg:col-span-8 space-y-8">
-                <div>
-                  <strong className="block font-serif text-xl mb-3 text-white border-b border-slate-800 pb-2 font-semibold">
-                    Friction
-                  </strong>
-                  <p className="text-slate-300 leading-relaxed text-lg">
-                    {cs.friction}
-                  </p>
-                </div>
-                <div>
-                  <strong className="block font-serif text-xl mb-3 text-white border-b border-slate-800 pb-2 font-semibold">
-                    Pivot
-                  </strong>
-                  <p className="text-slate-300 leading-relaxed text-lg">
-                    {cs.pivot}
-                  </p>
-                </div>
+              <div className="col-span-1 lg:col-span-8">
+                {cs.content}
               </div>
             </div>
           ))}

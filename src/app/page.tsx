@@ -242,16 +242,13 @@ export default function Home() {
                 <span className="block text-lg text-slate-300 mt-3">Time-to-Signal compression</span>
               </div>
               
-              <ul className="space-y-4 mb-8 flex-grow text-white">
-                <li className="flex gap-4 items-start">
-                  <span className="text-slate-500 font-bold mt-1 text-lg">&mdash;</span>
-                  <span className="text-lg leading-relaxed">Bypassed the &quot;Observer Effect&quot; by tracking Dark Funnel intent to map opposing boardroom fears: Founders terrified of dilution vs. PE Gatekeepers terrified of execution failure.</span>
-                </li>
-                <li className="flex gap-4 items-start">
-                  <span className="text-slate-500 font-bold mt-1 text-lg">&mdash;</span>
-                  <span className="text-lg leading-relaxed">Engineered strict &quot;Impedance Matching,&quot; compressing Time-to-Signal and generating deal velocity where none previously existed.</span>
-                </li>
-              </ul>
+              <p className="space-y-4 mb-8 flex-grow text-white text-lg leading-relaxed">
+                Bypassed the B2B &apos;Observer Effect&apos; by tracking Dark Funnel intent to map opposing boardroom fears: Founders terrified of cap table dilution vs. PE Gatekeepers terrified of execution failure. Engineered strict Impedance Matching, compressing Time-to-Signal from months to days.
+              </p>
+              
+              <a href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
+                Read full case study &rarr;
+              </a>
             </div>
           </div>
         </div>
