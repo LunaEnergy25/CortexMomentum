@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-slate-100 text-lg lg:text-2xl font-medium max-w-3xl leading-relaxed font-sans mb-12">
-          We engineer Asymmetric Commercial Architectures to rescue live enterprise pipeline from Pilot Purgatory and radically compress your Time-to-Signal.
+          Most enterprise deals don&apos;t die because the technology failed. They die in committee, killed by internal misalignment your team never saw coming. We build the Asymmetric Commercial Architecture to prevent that.
         </p>
 
         <a
@@ -29,7 +29,7 @@ export default function Hero() {
           Initiate Pipeline Diagnostic
         </a>
         <p className="text-slate-400 text-sm mt-4 max-w-xl leading-relaxed">
-          30 Minutes. Peer-to-peer. Mapping the gatekeepers blocking your stalled deals. No sales pitch.
+          30 minutes. Peer-to-peer. Mapping the specific internal dynamics stalling your deals. No pitch.
         </p>
       </div>
 

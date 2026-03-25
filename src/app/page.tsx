@@ -8,42 +8,62 @@ export default function Home() {
       <Navbar />
       <Hero />
       
-      {/* SECTION 2: PROBLEM RECOGNITION — The Series B Squeeze */}
+      {/* SECTION 1: THE COMMERCIAL ALIGNMENT PROBLEM */}
       <section className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">The Series B Squeeze</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">The Commercial Alignment Problem</h2>
           </div>
           <div className="lg:col-span-7 space-y-8 max-w-prose">
             <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
               You do not have a product problem. You have a commercial alignment problem.
             </p>
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              Deep-tech and energy founders routinely walk into enterprise boardrooms selling &quot;innovation&quot; and &quot;disruption.&quot; But to a corporate buyer, disruption equals transition risk. Selling unmitigated innovation triggers the buyer&apos;s <strong className="text-cyan-300 font-semibold">Personal Career Risk (Fear of Failure)</strong>&mdash;and in the enterprise, that fear kills deals.
+              Your enterprise pipeline is full of late-stage conversations that inexplicably stall. The engineering is proven. The pilot data is clean. But the deal dies anyway&mdash;because every member of that buying committee is evaluating your technology through a different lens of personal risk.
             </p>
-            
-            {/* Visual break — high contrast key insight card */}
-            <div className="bg-slate-800/60 border-l-4 border-cyan-500/80 p-6 md:p-8 rounded-sm my-6 shadow-xl relative overflow-hidden">
+            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
+              The VP of Innovation sees competitive advantage. The CFO sees transition cost. Procurement sees vendor liability. You are walking into that room with one narrative and expecting it to survive three completely different survival calculations.
+            </p>
+
+            {/* Stand-alone emphasis — key insight card */}
+            <div className="bg-slate-800/60 border-l-4 border-cyan-500/80 p-6 md:p-8 rounded-sm my-2 shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 p-4 opacity-5">
                 <AlertTriangle className="w-20 h-20 text-cyan-400" />
               </div>
               <p className="text-xl text-white leading-relaxed relative z-10">
-                A monolithic pitch deck will get you killed in committee. To survive procurement scrutiny, engineering brilliance must be translated into <strong className="text-cyan-300 font-semibold">risk-mitigated financial inevitability</strong>.
+                It won&apos;t. And a monolithic pitch deck is not going to fix it.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 3: THE 3-TRACK COMMERCIAL ARCHITECTURE */}
-      <section id="architecture" className="relative bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
+      {/* SECTION 2: THE INTELLIGENCE GAP (Root Cause) */}
+      <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">The Intelligence Gap</h2>
+          </div>
+          <div className="lg:col-span-7 space-y-8 max-w-prose">
+            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
+              The deal went silent because your champion walked into an internal committee meeting and got ambushed by objections they were never prepared for. They didn&apos;t fail. They were sent into that room without the right ammunition.
+            </p>
+            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
+              Most commercial teams have no infrastructure for mapping what is actually happening inside the buyer&apos;s organization before the deal reaches committee. That gap between your pipeline activity and the buyer&apos;s internal politics is where enterprise deals go to die. We close it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: ENGINEERING BOARDROOM CONSENSUS (Methodology) */}
+      <section id="architecture" className="relative bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-cyan-900/10 rounded-full blur-[100px] pointer-events-none" aria-hidden="true" />
 
         <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">The 3-Track Commercial Architecture</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">Engineering Boardroom Consensus</h2>
             <p className="text-xl text-cyan-50 leading-relaxed">
-              The monolithic pitch is dead. The 3-Track System deploys distinct psychological assets to navigate the enterprise buying matrix simultaneously.
+              Enterprise deals are won in rooms you are not allowed to enter. Your internal champion is walking into a hostile boardroom to defend your premium pricing against legacy incumbents. If they lack the precise commercial vocabulary to win that fight, your deal stalls. We build the architecture to arm them.
             </p>
           </div>
 
@@ -55,8 +75,8 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-sm font-medium tracking-wide text-slate-400">Track A</span>
-                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">The Skeptic (Quality Engineers)</h3>
-                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed"><strong className="text-white">The Asset: Visual Physics Briefs.</strong> Raw, unassailable data they need to defend your tech to their superiors without risking their own reputation.</p>
+                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Visual Physics Briefs</h3>
+                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Translating your engineering data into procurement-ready formats that technical evaluators can defend to their leadership without risking their own credibility.</p>
                 </div>
               </div>
             </div>
@@ -68,8 +88,8 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-sm font-medium tracking-wide text-slate-400">Track B</span>
-                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">The Blocker (CFO / Procurement)</h3>
-                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed"><strong className="text-white">The Asset: Volatility Hedging Models.</strong> Pivoting the narrative from &quot;cool technology&quot; to protecting their CAC payback period and capping downside risk.</p>
+                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Volatility Hedging Models</h3>
+                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Reframing the executive narrative from &quot;disruptive innovation&quot; to quantified risk mitigation and CAC downside protection.</p>
                 </div>
               </div>
             </div>
@@ -81,8 +101,8 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-sm font-medium tracking-wide text-slate-400">Track C</span>
-                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">The Champion (VP of Innovation)</h3>
-                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed"><strong className="text-white">The Asset: Lowest-Bidder Defense Dossiers.</strong> Arming your internal champion with the exact executive-level financial arguments required to justify premium pricing over legacy incumbents.</p>
+                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Lowest-Bidder Defense Dossiers</h3>
+                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Arming your internal champion with the exact financial arguments and competitive positioning required to defend premium pricing and survive the committee vote.</p>
                 </div>
               </div>
             </div>
@@ -90,50 +110,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: THE 45-DAY SIGNAL MAPPING SPRINT */}
-      <section id="services" className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">The 45-Day Signal Mapping Sprint</h2>
-            <p className="text-xl text-cyan-50 leading-relaxed">
-              Strategy PDFs that gather dust are a liability. This is a 45-day commercial sprint to unblock your architecture and integrate ready-to-deploy assets directly into your CRM.
-            </p>
-          </div>
-          <div className="lg:col-span-7 space-y-8 max-w-prose">
-            <div className="bg-slate-800/60 border-l-4 border-cyan-500/80 p-6 md:p-8 rounded-sm shadow-xl">
-              <p className="text-xl text-white leading-relaxed font-medium">
-                The biggest failure of GTM consulting is the execution gap. This architecture closes it by deploying:
-              </p>
-            </div>
-            <ul className="space-y-6 text-lg md:text-xl text-slate-200 leading-relaxed">
-              <li className="flex gap-4 items-start">
-                <ArrowRight className="w-5 h-5 text-cyan-400 mt-1.5 shrink-0" />
-                <span><strong className="text-white">Executive-to-Executive (E2E) Boardroom Briefings.</strong></span>
-              </li>
-              <li className="flex gap-4 items-start">
-                <ArrowRight className="w-5 h-5 text-cyan-400 mt-1.5 shrink-0" />
-                <span><strong className="text-white">Objection-handling battlecards</strong> built exclusively for procurement defense.</span>
-              </li>
-              <li className="flex gap-4 items-start">
-                <ArrowRight className="w-5 h-5 text-cyan-400 mt-1.5 shrink-0" />
-                <span><strong className="text-white">Narrative frameworks</strong> that bypass the middle-management freeze.</span>
-              </li>
-            </ul>
-            <div className="border-t border-slate-800 pt-8">
-              <p className="text-xl text-white leading-relaxed font-medium">
-                <strong>Outcome:</strong> Your commercial team is armed with a defensible financial architecture.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* MID-PAGE CTA — Premium Checkpoint */}
+      {/* MID-PAGE CTA — Intelligence Checkpoint */}
       <section className="bg-slate-900/50 py-16 md:py-20 px-6 border-y border-slate-800 text-center">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-serif text-white font-semibold leading-tight tracking-tight">Expedite the Architecture</h2>
           <p className="text-xl text-slate-300 leading-relaxed">
-            For capitalized teams ready to bypass the execution gap immediately.
+            For teams with live enterprise pipeline ready to close the gap between technical validation and commercial execution.
           </p>
           <a
             href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
@@ -146,23 +128,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SECTION 4: THE 45-DAY SIGNAL MAPPING SPRINT */}
+      <section id="services" className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">The 45-Day Signal Mapping Sprint</h2>
+          </div>
+          <div className="lg:col-span-7 space-y-8 max-w-prose">
+            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
+              Strategy decks that gather dust are a liability. We do not do retainers. This is a 45-day commercial sprint. We diagnose your specific enterprise bottlenecks, build the narrative assets, and integrate them directly into your team&apos;s workflow. When we exit, your commercial team owns:
+            </p>
+            <ul className="space-y-6 text-lg md:text-xl text-slate-200 leading-relaxed">
+              <li className="flex gap-4 items-start">
+                <ArrowRight className="w-5 h-5 text-cyan-400 mt-1.5 shrink-0" />
+                <span>E2E Executive Briefings calibrated to each stakeholder in the buying committee</span>
+              </li>
+              <li className="flex gap-4 items-start">
+                <ArrowRight className="w-5 h-5 text-cyan-400 mt-1.5 shrink-0" />
+                <span>Procurement defense battlecards built from real objection patterns in your pipeline</span>
+              </li>
+              <li className="flex gap-4 items-start">
+                <ArrowRight className="w-5 h-5 text-cyan-400 mt-1.5 shrink-0" />
+                <span>Customized defense dossiers your champion can deploy without modification</span>
+              </li>
+            </ul>
+            <div className="border-t border-slate-800 pt-8">
+              <p className="text-xl text-white leading-relaxed font-medium">
+                <strong>Outcome:</strong> Your team walks into the next committee meeting with a different conversation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 5: OUR BOUNDARIES */}
-      <section className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
+      <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           <div className="lg:col-span-5 lg:sticky lg:top-32 pr-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">Our Boundaries</h2>
           </div>
-          <div className="lg:col-span-7 space-y-8 max-w-prose">
+          <div className="lg:col-span-7 space-y-6 max-w-prose">
             <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
-              This is a specialized intelligence framework, not a marketing retainer.
+              This is a specialized commercial intelligence practice. Not a marketing retainer. Not a Fractional CRO engagement.
             </p>
-            <div className="bg-slate-900 border-l-4 border-slate-500 p-6 rounded-sm my-6 shadow-xl">
-              <p className="text-xl text-slate-100 leading-relaxed">
-                Traditional PR is built for top-of-funnel brand awareness. This infrastructure exists strictly for <strong className="text-white">live pipeline deal rescue</strong>.
-              </p>
-            </div>
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              This is not Fractional CRO work. The engagement is strictly scoped: drop in, unblock the commercial architecture, integrate the assets, and exit.
+              We do not run ad campaigns. We do not produce top-of-funnel content. We do not manage your LinkedIn.
+            </p>
+            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
+              This infrastructure exists for one purpose: live pipeline deal rescue. We scope the engagement, build the commercial architecture, integrate the assets, and exit.
             </p>
           </div>
         </div>
@@ -261,14 +274,18 @@ export default function Home() {
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-semibold leading-tight tracking-tight">Unblock Your Enterprise Pipeline</h2>
           
+          <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
+            Every quarter your team runs the same commercial playbook against a misaligned buying committee is a quarter of closed revenue lost to competitors who have already reverse-engineered their buyer&apos;s decision physics.
+          </p>
+
           {/* Qualification Gate */}
           <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-red-900/60 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-1 h-full bg-red-700/80"></div>
             <p className="text-xl text-white leading-relaxed font-medium mb-6">
-              Exclusively for capitalized deep-tech and energy companies with live enterprise pipeline.
+              This diagnostic is exclusively for capitalized deep-tech, energy, and industrial teams with live enterprise pipeline in complex buying environments.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Do not initiate this diagnostic if you are pre-revenue, seeking top-of-funnel PR, or unwilling to alter your engineering narrative.
+              This is not the right fit if you are pre-revenue, focused on top-of-funnel awareness, or not open to restructuring your commercial narrative.
             </p>
           </div>
 
@@ -282,7 +299,7 @@ export default function Home() {
                Initiate Pipeline Diagnostic
              </a>
              <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
-               30 Minutes. Peer-to-peer. Mapping the specific gatekeepers blocking your stalled deals. No sales pitch.
+               30 minutes. Peer-to-peer. Mapping the specific internal dynamics stalling your deals. No pitch.
              </p>
           </div>
         </div>
