@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
+import { CSPostHogProvider, PostHogPageView } from "./providers";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,7 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${merriweather.variable} bg-slate-950 text-slate-300 antialiased selection:bg-white selection:text-slate-900`}>
-        {children}
+        <CSPostHogProvider>
+          <Suspense fallback={null}>
+            <PostHogPageView />
+          </Suspense>
+          {children}
+        </CSPostHogProvider>
       </body>
     </html>
   );
