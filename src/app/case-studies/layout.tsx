@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Diagnostic Index | Cortex Momentum",
-  description: "Declassified enterprise architecture deployments across deep-tech, energy, and private equity sectors.",
+  title: "Engagement Record | Cortex Momentum",
+  description: "Selected commercial-intelligence engagements across energy, deep-tech, and industrials. Every figure scoped to its evidence and built to survive diligence.",
 };
 
 export default function CaseStudiesLayout({
