@@ -17,81 +17,23 @@ export default function Home() {
 
       <TrackSelector />
 
-      {/* SELECTED IMPACT */}
-      <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
-        <div className="max-w-[1400px] mx-auto space-y-16">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white font-semibold mb-6 leading-tight tracking-tight">
-              Selected Impact
-            </h2>
-            <p className="text-xl text-slate-200 leading-relaxed">
-              A cross-section of engagements. Each figure is scoped to its evidence.
+      {/* ENGAGEMENT RECORD BRIDGE */}
+      <section className="bg-slate-950 py-16 md:py-20 px-6 border-b border-slate-800">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <p className="text-2xl md:text-3xl font-serif text-white font-semibold leading-snug">
+              8 engagements across energy, deep-tech, and industrials.
+            </p>
+            <p className="text-slate-400 mt-3 text-base leading-relaxed">
+              Each figure is scoped to its evidence and built to survive a diligence committee.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
-            <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
-              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">GTM / Deal Rescue</span>
-              <h3 className="text-3xl font-serif font-semibold text-white mb-8">Elephantech</h3>
-              <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
-                <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
-                <span className="block text-5xl md:text-6xl font-serif font-semibold text-white leading-none tracking-tighter">~60%</span>
-                <span className="block text-lg text-slate-300 mt-3">More executive-seat attention vs the account&apos;s baseline</span>
-              </div>
-              <ul className="space-y-4 mb-8 flex-grow text-white">
-                <li className="flex gap-4 items-start">
-                  <span className="text-slate-500 font-bold mt-1 text-lg">&mdash;</span>
-                  <span className="text-lg leading-relaxed">Shifted narrative from &ldquo;Green Tech&rdquo; to &ldquo;Supply Chain Risk&rdquo;.</span>
-                </li>
-                <li className="flex gap-4 items-start">
-                  <span className="text-slate-500 font-bold mt-1 text-lg">&mdash;</span>
-                  <span className="text-lg leading-relaxed">Bypassed technical vetoes masking as &ldquo;70% Material Reduction&rdquo;.</span>
-                </li>
-              </ul>
-              <Link href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
-                Read full engagement &rarr;
-              </Link>
-            </div>
-
-            <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
-              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">DD · Validation</span>
-              <h3 className="text-3xl font-serif font-semibold text-white mb-8">Climate Hive &times; EarthGrid</h3>
-              <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
-                <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
-                <span className="block text-5xl md:text-6xl font-serif font-semibold text-white leading-none tracking-tighter">48 Hrs</span>
-                <span className="block text-lg text-slate-300 mt-3">To reach 103 decision-makers</span>
-              </div>
-              <ul className="space-y-4 mb-8 flex-grow text-white">
-                <li className="flex gap-4 items-start">
-                  <span className="text-slate-500 font-bold mt-1 text-lg">&mdash;</span>
-                  <span className="text-lg leading-relaxed">Shifted sales hook from &ldquo;Boring Cost&rdquo; to &ldquo;Permitting Speed&rdquo;.</span>
-                </li>
-                <li className="flex gap-4 items-start">
-                  <span className="text-slate-500 font-bold mt-1 text-lg">&mdash;</span>
-                  <span className="text-lg leading-relaxed">Reframed &ldquo;Science Project&rdquo; into rapid-deployment infrastructure.</span>
-                </li>
-              </ul>
-              <Link href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
-                Read full engagement &rarr;
-              </Link>
-            </div>
-
-            <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
-              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">Capital Transaction</span>
-              <h3 className="text-3xl font-serif font-semibold text-white mb-8">FOAK Private Credit Fund</h3>
-              <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
-                <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
-                <span className="block text-5xl md:text-6xl font-serif font-semibold text-white leading-none tracking-tighter">Months &rarr; Days</span>
-                <span className="block text-lg text-slate-300 mt-3">Time-to-Signal compression</span>
-              </div>
-              <p className="mb-8 flex-grow text-white text-lg leading-relaxed">
-                Read the opposing boardroom fears &mdash; founders wary of cap-table dilution, PE gatekeepers wary of execution failure &mdash; then ran a separate frame for each so the facility cleared both reads.
-              </p>
-              <Link href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
-                Read full engagement &rarr;
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/case-studies"
+            className="shrink-0 text-white font-bold border-b-2 border-slate-600 pb-1 hover:border-white transition-colors uppercase tracking-widest text-sm"
+          >
+            See the full record &rarr;
+          </Link>
         </div>
       </section>
 
