@@ -1,12 +1,22 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrackSelector from "@/components/TrackSelector";
+
+export const metadata: Metadata = {
+  title: "Cortex Momentum — Commercial Intelligence for Energy & Deep-Tech Deals",
+  description: "When your deal stalls in committee, we surface what each buyer seat is actually evaluating and rebuild the positioning around it. Standing intelligence instrument, five years running.",
+};
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col font-sans bg-slate-950 text-slate-100">
       <Navbar />
       <Hero />
+
+      {/* SECTION 3 (moved): TRACK SELECTOR */}
+      <TrackSelector />
 
       {/* SECTION 1: THE COMMERCIAL ALIGNMENT PROBLEM */}
       <section className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
@@ -35,32 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2: THE INTELLIGENCE GAP */}
-      <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">
-              The Intelligence Gap
-            </h2>
-          </div>
-          <div className="lg:col-span-7 space-y-8 max-w-prose">
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              The deal went silent because your champion walked into an internal committee meeting and got ambushed by objections they were never prepared for. They didn&apos;t fail. They were sent into that room without the right ammunition.
-            </p>
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              Most commercial teams have no infrastructure for mapping what is actually happening inside the buyer&apos;s organization before the deal reaches committee. That gap between your pipeline activity and the buyer&apos;s internal politics is where enterprise deals go to die.
-            </p>
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              We close it by reading how your market actually responds to your commercial thesis &mdash; which frames earn attention from which buyer seats, including the senior operators who evaluate in silence and never appear in normal engagement metrics. We&apos;ve kept that measurement running for years against a real energy and deep-tech audience. That&apos;s why the first read comes back in days, not the weeks a from-scratch study needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: TRACK SELECTOR */}
-      <TrackSelector />
-
-      {/* SECTION 4: SELECTED IMPACT */}
+      {/* SELECTED IMPACT */}
       <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
         <div className="max-w-[1400px] mx-auto space-y-16">
           <div className="text-center max-w-3xl mx-auto">
@@ -74,7 +59,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
             <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
-              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">Pipeline Velocity</span>
+              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">GTM / Deal Rescue</span>
               <h3 className="text-3xl font-serif font-semibold text-white mb-8">Elephantech</h3>
               <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
                 <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
@@ -91,9 +76,9 @@ export default function Home() {
                   <span className="text-lg leading-relaxed">Bypassed technical vetoes masking as &ldquo;70% Material Reduction&rdquo;.</span>
                 </li>
               </ul>
-              <a href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
+              <Link href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
                 Read full engagement &rarr;
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
@@ -114,13 +99,13 @@ export default function Home() {
                   <span className="text-lg leading-relaxed">Reframed &ldquo;Science Project&rdquo; into rapid-deployment infrastructure.</span>
                 </li>
               </ul>
-              <a href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
+              <Link href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
                 Read full engagement &rarr;
-              </a>
+              </Link>
             </div>
 
             <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
-              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">Deal Velocity</span>
+              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">Capital Transaction</span>
               <h3 className="text-3xl font-serif font-semibold text-white mb-8">FOAK Private Credit Fund</h3>
               <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
                 <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
@@ -130,9 +115,9 @@ export default function Home() {
               <p className="mb-8 flex-grow text-white text-lg leading-relaxed">
                 Read the opposing boardroom fears &mdash; founders wary of cap-table dilution, PE gatekeepers wary of execution failure &mdash; then ran a separate frame for each so the facility cleared both reads.
               </p>
-              <a href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
+              <Link href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
                 Read full engagement &rarr;
-              </a>
+              </Link>
             </div>
           </div>
         </div>

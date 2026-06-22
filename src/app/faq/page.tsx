@@ -31,6 +31,10 @@ const faqs = [
     q: "What does it cost?",
     a: "Engagements range from a rapid Layer-1 signal scan to a standing intelligence retainer, scoped to the decision in front of you. We share scope and a range on a short call — there's no pricing menu because the work is scoped to the question.",
   },
+  {
+    q: "Why this practice and not a larger research firm or advisory?",
+    a: "The measurement system has been running continuously for about five years against a real energy and deep-tech audience — the calibration is already built. A larger firm starts a study from scratch, assembles an audience, and takes weeks to return a first read. We return a first read in days because the slow part is already done. Larger firms also deliver reports; we deliver a read scoped to the specific decision in front of you, with no overhead from a general-purpose methodology.",
+  },
 ];
 
 export default function FaqPage() {

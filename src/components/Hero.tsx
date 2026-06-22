@@ -20,24 +20,19 @@ export default function Hero() {
           In the deals we see, the ones that stall rarely fail on the technology. They stall in committee &mdash; on internal misalignment the deal team never saw, where every seat reads a different risk. We surface and de-risk that misalignment before the committee meets.
         </p>
 
-        <p className="text-slate-300 text-base lg:text-lg max-w-2xl leading-relaxed mb-12 border-t border-slate-800 pt-6">
-          How we see it: for ~5 years we&apos;ve run one always-on measurement system reading how senior energy and deep-tech buyers actually respond to a commercial pitch &mdash; including the majority who study it in silence and never show up in normal metrics. We call it a standing instrument.{" "}
-          <a href="#instrument" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">See how it works &darr;</a>
-        </p>
-
         <a
           href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-12 py-5 font-bold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl transform hover:-translate-y-0.5 text-lg"
         >
-          Request a Pipeline Diagnostic
+          Request a Diagnostic
         </a>
         <p className="text-slate-400 text-sm mt-4 max-w-xl leading-relaxed">
           30 minutes. Peer-to-peer. Mapping the specific dynamics stalling your deal. No pitch.
         </p>
         <p className="text-slate-400 text-sm mt-3 max-w-xl leading-relaxed">
-          Or read the weekly market signal &mdash;{" "}
+          Not at a live decision yet? Read the weekly market signal &mdash;{" "}
           <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
         </p>
       </div>

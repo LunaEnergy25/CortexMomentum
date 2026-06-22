@@ -54,7 +54,7 @@ const caseStudiesData: CaseStudy[] = [
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> ClimateHive was leading a highly visible capital raise for EarthGrid&apos;s proprietary plasma boring technology. A critical &quot;Investor Skepticism&quot; gap emerged: VCs were listening, but end customers (Utilities and Developers) were missing. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk &quot;Science Project.&quot;</p>
-        <p><strong className="text-white">The Architecture:</strong> We executed a 48-Hour Market Validation Sprint. Activating a proprietary network of Utility VPs and Regulators, we engineered a technical debate on physics versus economics, bypassing standard PR to extract exact market objections.</p>
+        <p><strong className="text-white">The Architecture:</strong> We ran a 48-hour read of how the plasma boring thesis landed with utility and developer seats &mdash; tracking the comment-to-reaction ratio as a proxy for active engagement versus passive awareness. The Permitting Speed frame drew active debate from operator seats; the Boring Cost frame drew passive likes. That gap was the signal.</p>
         <p><strong className="text-white">The Impact:</strong> In 48 hours, the &quot;Permitting Speed&quot; frame drew an unusually high comment-to-reaction ratio for the account&apos;s baseline &mdash; active debate from operator seats, not passive likes &mdash; and engaged 103 persona-verified decision-maker seats. That attention signal was strong enough to justify shifting the lead hook from &quot;Boring Cost&quot; to &quot;Permitting Speed&quot; (Layer-1 attention; demand confirmation requires interviews).</p>
       </div>
     )
@@ -111,7 +111,7 @@ const caseStudiesData: CaseStudy[] = [
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A deep-tech company was navigating the &quot;Funding Gap&quot; between Seed and Series A. Operating in a strategic void, they were preparing to pitch a generic, monolithic deck to over 250+ investors, risking alienation of conservative capital.</p>
         <p><strong className="text-white">The Architecture:</strong> We replaced inefficient outreach with a data-driven intelligence strategy, mapping public statements of potential strategic investors to explicitly filter out misaligned capital.</p>
-        <p><strong className="text-white">The Impact:</strong> We cut their outreach list from 250 general VCs down to 25 highly targeted family offices. By developing precisely aligned messaging for each target, we delivered a playbook that massively accelerated their path to capitalization.</p>
+        <p><strong className="text-white">The Impact:</strong> The narrowing filter &mdash; from ~250 generalist VCs to 25 thesis-aligned family offices &mdash; is a targeting output, not a raise outcome. We mapped public statements of potential investors to explicitly filter misaligned capital. The raise itself was the client&apos;s next step.</p>
       </div>
     )
   },

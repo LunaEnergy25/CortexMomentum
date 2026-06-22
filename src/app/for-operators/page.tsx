@@ -50,6 +50,22 @@ export default function ForOperatorsPage() {
           <Link href="/case-studies" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">See the full engagement record &rarr;</Link>
         </div>
       </section>
+
+      <section className="px-6 py-20 text-center border-t border-slate-800">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif text-white font-semibold mb-6">Your next committee is closer than the last one.</h2>
+          <a
+            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
+          >
+            Request a Pipeline Diagnostic
+          </a>
+          <p className="text-slate-400 text-sm mt-4">We take a small number of engagements where the work can move a decision in front of you. If you&apos;re purely awareness-building, we&apos;ll tell you we&apos;re not the right spend.</p>
+          <p className="text-slate-400 text-sm mt-3">Not at a live deal yet? Read the weekly market signal &mdash; <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.</p>
+        </div>
+      </section>
     </main>
   );
 }

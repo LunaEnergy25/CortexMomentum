@@ -173,10 +173,10 @@ function CapitalContent() {
 }
 
 export default function TrackSelector() {
-  const [active, setActive] = useState<TrackId | null>(null);
+  const [active, setActive] = useState<TrackId | null>("gtm");
 
   return (
-    <section className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
+    <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
       <div className="max-w-4xl mx-auto">
         <p className="text-slate-500 text-xs font-semibold tracking-widest uppercase mb-5">Start here</p>
         <h2 className="text-3xl md:text-4xl font-serif text-white font-semibold leading-tight tracking-tight mb-10">
@@ -188,6 +188,7 @@ export default function TrackSelector() {
             <button
               key={track.id}
               onClick={() => setActive(active === track.id ? null : track.id)}
+              aria-expanded={active === track.id}
               className={`w-full text-left px-6 py-5 border transition-all duration-200 rounded-sm group cursor-pointer ${
                 active === track.id
                   ? "border-cyan-600/60 bg-slate-900/80"
@@ -203,7 +204,7 @@ export default function TrackSelector() {
                   </p>
                   <p className="text-xs tracking-widest uppercase text-slate-500 mt-1.5">{track.sub}</p>
                 </div>
-                <span className={`shrink-0 text-xl transition-all duration-200 ${
+                <span aria-hidden="true" className={`shrink-0 text-xl transition-all duration-200 ${
                   active === track.id ? "text-cyan-400 rotate-90" : "text-slate-600"
                 }`}>
                   ›
