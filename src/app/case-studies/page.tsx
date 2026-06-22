@@ -161,8 +161,14 @@ export default function CaseStudiesPage() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Selected engagements across energy, deep-tech, and industrials. Each
-            was run on the standing instrument &mdash; already calibrated, so the
-            first read came in days.
+            was read through a <strong className="text-white">standing instrument</strong> &mdash; a
+            measurement system we keep running year-round over a real energy and
+            deep-tech audience, watching how senior buyers respond to a company&apos;s
+            commercial pitch, including the majority who study it in silence and
+            never show up in normal metrics. Because it&apos;s already built and
+            calibrated, the slow setup is done &mdash; so the first read (the
+            initial segment-level attention picture, not the full engagement)
+            came back in days, not the weeks a from-scratch study needs.
           </p>
           <p className="text-sm text-slate-500 max-w-3xl mx-auto leading-relaxed mt-6 border-t border-slate-800 pt-6">
             How to read these: Layer&nbsp;1 tells us what earns attention, and
