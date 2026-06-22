@@ -1,5 +1,7 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TheInstrument from "@/components/sections/TheInstrument";
 import { Shield, DollarSign, Users, ArrowRight, AlertTriangle } from "lucide-react";
 
 export default function Home() {
@@ -54,6 +56,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* THE INSTRUMENT — the moat made legible (cold-reader copy) */}
+      <TheInstrument />
 
       {/* SECTION 3: ENGINEERING BOARDROOM CONSENSUS (Methodology) */}
       <section id="architecture" className="relative bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
@@ -304,6 +309,11 @@ export default function Home() {
              <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
                Not at a live decision yet? Read the weekly market signal &mdash;{" "}
                <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
+             </p>
+             <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed pt-2">
+               <Link href="/for-investors" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">For investors running commercial DD &rarr;</Link>
+               <span className="mx-3 text-slate-700">|</span>
+               <Link href="/for-operators" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">For operators with a deal in committee &rarr;</Link>
              </p>
           </div>
         </div>

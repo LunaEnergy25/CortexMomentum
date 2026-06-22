@@ -18,9 +18,9 @@ export default function Navbar() {
           </span>
         </Link>
         <div className="hidden md:flex gap-8 items-center text-sm font-medium tracking-wide">
-          <Link href="/#architecture" className="text-slate-300 hover:text-white transition-colors">How It Works</Link>
+          <Link href="/methodology" className="text-slate-300 hover:text-white transition-colors">How It Works</Link>
           <Link href="/case-studies" className="text-slate-300 hover:text-white transition-colors">Case Studies</Link>
-          <Link href="/#services" className="text-slate-300 hover:text-white transition-colors">Services</Link>
+          <Link href="/about" className="text-slate-300 hover:text-white transition-colors">About</Link>
           <a
             href="https://theinterconnect.energy"
             target="_blank"

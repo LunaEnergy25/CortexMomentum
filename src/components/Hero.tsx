@@ -20,6 +20,11 @@ export default function Hero() {
           In the deals we see, the ones that stall rarely fail on the technology. They stall in committee &mdash; on internal misalignment the deal team never saw, where every seat reads a different risk. We surface and de-risk that misalignment before the committee meets.
         </p>
 
+        <p className="text-slate-300 text-base lg:text-lg max-w-2xl leading-relaxed mb-12 border-t border-slate-800 pt-6">
+          How we see it: for ~5 years we&apos;ve run one always-on measurement system reading how senior energy and deep-tech buyers actually respond to a commercial pitch &mdash; including the majority who study it in silence and never show up in normal metrics. We call it a standing instrument.{" "}
+          <a href="#instrument" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">See how it works &darr;</a>
+        </p>
+
         <a
           href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
           target="_blank"
