@@ -22,7 +22,7 @@ export default function Navbar() {
           <Link href="/case-studies" className="text-slate-300 hover:text-white transition-colors">Case Studies</Link>
           <Link href="/about" className="text-slate-300 hover:text-white transition-colors">About</Link>
           <a
-            href="https://theinterconnect.energy"
+            href="https://www.theinterconnect.energy/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-300 hover:text-white transition-colors"

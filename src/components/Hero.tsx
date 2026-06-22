@@ -38,7 +38,7 @@ export default function Hero() {
         </p>
         <p className="text-slate-400 text-sm mt-3 max-w-xl leading-relaxed">
           Or read the weekly market signal &mdash;{" "}
-          <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
+          <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
         </p>
       </div>
 

@@ -38,7 +38,7 @@ export default function ForInvestorsPage() {
             </a>
             <p className="text-slate-400 text-sm mt-4">
               Not at a live deal yet?{" "}
-              <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">Read The Interconnect</a>{" "}for a sample of the signal.
+              <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">Read The Interconnect</a>{" "}for a sample of the signal.
             </p>
           </div>
         </div>

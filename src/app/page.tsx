@@ -175,7 +175,7 @@ export default function Home() {
             </p>
             <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed pt-2">
               Not at a live decision yet? Read the weekly market signal &mdash;{" "}
-              <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+              <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
                 The Interconnect
               </a>.
             </p>

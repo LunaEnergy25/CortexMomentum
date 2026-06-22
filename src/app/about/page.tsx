@@ -45,7 +45,7 @@ export default function AboutPage() {
           </p>
           <p>
             This is intelligence, not marketing. I don&apos;t run your channels, sell you data, or hand over lists &mdash; person-level data never leaves the practice; you receive the aggregate read. I also publish{" "}
-            <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>, a weekly market signal drawn from the same instrument.
+            <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>, a weekly market signal drawn from the same instrument.
           </p>
         </div>
 
