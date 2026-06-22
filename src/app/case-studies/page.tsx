@@ -161,7 +161,7 @@ export default function CaseStudiesPage() {
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Selected engagements across energy, deep-tech, and industrials. Each
-            was read through a <strong className="text-white">standing instrument</strong> &mdash; a
+            was read through our <strong className="text-white">standing instrument</strong> &mdash; the
             measurement system we keep running year-round over a real energy and
             deep-tech audience, watching how senior buyers respond to a company&apos;s
             commercial pitch, including the majority who study it in silence and
