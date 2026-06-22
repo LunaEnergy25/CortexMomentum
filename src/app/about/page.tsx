@@ -49,7 +49,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-16 border-t border-slate-800 pt-10">
+        <div className="mt-16 border-t border-slate-800 pt-10 text-center">
           <a
             href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
             target="_blank"

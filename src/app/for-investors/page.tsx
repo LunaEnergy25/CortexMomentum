@@ -68,20 +68,22 @@ export default function ForInvestorsPage() {
             before you commit the capital.
           </p>
 
-          <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
-          >
-            Request a Diligence Read
-          </a>
-          <p className="text-slate-400 text-sm mt-4">
-            Not at a live deal yet?{" "}
-            <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
-              Read The Interconnect
-            </a>{" "}for a sample of the signal.
-          </p>
+          <div className="text-center sm:text-left">
+            <a
+              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
+            >
+              Request a Diligence Read
+            </a>
+            <p className="text-slate-400 text-sm mt-4">
+              Not at a live deal yet?{" "}
+              <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+                Read The Interconnect
+              </a>{" "}for a sample of the signal.
+            </p>
+          </div>
         </div>
       </section>
 

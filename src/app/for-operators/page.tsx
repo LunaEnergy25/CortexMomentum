@@ -23,22 +23,13 @@ export default function ForOperatorsPage() {
             Your engineering is proven. The deal is still stuck in committee.
           </h1>
 
-          {/* Proof stat strip */}
-          <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 mb-10 py-8 border-y border-slate-800">
-            <div>
-              <p className="text-4xl md:text-5xl font-serif text-white font-semibold">~60%</p>
-              <p className="text-slate-400 text-sm mt-1 uppercase tracking-wide font-medium">
-                More executive-seat attention on the reframe
-              </p>
-              <p className="text-slate-500 text-xs mt-1">Elephantech engagement</p>
-            </div>
-            <div>
-              <p className="text-4xl md:text-5xl font-serif text-white font-semibold">Months&nbsp;&rarr;&nbsp;Days</p>
-              <p className="text-slate-400 text-sm mt-1 uppercase tracking-wide font-medium">
-                Time-to-committee clarity
-              </p>
-              <p className="text-slate-500 text-xs mt-1">FOAK engagement</p>
-            </div>
+          {/* Proof stat */}
+          <div className="mb-10 py-8 border-y border-slate-800">
+            <p className="text-4xl md:text-5xl font-serif text-white font-semibold">~60%</p>
+            <p className="text-slate-400 text-sm mt-1 uppercase tracking-wide font-medium">
+              More executive-seat attention on the reframe
+            </p>
+            <p className="text-slate-500 text-xs mt-1">Layer-1 attention signal — Elephantech engagement</p>
           </div>
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mb-10">
@@ -52,17 +43,19 @@ export default function ForOperatorsPage() {
             </Link>
           </p>
 
-          <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
-          >
-            Request a Pipeline Diagnostic
-          </a>
-          <p className="mt-4 text-slate-400 text-sm">
-            30 minutes. Peer-to-peer. Mapping the specific dynamics stalling your deal. No pitch.
-          </p>
+          <div className="text-center sm:text-left">
+            <a
+              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
+            >
+              Request a Pipeline Diagnostic
+            </a>
+            <p className="mt-4 text-slate-400 text-sm">
+              30 minutes. Peer-to-peer. Mapping the specific dynamics stalling your deal. No pitch.
+            </p>
+          </div>
         </div>
       </section>
 

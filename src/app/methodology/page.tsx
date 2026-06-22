@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TheInstrument from "@/components/sections/TheInstrument";
 
@@ -21,6 +22,32 @@ export default function MethodologyPage() {
         </p>
       </div>
       <TheInstrument />
+
+      {/* Closing CTA */}
+      <section className="bg-slate-950 py-20 md:py-28 px-6 border-t border-slate-800 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-serif text-white font-semibold tracking-tight mb-6">
+            See the instrument applied to a real decision.
+          </h2>
+          <p className="text-slate-400 text-lg leading-relaxed mb-10">
+            Bring a deal in committee, a thesis to stress-test, or a transaction to read. We scope the engagement to the specific decision in front of you.
+          </p>
+          <a
+            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
+          >
+            Request a Diagnostic
+          </a>
+          <p className="text-slate-500 text-sm mt-4">30 minutes. Peer-to-peer. No pitch.</p>
+          <p className="mt-6">
+            <Link href="/case-studies" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4 text-sm">
+              Or see the full engagement record &rarr;
+            </Link>
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
