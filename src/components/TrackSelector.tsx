@@ -16,8 +16,8 @@ const tracks = [
     id: "dd" as TrackId,
     label: "I need an outside read on a thesis or strategy",
     sub: "Due Diligence · Validation",
-    metric: "5 Days",
-    metricLabel: "Board-ready direction",
+    metric: "Board-ready",
+    metricLabel: "Independent read you can defend in the room",
   },
   {
     id: "capital" as TrackId,

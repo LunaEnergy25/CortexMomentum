@@ -25,8 +25,8 @@ export default function Hero() {
             <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">time-to-first-signal</span>
           </div>
           <div className="flex-1 flex flex-col items-center px-4">
-            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">250&nbsp;&rarr;&nbsp;25</span>
-            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">investors narrowed to thesis-aligned</span>
+            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">~5 Years</span>
+            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">standing instrument, running continuously</span>
           </div>
         </div>
 

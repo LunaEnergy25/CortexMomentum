@@ -68,7 +68,7 @@ export default function ForInvestorsPage() {
             before you commit the capital.
           </p>
 
-          <div className="text-center sm:text-left">
+          <div className="text-center">
             <a
               href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
               target="_blank"
