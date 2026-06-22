@@ -184,13 +184,13 @@ export default function TrackSelector() {
   return (
     <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
       <div className="max-w-5xl mx-auto">
-        <p className="text-slate-500 text-xs font-semibold tracking-widest uppercase mb-5">What brings you here</p>
+        <p className="text-slate-500 text-xs font-semibold tracking-widest uppercase mb-5">Start here</p>
         <h2 className="text-3xl md:text-4xl font-serif text-white font-semibold leading-tight tracking-tight mb-10">
-          Pick your track. See what we do about it.
+          What&apos;s the decision in front of you?
         </h2>
 
         {/* Visual card grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
           {tracks.map((track) => (
             <button
               key={track.id}

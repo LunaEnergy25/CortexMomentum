@@ -54,7 +54,7 @@ export default function Home() {
             </div>
 
             <div className="bg-slate-900 border border-slate-800 flex flex-col p-8 md:p-10 rounded-sm shadow-xl">
-              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">Market Validation</span>
+              <span className="text-sm font-semibold tracking-wide uppercase text-slate-400 mb-3 block">DD · Validation</span>
               <h3 className="text-3xl font-serif font-semibold text-white mb-8">Climate Hive &times; EarthGrid</h3>
               <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
                 <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
@@ -101,11 +101,11 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-semibold leading-tight tracking-tight">
-            Unblock Your Enterprise Pipeline
+            The decision in front of you has a read it hasn&apos;t gotten yet.
           </h2>
 
           <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-            Every quarter your team runs the same commercial playbook against a misaligned buying committee is a quarter of closed revenue lost to competitors who have already reverse-engineered their buyer&apos;s decision physics.
+            Whether you&apos;re moving a deal through committee, stress-testing a thesis before the board commits, or reading a transaction before capital flows &mdash; the commercial frame underneath that decision is either legible in that room or it isn&apos;t.
           </p>
 
           <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-cyan-900/50 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
