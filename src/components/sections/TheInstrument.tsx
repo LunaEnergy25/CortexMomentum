@@ -1,12 +1,9 @@
 import Link from "next/link";
 
 /*
- * Figures below use the agreed conservative public framing. The as-of date and a
- * live-analytics re-check are pending Jamie's verification before this ships to
- * production (see AS_OF placeholder). Numbers: 30,000+ network, 200,000+ reach
- * (trailing-90-day), ~4.7:1 silent-reactor ratio.
+ * Figures use floor framing — no date stamped, numbers are growing continuously.
+ * 30,000+ network / 200,000+ trailing-90-day reach / ~4.7:1 silent-reactor ratio.
  */
-const AS_OF = "as of [date to confirm]";
 
 export default function TheInstrument() {
   return (
@@ -46,7 +43,7 @@ export default function TheInstrument() {
             </p>
             <div className="bg-slate-900/70 border-l-4 border-cyan-500/70 p-6 md:p-7 rounded-sm">
               <p>
-                Once you can see both groups, you can count them. Across years of our own reads, for every senior person who reacts in public, roughly <strong className="text-white">4.7 study the same frame in silence</strong> <span className="text-slate-400 text-base">(practice baseline, {AS_OF})</span>. It&apos;s a rate averaged over many posts over years &mdash; which is what lets it carry a decimal at all &mdash; and it means roughly four-fifths of the real attention a frame earns never shows up in the metrics you&apos;d normally look at. That hidden-to-visible ratio is hard to get anywhere else, because almost no one is measuring the silence.
+                Once you can see both groups, you can count them. Across years of our own reads, for every senior person who reacts in public, roughly <strong className="text-white">4.7 study the same frame in silence</strong> <span className="text-slate-400 text-base">(practice baseline)</span>. It&apos;s a rate averaged over many posts over years &mdash; which is what lets it carry a decimal at all &mdash; and it means roughly four-fifths of the real attention a frame earns never shows up in the metrics you&apos;d normally look at. That hidden-to-visible ratio is hard to get anywhere else, because almost no one is measuring the silence.
               </p>
             </div>
           </div>
@@ -78,7 +75,7 @@ export default function TheInstrument() {
             <h3 className="text-xl font-serif text-white font-semibold">A measurement is only as good as what it can see.</h3>
             <p>These two numbers describe how wide the instrument&apos;s view is &mdash; its sample size &mdash; not an audience we sell, rent, or run.</p>
             <ul className="space-y-3 list-none">
-              <li className="flex gap-4"><span className="text-cyan-400 mt-1">&mdash;</span><span>It observes a standing network of <strong className="text-white">30,000+ energy and deep-tech operators</strong> <span className="text-slate-400 text-base">({AS_OF})</span> &mdash; the people whose reactions it can read directly.</span></li>
+              <li className="flex gap-4"><span className="text-cyan-400 mt-1">&mdash;</span><span>It observes a standing network of <strong className="text-white">30,000+ energy and deep-tech operators</strong> &mdash; the people whose reactions it can read directly.</span></li>
               <li className="flex gap-4"><span className="text-cyan-400 mt-1">&mdash;</span><span>Its frames reach <strong className="text-white">200,000+ relevant members</strong> over any rolling 90-day window &mdash; how far a read can actually observe as frames circulate.</span></li>
             </ul>
             <p>
