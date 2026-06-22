@@ -43,12 +43,8 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-semibold leading-tight tracking-tight">
-            The decision in front of you has a read it hasn&apos;t gotten yet.
+            You know what you&apos;re presenting.<br className="hidden md:block" /> You don&apos;t know what they&apos;re evaluating.
           </h2>
-
-          <p className="text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-            Whether you&apos;re moving a deal through committee, stress-testing a thesis before the board commits, or reading a transaction before capital flows &mdash; the commercial frame underneath that decision is either legible in that room or it isn&apos;t.
-          </p>
 
           <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-cyan-900/50 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-1 h-full bg-cyan-600/70"></div>
