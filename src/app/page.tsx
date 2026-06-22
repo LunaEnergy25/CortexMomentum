@@ -15,35 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
 
-      {/* SECTION 3 (moved): TRACK SELECTOR */}
       <TrackSelector />
-
-      {/* SECTION 1: THE COMMERCIAL ALIGNMENT PROBLEM */}
-      <section className="bg-slate-950 py-20 md:py-28 px-6 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          <div className="lg:col-span-5 lg:sticky lg:top-32 space-y-6 pr-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">
-              The Commercial Alignment Problem
-            </h2>
-          </div>
-          <div className="lg:col-span-7 space-y-8 max-w-prose">
-            <p className="text-xl md:text-2xl text-white leading-relaxed font-medium">
-              You do not have a product problem. You have a commercial alignment problem.
-            </p>
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              Your pipeline is full of late-stage conversations that inexplicably stall. The engineering is proven. The pilot data is clean. But the deal dies anyway &mdash; because every member of that buying committee is evaluating your technology through a different lens of personal risk.
-            </p>
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              The VP of Innovation sees competitive advantage. The CFO sees transition cost. Procurement sees vendor liability. You are walking into that room with one narrative and expecting it to survive three completely different survival calculations.
-            </p>
-            <div className="bg-slate-800/60 border-l-4 border-cyan-500/80 p-6 md:p-8 rounded-sm shadow-xl">
-              <p className="text-xl text-white leading-relaxed">
-                It won&apos;t. And a monolithic pitch deck is not going to fix it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* SELECTED IMPACT */}
       <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">

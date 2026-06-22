@@ -9,16 +9,22 @@ const tracks = [
     id: "gtm" as TrackId,
     label: "My pitch or deal is stalling in market",
     sub: "GTM · Deal Rescue",
+    metric: "~60%",
+    metricLabel: "More executive-seat attention",
   },
   {
     id: "dd" as TrackId,
     label: "I need an outside read on a thesis or strategy",
     sub: "Due Diligence · Validation",
+    metric: "5 Days",
+    metricLabel: "Board-ready direction",
   },
   {
     id: "capital" as TrackId,
     label: "I'm in a capital transaction — raising or evaluating",
     sub: "Capital · Evaluation",
+    metric: "Months→Days",
+    metricLabel: "Time-to-first-signal",
   },
 ];
 
@@ -177,46 +183,60 @@ export default function TrackSelector() {
 
   return (
     <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
-      <div className="max-w-4xl mx-auto">
-        <p className="text-slate-500 text-xs font-semibold tracking-widest uppercase mb-5">Start here</p>
+      <div className="max-w-5xl mx-auto">
+        <p className="text-slate-500 text-xs font-semibold tracking-widest uppercase mb-5">What brings you here</p>
         <h2 className="text-3xl md:text-4xl font-serif text-white font-semibold leading-tight tracking-tight mb-10">
-          What&apos;s the decision in front of you?
+          Pick your track. See what we do about it.
         </h2>
 
-        <div className="space-y-3 mb-14">
+        {/* Visual card grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           {tracks.map((track) => (
             <button
               key={track.id}
               onClick={() => setActive(active === track.id ? null : track.id)}
               aria-expanded={active === track.id}
-              className={`w-full text-left px-6 py-5 border transition-all duration-200 rounded-sm group cursor-pointer ${
+              className={`text-left p-7 border rounded-sm transition-all duration-200 group cursor-pointer ${
                 active === track.id
-                  ? "border-cyan-600/60 bg-slate-900/80"
-                  : "border-slate-800 bg-slate-900/30 hover:border-slate-700 hover:bg-slate-900/50"
+                  ? "border-cyan-500/70 bg-slate-900/90 shadow-lg shadow-cyan-950/30"
+                  : "border-slate-800 bg-slate-900/30 hover:border-slate-600 hover:bg-slate-900/60"
               }`}
             >
-              <div className="flex items-center justify-between gap-4">
-                <div>
-                  <p className={`text-lg font-medium leading-snug transition-colors ${
-                    active === track.id ? "text-white" : "text-slate-300 group-hover:text-white"
-                  }`}>
-                    {track.label}
-                  </p>
-                  <p className="text-xs tracking-widest uppercase text-slate-500 mt-1.5">{track.sub}</p>
-                </div>
-                <span aria-hidden="true" className={`shrink-0 text-xl transition-all duration-200 ${
-                  active === track.id ? "text-cyan-400 rotate-90" : "text-slate-600"
-                }`}>
-                  ›
-                </span>
-              </div>
+              <p className={`text-xs font-semibold uppercase tracking-widest mb-4 transition-colors ${
+                active === track.id ? "text-cyan-400" : "text-slate-500 group-hover:text-slate-400"
+              }`}>
+                {track.sub}
+              </p>
+              <p className={`text-4xl lg:text-5xl font-serif font-semibold leading-none mb-2 transition-colors ${
+                active === track.id ? "text-white" : "text-slate-300"
+              }`}>
+                {track.metric}
+              </p>
+              <p className={`text-sm mb-5 transition-colors ${
+                active === track.id ? "text-slate-300" : "text-slate-500"
+              }`}>
+                {track.metricLabel}
+              </p>
+              <p className={`text-base leading-snug transition-colors ${
+                active === track.id ? "text-slate-200" : "text-slate-400 group-hover:text-slate-300"
+              }`}>
+                {track.label}
+              </p>
+              {active === track.id && (
+                <p className="text-xs text-cyan-500 uppercase tracking-widest mt-4 font-semibold">View details ↓</p>
+              )}
             </button>
           ))}
         </div>
 
-        {active === "gtm" && <GtmContent />}
-        {active === "dd" && <DdContent />}
-        {active === "capital" && <CapitalContent />}
+        {/* Full-width expanded content panel */}
+        {active && (
+          <div className="border border-slate-800 bg-slate-950/60 rounded-sm p-8 md:p-12">
+            {active === "gtm" && <GtmContent />}
+            {active === "dd" && <DdContent />}
+            {active === "capital" && <CapitalContent />}
+          </div>
+        )}
       </div>
     </section>
   );
