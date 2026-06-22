@@ -17,8 +17,8 @@ export default function Hero() {
         {/* Proof stat bar */}
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 sm:divide-x sm:divide-slate-700 mb-12 w-full max-w-2xl">
           <div className="flex-1 flex flex-col items-center px-4">
-            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">48 hrs</span>
-            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">to 103 decision-maker seats</span>
+            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">5 Days</span>
+            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">board-ready pivot direction</span>
           </div>
           <div className="flex-1 flex flex-col items-center px-4">
             <span className="text-3xl md:text-4xl font-serif text-white font-semibold">Months&nbsp;&rarr;&nbsp;Days</span>

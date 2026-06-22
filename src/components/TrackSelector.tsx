@@ -207,7 +207,7 @@ export default function TrackSelector() {
               }`}>
                 {track.sub}
               </p>
-              <p className={`text-4xl lg:text-5xl font-serif font-semibold leading-none mb-2 transition-colors ${
+              <p className={`text-3xl md:text-4xl font-serif font-semibold leading-tight mb-2 transition-colors overflow-hidden ${
                 active === track.id ? "text-white" : "text-slate-300"
               }`}>
                 {track.metric}

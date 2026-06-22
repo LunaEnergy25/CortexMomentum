@@ -19,18 +19,16 @@ export default function Home() {
 
       {/* ENGAGEMENT RECORD BRIDGE */}
       <section className="bg-slate-950 py-16 md:py-20 px-6 border-b border-slate-800">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <div>
-            <p className="text-2xl md:text-3xl font-serif text-white font-semibold leading-snug">
-              8 engagements across energy, deep-tech, and industrials.
-            </p>
-            <p className="text-slate-400 mt-3 text-base leading-relaxed">
-              Each figure is scoped to its evidence and built to survive a diligence committee.
-            </p>
-          </div>
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-2xl md:text-3xl font-serif text-white font-semibold leading-snug mb-3">
+            8 engagements across energy, deep-tech, and industrials.
+          </p>
+          <p className="text-slate-400 text-base leading-relaxed mb-8">
+            Each figure is scoped to its evidence and built to survive a diligence committee.
+          </p>
           <Link
             href="/case-studies"
-            className="shrink-0 text-white font-bold border-b-2 border-slate-600 pb-1 hover:border-white transition-colors uppercase tracking-widest text-sm"
+            className="inline-block text-white font-bold border-b-2 border-slate-600 pb-1 hover:border-white transition-colors uppercase tracking-widest text-sm"
           >
             See the full record &rarr;
           </Link>
@@ -43,7 +41,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-5xl mx-auto text-center space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white font-semibold leading-tight tracking-tight">
-            You know what you&apos;re presenting.<br className="hidden md:block" /> You don&apos;t know what they&apos;re evaluating.
+            The room is running a different risk calculation<br className="hidden md:block" /> than the one you prepared for.
           </h2>
 
           <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-cyan-900/50 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
