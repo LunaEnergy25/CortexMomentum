@@ -16,8 +16,8 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Commercial Architecture Advisory",
-  description: "Elite, high-status Commercial Architect for Capitalized Deep-Tech, Energy, and Industrial companies.",
+  title: "Cortex Momentum | Commercial Due-Diligence & Market Intelligence for Energy & Deep-Tech",
+  description: "Commercial-due-diligence-grade market intelligence for capital decisions in energy, deep-tech and industrials. Figures scoped to their evidence; built to survive diligence.",
 };
 
 export default function RootLayout({

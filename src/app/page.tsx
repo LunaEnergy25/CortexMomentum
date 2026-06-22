@@ -75,7 +75,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-sm font-medium tracking-wide text-slate-400">Track A</span>
-                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Visual Physics Briefs</h3>
+                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Evaluator-Ready Technical Briefs</h3>
                   <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Translating your engineering data into procurement-ready formats that technical evaluators can defend to their leadership without risking their own credibility.</p>
                 </div>
               </div>
@@ -88,8 +88,8 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-sm font-medium tracking-wide text-slate-400">Track B</span>
-                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Volatility Hedging Models</h3>
-                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Reframing the executive narrative from &quot;disruptive innovation&quot; to quantified risk mitigation and CAC downside protection.</p>
+                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Risk-Reduction Reframes</h3>
+                  <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Recasting the executive narrative from &quot;disruptive innovation&quot; into the downside-protection and cost-of-inaction argument the CFO can defend.</p>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-sm font-medium tracking-wide text-slate-400">Track C</span>
-                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Lowest-Bidder Defense Dossiers</h3>
+                  <h3 className="text-2xl font-semibold font-serif text-white mb-3 mt-1">Premium-Pricing Defense</h3>
                   <p className="text-lg md:text-xl text-slate-200 leading-relaxed">Arming your internal champion with the exact financial arguments and competitive positioning required to defend premium pricing and survive the committee vote.</p>
                 </div>
               </div>
@@ -123,7 +123,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-900 px-10 py-5 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl transform hover:-translate-y-1 text-lg mt-2"
           >
-            Initiate Pipeline Diagnostic
+            Request a Pipeline Diagnostic
           </a>
         </div>
       </section>
@@ -136,7 +136,7 @@ export default function Home() {
           </div>
           <div className="lg:col-span-7 space-y-8 max-w-prose">
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              Strategy decks that gather dust are a liability. We do not do retainers. This is a 45-day commercial sprint. We diagnose your specific enterprise bottlenecks, build the narrative assets, and integrate them directly into your team&apos;s workflow. When we exit, your commercial team owns:
+              Strategy decks that gather dust are a liability. We don&apos;t do open-ended marketing retainers. This is a fixed-scope 45-day sprint. We diagnose your specific enterprise bottlenecks, build the narrative assets, and integrate them directly into your team&apos;s workflow. When we exit, your commercial team owns:
             </p>
             <ul className="space-y-6 text-lg md:text-xl text-slate-200 leading-relaxed">
               <li className="flex gap-4 items-start">
@@ -185,8 +185,8 @@ export default function Home() {
       <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">
         <div className="max-w-[1400px] mx-auto space-y-16">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white font-semibold mb-6 leading-tight tracking-tight">Declassified Impact</h2>
-            <p className="text-xl text-slate-200 leading-relaxed">Observe how we reverse-engineered stalled enterprise pipelines for deep-tech leaders.</p>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white font-semibold mb-6 leading-tight tracking-tight">Selected Impact</h2>
+            <p className="text-xl text-slate-200 leading-relaxed">How we read and reset stalled enterprise pipelines for deep-tech and energy leaders. Each figure is scoped to its evidence.</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
@@ -197,8 +197,8 @@ export default function Home() {
               
               <div className="bg-slate-950 border border-slate-800 border-l-4 border-l-slate-500 p-6 mb-8 rounded-sm shadow-inner">
                 <span className="block text-sm font-medium tracking-wide text-slate-400 mb-3">Impact at a Glance</span>
-                <span className="block text-5xl md:text-6xl font-serif font-semibold text-white leading-none tracking-tighter">60%</span>
-                <span className="block text-lg text-slate-300 mt-3">Higher executive engagement</span>
+                <span className="block text-5xl md:text-6xl font-serif font-semibold text-white leading-none tracking-tighter">~60%</span>
+                <span className="block text-lg text-slate-300 mt-3">More executive-seat attention vs the account&apos;s baseline</span>
               </div>
               
               <ul className="space-y-4 mb-8 flex-grow text-white">
@@ -256,7 +256,7 @@ export default function Home() {
               </div>
               
               <p className="space-y-4 mb-8 flex-grow text-white text-lg leading-relaxed">
-                Bypassed the B2B &apos;Observer Effect&apos; by tracking Dark Funnel intent to map opposing boardroom fears: Founders terrified of cap table dilution vs. PE Gatekeepers terrified of execution failure. Engineered strict Impedance Matching, compressing Time-to-Signal from months to days.
+                Read the dark-funnel attention signal to map the opposing boardroom fears &mdash; founders wary of cap-table dilution, PE gatekeepers wary of execution failure &mdash; then ran a separate frame for each so the facility cleared both reads. Compressed time-to-first-signal from months to days.
               </p>
               
               <a href="/case-studies" className="text-white font-bold border-b-2 border-slate-600 pb-1 self-start hover:border-white transition-colors uppercase tracking-widest text-sm mt-auto">
@@ -279,13 +279,13 @@ export default function Home() {
           </p>
 
           {/* Qualification Gate */}
-          <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-red-900/60 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-1 h-full bg-red-700/80"></div>
+          <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-cyan-900/50 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-cyan-600/70"></div>
             <p className="text-xl text-white leading-relaxed font-medium mb-6">
-              This diagnostic is exclusively for capitalized deep-tech, energy, and industrial teams with live enterprise pipeline in complex buying environments.
+              We take a small number of engagements where the work can actually move a decision in front of you &mdash; a deal in committee, or a market to read before you commit.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              This is not the right fit if you are pre-revenue, focused on top-of-funnel awareness, or not open to restructuring your commercial narrative.
+              If you&apos;re purely awareness-building with no decision attached, we&apos;ll tell you we&apos;re not the right spend.
             </p>
           </div>
 
@@ -296,10 +296,14 @@ export default function Home() {
                rel="noopener noreferrer"
                className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"
              >
-               Initiate Pipeline Diagnostic
+               Request a Pipeline Diagnostic
              </a>
              <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
-               30 minutes. Peer-to-peer. Mapping the specific internal dynamics stalling your deals. No pitch.
+               30 minutes. Peer-to-peer. Mapping the specific internal dynamics stalling your deal. No pitch.
+             </p>
+             <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+               Not at a live decision yet? Read the weekly market signal &mdash;{" "}
+               <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
              </p>
           </div>
         </div>

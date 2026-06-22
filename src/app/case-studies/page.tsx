@@ -26,8 +26,8 @@ const caseStudiesData: CaseStudy[] = [
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A FOAK Private Credit fund offered a lower cost of capital, yet the market actively filtered out its term sheets. Standard diagnostics failed to uncover why due to the B2B &quot;Observer Effect&quot;&mdash;developers posture rather than reveal their true bottlenecks to capital providers.</p>
-        <p><strong className="text-white">The Architecture:</strong> We deployed comparative analytics to track &quot;Dark Funnel&quot; intent, bypassing sanitized market data. The root cause was exposed: the market was frozen between opposing boardroom fears. Founders were terrified of cap table dilution, while PE Gatekeepers were terrified of execution failure.</p>
-        <p><strong className="text-white">The Impact:</strong> We engineered a Dual-Payload Architecture. The facility was repositioned as &quot;Cap Table Protection&quot; for Founders, and strict &quot;Impedance Matching&quot; for PE Gatekeepers. This neutralized the specific fears blocking the deal, compressing Time-to-Signal from months to days.</p>
+        <p><strong className="text-white">The Architecture:</strong> We read the dark-funnel attention signal &mdash; the ratio of silent reactors to public commenters, by aggregate persona segment &mdash; bypassing sanitized market data. The root cause surfaced: the market was frozen between opposing boardroom fears. Founders were wary of cap-table dilution, while PE gatekeepers were wary of execution failure.</p>
+        <p><strong className="text-white">The Impact:</strong> We ran two parallel frames for the two audiences that had to say yes &mdash; &quot;cap-table protection&quot; for founders, &quot;risk-adjusted capital efficiency&quot; for the PE gatekeepers &mdash; so the facility cleared both reads. This compressed time-to-first-signal from months to days.</p>
       </div>
     )
   },
@@ -36,12 +36,12 @@ const caseStudiesData: CaseStudy[] = [
     category: 'Deep-Tech & Manufacturing',
     badge: 'DEEP-TECH & ADVANCED MANUFACTURING',
     metric: '60%',
-    result: '60% higher executive engagement by neutralizing transition risk.',
+    result: '~60% more executive-seat attention than the account’s own baseline after the reframe (Layer-1 attention).',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> Elephantech secured early capital based on flawless physics, but the enterprise pipeline stalled. The sales team relied on a monolithic pitch focused on &quot;Sustainability.&quot; Enterprise procurement&mdash;incentivized by supply chain stability&mdash;blocked the technology as an unnecessary &quot;Green Premium.&quot; Simultaneously, Quality Engineers viewed the drastic reduction in copper as a severe risk to system reliability.</p>
         <p><strong className="text-white">The Architecture:</strong> Cortex Momentum deployed a Strategic GTM sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don&apos;t buy &quot;Better&quot;&mdash;they buy &quot;Safer,&quot; we moved &quot;Sustainability&quot; to a secondary validator. The commercial engine was anchored entirely to &quot;Silver Volatility Hedging,&quot; positioning the innovation as a safe harbor against supply chain chaos.</p>
-        <p><strong className="text-white">The Impact:</strong> The narrative shift from &quot;Green Tech&quot; to strict &quot;Supply Chain Risk&quot; generated 60% higher engagement from executives. By diagnosing actual operational risk, the buyer sold it internally, successfully neutralizing personal career risk and achieving rapid commercial readiness.</p>
+        <p><strong className="text-white">The Impact:</strong> Across comparable posts, the &quot;Supply Chain Risk&quot; frame drew roughly 60% more executive-seat attention than the account&apos;s &quot;Green Tech&quot; baseline (Layer-1 attention signal &mdash; not a demand measure). The reframed brief was adopted as the client&apos;s internal committee narrative &mdash; the framing the buyer could defend on operational risk rather than career risk.</p>
       </div>
     )
   },
@@ -55,7 +55,7 @@ const caseStudiesData: CaseStudy[] = [
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> ClimateHive was leading a highly visible capital raise for EarthGrid&apos;s proprietary plasma boring technology. A critical &quot;Investor Skepticism&quot; gap emerged: VCs were listening, but end customers (Utilities and Developers) were missing. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk &quot;Science Project.&quot;</p>
         <p><strong className="text-white">The Architecture:</strong> We executed a 48-Hour Market Validation Sprint. Activating a proprietary network of Utility VPs and Regulators, we engineered a technical debate on physics versus economics, bypassing standard PR to extract exact market objections.</p>
-        <p><strong className="text-white">The Impact:</strong> In 48 hours, the intelligence sprint generated 4,999 organic impressions with a 1:1 comment-to-like debate ratio. Direct dialogue was initiated with 103 vetted decision-makers. This live stress-test proved absolute relevance to grid operators, shifting their sales hook from &quot;Boring Cost&quot; to &quot;Permitting Speed.&quot;</p>
+        <p><strong className="text-white">The Impact:</strong> In 48 hours, the &quot;Permitting Speed&quot; frame drew an unusually high comment-to-reaction ratio for the account&apos;s baseline &mdash; active debate from operator seats, not passive likes &mdash; and engaged 103 persona-verified decision-maker seats. That attention signal was strong enough to justify shifting the lead hook from &quot;Boring Cost&quot; to &quot;Permitting Speed&quot; (Layer-1 attention; demand confirmation requires interviews).</p>
       </div>
     )
   },
@@ -64,12 +64,12 @@ const caseStudiesData: CaseStudy[] = [
     category: 'Energy & Infrastructure',
     badge: 'RENEWABLE NATURAL GAS',
     metric: '5 Days',
-    result: 'Board-ready pivot strategy delivered in 5 days, unlocking a stalled $50M pipeline.',
+    result: 'Board-ready pivot direction delivered in 5 days, under a board-imposed 45-day clock.',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A renewable natural gas (RNG) company watched its core market implode as prices crashed. Investors imposed a spending freeze, and the board delivered an ultimatum: find a viable new business model in 45 days. The sales team relied on outdated market data, while enterprise procurement blocked deals because the ROI timeline misaligned with buyers&apos; requirements.</p>
-        <p><strong className="text-white">The Architecture:</strong> Bypassing a prohibitive $120k, 3-month consulting study, Cortex Momentum deployed a 5-day intelligence sprint. We mapped regulatory and compliance drivers across the sector to uncover hidden, high-velocity demand.</p>
-        <p><strong className="text-white">The Impact:</strong> We delivered a board-ready pivot strategy in 5 days, identifying European Sustainable Aviation Fuel (SAF) regulations as a massive, immediate demand driver. By aligning output with strict internal compliance mandates, we established immediate commercial readiness and unlocked a stalled $50M pipeline.</p>
+        <p><strong className="text-white">The Architecture:</strong> Against the client&apos;s own quoted ~3-month, six-figure traditional study, Cortex Momentum ran a 5-day first-read sprint, mapping regulatory and compliance drivers across the sector to surface high-potential commercial-signal vectors.</p>
+        <p><strong className="text-white">The Impact:</strong> In 5 days we delivered a board-ready pivot direction, surfacing European Sustainable Aviation Fuel (SAF) regulation as a high-potential commercial-signal vector to validate with buyer interviews. The client re-prioritized an opportunity its board had put on a 45-day clock.</p>
       </div>
     )
   },
@@ -83,7 +83,7 @@ const caseStudiesData: CaseStudy[] = [
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A pre-revenue, engineer-led cleantech SaaS startup developed a promising MVP for microgrid developers but had only six months of runway remaining. Drowning in industry noise, they were unable to separate signal from noise and lacked the commercial hooks that actually resonate with enterprise buyers.</p>
         <p><strong className="text-white">The Architecture:</strong> We deployed our intelligence platform to analyze their target market. We processed over 200 project RFPs to identify timing patterns, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers.</p>
-        <p><strong className="text-white">The Impact:</strong> We pinpointed Brownfield redevelopment projects as a highly lucrative niche. Uncovering that the #1 driver for these developers was deal velocity, not cost savings, we rebuilt their messaging architecture entirely around Speed, Compliance, and Guarantees.</p>
+        <p><strong className="text-white">The Impact:</strong> We pinpointed Brownfield redevelopment as the priority niche. Across the 12 buyer interviews, deal velocity outranked cost savings as the stated decision driver (n=12 &mdash; directional, not market-wide), so we rebuilt the messaging architecture around Speed, Compliance, and Guarantees. This is what a demand finding looks like when interviews &mdash; not attention alone &mdash; back it.</p>
       </div>
     )
   },
@@ -92,12 +92,12 @@ const caseStudiesData: CaseStudy[] = [
     category: 'Energy & Infrastructure',
     badge: 'FOAK WIND PRICING',
     metric: '$38\u2013$42',
-    result: 'Risk-adjusted price point of $38\u2013$42/MWh validated for the Texas ERCOT market.',
+    result: 'Defensible risk-adjusted band of $38\u2013$42/MWh modeled for the 2027 ERCOT market.',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A disruptive wind energy startup developed technology to build gigawatt-scale projects faster than legacy competitors. The CEO was consumed by financing rounds and lacked the bandwidth to build a data-backed price point for the 2027 Texas ERCOT market.</p>
         <p><strong className="text-white">The Architecture:</strong> Cortex Momentum analyzed the complex energy market, specifically evaluating hyperscaler, data center, and Department of Defense market opportunities to map the path of least commercial resistance.</p>
-        <p><strong className="text-white">The Impact:</strong> We delivered a competitive, risk-adjusted price point of $38\u2013$42/MWh, validating data centers as the primary target based on &quot;speed-to-deployment.&quot; This achieved total commercial readiness for their upcoming hires.</p>
+        <p><strong className="text-white">The Impact:</strong> We modeled a defensible risk-adjusted band of $38\u2013$42/MWh from comparable-PPA inputs, and prioritized data-center offtakers as the lead segment to test first on a &quot;speed-to-deployment&quot; thesis &mdash; to confirm with offtaker interviews. That gave the CEO a defensible pricing anchor ahead of their commercial hires.</p>
       </div>
     )
   },
@@ -120,12 +120,12 @@ const caseStudiesData: CaseStudy[] = [
     category: 'Deep-Tech & Manufacturing',
     badge: 'SOLAR HARDWARE MARGIN OPTIMIZATION',
     metric: '~40%',
-    result: 'Achieved a sustainable ~40% profit margin through strategic targeting.',
+    result: 'Client reported ~40% gross margins following a targeted, metro-segmented price change (client-reported).',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A pioneering solar hardware startup had no formal commercial background and no clear path to market. Sales efforts were scattered nationwide to early adopters, resulting in thin margins, high friction, and no budget for customer acquisition.</p>
         <p><strong className="text-white">The Architecture:</strong> Cortex Momentum analyzed the entire US market to pinpoint optimal geographic targeting based on income brackets, EV adoption rates, and local compliance incentives.</p>
-        <p><strong className="text-white">The Impact:</strong> We pinpointed exactly 3 high-potential metro areas. By identifying their ideal first customer profile and recommending a strategic price increase, we transformed their GTM into a focused, self-funding growth engine with a sustainable ~40% profit margin.</p>
+        <p><strong className="text-white">The Impact:</strong> We pinpointed 3 high-potential metro areas, identified their ideal first-customer profile, and informed a targeted, metro-segmented price change. The client reported gross margins in the ~40% range following the change (client-reported; Cortex informed the targeting and did not measure the margin outcome).</p>
       </div>
     )
   }
@@ -157,11 +157,19 @@ export default function CaseStudiesPage() {
         {/* ── Header ── */}
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-semibold text-white mb-6 tracking-tight">
-            Diagnostic Index
+            Engagement Record
           </h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Declassified enterprise architecture deployments across deep-tech,
-            energy, and private equity sectors.
+            Selected engagements across energy, deep-tech, and industrials. Each
+            was run on the standing instrument &mdash; already calibrated, so the
+            first read came in days.
+          </p>
+          <p className="text-sm text-slate-500 max-w-3xl mx-auto leading-relaxed mt-6 border-t border-slate-800 pt-6">
+            How to read these: Layer&nbsp;1 tells us what earns attention, and
+            from which seats. We don&apos;t call it demand until peer interviews
+            confirm it &mdash; attention findings and demand findings are labeled
+            distinctly. Every figure is scoped to its evidence and built to
+            survive a diligence committee.
           </p>
         </div>
 
@@ -218,15 +226,16 @@ export default function CaseStudiesPage() {
             Unblock Your Enterprise Pipeline
           </h2>
 
-          <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-red-900/60 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-1 h-full bg-red-700/80"></div>
+          <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-cyan-900/50 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1 h-full bg-cyan-600/70"></div>
             <p className="text-xl text-white leading-relaxed font-medium mb-4">
-              Exclusively for capitalized deep-tech and energy companies with
-              live enterprise pipeline.
+              We take a small number of engagements where the work can move a
+              decision in front of you &mdash; a deal in committee, or a market to
+              read before you commit.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Do not initiate this diagnostic if you are pre-revenue or seeking
-              top-of-funnel PR.
+              If you&apos;re purely awareness-building with no decision attached,
+              we&apos;ll tell you we&apos;re not the right spend.
             </p>
           </div>
 
@@ -236,8 +245,12 @@ export default function CaseStudiesPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"
           >
-            Initiate Pipeline Diagnostic
+            Request a Pipeline Diagnostic
           </a>
+          <p className="text-slate-500 text-sm max-w-xl mx-auto leading-relaxed pt-2">
+            Not at a live decision yet? Read the weekly market signal &mdash;{" "}
+            <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
+          </p>
         </div>
       </div>
     </div>

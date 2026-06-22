@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-slate-100 text-lg lg:text-2xl font-medium max-w-3xl leading-relaxed font-sans mb-12">
-          Most enterprise deals don&apos;t die because the technology failed. They die in committee, killed by internal misalignment your team never saw coming. We build the Asymmetric Commercial Architecture to prevent that.
+          In the deals we see, the ones that stall rarely fail on the technology. They stall in committee &mdash; on internal misalignment the deal team never saw, where every seat reads a different risk. We surface and de-risk that misalignment before the committee meets.
         </p>
 
         <a
@@ -26,10 +26,14 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-12 py-5 font-bold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl transform hover:-translate-y-0.5 text-lg"
         >
-          Initiate Pipeline Diagnostic
+          Request a Pipeline Diagnostic
         </a>
         <p className="text-slate-400 text-sm mt-4 max-w-xl leading-relaxed">
-          30 minutes. Peer-to-peer. Mapping the specific internal dynamics stalling your deals. No pitch.
+          30 minutes. Peer-to-peer. Mapping the specific dynamics stalling your deal. No pitch.
+        </p>
+        <p className="text-slate-400 text-sm mt-3 max-w-xl leading-relaxed">
+          Or read the weekly market signal &mdash;{" "}
+          <a href="https://theinterconnect.energy" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
         </p>
       </div>
 
