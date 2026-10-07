@@ -3,6 +3,7 @@ import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { CSPostHogProvider, PostHogPageView } from "./providers";
+import SiteFooter from "@/components/SiteFooter";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -33,6 +34,7 @@ export default function RootLayout({
             <PostHogPageView />
           </Suspense>
           {children}
+          <SiteFooter />
         </CSPostHogProvider>
       </body>
     </html>
