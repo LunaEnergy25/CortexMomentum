@@ -54,6 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
+      url: `${base}/read`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
       url: `${base}/interconnect`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

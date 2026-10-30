@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "A one-page read on your sector | Cortex Momentum",
   description:
     "Tell us your sector and the decision in front of you. We'll send a one-page read on how your market is being argued, written around that decision.",
-  alternates: { canonical: "/read" },
+  alternates: { canonical: "https://cortexmomentum.com/read" },
 };
 
 export default function ReadPage() {

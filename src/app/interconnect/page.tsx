@@ -3,7 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { formatAsOf, getQuarterlies, getThreads } from "@/lib/threads";
 import ReadRequestForm from "@/components/ReadRequestForm";
-import { BOOKING_URL, decisionEmailHref } from "@/lib/links";
+import { BOOKING_URL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "The Interconnect | Cortex Momentum",
@@ -70,13 +70,9 @@ export default function InterconnectPage() {
             <ReadRequestForm source="hub" />
           </div>
           <p className="text-slate-400 text-sm mt-6">
-            or{" "}
+            Rather talk it through?{" "}
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={link}>
-              book 30 minutes
-            </a>
-            {" "}&middot;{" "}
-            <a href={decisionEmailHref("hub")} className={link}>
-              email us the decision and its date
+              Book a call
             </a>
           </p>
         </div>

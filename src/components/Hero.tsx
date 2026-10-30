@@ -68,7 +68,7 @@ export default function Hero() {
           </Link>
         </div>
         <p className="text-slate-400 text-sm mt-4 max-w-xl leading-relaxed">
-          30 minutes. If it isn&apos;t a fit, we&apos;ll say so.
+          Calls are 30 minutes. If it isn&apos;t a fit, we&apos;ll say so.
         </p>
         <p className="text-slate-400 text-sm mt-3 max-w-xl leading-relaxed">
           Not at a decision yet?{" "}

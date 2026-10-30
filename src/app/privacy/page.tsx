@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         <h2 className={h2}>What we collect</h2>
         <ul className={ul}>
           <li><strong className="text-white">Professional contact information:</strong> your name, job title, company, business location and business email address.</li>
-          <li><strong className="text-white">Correspondence:</strong> messages you exchange with us by email, on LinkedIn or through forms on this site.</li>
+          <li><strong className="text-white">Correspondence:</strong> messages you exchange with us by email, on LinkedIn or through forms on this site. When you request something through a form here, we also record the page you sent it from and the campaign tag on the link you arrived by (kept in your browser tab only until it closes).</li>
           <li><strong className="text-white">Interactions with our public content:</strong> for example, engagement with posts we publish on LinkedIn.</li>
           <li><strong className="text-white">Newsletter data:</strong> if you subscribe to The Interconnect, your subscription details are handled through our newsletter platform (Beehiiv). Beehiiv&apos;s privacy policy applies as well as this one.</li>
           <li><strong className="text-white">Link activity:</strong> some links we send are personal to you, such as a private edition of a brief. When you open one, we record that it was opened and when, so we know the document reached you. Some email software opens links automatically, so this record does not prove you read it.</li>
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
 
         <h2 className={h2}>How long we keep it</h2>
         <ul className={ul}>
-          <li><strong className="text-white">Contact and correspondence records</strong> are reviewed after at most 24 months without contact, and deleted when no longer needed.</li>
+          <li><strong className="text-white">Contact and correspondence records</strong>, including requests made through this site, are reviewed after at most 24 months without contact, and deleted when no longer needed.</li>
           <li><strong className="text-white">If you ask us not to contact you,</strong> we keep a minimal suppression record (your email address and the date) so that we can honour the request.</li>
         </ul>
 

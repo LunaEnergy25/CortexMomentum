@@ -8,7 +8,7 @@ export default function TheInstrument() {
 
         <div className="space-y-8 text-lg md:text-xl text-slate-300 leading-relaxed">
           <p>
-            We keep a measurement system running year-round against a real energy and deep-tech audience &mdash; watching how energy and deep-tech professionals respond to a company&apos;s commercial thesis, including those who read without engaging and never appear in normal engagement metrics. The audience is 35,000+ professionals, reaching 200,000+ members each quarter. We read reactions in aggregate &mdash; how a frame lands against its topic&apos;s own track record &mdash; never by named individual. No person-level data leaves the practice.
+            We keep a market read running year-round across energy and deep-tech &mdash; tracking how a company&apos;s commercial thesis lands and where the pushback sits. Our reads come from a 35,000+ professional audience and reach 200,000+ LinkedIn members each quarter. We read reactions in aggregate &mdash; how a frame lands against its topic&apos;s own track record &mdash; never by named individual. No person-level data leaves the practice.
           </p>
           <p>
             Because it&apos;s been running for years, the baseline work is done. A new read is a comparison against that history, not a study assembled from zero. That&apos;s why the initial picture &mdash; which frames earn attention, and where the pushback sits, versus each topic&apos;s own track record &mdash; comes back faster than a from-scratch study. Deeper work, and demand-level confirmation, takes longer; we scope that explicitly at the start of every engagement.

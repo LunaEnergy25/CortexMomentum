@@ -32,19 +32,22 @@ function parseFrontmatter(raw: string): { meta: Record<string, string>; body: st
 }
 
 function escapeHtml(s: string): string {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
 function inline(s: string): string {
-  let out = escapeHtml(s);
-  out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_m, text, url) => {
+  // Links become placeholders first so emphasis rules can't touch their URLs.
+  const links: string[] = [];
+  let out = escapeHtml(s).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_m, text, url) => {
+    if (!/^(https?:\/\/|mailto:|\/|#)/.test(url)) return text;
     const external = /^https?:\/\//.test(url);
     const attrs = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-    return `<a href="${url}"${attrs}>${text}</a>`;
+    links.push(`<a href="${url}"${attrs}>${text}</a>`);
+    return `\u0000${links.length - 1}\u0000`;
   });
   out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   out = out.replace(/(^|[^*])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
-  return out;
+  return out.replace(/\u0000(\d+)\u0000/g, (_m, i) => links[Number(i)]);
 }
 
 export function renderMarkdown(md: string): string {

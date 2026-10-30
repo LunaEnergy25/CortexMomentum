@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { formatAsOf } from "@/lib/threads";
 import ReadRequestForm from "@/components/ReadRequestForm";
-import { BOOKING_URL, decisionEmailHref } from "@/lib/links";
+import { BOOKING_URL } from "@/lib/links";
 
 /* Shared reading layout for Interconnect thread pages and quarterly snapshots:
    byline + as-of date up top, prose body, then two closing asks: the
@@ -42,6 +42,10 @@ export default function ReadLayout({
   backHref?: string;
   backLabel?: string;
 }) {
+  // The method note is reference material; it sits after the asks, not before them.
+  const split = html.indexOf("<h2>Method note");
+  const body = split === -1 ? html : html.slice(0, split);
+  const method = split === -1 ? "" : html.slice(split);
   return (
     <main className="bg-slate-950 min-h-screen text-slate-200 font-sans">
       <Navbar />
@@ -57,7 +61,7 @@ export default function ReadLayout({
         <p className="text-sm text-slate-400 border-b border-slate-800 pb-8 mb-4">
           Jamie Skaar, Cortex Momentum &middot; as of {formatAsOf(asOf)}
         </p>
-        <div className={prose} dangerouslySetInnerHTML={{ __html: html }} />
+        <div className={prose} dangerouslySetInnerHTML={{ __html: body }} />
         <div className="border-t border-slate-800 mt-14 pt-10 space-y-6">
           <div className="bg-slate-900/60 border border-slate-800 rounded-sm p-6">
             <p className="text-slate-200 leading-relaxed">
@@ -68,17 +72,14 @@ export default function ReadLayout({
             </div>
           </div>
           <p className="text-slate-300 leading-relaxed">
-            If you have a decision riding on this (a contract, a raise, a market entry) and it has a date, that&apos;s worth 30 minutes. I&apos;ll bring how I&apos;m reading it; you bring what you&apos;re seeing that I&apos;m not. If it isn&apos;t a fit, I&apos;ll say so.{" "}
+            Rather talk it through? If a decision is riding on this and it has a date, that&apos;s worth 30 minutes. I&apos;ll bring how I&apos;m reading it; you bring what you&apos;re seeing that I&apos;m not.{" "}
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={link}>
-              Book 30 minutes
-            </a>{" "}
-            or{" "}
-            <a href={decisionEmailHref(source)} className={link}>
-              email me the decision and its date
+              Book a call
             </a>
             .
           </p>
         </div>
+        {method && <div className={`${prose} mt-14 border-t border-slate-800 pt-4 text-base`} dangerouslySetInnerHTML={{ __html: method }} />}
       </article>
     </main>
   );

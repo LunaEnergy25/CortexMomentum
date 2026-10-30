@@ -8,7 +8,3 @@ export function sectorReadHref(source: string, sector?: string): string {
   const body = "The decision it would feed, and roughly when:";
   return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
-
-export function decisionEmailHref(source: string): string {
-  return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`Decision and date (${source})`)}`;
-}

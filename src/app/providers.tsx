@@ -4,6 +4,7 @@ import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
+import { captureUtm } from '@/lib/utm';
 
 if (typeof window !== 'undefined') {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
@@ -22,6 +23,7 @@ export function PostHogPageView() {
 
   useEffect(() => {
     if (pathname && typeof window !== 'undefined') {
+      captureUtm(window.location.search);
       let url = window.origin + pathname;
       if (searchParams && searchParams.toString()) {
         url = url + `?${searchParams.toString()}`;
