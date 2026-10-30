@@ -75,7 +75,7 @@ export default function ForInvestorsPage() {
               rel="noopener noreferrer"
               className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
             >
-              Request a Diligence Read
+              Book a call
             </a>
             <p className="text-slate-400 text-sm mt-4">
               Not at a live deal yet?{" "}
@@ -115,7 +115,7 @@ export default function ForInvestorsPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
           >
-            Request a Diligence Read
+            Book a call
           </a>
           <p className="mt-6">
             <Link href="/case-studies" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4 text-sm">

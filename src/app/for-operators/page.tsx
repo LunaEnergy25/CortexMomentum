@@ -50,10 +50,10 @@ export default function ForOperatorsPage() {
               rel="noopener noreferrer"
               className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
             >
-              Request a Pipeline Diagnostic
+              Book a call
             </a>
             <p className="mt-4 text-slate-400 text-sm">
-              30 minutes. Peer-to-peer. Mapping the specific dynamics stalling your deal. No pitch.
+              30 minutes. Mapping the specific dynamics stalling your deal. If it isn&apos;t a fit, we&apos;ll say so.
             </p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function ForOperatorsPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
           >
-            Request a Pipeline Diagnostic
+            Book a call
           </a>
           <p className="mt-6 text-slate-300 text-sm leading-relaxed">
             We take a small number of engagements where the work can move a decision in front of

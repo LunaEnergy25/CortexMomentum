@@ -69,7 +69,7 @@ export default function FaqPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
           >
-            Request a Diagnostic
+            Book a call
           </a>
         </div>
       </div>

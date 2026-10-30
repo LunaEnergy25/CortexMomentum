@@ -251,7 +251,7 @@ export default function CaseStudiesPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"
           >
-            Request a Pipeline Diagnostic
+            Book a call
           </a>
           <p className="text-slate-500 text-sm max-w-xl mx-auto leading-relaxed pt-2">
             Not at a live decision yet? Read the weekly market signal &mdash;{" "}

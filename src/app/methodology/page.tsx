@@ -38,9 +38,9 @@ export default function MethodologyPage() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
           >
-            Request a Diagnostic
+            Book a call
           </a>
-          <p className="text-slate-500 text-sm mt-4">30 minutes. Peer-to-peer. No pitch.</p>
+          <p className="text-slate-500 text-sm mt-4">30 minutes. If it isn&apos;t a fit, we&apos;ll say so.</p>
           <p className="mt-6">
             <Link href="/case-studies" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4 text-sm">
               Or see the full engagement record &rarr;

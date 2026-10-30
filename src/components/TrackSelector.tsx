@@ -72,9 +72,9 @@ function GtmContent() {
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
         >
-          Request a Pipeline Diagnostic
+          Book a call
         </a>
-        <p className="text-slate-400 text-sm">30 minutes. Peer-to-peer. We map what the committee is actually afraid of. No pitch.</p>
+        <p className="text-slate-400 text-sm">30 minutes. We map what the committee is actually afraid of. If it isn&apos;t a fit, we&apos;ll say so.</p>
       </div>
     </div>
   );
@@ -125,7 +125,7 @@ function DdContent() {
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
         >
-          Request a Diagnostic
+          Book a call
         </a>
         <p className="text-slate-400 text-sm">We scope the read to the specific decision you&apos;re carrying.</p>
       </div>
@@ -169,7 +169,7 @@ function CapitalContent() {
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
         >
-          Request a Diligence Read
+          Book a call
         </a>
         <p className="text-slate-400 text-sm">We scope the read to the transaction in front of you.</p>
       </div>
@@ -178,7 +178,7 @@ function CapitalContent() {
 }
 
 export default function TrackSelector() {
-  const [active, setActive] = useState<TrackId | null>("gtm");
+  const [active, setActive] = useState<TrackId | null>(null);
 
   return (
     <section className="bg-slate-900/40 py-20 md:py-28 px-6 border-b border-slate-800">

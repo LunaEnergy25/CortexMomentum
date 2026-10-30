@@ -6,7 +6,7 @@ import TrackSelector from "@/components/TrackSelector";
 
 export const metadata: Metadata = {
   title: "Cortex Momentum — Commercial Intelligence for Energy & Deep-Tech Deals",
-  description: "When your deal stalls in committee, we find which frame earns attention, confirm in interviews what each buyer weighs, and rebuild the positioning around it. Standing intelligence instrument, five years running.",
+  description: "Your deal has a date. We read where storage, solar, firm-power, large-load and deep-tech deals stall, confirm in interviews what each buyer weighs, and show what it means for your next move.",
 };
 
 export default function Home() {
@@ -61,16 +61,16 @@ export default function Home() {
               rel="noopener noreferrer"
               className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"
             >
-              Request a Diagnostic
+              Book a call
             </a>
             <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
-              30 minutes. Peer-to-peer. No pitch.
+              30 minutes. If it isn&apos;t a fit, we&apos;ll say so.
             </p>
             <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed pt-2">
-              Not at a live decision yet? Read the weekly market signal &mdash;{" "}
+              Not at a decision yet?{" "}
               <Link href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
-                The Interconnect
-              </Link>.
+                See the energy threads we&apos;re tracking &rarr;
+              </Link>
             </p>
           </div>
         </div>

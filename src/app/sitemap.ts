@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { getQuarterlies, getThreads } from '@/lib/threads'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://cortexmomentum.com'
@@ -58,5 +59,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.7,
     },
+    ...getThreads().map((t) => ({
+      url: `${base}/interconnect/threads/${t.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+    ...getQuarterlies().map((q) => ({
+      url: `${base}/interconnect/quarterly/${q.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
   ]
 }
