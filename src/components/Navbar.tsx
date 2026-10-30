@@ -18,7 +18,7 @@ export default function Navbar() {
           </span>
         </Link>
         <div className="flex md:hidden">
-          <a href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 px-4 py-2 font-semibold text-sm tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm">Book a Call</a>
+          <a href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8" target="_blank" rel="noopener noreferrer" className="bg-white text-slate-950 px-4 py-2 font-semibold text-sm tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm">Book a call</a>
         </div>
         <div className="hidden md:flex gap-8 items-center text-sm font-medium tracking-wide">
           <Link href="/methodology" className="text-slate-300 hover:text-white transition-colors">How It Works</Link>
@@ -26,21 +26,14 @@ export default function Navbar() {
           <Link href="/for-investors" className="text-slate-300 hover:text-white transition-colors">For Investors</Link>
           <Link href="/case-studies" className="text-slate-300 hover:text-white transition-colors">Case Studies</Link>
           <Link href="/about" className="text-slate-300 hover:text-white transition-colors">About</Link>
-          <a
-            href="https://www.theinterconnect.energy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-slate-300 hover:text-white transition-colors"
-          >
-            The Interconnect
-          </a>
+          <Link href="/interconnect" className="text-slate-300 hover:text-white transition-colors">The Interconnect</Link>
           <a
             href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-slate-950 px-5 py-2 hover:bg-slate-200 transition-all duration-300 font-semibold tracking-wide rounded-sm"
           >
-            Request a Diagnostic
+            Book a call
           </a>
         </div>
       </div>

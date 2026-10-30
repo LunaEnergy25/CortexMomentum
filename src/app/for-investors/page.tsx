@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "For Investors — Diligence Read | Cortex Momentum",
   description:
-    "An independent commercial read for energy and deep-tech diligence: is the target's market actually leaning into its thesis, and from which seats? Attention measured; demand confirmed by interview. Deal-attached, partner-discretionary.",
+    "An independent commercial read for energy and deep-tech diligence: is the target's market actually leaning into its thesis? Attention measured; demand confirmed by interview. Deal-attached, partner-discretionary.",
 };
 
 export default function ForInvestorsPage() {
@@ -30,12 +30,12 @@ export default function ForInvestorsPage() {
                 Private Equity &amp; FOAK Capital
               </p>
               <p className="text-4xl md:text-5xl font-serif text-white font-semibold mb-4">
-                Months &rarr; Days
+                2 Frames
               </p>
               <p className="text-slate-300 text-sm leading-relaxed">
                 A FOAK private-credit fund whose term sheets the market kept filtering out. We read
-                the silent attention behind two opposing boardroom fears and ran a frame for each &mdash;
-                compressing time-to-first-signal from months to days.
+                the silent attention behind two opposing boardroom fears and ran a frame for each, so
+                the facility could clear both.
               </p>
             </div>
             <div className="bg-slate-900/60 border border-slate-800 p-7 rounded-sm">
@@ -64,7 +64,7 @@ export default function ForInvestorsPage() {
             market is leaning toward, measured from public behavior) and separates it from{" "}
             <strong className="text-white">Layer 2</strong> demand (confirmed only through peer
             interviews). For a diligence engagement, it answers one question: is the market leaning in,
-            and from which seats? That answer is deal-attached, partner-discretionary, and delivered
+            and where is the pushback? That answer is deal-attached, partner-discretionary, and delivered
             before you commit the capital.
           </p>
 
@@ -79,7 +79,7 @@ export default function ForInvestorsPage() {
             </a>
             <p className="text-slate-400 text-sm mt-4">
               Not at a live deal yet?{" "}
-              <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+              <a href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
                 Read The Interconnect
               </a>{" "}for a sample of the signal.
             </p>

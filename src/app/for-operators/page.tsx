@@ -25,18 +25,18 @@ export default function ForOperatorsPage() {
 
           {/* Proof stat */}
           <div className="mb-10 py-8 border-y border-slate-800">
-            <p className="text-4xl md:text-5xl font-serif text-white font-semibold">~60%</p>
+            <p className="text-4xl md:text-5xl font-serif text-white font-semibold">12 Interviews</p>
             <p className="text-slate-400 text-sm mt-1 uppercase tracking-wide font-medium">
-              More executive-seat attention on the reframe
+              Deal velocity outranked cost savings as the stated decision driver
             </p>
-            <p className="text-slate-500 text-xs mt-1">Layer-1 attention signal — Elephantech engagement</p>
+            <p className="text-slate-500 text-xs mt-1">Layer-2 demand finding (n=12, directional) — Cleantech SaaS engagement</p>
           </div>
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mb-10">
             The pilot data is clean and your champion is sold &mdash; and the deal still stalls, because
             every seat on the buying committee evaluates through a different lens of personal risk, and
-            your champion walks in meeting objections nobody briefed them on. We surface which commercial
-            frame each seat is actually leaning into, then build the assets your champion deploys to win
+            your champion walks in meeting objections nobody briefed them on. We find which commercial
+            frame earns attention, confirm in interviews what each seat actually weighs, then build the assets your champion deploys to win
             the consensus.{" "}
             <Link href="/methodology" className="text-cyan-300 hover:text-cyan-200 transition-colors underline underline-offset-4">
               How the read works &rarr;
@@ -152,14 +152,12 @@ export default function ForOperatorsPage() {
           </p>
           <p className="mt-4 text-slate-400 text-sm">
             Not at a live deal yet?{" "}
-            <a
-              href="https://www.theinterconnect.energy/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/interconnect"
               className="text-cyan-300 hover:text-cyan-200 transition-colors"
             >
               Read the weekly market signal &mdash; The Interconnect.
-            </a>
+            </Link>
           </p>
         </div>
       </section>

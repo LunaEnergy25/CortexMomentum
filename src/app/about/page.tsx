@@ -37,7 +37,7 @@ export default function AboutPage() {
             Fifteen years operating inside the space made the pattern legible. I was the first commercial hire at the residential-solar operator that scaled to $2.2B in revenue and is now Lumio, and I&apos;ve founded three operating companies in energy and adjacent hardware since. The same structure that gates a residential deal at small dollar values gates an enterprise deal at seven figures &mdash; only the dollar amount changes. Cortex Momentum is what got built once that pattern was clear enough to systematize.
           </p>
           <p>
-            What makes the practice different from a sharp advisor with an opinion is the measurement system behind it. For roughly five years I&apos;ve run a standing instrument &mdash; a continuously-calibrated read of how senior energy and deep-tech buyers actually respond to a commercial pitch, including the majority who study it in silence and never appear in normal metrics.{" "}
+            What makes the practice different from a sharp advisor with an opinion is the measurement system behind it. For roughly five years I&apos;ve run a standing instrument &mdash; a continuously-calibrated read of how energy and deep-tech professionals actually respond to a commercial pitch, including those who read without engaging and never appear in normal metrics.{" "}
             <Link href="/methodology" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">Here&apos;s exactly how it works &rarr;</Link>
           </p>
           <p>
@@ -45,7 +45,7 @@ export default function AboutPage() {
           </p>
           <p>
             This is intelligence, not marketing. I don&apos;t run your channels, sell you data, or hand over lists &mdash; person-level data never leaves the practice; you receive the aggregate read. I also publish{" "}
-            <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>, a weekly market signal drawn from the same instrument.
+            <a href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>, a weekly market signal drawn from the same instrument.
           </p>
         </div>
 

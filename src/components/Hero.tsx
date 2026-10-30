@@ -17,12 +17,12 @@ export default function Hero() {
         {/* Proof stat bar — quality / velocity / precision */}
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-0 sm:divide-x sm:divide-slate-700 mb-12 w-full max-w-2xl">
           <div className="flex-1 flex flex-col items-center px-4">
-            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">~60%</span>
-            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">more executive-seat attention</span>
+            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">12 Interviews</span>
+            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">behind our lead demand finding (directional)</span>
           </div>
           <div className="flex-1 flex flex-col items-center px-4">
-            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">Months&nbsp;&rarr;&nbsp;Days</span>
-            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">time-to-first-signal</span>
+            <span className="text-3xl md:text-4xl font-serif text-white font-semibold">200,000+</span>
+            <span className="text-xs text-slate-400 tracking-widest uppercase mt-2">LinkedIn members reached by our reads each quarter</span>
           </div>
           <div className="flex-1 flex flex-col items-center px-4">
             <span className="text-3xl md:text-4xl font-serif text-white font-semibold">~5 Years</span>
@@ -43,7 +43,7 @@ export default function Hero() {
         </p>
         <p className="text-slate-400 text-sm mt-3 max-w-xl leading-relaxed">
           Not at a live decision yet? Read the weekly market signal &mdash;{" "}
-          <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
+          <a href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
         </p>
       </div>
 

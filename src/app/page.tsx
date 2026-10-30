@@ -6,7 +6,7 @@ import TrackSelector from "@/components/TrackSelector";
 
 export const metadata: Metadata = {
   title: "Cortex Momentum — Commercial Intelligence for Energy & Deep-Tech Deals",
-  description: "When your deal stalls in committee, we surface what each buyer seat is actually evaluating and rebuild the positioning around it. Standing intelligence instrument, five years running.",
+  description: "When your deal stalls in committee, we find which frame earns attention, confirm in interviews what each buyer weighs, and rebuild the positioning around it. Standing intelligence instrument, five years running.",
 };
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
       <section className="bg-slate-950 py-16 md:py-20 px-6 border-b border-slate-800">
         <div className="max-w-5xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-serif text-white font-semibold leading-snug mb-3">
-            8 engagements across energy, deep-tech, and industrials.
+            The record, across energy, deep-tech and industrials.
           </p>
           <p className="text-slate-400 text-base leading-relaxed mb-8">
             Each figure is scoped to its evidence and built to survive a diligence committee.
@@ -68,9 +68,9 @@ export default function Home() {
             </p>
             <p className="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed pt-2">
               Not at a live decision yet? Read the weekly market signal &mdash;{" "}
-              <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+              <Link href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
                 The Interconnect
-              </a>.
+              </Link>.
             </p>
           </div>
         </div>

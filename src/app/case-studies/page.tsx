@@ -21,13 +21,13 @@ const caseStudiesData: CaseStudy[] = [
     id: 1,
     category: 'Private Equity & Capital',
     badge: 'PRIVATE EQUITY & FOAK CAPITAL',
-    metric: 'Months to Days',
-    result: 'Compressed Time-to-Signal, engineering deal velocity where none previously existed.',
+    metric: '2 Frames',
+    result: 'Two parallel frames, one for each side that had to say yes.',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A FOAK Private Credit fund offered a lower cost of capital, yet the market actively filtered out its term sheets. Standard diagnostics failed to uncover why due to the B2B &quot;Observer Effect&quot;&mdash;developers posture rather than reveal their true bottlenecks to capital providers.</p>
-        <p><strong className="text-white">The Architecture:</strong> We read the dark-funnel attention signal &mdash; the ratio of silent reactors to public commenters, by aggregate persona segment &mdash; bypassing sanitized market data. The root cause surfaced: the market was frozen between opposing boardroom fears. Founders were wary of cap-table dilution, while PE gatekeepers were wary of execution failure.</p>
-        <p><strong className="text-white">The Impact:</strong> We ran two parallel frames for the two audiences that had to say yes &mdash; &quot;cap-table protection&quot; for founders, &quot;risk-adjusted capital efficiency&quot; for the PE gatekeepers &mdash; so the facility cleared both reads. This compressed time-to-first-signal from months to days.</p>
+        <p><strong className="text-white">The Architecture:</strong> We read the dark-funnel attention signal &mdash; the ratio of silent reactors to public commenters &mdash; bypassing sanitized market data. The root cause surfaced: the market was frozen between opposing boardroom fears. Founders were wary of cap-table dilution, while PE gatekeepers were wary of execution failure.</p>
+        <p><strong className="text-white">The Impact:</strong> We ran two parallel frames for the two audiences that had to say yes &mdash; &quot;cap-table protection&quot; for founders, &quot;risk-adjusted capital efficiency&quot; for the PE gatekeepers &mdash; so the facility could clear both reads.</p>
       </div>
     )
   },
@@ -35,13 +35,13 @@ const caseStudiesData: CaseStudy[] = [
     id: 2,
     category: 'Deep-Tech & Manufacturing',
     badge: 'DEEP-TECH & ADVANCED MANUFACTURING',
-    metric: '60%',
-    result: '~60% more executive-seat attention than the account’s own baseline after the reframe (Layer-1 attention).',
+    metric: 'Reframe',
+    result: 'The supply-chain-risk reframe was adopted as the client’s internal committee narrative.',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> Elephantech secured early capital based on flawless physics, but the enterprise pipeline stalled. The sales team relied on a monolithic pitch focused on &quot;Sustainability.&quot; Enterprise procurement&mdash;incentivized by supply chain stability&mdash;blocked the technology as an unnecessary &quot;Green Premium.&quot; Simultaneously, Quality Engineers viewed the drastic reduction in copper as a severe risk to system reliability.</p>
         <p><strong className="text-white">The Architecture:</strong> Cortex Momentum deployed a Strategic GTM sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don&apos;t buy &quot;Better&quot;&mdash;they buy &quot;Safer,&quot; we moved &quot;Sustainability&quot; to a secondary validator. The commercial engine was anchored entirely to &quot;Silver Volatility Hedging,&quot; positioning the innovation as a safe harbor against supply chain chaos.</p>
-        <p><strong className="text-white">The Impact:</strong> Across comparable posts, the &quot;Supply Chain Risk&quot; frame drew roughly 60% more executive-seat attention than the account&apos;s &quot;Green Tech&quot; baseline (Layer-1 attention signal &mdash; not a demand measure). The reframed brief was adopted as the client&apos;s internal committee narrative &mdash; the framing the buyer could defend on operational risk rather than career risk.</p>
+        <p><strong className="text-white">The Impact:</strong> Across comparable posts, the &quot;Supply Chain Risk&quot; frame drew more attention than the account&apos;s &quot;Green Tech&quot; baseline (Layer-1 attention signal &mdash; not a demand measure). The reframed brief was adopted as the client&apos;s internal committee narrative &mdash; the framing the buyer could defend on operational risk rather than career risk.</p>
       </div>
     )
   },
@@ -50,12 +50,12 @@ const caseStudiesData: CaseStudy[] = [
     category: 'Energy & Infrastructure',
     badge: 'PLASMA BORING MARKET VALIDATION',
     metric: '48 Hours',
-    result: 'From zero to 103 engaged decision-makers in 48 hours.',
+    result: 'A 48-hour read that moved the lead hook from cost to permitting speed.',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
-        <p><strong className="text-white">The Friction:</strong> ClimateHive was leading a highly visible capital raise for EarthGrid&apos;s proprietary plasma boring technology. A critical &quot;Investor Skepticism&quot; gap emerged: VCs were listening, but end customers (Utilities and Developers) were missing. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk &quot;Science Project.&quot;</p>
-        <p><strong className="text-white">The Architecture:</strong> We ran a 48-hour read of how the plasma boring thesis landed with utility and developer seats &mdash; tracking the comment-to-reaction ratio as a proxy for active engagement versus passive awareness. The Permitting Speed frame drew active debate from operator seats; the Boring Cost frame drew passive likes. That gap was the signal.</p>
-        <p><strong className="text-white">The Impact:</strong> In 48 hours, the &quot;Permitting Speed&quot; frame drew an unusually high comment-to-reaction ratio for the account&apos;s baseline &mdash; active debate from operator seats, not passive likes &mdash; and engaged 103 persona-verified decision-maker seats. That attention signal was strong enough to justify shifting the lead hook from &quot;Boring Cost&quot; to &quot;Permitting Speed&quot; (Layer-1 attention; demand confirmation requires interviews).</p>
+        <p><strong className="text-white">The Friction:</strong> ClimateHive was leading a highly visible capital raise for EarthGrid&apos;s proprietary plasma boring technology. A critical &quot;Investor Skepticism&quot; gap emerged: Investors were engaging, but the technical validation that operators bring was absent from the conversation. Without industry experts present to verify the complex electrical physics, conservative investors viewed the technology as a high-risk &quot;Science Project.&quot;</p>
+        <p><strong className="text-white">The Architecture:</strong> We ran a 48-hour read of how the plasma boring thesis landed &mdash; tracking the comment-to-reaction ratio as a proxy for active engagement versus passive awareness. The Permitting Speed frame drew active debate; the Boring Cost frame drew passive likes. That gap was the signal.</p>
+        <p><strong className="text-white">The Impact:</strong> In 48 hours, the &quot;Permitting Speed&quot; frame drew an unusually high comment-to-reaction ratio for the account&apos;s baseline &mdash; active debate, not passive likes. That attention signal was strong enough to justify shifting the lead hook from &quot;Boring Cost&quot; to &quot;Permitting Speed&quot; (Layer-1 attention; demand confirmation requires interviews).</p>
       </div>
     )
   },
@@ -97,7 +97,7 @@ const caseStudiesData: CaseStudy[] = [
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A disruptive wind energy startup developed technology to build gigawatt-scale projects faster than legacy competitors. The CEO was consumed by financing rounds and lacked the bandwidth to build a data-backed price point for the 2027 Texas ERCOT market.</p>
         <p><strong className="text-white">The Architecture:</strong> Cortex Momentum analyzed the complex energy market, specifically evaluating hyperscaler, data center, and Department of Defense market opportunities to map the path of least commercial resistance.</p>
-        <p><strong className="text-white">The Impact:</strong> We modeled a defensible risk-adjusted band of $38\u2013$42/MWh from comparable-PPA inputs, and prioritized data-center offtakers as the lead segment to test first on a &quot;speed-to-deployment&quot; thesis &mdash; to confirm with offtaker interviews. That gave the CEO a defensible pricing anchor ahead of their commercial hires.</p>
+        <p><strong className="text-white">The Impact:</strong> We modeled a defensible risk-adjusted band of $38&ndash;$42/MWh from comparable-PPA inputs, and prioritized data-center offtakers as the lead segment to test first on a &quot;speed-to-deployment&quot; thesis &mdash; to confirm with offtaker interviews. That gave the CEO a defensible pricing anchor ahead of their commercial hires.</p>
       </div>
     )
   },
@@ -163,16 +163,16 @@ export default function CaseStudiesPage() {
             Selected engagements across energy, deep-tech, and industrials. Each
             was read through our <strong className="text-white">standing instrument</strong> &mdash; the
             measurement system we keep running year-round over a real energy and
-            deep-tech audience, watching how senior buyers respond to a company&apos;s
-            commercial pitch, including the majority who study it in silence and
-            never show up in normal metrics. Because it&apos;s already built and
+            deep-tech audience, watching how energy and deep-tech professionals respond to a
+            company&apos;s commercial pitch, including those who read without
+            engaging and never show up in normal metrics. Because it&apos;s already built and
             calibrated, the slow setup is done &mdash; so the first read (the
-            initial segment-level attention picture, not the full engagement)
+            initial attention picture, not the full engagement)
             came back in days, not the weeks a from-scratch study needs.
           </p>
           <p className="text-sm text-slate-500 max-w-3xl mx-auto leading-relaxed mt-6 border-t border-slate-800 pt-6">
-            How to read these: Layer&nbsp;1 tells us what earns attention, and
-            from which seats. We don&apos;t call it demand until peer interviews
+            How to read these: Layer&nbsp;1 tells us which frames earn attention,
+            against their own baseline. We don&apos;t call it demand until peer interviews
             confirm it &mdash; attention findings and demand findings are labeled
             distinctly. Every figure is scoped to its evidence and built to
             survive a diligence committee.
@@ -255,7 +255,7 @@ export default function CaseStudiesPage() {
           </a>
           <p className="text-slate-500 text-sm max-w-xl mx-auto leading-relaxed pt-2">
             Not at a live decision yet? Read the weekly market signal &mdash;{" "}
-            <a href="https://www.theinterconnect.energy/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
+            <a href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
           </p>
         </div>
       </div>

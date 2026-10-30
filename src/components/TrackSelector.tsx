@@ -9,8 +9,8 @@ const tracks = [
     id: "gtm" as TrackId,
     label: "My pitch or deal is stalling in market",
     sub: "GTM · Deal Rescue",
-    metric: "~60%",
-    metricLabel: "More executive-seat attention",
+    metric: "Reframe",
+    metricLabel: "Adopted as the client's committee narrative",
   },
   {
     id: "dd" as TrackId,
@@ -23,8 +23,8 @@ const tracks = [
     id: "capital" as TrackId,
     label: "I'm in a capital transaction — raising or evaluating",
     sub: "Capital · Evaluation",
-    metric: "Months→Days",
-    metricLabel: "Time-to-first-signal",
+    metric: "250→25",
+    metricLabel: "Outreach narrowed to thesis-aligned capital",
   },
 ];
 
@@ -36,32 +36,31 @@ function GtmContent() {
           Your champion walked into that committee meeting with a pitch the engineering team believes in. The room heard something else. Every seat in a buying committee is running its own risk calculation &mdash; procurement, the CFO, and the VP of Innovation are not evaluating the same problem. A single narrative cannot clear all three simultaneously.
         </p>
         <p>
-          We surface what each seat is actually evaluating, and rebuild the positioning around it. The output is a reframe your champion can walk into that meeting with &mdash; one that speaks to the operational risk, the financial risk, and the credibility risk in the same conversation, without diluting any of them.
+          We find which frame earns attention, confirm in interviews what each seat actually weighs, and rebuild the positioning around it. The output is a reframe your champion can walk into that meeting with &mdash; one that speaks to the operational risk, the financial risk, and the credibility risk in the same conversation, without diluting any of them.
         </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-sm">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Elephantech</p>
-          <p className="text-3xl font-serif text-white mb-3">~60%</p>
+          <p className="text-3xl font-serif text-white mb-3">Reframe</p>
           <p className="text-slate-300 text-base leading-relaxed">
-            More executive-seat attention after shifting &ldquo;Green Tech&rdquo; to &ldquo;Supply Chain Risk&rdquo; &mdash; the frame procurement could defend without calling it a green premium.
+            Shifted &ldquo;Green Tech&rdquo; to &ldquo;Supply Chain Risk&rdquo; &mdash; the frame procurement could defend without calling it a green premium. Adopted as the client&apos;s internal committee narrative.
           </p>
-          <p className="text-xs text-slate-500 mt-3">Layer-1 attention signal</p>
         </div>
         <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-sm">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">ClimateHive &times; EarthGrid</p>
           <p className="text-3xl font-serif text-white mb-3">48 Hours</p>
           <p className="text-slate-300 text-base leading-relaxed">
-            Shifted the lead hook from &ldquo;Boring Cost&rdquo; to &ldquo;Permitting Speed&rdquo; &mdash; the frame that drew active debate from operator seats, not passive reaction.
+            Shifted the lead hook from &ldquo;Boring Cost&rdquo; to &ldquo;Permitting Speed&rdquo; &mdash; the frame that drew active debate, not passive reaction.
           </p>
           <p className="text-xs text-slate-500 mt-3">Attention signal; demand confirmation requires interviews</p>
         </div>
         <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-sm">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">FOAK Private Credit</p>
-          <p className="text-3xl font-serif text-white mb-3">Months &rarr; Days</p>
+          <p className="text-3xl font-serif text-white mb-3">2 Frames</p>
           <p className="text-slate-300 text-base leading-relaxed">
-            Term sheets the market kept filtering out. We read the opposing boardroom fears and ran a separate frame for each &mdash; compressing time-to-first-signal from months to days.
+            Term sheets the market kept filtering out. We read the opposing boardroom fears and ran a separate frame for each, so the facility could clear both reads.
           </p>
         </div>
       </div>
@@ -86,10 +85,10 @@ function DdContent() {
     <div className="space-y-12 pt-2">
       <div className="space-y-6 text-lg md:text-xl text-slate-200 leading-relaxed">
         <p>
-          Before you commit to a thesis &mdash; a pivot, a new market entry, a strategy the board is about to fund &mdash; you need to know if it reads the way you need it to. Not whether the logic holds on paper, but whether the relevant audience actually leans into it from the seats that matter.
+          Before you commit to a thesis &mdash; a pivot, a new market entry, a strategy the board is about to fund &mdash; you need to know if it reads the way you need it to. Not whether the logic holds on paper, but whether the market it depends on actually leans into it.
         </p>
         <p>
-          We run an independent read: which seats lean in, which stay cold, where the thesis has gaps the next conversation will expose. That independence from your internal view is the point. If it holds up, you carry defensible signal forward. If it doesn&apos;t, you find out before it costs you.
+          We run an independent read: which frames earn attention against the category&apos;s baseline, where the pushback sits, and where the thesis has gaps the next conversation will expose. That independence from your internal view is the point. If it holds up, you carry defensible signal forward. If it doesn&apos;t, you find out before it costs you.
         </p>
       </div>
 
@@ -139,19 +138,19 @@ function CapitalContent() {
     <div className="space-y-12 pt-2">
       <div className="space-y-6 text-lg md:text-xl text-slate-200 leading-relaxed">
         <p>
-          On both sides of a capital decision, the same question is usually unresolved: does the commercial thesis read as defensible to the people who have to say yes? A founder preparing to raise needs to know if their story is landing with the right capital seats before they&apos;re filtered out. A fund manager evaluating a target needs to know if the market is actually leaning into the thesis &mdash; or if the demand being projected is ahead of what the market has confirmed.
+          On both sides of a capital decision, the same question is usually unresolved: does the commercial thesis read as defensible to the people who have to say yes? A founder preparing to raise needs to know if their story is landing with the capital they need before they&apos;re filtered out. A fund manager evaluating a target needs to know if the market is actually leaning into the thesis &mdash; or if the demand being projected is ahead of what the market has confirmed.
         </p>
         <p>
-          We give you that independent read. Which seats lean in, which stay cold, and what&apos;s been confirmed as demand versus what&apos;s still attention waiting on interview. For diligence engagements we disclose and wall off any concurrent operating-company work on the target &mdash; the independence is structural, not just stated.
+          We give you that independent read: which frames earn attention, where the pushback sits, and what&apos;s been confirmed as demand in interviews versus what&apos;s still attention. For diligence engagements we disclose and wall off any concurrent operating-company work on the target &mdash; the independence is structural, not just stated.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-sm">
           <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">FOAK Private Credit</p>
-          <p className="text-3xl font-serif text-white mb-3">Months &rarr; Days</p>
+          <p className="text-3xl font-serif text-white mb-3">2 Frames</p>
           <p className="text-slate-300 text-base leading-relaxed">
-            Term sheets the market kept filtering out. We read the opposing boardroom fears &mdash; founders wary of cap-table dilution, PE gatekeepers wary of execution failure &mdash; and ran a frame that cleared both.
+            Term sheets the market kept filtering out. We read the opposing boardroom fears &mdash; founders wary of cap-table dilution, PE gatekeepers wary of execution failure &mdash; and ran a frame for each.
           </p>
         </div>
         <div className="bg-slate-900/60 border border-slate-800 p-6 rounded-sm">

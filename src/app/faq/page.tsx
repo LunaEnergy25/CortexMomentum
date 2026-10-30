@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Are you selling data from your LinkedIn audience?",
-    a: "No. We never sell data, lists, or person-level information — it never leaves the practice. The audience is a measurement sensor we read, not an asset we rent out. You receive the aggregate, segment-level read; nothing about any individual.",
+    a: "No. We never sell data, lists, or person-level information — it never leaves the practice. The audience is a measurement sensor we read, not an asset we rent out. You receive the aggregate read; nothing about any individual.",
   },
   {
     q: "Isn't a read that comes back in days just shallow?",
-    a: "The first read is fast because the measurement system has already been running for years — the slow part of a normal study (assembling an audience and gathering enough reactions to mean anything) is already done. A first read is the initial segment-level attention picture. Deeper work, and demand-level interview work, takes longer, and we scope that explicitly.",
+    a: "The first read is fast because the measurement system has already been running for years — the slow part of a normal study (assembling an audience and gathering enough reactions to mean anything) is already done. A first read is the initial attention picture. Deeper work, and demand-level interview work, takes longer, and we scope that explicitly.",
   },
   {
     q: "How is this different from content marketing or a social agency?",
@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Do you measure demand, or just attention?",
-    a: "Attention only — which frames earn study, from which seats, against each topic's multi-year baseline. That's a leading indicator, not proof anyone will buy. Confirming demand is a separate step done through direct peer interviews. We never report attention as if it were demand.",
+    a: "Attention only — which frames earn study, and where the pushback sits, against each topic's multi-year baseline. That's a leading indicator, not proof anyone will buy. Confirming demand is a separate step done through direct peer interviews. We never report attention as if it were demand.",
   },
   {
     q: "If you also work with operating companies, is the diligence read really independent?",
