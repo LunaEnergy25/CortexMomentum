@@ -1,6 +1,6 @@
 import Link from "next/link";
 import GlobalIntelligence from "@/components/GlobalIntelligence";
-import { BOOKING_URL, SURVEY_URL, sectorReadHref } from "@/lib/links";
+import { BOOKING_URL } from "@/lib/links";
 
 // Corpus figures: deduplicated posts in cortex.db as of 2026-10-18 (847 unique).
 // Topic counts overlap; never sum them.
@@ -11,8 +11,6 @@ const STATS = [
 ];
 
 export default function Hero() {
-  const external = Boolean(SURVEY_URL);
-
   return (
     <section className="relative bg-slate-950 text-white py-20 md:py-28 lg:py-36 px-6 border-b border-slate-800 overflow-hidden text-center">
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-900/15 rounded-full blur-[120px] pointer-events-none" aria-hidden="true" />
@@ -62,13 +60,12 @@ export default function Hero() {
           >
             Book a call
           </a>
-          <a
-            href={sectorReadHref("home")}
-            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          <Link
+            href="/read?from=home"
             className="inline-block border border-slate-500 text-white px-8 py-5 font-semibold tracking-wide hover:border-white hover:bg-slate-900 transition-all duration-300 rounded-sm text-lg"
           >
             Get a one-page read on your sector
-          </a>
+          </Link>
         </div>
         <p className="text-slate-400 text-sm mt-4 max-w-xl leading-relaxed">
           30 minutes. If it isn&apos;t a fit, we&apos;ll say so.

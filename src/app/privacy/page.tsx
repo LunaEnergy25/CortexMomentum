@@ -39,7 +39,7 @@ export default function PrivacyPage() {
         <h2 className={h2}>What we collect</h2>
         <ul className={ul}>
           <li><strong className="text-white">Professional contact information:</strong> your name, job title, company, business location and business email address.</li>
-          <li><strong className="text-white">Correspondence:</strong> messages you exchange with us by email or on LinkedIn.</li>
+          <li><strong className="text-white">Correspondence:</strong> messages you exchange with us by email, on LinkedIn or through forms on this site.</li>
           <li><strong className="text-white">Interactions with our public content:</strong> for example, engagement with posts we publish on LinkedIn.</li>
           <li><strong className="text-white">Newsletter data:</strong> if you subscribe to The Interconnect, your subscription details are handled through our newsletter platform (Beehiiv). Beehiiv&apos;s privacy policy applies as well as this one.</li>
           <li><strong className="text-white">Link activity:</strong> some links we send are personal to you, such as a private edition of a brief. When you open one, we record that it was opened and when, so we know the document reached you. Some email software opens links automatically, so this record does not prove you read it.</li>

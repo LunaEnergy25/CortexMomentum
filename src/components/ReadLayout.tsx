@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { formatAsOf } from "@/lib/threads";
-import { BOOKING_URL, decisionEmailHref, sectorReadHref, SURVEY_URL } from "@/lib/links";
+import ReadRequestForm from "@/components/ReadRequestForm";
+import { BOOKING_URL, decisionEmailHref } from "@/lib/links";
 
 /* Shared reading layout for Interconnect thread pages and quarterly snapshots:
    byline + as-of date up top, prose body, then two closing asks: the
@@ -41,8 +42,6 @@ export default function ReadLayout({
   backHref?: string;
   backLabel?: string;
 }) {
-  const readHref = sectorReadHref(source, sector);
-  const external = Boolean(SURVEY_URL);
   return (
     <main className="bg-slate-950 min-h-screen text-slate-200 font-sans">
       <Navbar />
@@ -64,13 +63,9 @@ export default function ReadLayout({
             <p className="text-slate-200 leading-relaxed">
               Want this mapped to your market? I&apos;ll send a one-page read{sector ? ` on ${sector.toLowerCase()}` : ""}, written around the decision you&apos;re working through.
             </p>
-            <a
-              href={readHref}
-              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="inline-block mt-4 bg-white text-slate-950 px-6 py-3 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
-            >
-              {external ? "Three questions, under a minute →" : "Ask for the one-page read →"}
-            </a>
+            <div className="mt-6">
+              <ReadRequestForm source={source} sector={sector} />
+            </div>
           </div>
           <p className="text-slate-300 leading-relaxed">
             If you have a decision riding on this (a contract, a raise, a market entry) and it has a date, that&apos;s worth 30 minutes. I&apos;ll bring how I&apos;m reading it; you bring what you&apos;re seeing that I&apos;m not. If it isn&apos;t a fit, I&apos;ll say so.{" "}

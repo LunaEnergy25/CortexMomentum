@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import { formatAsOf, getQuarterlies, getThreads } from "@/lib/threads";
-import { BOOKING_URL, decisionEmailHref, sectorReadHref, SURVEY_URL } from "@/lib/links";
+import ReadRequestForm from "@/components/ReadRequestForm";
+import { BOOKING_URL, decisionEmailHref } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "The Interconnect | Cortex Momentum",
@@ -16,7 +17,6 @@ const link = "text-cyan-300 hover:text-cyan-200 underline underline-offset-4";
 export default function InterconnectPage() {
   const threads = getThreads();
   const snapshot = getQuarterlies()[0];
-  const external = Boolean(SURVEY_URL);
 
   return (
     <main className="bg-slate-950 min-h-screen text-slate-200 font-sans">
@@ -65,13 +65,10 @@ export default function InterconnectPage() {
           <p className="text-slate-400 text-lg leading-relaxed mb-10">
             If you&apos;re weighing an entry, an investment or a positioning call, and it has a date, the useful question is what this market will have settled by then and what it won&apos;t. We can put together a short read on how your category is being argued in public: which frames hold up, and where the skepticism sits. It&apos;s only worth doing if it feeds a real decision. If it doesn&apos;t, we&apos;ll tell you.
           </p>
-          <a
-            href={sectorReadHref("hub")}
-            {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
-          >
-            Start with a one-page read on your sector &rarr;
-          </a>
+          <div className="bg-slate-900/60 border border-slate-800 rounded-sm p-6 md:p-8 max-w-xl mx-auto">
+            <p className="text-white font-semibold mb-5 text-left">Start with a one-page read on your sector</p>
+            <ReadRequestForm source="hub" />
+          </div>
           <p className="text-slate-400 text-sm mt-6">
             or{" "}
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={link}>

@@ -1,0 +1,120 @@
+"use client";
+
+import { useState } from "react";
+import posthog from "posthog-js";
+import { sectorReadHref } from "@/lib/links";
+
+/* On-site request for a one-page sector read. Three fields; UTM tags are read
+   from the page URL so a DM link that lands here keeps its attribution. */
+
+export const SECTORS = [
+  "Data centers & large-load power",
+  "Battery storage",
+  "Solar",
+  "Gas turbines, grid equipment and firm capacity",
+  "Deep-tech or other",
+];
+
+const input =
+  "w-full bg-slate-950 border border-slate-700 rounded-sm px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-slate-400";
+const label = "block text-sm font-medium text-slate-300 mb-2";
+
+export default function ReadRequestForm({ source, sector }: { source: string; sector?: string }) {
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [chosen, setChosen] = useState(sector && SECTORS.includes(sector) ? sector : "");
+
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const params = new URLSearchParams(window.location.search);
+    setState("sending");
+    try {
+      const res = await fetch("/api/read-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sector: form.get("sector"),
+          decision: form.get("decision"),
+          contact: form.get("contact"),
+          website: form.get("website"),
+          source: params.get("from") || source,
+          page: window.location.pathname,
+          utm_source: params.get("utm_source"),
+          utm_content: params.get("utm_content"),
+        }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      posthog.capture("read_request_submitted", { source, sector: form.get("sector") });
+      setState("sent");
+    } catch {
+      setState("error");
+    }
+  }
+
+  if (state === "sent") {
+    return (
+      <p className="text-slate-200 leading-relaxed">
+        Thanks. The read will come to you within 48 hours, written around the decision you named. No follow-up unless you reply.
+      </p>
+    );
+  }
+
+  return (
+    <form onSubmit={onSubmit} className="space-y-5 text-left">
+      <div>
+        <label htmlFor={`sector-${source}`} className={label}>Which part of the energy market do you sell into?</label>
+        <select
+          id={`sector-${source}`}
+          name="sector"
+          required
+          value={chosen}
+          onChange={(e) => setChosen(e.target.value)}
+          className={input}
+        >
+          <option value="" disabled>Choose one</option>
+          {SECTORS.map((s) => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label htmlFor={`decision-${source}`} className={label}>
+          What decision would it feed, and roughly when? <span className="text-slate-500 font-normal">(optional)</span>
+        </label>
+        <input id={`decision-${source}`} name="decision" maxLength={500} placeholder="e.g. offtake contract, Q2" className={input} />
+      </div>
+      <div>
+        <label htmlFor={`contact-${source}`} className={label}>Where should it go?</label>
+        <input
+          id={`contact-${source}`}
+          name="contact"
+          required
+          minLength={3}
+          maxLength={200}
+          placeholder="Work email or LinkedIn profile URL"
+          className={input}
+        />
+      </div>
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor={`website-${source}`}>Website</label>
+        <input id={`website-${source}`} name="website" tabIndex={-1} autoComplete="off" />
+      </div>
+      <button
+        type="submit"
+        disabled={state === "sending"}
+        className="inline-block bg-white text-slate-950 px-6 py-3 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm disabled:opacity-60"
+      >
+        {state === "sending" ? "Sending…" : "Send me the one-page read"}
+      </button>
+      {state === "error" && (
+        <p className="text-sm text-slate-300">
+          That didn&apos;t go through.{" "}
+          <a href={sectorReadHref(source, chosen || sector)} className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+            Send the request by email instead
+          </a>
+          .
+        </p>
+      )}
+    </form>
+  );
+}
