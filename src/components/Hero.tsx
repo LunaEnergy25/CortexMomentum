@@ -2,7 +2,7 @@ import Link from "next/link";
 import GlobalIntelligence from "@/components/GlobalIntelligence";
 import { BOOKING_URL } from "@/lib/links";
 
-// Corpus figures: deduplicated posts in cortex.db as of 2026-10-18 (847 unique).
+// Corpus figures: deduplicated posts in cortex.db as of 2026-11-06 (854 unique; gas = 147 gas-power posts).
 // Topic counts overlap; never sum them.
 const STATS = [
   { value: "850+", label: "published market reads, so we don't start from zero", href: "/interconnect" },
@@ -48,7 +48,7 @@ export default function Hero() {
           })}
         </div>
         <p className="text-slate-500 text-xs tracking-wide mb-12 max-w-3xl">
-          Reads by topic: storage 280+ &middot; data centers 200+ &middot; grid 360+ &middot; solar 350+ &middot; natural gas 190+
+          Reads by topic: storage 280+ &middot; data centers 200+ &middot; grid 360+ &middot; solar 350+ &middot; gas 140+
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">

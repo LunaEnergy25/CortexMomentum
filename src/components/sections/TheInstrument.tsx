@@ -21,7 +21,7 @@ export default function TheInstrument() {
             <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 mb-3">Layer 1 — Attention</p>
             <p className="text-white font-semibold text-lg mb-3">What the instrument measures</p>
             <p className="text-slate-300 leading-relaxed">
-              Which commercial frames earn study, and by how much relative to their own baseline. Attention is a leading indicator &mdash; it typically moves before demand does. Every figure is labeled as attention, not demand.
+              Which commercial frames earn study, and by how much relative to their own baseline. Attention can move before demand does, but it isn&apos;t evidence of demand. Every figure is labeled as attention, not demand.
             </p>
           </div>
           <div className="border border-slate-700 bg-slate-900/60 p-7 rounded-sm">

@@ -1,3 +1,5 @@
+import { BOOKING_URL } from "@/lib/links";
+
 export default function DiagnosticBookingCTA() {
   return (
     <section id="diagnostic-booking" className="w-full bg-slate-900 text-white py-24 px-4">
@@ -16,7 +18,7 @@ export default function DiagnosticBookingCTA() {
 
       <div className="text-center">
         <a
-          href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+          href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-navy-900 px-10 py-4 font-semibold hover:bg-slate-200 transition-colors text-center w-full md:w-auto"

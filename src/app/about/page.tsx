@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "@/lib/links";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "About the Operator | Cortex Momentum",
   description: "Cortex Momentum is built and run by Jamie Skaar — fifteen years operating in energy, and a standing market-intelligence instrument behind every read.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -51,7 +53,7 @@ export default function AboutPage() {
 
         <div className="mt-16 border-t border-slate-800 pt-10 text-center">
           <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"

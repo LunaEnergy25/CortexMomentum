@@ -1,9 +1,11 @@
+import { BOOKING_URL } from "@/lib/links";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "FAQ | Cortex Momentum",
   description: "Straight answers on what Cortex Momentum is and isn't: data, independence, why a days-long first read isn't shallow, retainers, and cost.",
+  alternates: { canonical: "/faq" },
 };
 
 const faqs = [
@@ -21,7 +23,7 @@ const faqs = [
   },
   {
     q: "Do you measure demand, or just attention?",
-    a: "Attention only — which frames earn study, and where the pushback sits, against each topic's multi-year baseline. That's a leading indicator, not proof anyone will buy. Confirming demand is a separate step done through direct peer interviews. We never report attention as if it were demand.",
+    a: "Attention only — which frames earn study, and where the pushback sits, against each topic's multi-year baseline. Attention can move before demand does, but it isn't proof anyone will buy. Confirming demand is a separate step done through direct peer interviews. We never report attention as if it were demand.",
   },
   {
     q: "If you also work with operating companies, is the diligence read really independent?",
@@ -64,7 +66,7 @@ export default function FaqPage() {
         </dl>
         <div className="mt-12">
           <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"

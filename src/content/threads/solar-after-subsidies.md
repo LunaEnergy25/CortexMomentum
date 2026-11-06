@@ -37,7 +37,7 @@ Put those together and solar's economics turn on things the panel doesn't contro
 ## Where it stands now
 
 - **The start-of-construction deadline has passed.** Projects had to begin construction by July 4, 2026. A project that missed it has to be placed in service by December 31, 2027 to stay eligible (One Big Beautiful Bill Act; McGuireWoods). Safe-harbored projects can run to the end of 2030 (SEIA/Wood Mackenzie via pv magazine USA, September 10, 2026).
-- **The 5% safe harbor came back late.** On June 6, 2026, the D.C. district court vacated IRS Notice 2025-42 (*Oregon Environmental Council v. IRS*). That restored the 5% cost safe harbor for large solar shortly before the deadline (Stoel Rives, June 10, 2026). One update reported no government appeal as of early September. I could not confirm the current appeal or remand status.
+- **The 5% safe harbor came back late.** On June 6, 2026, the D.C. district court vacated IRS Notice 2025-42 (*Oregon Environmental Council v. IRS*). That restored the 5% cost safe harbor for large solar shortly before the deadline (Stoel Rives, June 10, 2026). One update reported no government appeal as of early September. Its appeal status was still unsettled in public reporting as of late October 2026.
 - **FEOC rules apply, but only in interim form.** IRS Notice 2026-15 (February 12, 2026) set interim material-assistance rules for projects beginning construction after December 31, 2025. Treasury still intends to propose regulations and new safe-harbor tables, and I found no record that they have been issued yet.
 - **The deadline rush is still landing.** The US installed 11.4 GWdc in Q2 2026, up 45% year over year, driven by utility-scale while residential fell. The report names permitting and interconnection as the binding constraints (SEIA/Wood Mackenzie, Q3 2026 Solar Market Insight, September 10, 2026).
 - **Import prices get a floor on December 4.** A Section 232 proclamation (August 6, 2026) sets minimum import prices, including $0.38/W for modules and $0.22/W for cells, plus tariffs capped at 15% for some partners (as summarized by BDO and Mercom, August 2026).
@@ -52,7 +52,7 @@ Put those together and solar's economics turn on things the panel doesn't contro
 
 ## What it means if you sell into this
 
-For solar developer and solar-finance founders, these are the levers I'd look at:
+If you develop or finance solar, these are the levers I'd look at:
 
 1. **Sell proof, not savings.** A credit buyer discounts for FEOC tracing, construction-start evidence and recapture exposure. An audit-ready file from day one shrinks that discount.
 2. **Sell the hour, not the megawatt.** If you improve the shape of output (storage, dispatch, offtake structure), lead with the offtaker's question: can you deliver when it's worth something?

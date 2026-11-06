@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Privacy Notice | Cortex Momentum",
   description:
     "How Cortex Momentum handles professional contact information, correspondence and newsletter data.",
+  alternates: { canonical: "/privacy" },
 };
 
 const h2 = "text-2xl font-serif font-semibold text-white tracking-tight mt-12 mb-4";

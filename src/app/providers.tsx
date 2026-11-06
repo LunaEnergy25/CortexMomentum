@@ -7,8 +7,10 @@ import { useEffect } from 'react';
 import { captureUtm, readUtm } from '@/lib/utm';
 import { BOOKING_URL } from '@/lib/links';
 
-if (typeof window !== 'undefined') {
-  posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
+const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+
+if (typeof window !== 'undefined' && POSTHOG_KEY) {
+  posthog.init(POSTHOG_KEY, {
     api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     person_profiles: 'identified_only',
     capture_pageview: false,
@@ -38,13 +40,18 @@ export function PostHogPageView() {
   // The booking page can't carry UTMs, so record the click with the page and DM tag.
   useEffect(() => {
     function onClick(e: MouseEvent) {
+      if (e.type === 'auxclick' && e.button !== 1) return;
       const a = (e.target as Element | null)?.closest?.('a');
       if (a && a.href.startsWith(BOOKING_URL)) {
         posthog.capture('book_call_clicked', { page: window.location.pathname, ...readUtm() });
       }
     }
     document.addEventListener('click', onClick);
-    return () => document.removeEventListener('click', onClick);
+    document.addEventListener('auxclick', onClick);
+    return () => {
+      document.removeEventListener('click', onClick);
+      document.removeEventListener('auxclick', onClick);
+    };
   }, []);
 
   return null;

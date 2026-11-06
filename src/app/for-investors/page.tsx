@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "@/lib/links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -6,6 +7,7 @@ export const metadata: Metadata = {
   title: "For Investors — Diligence Read | Cortex Momentum",
   description:
     "An independent commercial read for energy and deep-tech diligence: where is attention on the target's thesis concentrating, and where is the pushback? Attention measured; demand confirmed by interview. Deal-attached, partner-discretionary.",
+  alternates: { canonical: "/for-investors" },
 };
 
 export default function ForInvestorsPage() {
@@ -34,7 +36,7 @@ export default function ForInvestorsPage() {
               </p>
               <p className="text-slate-300 text-sm leading-relaxed">
                 A FOAK private-credit fund whose term sheets the market kept filtering out. We read
-                the silent attention behind two opposing boardroom fears and ran a frame for each, so
+                how the market responded to two opposing boardroom fears and ran a frame for each, so
                 the facility could clear both.
               </p>
             </div>
@@ -68,7 +70,7 @@ export default function ForInvestorsPage() {
 
           <div className="text-center">
             <a
-              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
@@ -108,7 +110,7 @@ export default function ForInvestorsPage() {
             Read the market before you commit the capital.
           </h2>
           <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"

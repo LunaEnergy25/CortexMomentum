@@ -35,11 +35,15 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
           decision: form.get("decision"),
         }),
       });
-      if (!res.ok) throw new Error(String(res.status));
+      if (!res.ok) {
+        posthog.capture("read_request_failed", { ...props, status: res.status });
+        setState("error");
+        return;
+      }
       posthog.capture("read_request_submitted", props);
       setState("sent");
-    } catch (err) {
-      posthog.capture("read_request_failed", { ...props, error: String(err) });
+    } catch {
+      posthog.capture("read_request_failed", { ...props, status: "network" });
       setState("error");
     }
   }
@@ -92,6 +96,10 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
         <label htmlFor={`hp-${source}`}>Leave this empty</label>
         <input id={`hp-${source}`} name="hp_field" tabIndex={-1} autoComplete="new-password" />
       </div>
+      <p className="text-sm text-slate-400">
+        Within two business days. No list, no follow-up unless you reply.{" "}
+        <a href="/privacy" className="underline underline-offset-4 hover:text-slate-200">Privacy</a>
+      </p>
       <button
         type="submit"
         disabled={state === "sending"}

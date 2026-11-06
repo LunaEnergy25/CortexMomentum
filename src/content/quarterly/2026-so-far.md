@@ -36,7 +36,7 @@ With firm capacity and its equipment both booked years out, the market buys on d
 
 I'll score these in a January update, hits and misses both.
 
-1. **Early December 2026:** what does PJM's 2029/30 base capacity auction clear at, and does FERC accept PJM's October 29 backstop refiling, which charges costs to the zones where large loads are growing?
+1. **December 2026 to March 2027:** what does PJM's 2029/30 base capacity auction clear at in early December, and does FERC accept PJM's October 29 backstop refiling, which charges costs to the zones where large loads are growing, before bidding opens March 1?
 2. **By December 31, 2026:** do Ofgem's final cap-and-floor awards confirm the 16 shortlisted long-duration projects on the minded-to terms?
 3. **December 4, 2026 onward:** do US module prices move toward the new $0.38/W import floor in the first solar market report of 2027 (expected around March)?
 4. **Late January 2027:** does GE Vernova's gas backlog plus reservations reach its guided 130 GW, with conversions still outpacing new reservations?

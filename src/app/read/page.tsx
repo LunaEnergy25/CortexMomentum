@@ -6,7 +6,7 @@ import ReadRequestForm from "@/components/ReadRequestForm";
 export const metadata: Metadata = {
   title: "A one-page read on your sector | Cortex Momentum",
   description:
-    "Tell us your sector and the decision in front of you. We'll send a one-page read on how your market is being argued, written around that decision.",
+    "Tell us your sector and the decision in front of you. We'll send a one-page read on what's moving in your market and where the skepticism sits, written around that decision.",
   alternates: { canonical: "/read" },
   openGraph: { title: "A one-page read on your sector", url: "/read", siteName: "Cortex Momentum", images: ["/opengraph-image"] },
 };
@@ -20,7 +20,7 @@ export default function ReadPage() {
           A one-page read on your sector
         </h1>
         <p className="text-lg text-slate-300 leading-relaxed mb-10">
-          Three questions, under a minute. We&apos;ll send a one-page read on how your market is being argued, which frames are holding up and where the skepticism sits, written around the decision you name.
+          Three questions, under a minute. We&apos;ll send a one-page read on what&apos;s moving in your market (rules, capital, offtake), where the skepticism sits, and what it means for the decision you name.
         </p>
         <div className="bg-slate-900/60 border border-slate-800 rounded-sm p-6 md:p-8">
           <ReadRequestForm source="read-page" />

@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "@/lib/links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -57,7 +58,7 @@ export default function Home() {
 
           <div className="pt-4 space-y-4">
             <a
-              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"

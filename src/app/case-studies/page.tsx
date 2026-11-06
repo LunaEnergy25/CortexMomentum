@@ -1,5 +1,6 @@
 "use client";
 
+import { BOOKING_URL } from "@/lib/links";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 
@@ -40,7 +41,7 @@ const caseStudiesData: CaseStudy[] = [
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> Elephantech secured early capital based on flawless physics, but the enterprise pipeline stalled. The sales team relied on a monolithic pitch focused on &quot;Sustainability.&quot; Enterprise procurement&mdash;incentivized by supply chain stability&mdash;blocked the technology as an unnecessary &quot;Green Premium.&quot; Simultaneously, Quality Engineers viewed the drastic reduction in copper as a severe risk to system reliability.</p>
-        <p><strong className="text-white">The Architecture:</strong> Cortex Momentum deployed a Strategic GTM sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don&apos;t buy &quot;Better&quot;&mdash;they buy &quot;Safer,&quot; we moved &quot;Sustainability&quot; to a secondary validator. The commercial engine was anchored entirely to &quot;Silver Volatility Hedging,&quot; positioning the innovation as a safe harbor against supply chain chaos.</p>
+        <p><strong className="text-white">The Architecture:</strong> Cortex Momentum deployed a Strategic GTM sprint. Bypassing the monolithic pitch, we built a 3-Track Bifurcated system. Recognizing that B2B buyers don&apos;t buy &quot;Better&quot;&mdash;they buy &quot;Safer,&quot; we moved &quot;Sustainability&quot; to a secondary validator. The commercial engine was anchored entirely to &quot;Silver Volatility Hedging,&quot; positioning the innovation as a hedge against supply-chain risk.</p>
         <p><strong className="text-white">The Impact:</strong> Across comparable posts, the &quot;Supply Chain Risk&quot; frame drew more attention than the account&apos;s &quot;Green Tech&quot; baseline (Layer-1 attention signal &mdash; not a demand measure). The reframed brief was adopted as the client&apos;s internal committee narrative &mdash; the framing the buyer could defend on operational risk rather than career risk.</p>
       </div>
     )
@@ -78,11 +79,11 @@ const caseStudiesData: CaseStudy[] = [
     category: 'Cleantech & SaaS',
     badge: 'CLEANTECH SAAS GTM',
     metric: '200+',
-    result: 'Analyzed over 200 project RFPs to achieve total GTM clarity before runway expired.',
+    result: 'Analyzed over 200 project RFPs to set GTM priorities before runway ran out.',
     content: (
       <div className="space-y-6 text-slate-300 leading-relaxed text-lg">
         <p><strong className="text-white">The Friction:</strong> A pre-revenue, engineer-led cleantech SaaS startup developed a promising MVP for microgrid developers but had only six months of runway remaining. Drowning in industry noise, they were unable to separate signal from noise and lacked the commercial hooks that actually resonate with enterprise buyers.</p>
-        <p><strong className="text-white">The Architecture:</strong> We deployed our intelligence platform to analyze their target market. We processed over 200 project RFPs to identify timing patterns, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers.</p>
+        <p><strong className="text-white">The Architecture:</strong> We analyzed their target market. We processed over 200 project RFPs to identify timing patterns, mapped 15 competitor positioning strategies, and interviewed 12 potential buyers.</p>
         <p><strong className="text-white">The Impact:</strong> We pinpointed Brownfield redevelopment as the priority niche. Across the 12 buyer interviews, deal velocity outranked cost savings as the stated decision driver (n=12 &mdash; directional, not market-wide), so we rebuilt the messaging architecture around Speed, Compliance, and Guarantees. This is what a demand finding looks like when interviews &mdash; not attention alone &mdash; back it.</p>
       </div>
     )
@@ -229,7 +230,7 @@ export default function CaseStudiesPage() {
         {/* ── STEP 4: DIAGNOSTIC GATE FOOTER CTA ── */}
         <div className="mt-16 text-center space-y-10 pb-24">
           <h2 className="text-4xl md:text-5xl font-serif text-white font-semibold leading-tight tracking-tight">
-            Unblock Your Enterprise Pipeline
+            Bring the decision in front of you
           </h2>
 
           <div className="bg-slate-900/80 p-8 md:p-12 border-2 border-cyan-900/50 text-left mx-auto rounded-sm shadow-xl max-w-3xl relative overflow-hidden">
@@ -246,7 +247,7 @@ export default function CaseStudiesPage() {
           </div>
 
           <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-12 py-6 font-semibold text-xl tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm shadow-xl w-full md:w-auto transform hover:-translate-y-1"

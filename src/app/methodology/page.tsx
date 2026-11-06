@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "@/lib/links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -5,7 +6,8 @@ import TheInstrument from "@/components/sections/TheInstrument";
 
 export const metadata: Metadata = {
   title: "How It Works — The Standing Instrument | Cortex Momentum",
-  description: "The measurement system behind every Cortex Momentum read: what a standing instrument is, what silent reactors are, and why attention is a leading indicator, not demand. Every figure scoped to its evidence.",
+  description: "The measurement system behind every Cortex Momentum read: what a standing instrument is, and why attention is not demand. Every figure scoped to its evidence.",
+  alternates: { canonical: "/methodology" },
 };
 
 export default function MethodologyPage() {
@@ -33,7 +35,7 @@ export default function MethodologyPage() {
             Bring a deal in committee, a thesis to stress-test, or a transaction to read. We scope the engagement to the specific decision in front of you.
           </p>
           <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"

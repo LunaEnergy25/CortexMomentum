@@ -1,5 +1,6 @@
 "use client";
 
+import { BOOKING_URL } from "@/lib/links";
 import { useState } from "react";
 
 type TrackId = "gtm" | "dd" | "capital";
@@ -67,7 +68,7 @@ function GtmContent() {
 
       <div className="space-y-3 text-center">
         <a
-          href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+          href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
@@ -120,7 +121,7 @@ function DdContent() {
 
       <div className="space-y-3 text-center">
         <a
-          href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+          href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
@@ -164,7 +165,7 @@ function CapitalContent() {
 
       <div className="space-y-3 text-center">
         <a
-          href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+          href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"

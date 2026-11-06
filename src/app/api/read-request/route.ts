@@ -77,7 +77,9 @@ export async function POST(req: Request) {
   }
   // 409 = same contact already asked today; the first request stands.
   if (!res.ok && res.status !== 409) {
-    console.error("read-request store failed", res.status, await res.text());
+    // Status and Postgres code only: the error body can echo the submitted row.
+    const code = await res.json().then((j) => j?.code).catch(() => undefined);
+    console.error("read-request store failed", res.status, code);
     return NextResponse.json({ ok: false, error: "store_failed" }, { status: 502 });
   }
   return NextResponse.json({ ok: true });

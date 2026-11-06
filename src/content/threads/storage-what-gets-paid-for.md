@@ -32,12 +32,12 @@ Financing has its own version. Connection queues now run for years, so the inter
 
 ## Where it stands now
 
-- **Spain:** the European Commission approved a capacity market worth roughly €9 billion, open to generation, demand response and storage (energy-storage.news, May 2026). The ministry announced the order on September 16, 2026, with contracts of up to 15 years for new investments (ESS News, September 17, 2026). I could not confirm a date for the first auction. Analysts say de-rating factors will decide what batteries actually earn from it.
+- **Spain:** the European Commission approved a capacity market worth roughly €9 billion, open to generation, demand response and storage (energy-storage.news, May 2026). The ministry announced the order on September 16, 2026, with contracts of up to 15 years for new investments (ESS News, September 17, 2026). No first-auction date had been published by late October 2026. Analysts say de-rating factors will decide what batteries actually earn from it.
 - **Britain:** Ofgem's minded-to decision on June 26, 2026 shortlisted 16 long-duration projects, about 7.65 GW with 8 to 22 hours of storage, for cap-and-floor support. Final awards are expected this autumn (Hill Dickinson, Foot Anstey). As of late October 2026 I have not seen final determinations.
 - **US rules:** Treasury's interim FEOC guidance (Notice 2026-15, February 2026) sets a 55% material-assistance threshold for storage that begins construction in 2026. Tax counsel say it leaves open questions on recapture and contract-level control (Morgan Lewis, March 2026).
 - **US build:** Wood Mackenzie and ACP reported a record 18.9 GWh deployed in Q2 2026, and withdrew an earlier contraction forecast because projects were rushing to secure tax-credit safe harbor (ESS News, October 1, 2026). The pace of the build is again being set by a rule's calendar.
 - **Cost of money:** the 10-year Treasury went from 4.66% on August 26 to 5.31% on October 5, then eased to 4.99% on October 27 (FRED, DGS10). Any pro forma underwritten in summer is running on a discount rate that is now out of date.
-- **California:** the first state-run procurement of up to 2 GW of long-duration storage is scheduled to open in late 2026 (CPUC). I could not confirm it has launched.
+- **California:** DWR, as central buyer under the CPUC's AB 1373 decision, is scheduled to open a solicitation in late 2026 for up to 2 GW of long-duration storage: 1 GW multi-day and 1 GW of 12 hours or more, for delivery from 2031 (CPUC procurement request to DWR).
 
 ## The pushback worth taking seriously
 
@@ -47,7 +47,7 @@ I take most of that as correct. Gas and imports cover firmness because firmness 
 
 Two other patterns sharpened the read. Several commenters pointed out that storage erodes its own merchant revenue, because each new battery narrows the spread the others earn on. That pushes value toward contracted floors. On the queue post, commenters said standalone and behind-the-meter storage connects much faster than the national median. Fair: configuration is a lever.
 
-## What it means if you sell into this
+## If you're building or financing here
 
 - **Underwrite by rule, not by spread.** For each market, write down which services are paid, which are contracted, and how your duration is accredited. Treat the merchant tail as something that shrinks as more batteries arrive.
 - **Price the wait.** Re-run queue time at today's discount rate. Configurations that skip co-location queue inheritance, or that sit behind the meter, are financing levers as much as engineering choices.

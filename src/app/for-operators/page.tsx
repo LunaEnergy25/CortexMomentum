@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "@/lib/links";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -5,7 +6,8 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "For Operators — Deal Rescue | Cortex Momentum",
   description:
-    "Enterprise deals stall in committee — not because your engineering failed, but because every buying seat evaluates through a different lens of personal risk. We surface the frame and build the assets your champion deploys to win the vote.",
+    "Enterprise deals stall in committee — not because your engineering failed, but because every committee member evaluates through a different lens of personal risk. We surface the frame and build the assets your champion deploys to win the vote.",
+  alternates: { canonical: "/for-operators" },
 };
 
 export default function ForOperatorsPage() {
@@ -34,9 +36,9 @@ export default function ForOperatorsPage() {
 
           <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mb-10">
             The pilot data is clean and your champion is sold &mdash; and the deal still stalls, because
-            every seat on the buying committee evaluates through a different lens of personal risk, and
+            each person on the buying committee evaluates through a different lens of personal risk, and
             your champion walks in meeting objections nobody briefed them on. We find which commercial
-            frame earns attention, confirm in interviews what each seat actually weighs, then build the assets your champion deploys to win
+            frame earns attention, confirm in interviews what each person actually weighs, then build the assets your champion deploys to win
             the consensus.{" "}
             <Link href="/methodology" className="text-cyan-300 hover:text-cyan-200 transition-colors underline underline-offset-4">
               How the read works &rarr;
@@ -45,7 +47,7 @@ export default function ForOperatorsPage() {
 
           <div className="text-center">
             <a
-              href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
@@ -111,11 +113,11 @@ export default function ForOperatorsPage() {
               </span>
               <div>
                 <p className="text-white font-semibold text-lg leading-snug">
-                  Premium-pricing defense that survives the committee vote
+                  A pricing case that holds up in committee
                 </p>
                 <p className="text-slate-300 mt-2 leading-relaxed">
-                  A structured value narrative that holds under procurement pressure and gives your
-                  champion standing to defend the number without concession.
+                  A structured value narrative that holds up under procurement pressure, so your
+                  champion can defend the price with evidence.
                 </p>
               </div>
             </div>
@@ -139,7 +141,7 @@ export default function ForOperatorsPage() {
             Your next committee is closer than the last one.
           </h2>
           <a
-            href="https://calendar.app.google/3tM6Q9tF6JkDaW2x8"
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-slate-950 px-10 py-4 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
