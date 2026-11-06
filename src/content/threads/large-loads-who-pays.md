@@ -3,7 +3,7 @@ slug: large-loads-who-pays
 title: "Large loads: who pays and who gets connected"
 dek: The fight over large loads has moved from who pays for the wires to who carries the cost of a late date, and the rules for that are still unwritten.
 sector: Data centers & large-load power
-asOf: 2026-10
+asOf: 2026-11
 order: 1
 summary: Why the data-center cost fight is now about queue position and arrival dates, and what that means if you sell power, sites or grid tech to large loads.
 ---
@@ -30,7 +30,7 @@ Underneath both is time. For a buyer who needs power in 2028, the cost that matt
 ## Where it stands now
 
 - **PJM's large-load plan was mostly rejected.** On October 9, 2026, FERC rejected the core of PJM's proposal: an interim service letting new large loads connect early if curtailed first, plus the bring-your-own-capacity rules. FERC found it intruded on state authority over retail customers. It kept PJM's large-load definition and a registry (Utility Dive, October 12, 2026). FERC left room for a refiling and said states have a "crucial role," including deciding who gets curtailed.
-- **The backstop procurement is on hold over who pays.** On September 29, 2026, FERC partly approved PJM's reliability backstop procurement but questioned its cost allocation, suggesting updated load forecasts; PJM delayed it (Utility Dive, September 30, 2026). DOE then urged PJM to keep data-center costs off existing customers and to track whether large-load projects actually come online (Utility Dive, October 8, 2026). PJM said it would file a revision by October 29.
+- **The backstop procurement was refiled around who pays.** On September 29, 2026, FERC partly approved PJM's reliability backstop procurement but questioned its cost allocation, suggesting updated load forecasts; PJM delayed it (Utility Dive, September 30, 2026). DOE then urged PJM to keep data-center costs off existing customers and to track whether large-load projects actually come online (Utility Dive, October 8, 2026). PJM refiled on October 29. Costs would go to each zone by its large-load growth between the actual 2026 summer peak and the 2028/29 forecast, the opt-out for some municipal utilities and co-ops is removed, and bidding for about 6.8 GW would run March 1 to 28, 2027 (PJM Inside Lines, October 29, 2026). FERC has not yet ruled on it.
 - **FERC is working market by market.** On June 18, 2026, FERC issued six show-cause orders on large-load interconnection, including cost-shift prevention (Foley & Lardner, June 30, 2026). I couldn't confirm how those proceedings have moved since the August responses.
 - **The deals.** Google and Constellation announced a 3,590 MW agreement on October 6, 2026. Of that, 890 MW is a 20-year agreement tied to reactor uprates, with first output in 2028, and 2,700 MW is a supply agreement from Constellation's PJM fleet (Reuters via TimesLIVE, October 6, 2026). Coverage tied it to PJM's bring-your-own-capacity proposal, the one FERC has now largely rejected.
 
@@ -61,9 +61,9 @@ If you're already seeing one of these, I'd rather hear it now than find it in th
 
 ## What to watch
 
-- **PJM's cost allocation, October 29 and early December 2026.** Does PJM's revised backstop filing (due October 29) allocate costs on updated load forecasts? And what does the 2029/30 base capacity auction, scheduled for early December, clear at?
+- **PJM's cost allocation, December 2026 to March 2027.** Does FERC accept the October 29 refiling, which charges backstop costs to the zones where large loads are growing, before bidding opens March 1? And what does the 2029/30 base capacity auction, scheduled for early December, clear at?
 - **The curtailment rules, by March 31, 2027.** Does PJM refile a large-load interim service at FERC, or does Ohio or Pennsylvania set which retail customers are curtailed first?
 
 ## Method note
 
-Engagement is attention, not demand. I measured 21 LinkedIn posts on this thread published April 3 to October 18, 2026. Their median saves per 1,000 impressions was 2.8, against 1.4 for my other 158 posts in the same period. Comment and reaction rates were in line with those other posts (5.9 vs 5.6 comments, 18.4 vs 17.5 reactions per 1,000). 298 distinct people commented. Data as of October 28, 2026.
+Built from my published LinkedIn posts on this thread (April to October 2026), read against the filings and reporting cited above. Engagement is attention, not demand. Sources as of November 2026.

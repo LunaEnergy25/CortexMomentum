@@ -3,7 +3,7 @@ slug: 2026-so-far
 title: Four energy threads, 2026 so far, and where each stands
 dek: Across large loads, storage, solar and firm power, the binding constraint this year wasn't the technology or its cost. It was the rule that decides who gets paid, who pays, and whose date counts.
 asOf: 2026-10
-summary: The four threads I tracked from April to October 2026, the one pattern running through all of them, and five dated questions to watch.
+summary: Four threads tracked from April to October 2026, the one pattern running through all of them, and five dated questions to watch.
 order: 1
 ---
 
@@ -21,7 +21,7 @@ If you sell into any of these markets, the question your buyer is really asking 
 ## The four threads
 
 ### [Large loads: who pays and who gets connected](/interconnect/threads/large-loads-who-pays)
-In the spring, the fight was over who pays for the wires. By the fall it was over who carries the cost of a late arrival date. FERC's October 9 order rejected the core of PJM's large-load proposal and sent the question of who gets curtailed first back to the states. For now, the cost of being late is priced in contracts, not in a market rule. **Watch:** PJM's revised backstop filing and the early-December capacity auction.
+In the spring, the fight was over who pays for the wires. By the fall it was over who carries the cost of a late arrival date. FERC's October 9 order rejected the core of PJM's large-load proposal and sent the question of who gets curtailed first back to the states. For now, the cost of being late is priced in contracts, not in a market rule. **Watch:** FERC's ruling on PJM's October 29 backstop refiling and the early-December capacity auction.
 
 ### [Storage economics: what actually gets paid for](/interconnect/threads/storage-what-gets-paid-for)
 Storage gets built where a rule pays for speed, duration or availability, and stalls where it doesn't, even with cheap cells. The pushback I kept hearing was about firmness: are storage and renewables firm, or do they lean on gas and imports? That's mostly right, and it points to the same answer. Firmness is what capacity payments reward, and duration mostly isn't accredited yet. **Watch:** Britain's final long-duration awards and Spain's first capacity auction.
@@ -36,7 +36,7 @@ With firm capacity and its equipment both booked years out, the market buys on d
 
 I'll score these in a January update, hits and misses both.
 
-1. **Early December 2026:** what does PJM's 2029/30 base capacity auction clear at, and does the revised backstop filing allocate costs on updated load forecasts?
+1. **Early December 2026:** what does PJM's 2029/30 base capacity auction clear at, and does FERC accept PJM's October 29 backstop refiling, which charges costs to the zones where large loads are growing?
 2. **By December 31, 2026:** do Ofgem's final cap-and-floor awards confirm the 16 shortlisted long-duration projects on the minded-to terms?
 3. **December 4, 2026 onward:** do US module prices move toward the new $0.38/W import floor in the first solar market report of 2027 (expected around March)?
 4. **Late January 2027:** does GE Vernova's gas backlog plus reservations reach its guided 130 GW, with conversions still outpacing new reservations?
@@ -44,4 +44,4 @@ I'll score these in a January update, hits and misses both.
 
 ## How to read this
 
-Each thread page is a dated snapshot of my own read, not a forecast. It cites my LinkedIn posts by date, and public sources for where things stand. Engagement figures on those pages are attention, not demand. They show which threads people saved and argued with, not what anyone will buy. Every figure was recomputed in October 2026.
+Each thread page is a dated snapshot of my own read, not a forecast. It cites my LinkedIn posts by date, and public sources for where things stand. Engagement on those posts is attention, not demand: it shows what people argued with, not what anyone will buy. Sources were checked in October 2026, and on the large-loads page in November.

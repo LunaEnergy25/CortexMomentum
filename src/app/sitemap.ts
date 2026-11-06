@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getQuarterlies, getThreads } from '@/lib/threads'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://cortexmomentum.com'
+  const base = 'https://www.cortexmomentum.com'
 
   return [
     {

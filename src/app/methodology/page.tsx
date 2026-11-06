@@ -18,7 +18,7 @@ export default function MethodologyPage() {
           The measurement system behind every read
         </h1>
         <p className="text-xl text-slate-300 leading-relaxed">
-          No opinion, no dashboard you can buy. A standing instrument we&apos;ve run for years &mdash; and the discipline that keeps every figure honest.
+          Not a dashboard you can buy. A standing instrument we&apos;ve run for years &mdash; and the discipline that keeps every figure honest.
         </p>
       </div>
       <TheInstrument />

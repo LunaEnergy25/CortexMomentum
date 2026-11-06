@@ -156,7 +156,7 @@ export default function ForOperatorsPage() {
               href="/interconnect"
               className="text-cyan-300 hover:text-cyan-200 transition-colors"
             >
-              Read the weekly market signal &mdash; The Interconnect.
+              See the energy threads we&apos;re tracking &rarr;
             </Link>
           </p>
         </div>

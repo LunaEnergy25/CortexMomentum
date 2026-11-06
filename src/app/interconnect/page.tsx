@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "The Interconnect | Cortex Momentum",
   description:
     "The energy-market questions we're tracking: what each is really about, where it stands now, and what would change our read.",
+  alternates: { canonical: "/interconnect" },
 };
 
 const h2 = "text-2xl md:text-3xl font-serif font-semibold text-white tracking-tight mb-4";

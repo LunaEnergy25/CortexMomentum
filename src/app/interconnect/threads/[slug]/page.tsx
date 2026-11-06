@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${thread.title} | The Interconnect`,
     description: thread.dek || thread.summary,
-    alternates: { canonical: `https://cortexmomentum.com/interconnect/threads/${thread.slug}` },
+    alternates: { canonical: `/interconnect/threads/${thread.slug}` },
+    openGraph: { title: thread.title, description: thread.dek || thread.summary, type: "article", url: `/interconnect/threads/${thread.slug}`, siteName: "Cortex Momentum", images: ["/opengraph-image"] },
   };
 }
 

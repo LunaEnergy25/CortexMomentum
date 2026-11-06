@@ -4,18 +4,11 @@ import { useState } from "react";
 import posthog from "posthog-js";
 import { sectorReadHref } from "@/lib/links";
 import { readUtm } from "@/lib/utm";
+import { SECTORS } from "@/lib/sectors";
 
 /* On-site request for a one-page sector read. Three fields. UTM tags come
    from the page URL, or from the landing page earlier in the same tab
    (lib/utm), so a DM link keeps its attribution if the visitor clicks around. */
-
-export const SECTORS = [
-  "Data centers & large-load power",
-  "Battery storage",
-  "Solar",
-  "Gas turbines, grid equipment and firm capacity",
-  "Deep-tech or other",
-];
 
 const input =
   "w-full bg-slate-950 border border-slate-700 rounded-sm px-4 py-3 text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-slate-400";
@@ -29,25 +22,24 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const from = new URLSearchParams(window.location.search).get("from") || source;
+    const props = { source: from, sector: form.get("sector"), page: window.location.pathname, ...readUtm() };
     setState("sending");
     try {
       const res = await fetch("/api/read-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          sector: form.get("sector"),
-          decision: form.get("decision"),
           contact: form.get("contact"),
           hp_field: form.get("hp_field"),
-          source: from,
-          page: window.location.pathname,
-          ...readUtm(),
+          ...props,
+          decision: form.get("decision"),
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
-      posthog.capture("read_request_submitted", { source: from, sector: form.get("sector") });
+      posthog.capture("read_request_submitted", props);
       setState("sent");
-    } catch {
+    } catch (err) {
+      posthog.capture("read_request_failed", { ...props, error: String(err) });
       setState("error");
     }
   }
@@ -55,7 +47,7 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
   if (state === "sent") {
     return (
       <p className="text-slate-200 leading-relaxed">
-        Thanks. The read will reach you within two business days, written around the decision you named. No follow-up unless you reply.
+        Thanks. The read will reach you within two business days, written around your sector and any decision you named. No follow-up unless you reply.
       </p>
     );
   }

@@ -7,6 +7,7 @@ import TrackSelector from "@/components/TrackSelector";
 export const metadata: Metadata = {
   title: "Cortex Momentum — Commercial Intelligence for Energy & Deep-Tech Deals",
   description: "Your deal has a date. We read where storage, solar, firm-power, large-load and deep-tech deals stall, confirm in interviews what each buyer weighs, and show what it means for your next move.",
+  alternates: { canonical: "/" },
 };
 
 export default function Home() {

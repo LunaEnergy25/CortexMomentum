@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "For Investors — Diligence Read | Cortex Momentum",
   description:
-    "An independent commercial read for energy and deep-tech diligence: is the target's market actually leaning into its thesis? Attention measured; demand confirmed by interview. Deal-attached, partner-discretionary.",
+    "An independent commercial read for energy and deep-tech diligence: where is attention on the target's thesis concentrating, and where is the pushback? Attention measured; demand confirmed by interview. Deal-attached, partner-discretionary.",
 };
 
 export default function ForInvestorsPage() {
@@ -58,12 +58,10 @@ export default function ForInvestorsPage() {
             Most of a market&apos;s response to a commercial thesis leaves no trace you can find in a data room.
           </p>
           <p className="text-slate-300 text-base leading-relaxed mb-10 max-w-3xl">
-            Silent reactors &mdash; the operators, allocators, and procurement committees who evaluate
-            a thesis and never respond publicly &mdash; form the majority of any market&apos;s real signal.
-            The instrument reads <strong className="text-white">Layer 1</strong> attention (what the
-            market is leaning toward, measured from public behavior) and separates it from{" "}
+            The instrument reads <strong className="text-white">Layer 1</strong> attention (where a
+            market&apos;s attention concentrates against each topic&apos;s baseline) and keeps it separate from{" "}
             <strong className="text-white">Layer 2</strong> demand (confirmed only through peer
-            interviews). For a diligence engagement, it answers one question: is the market leaning in,
+            interviews). For a diligence engagement, it answers one question: where is attention concentrating,
             and where is the pushback? That answer is deal-attached, partner-discretionary, and delivered
             before you commit the capital.
           </p>

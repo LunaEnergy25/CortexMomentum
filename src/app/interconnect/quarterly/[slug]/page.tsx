@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${q.title} | The Interconnect`,
     description: q.dek || q.summary,
-    alternates: { canonical: `https://cortexmomentum.com/interconnect/quarterly/${q.slug}` },
+    alternates: { canonical: `/interconnect/quarterly/${q.slug}` },
+    openGraph: { title: q.title, description: q.dek || q.summary, type: "article", url: `/interconnect/quarterly/${q.slug}`, siteName: "Cortex Momentum", images: ["/opengraph-image"] },
   };
 }
 

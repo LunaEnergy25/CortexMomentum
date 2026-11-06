@@ -42,11 +42,11 @@ Behind-the-meter gas, turbine reservations, refurbished transformers and 1970s p
 
 ## The pushback worth taking seriously
 
-- **"The shortage is narrower than you say."** Commenters pushed back that only heavy-duty frame turbines from the top OEMs are sold out; aeroderivatives, engines, other brands and used units can still be bought. I accept that. Scarcity pushed buyers down the ladder, and the cost shows up in heat rate, O&M and certification risk rather than the sticker price.
-- **"Gas isn't fast either."** People pressed that a two-to-three-year gas build assumes the turbine is already in hand. Right. The speed belongs to whoever holds the slot, not to gas.
-- **"Storage can match the date at some sites."** Possibly. What I'd look at is whether lenders will write that credit case for a load that needs very high uptime. Most such deals still carry a gas backstop.
-- **"People are the constraint, not factories."** On transformers, commenters argued that new plants still need trained workers who take years to develop, and that averages hide longer waits for high-voltage units. I agree. Easing will lag the plant opening dates.
-- **"Your cost numbers were too clean."** My July 8 behind-the-meter cost comparison drew fair questions on sources and fuel-cell assumptions. Treat it as directional.
+- **The shortage is narrower than it looks.** Commenters pushed back that only heavy-duty frame turbines from the top OEMs are sold out; aeroderivatives, engines, other brands and used units can still be bought. I accept that. Scarcity pushed buyers down the ladder, and the cost shows up in heat rate, O&M and certification risk rather than the sticker price.
+- **Gas isn't fast either.** People pressed that a two-to-three-year gas build assumes the turbine is already in hand. Right. The speed belongs to whoever holds the slot, not to gas.
+- **Storage can match the date at some sites.** Possibly. What I'd look at is whether lenders will write that credit case for a load that needs very high uptime. Most such deals still carry a gas backstop.
+- **People are the constraint, not factories.** On transformers, commenters argued that new plants still need trained workers who take years to develop, and that averages hide longer waits for high-voltage units. I agree. Easing will lag the plant opening dates.
+- **My cost numbers were too clean.** My July 8 behind-the-meter cost comparison drew fair questions on sources and fuel-cell assumptions. Treat it as directional.
 - **On coal**, people pressed that firm capacity has value at peak even as its generation share falls. Agreed. The open question is who pays that insurance premium.
 
 ## What it means if you sell into this
@@ -74,4 +74,4 @@ If you're already seeing one of these, I'd rather hear it now than find it in th
 
 ## Method note
 
-Engagement is attention, not demand. This page uses 28 unique LinkedIn posts from April 2 to October 16, 2026, with repeats across newsletter issues counted once. Median rates per 1,000 impressions were saves 1.49, comments 5.47 and reactions 12.88, against 151 other posts from the same period (1.39 / 5.68 / 18.17). There were 443 distinct commenters. Data as of October 28, 2026.
+Built from my published LinkedIn posts on this thread (April to October 2026), read against the filings and reporting cited above. Engagement is attention, not demand. Sources as of October 2026.

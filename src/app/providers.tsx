@@ -4,7 +4,8 @@ import posthog from 'posthog-js';
 import { PostHogProvider } from 'posthog-js/react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
-import { captureUtm } from '@/lib/utm';
+import { captureUtm, readUtm } from '@/lib/utm';
+import { BOOKING_URL } from '@/lib/links';
 
 if (typeof window !== 'undefined') {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY as string, {
@@ -33,6 +34,18 @@ export function PostHogPageView() {
       });
     }
   }, [pathname, searchParams]);
+
+  // The booking page can't carry UTMs, so record the click with the page and DM tag.
+  useEffect(() => {
+    function onClick(e: MouseEvent) {
+      const a = (e.target as Element | null)?.closest?.('a');
+      if (a && a.href.startsWith(BOOKING_URL)) {
+        posthog.capture('book_call_clicked', { page: window.location.pathname, ...readUtm() });
+      }
+    }
+    document.addEventListener('click', onClick);
+    return () => document.removeEventListener('click', onClick);
+  }, []);
 
   return null;
 }

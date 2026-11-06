@@ -254,8 +254,8 @@ export default function CaseStudiesPage() {
             Book a call
           </a>
           <p className="text-slate-500 text-sm max-w-xl mx-auto leading-relaxed pt-2">
-            Not at a live decision yet? Read the weekly market signal &mdash;{" "}
-            <a href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">The Interconnect</a>.
+            Not at a live decision yet?{" "}
+            <a href="/interconnect" className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">See the energy threads we&apos;re tracking &rarr;</a>
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { SECTORS } from "@/lib/sectors";
 
 /* One-page read requests. Inserts into Supabase public.site_read_requests with
    the public anon key: that role may only INSERT into this table (no SELECT, no
@@ -30,13 +31,15 @@ export async function POST(req: Request) {
   const key = process.env.SUPABASE_ANON_KEY;
   if (!url || !key) return NextResponse.json({ ok: false, error: "unavailable" }, { status: 503 });
 
-  if (Number(req.headers.get("content-length") ?? 0) > 8192) {
+  // Measure the body itself: content-length is absent on chunked requests.
+  const raw = await req.text();
+  if (raw.length > 8192) {
     return NextResponse.json({ ok: false, error: "too_large" }, { status: 413 });
   }
 
   let body: unknown;
   try {
-    body = await req.json();
+    body = JSON.parse(raw);
   } catch {
     return NextResponse.json({ ok: false, error: "bad_request" }, { status: 400 });
   }
@@ -52,7 +55,7 @@ export async function POST(req: Request) {
     (Object.keys(LIMITS) as Field[]).map((f) => [f, clean(data[f], LIMITS[f]) || null]),
   ) as Record<Field, string | null>;
 
-  if (!row.sector || !row.contact || !CONTACT.test(row.contact)) {
+  if (!row.sector || !SECTORS.includes(row.sector) || !row.contact || !CONTACT.test(row.contact)) {
     return NextResponse.json({ ok: false, error: "invalid_fields" }, { status: 400 });
   }
 
@@ -68,11 +71,13 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify(row),
     });
-  } catch {
+  } catch (err) {
+    console.error("read-request store unreachable", err);
     return NextResponse.json({ ok: false, error: "store_failed" }, { status: 502 });
   }
   // 409 = same contact already asked today; the first request stands.
   if (!res.ok && res.status !== 409) {
+    console.error("read-request store failed", res.status, await res.text());
     return NextResponse.json({ ok: false, error: "store_failed" }, { status: 502 });
   }
   return NextResponse.json({ ok: true });

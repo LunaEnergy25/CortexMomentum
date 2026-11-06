@@ -33,7 +33,7 @@ Financing has its own version. Connection queues now run for years, so the inter
 ## Where it stands now
 
 - **Spain:** the European Commission approved a capacity market worth roughly €9 billion, open to generation, demand response and storage (energy-storage.news, May 2026). The ministry announced the order on September 16, 2026, with contracts of up to 15 years for new investments (ESS News, September 17, 2026). I could not confirm a date for the first auction. Analysts say de-rating factors will decide what batteries actually earn from it.
-- **Britain:** Ofgem's minded-to decision on June 26, 2026 shortlisted 16 long-duration projects, about 7.65 GW with 8 to 22 hours of storage, for cap-and-floor support. Final awards are expected this autumn (Hill Dickinson, Foot Anstey). As of today I have not seen final determinations.
+- **Britain:** Ofgem's minded-to decision on June 26, 2026 shortlisted 16 long-duration projects, about 7.65 GW with 8 to 22 hours of storage, for cap-and-floor support. Final awards are expected this autumn (Hill Dickinson, Foot Anstey). As of late October 2026 I have not seen final determinations.
 - **US rules:** Treasury's interim FEOC guidance (Notice 2026-15, February 2026) sets a 55% material-assistance threshold for storage that begins construction in 2026. Tax counsel say it leaves open questions on recapture and contract-level control (Morgan Lewis, March 2026).
 - **US build:** Wood Mackenzie and ACP reported a record 18.9 GWh deployed in Q2 2026, and withdrew an earlier contraction forecast because projects were rushing to secure tax-credit safe harbor (ESS News, October 1, 2026). The pace of the build is again being set by a rule's calendar.
 - **Cost of money:** the 10-year Treasury went from 4.66% on August 26 to 5.31% on October 5, then eased to 4.99% on October 27 (FRED, DGS10). Any pro forma underwritten in summer is running on a discount rate that is now out of date.
@@ -72,4 +72,4 @@ If you're already seeing one of these, I'd rather hear it now than find it in th
 
 ## Method note
 
-Engagement is attention, not demand. I hand-selected 19 storage-focused posts (April 23 to September 27, 2026). Their median saves per 1,000 impressions was 2.30 (n=19), against 1.36 for my 160 other posts in the same period. Comments per 1,000 impressions ran lower: 4.20 against 5.71. The 19 posts drew 200 distinct commenters. Data as of October 28, 2026.
+Built from my published LinkedIn posts on this thread (April to October 2026), read against the filings and reporting cited above. Engagement is attention, not demand. Sources as of October 2026.
