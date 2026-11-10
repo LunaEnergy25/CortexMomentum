@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import posthog from "posthog-js";
-import { sectorReadHref } from "@/lib/links";
+import { BOOKING_URL, sectorReadHref } from "@/lib/links";
 import { readUtm } from "@/lib/utm";
-import { SECTORS } from "@/lib/sectors";
+import { SECTORS, SECTOR_READS } from "@/lib/sectors";
 
-/* On-site request for a one-page sector read. Three fields. UTM tags come
+/* On-site request for a one-page sector read. Three fields. The read (a
+   static PDF per sector, public/reads) opens as soon as the form is sent,
+   and still opens if the request fails to save. UTM tags come
    from the page URL, or from the landing page earlier in the same tab
    (lib/utm), so a DM link keeps its attribution if the visitor clicks around. */
 
@@ -48,11 +50,30 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
     }
   }
 
+  const readHref = SECTOR_READS[chosen] || SECTOR_READS["Deep-tech or other"];
+  const readLink = (
+    <a
+      href={readHref}
+      target="_blank"
+      rel="noopener"
+      onClick={() => posthog.capture("read_pdf_opened", { sector: chosen, page: window.location.pathname, ...readUtm() })}
+      className="inline-block bg-white text-slate-950 px-6 py-3 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm"
+    >
+      Open your one-page read (PDF)
+    </a>
+  );
+
   if (state === "sent") {
     return (
-      <p className="text-slate-200 leading-relaxed">
-        Thanks. The read will reach you within two business days, written around your sector and any decision you named. No follow-up unless you reply.
-      </p>
+      <div className="space-y-4 text-left">
+        <p className="text-slate-200 leading-relaxed">Here&apos;s your read on {chosen || "your sector"}, as of the date on the page.</p>
+        {readLink}
+        <p className="text-sm text-slate-400">
+          If it bears on a decision with a date, we can work through it with you:{" "}
+          <a href={BOOKING_URL} className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">Book a call</a>.
+          No list, no follow-up unless you write to us.
+        </p>
+      </div>
     );
   }
 
@@ -81,14 +102,14 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
         <input id={`decision-${source}`} name="decision" maxLength={500} placeholder="e.g. offtake contract, Q2" className={input} />
       </div>
       <div>
-        <label htmlFor={`contact-${source}`} className={label}>Send it to</label>
+        <label htmlFor={`contact-${source}`} className={label}>Your work email or LinkedIn profile</label>
         <input
           id={`contact-${source}`}
           name="contact"
           required
           minLength={3}
           maxLength={200}
-          placeholder="Work email, or LinkedIn profile URL (sent by DM)"
+          placeholder="Work email, or LinkedIn profile URL"
           className={input}
         />
       </div>
@@ -97,7 +118,7 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
         <input id={`hp-${source}`} name="hp_field" tabIndex={-1} autoComplete="new-password" />
       </div>
       <p className="text-sm text-slate-400">
-        Within two business days. No list, no follow-up unless you reply.{" "}
+        Opens right away. No list, no follow-up unless you write to us.{" "}
         <a href="/privacy" className="underline underline-offset-4 hover:text-slate-200">Privacy</a>
       </p>
       <button
@@ -105,16 +126,19 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
         disabled={state === "sending"}
         className="inline-block bg-white text-slate-950 px-6 py-3 font-semibold tracking-wide hover:bg-slate-200 transition-all duration-300 rounded-sm disabled:opacity-60"
       >
-        {state === "sending" ? "Sending…" : "Send me the one-page read"}
+        {state === "sending" ? "Opening…" : "Get the one-page read"}
       </button>
       {state === "error" && (
-        <p className="text-sm text-slate-300">
-          That didn&apos;t go through. Check the email or LinkedIn URL, or{" "}
-          <a href={sectorReadHref(source, chosen || sector)} className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
-            send the request by email
-          </a>
-          .
-        </p>
+        <div className="space-y-3">
+          <p className="text-sm text-slate-300">
+            We couldn&apos;t save that (check the email or LinkedIn URL, or{" "}
+            <a href={sectorReadHref(source, chosen || sector)} className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">
+              write to us
+            </a>
+            ). The read is yours either way:
+          </p>
+          {chosen && readLink}
+        </div>
       )}
     </form>
   );

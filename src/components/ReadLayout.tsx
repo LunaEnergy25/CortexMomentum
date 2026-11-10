@@ -65,7 +65,7 @@ export default function ReadLayout({
         <div className="border-t border-slate-800 mt-14 pt-10 space-y-6">
           <div className="bg-slate-900/60 border border-slate-800 rounded-sm p-6">
             <p className="text-slate-200 leading-relaxed">
-              Want this mapped to your market? I&apos;ll send a one-page read{sector ? ` on ${sector.toLowerCase()}` : ""}, written around the decision you&apos;re working through.
+              Want the one-page version{sector ? ` for ${sector.toLowerCase()}` : ""}, to keep or forward? It opens as soon as you send the form.
             </p>
             <div className="mt-6">
               <ReadRequestForm source={source} sector={sector} />

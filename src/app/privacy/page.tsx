@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
                 <h2 className={h2}>Website analytics</h2>
         <p className={p}>
-          This site uses PostHog to understand how visitors use it: pages viewed, referrer, device and approximate location. It may record clicks and other on-page interactions. It is configured not to store cookies or other identifiers in your browser, and session recording is off. We don&apos;t use it to identify you.
+          This site uses PostHog to understand how visitors use it: pages viewed, referrer, device and approximate location. It records clicks and other on-page interactions, and it records sessions: a replay of how pages are scrolled and clicked during a visit, with anything typed into form fields hidden. Recordings are kept for 30 days. It is configured not to store cookies or other identifiers in your browser, and we don&apos;t use it to identify you.
         </p>
 
         <h2 className={h2}>Where it comes from</h2>
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
           </li>
           <li><strong className="text-white">To run and improve our research.</strong> We analyse how audiences engage with public energy-market content, in aggregate. Our basis is our legitimate interest in producing market research. We do not publish information that identifies individuals, and we do not quote anyone without permission.</li>
           <li><strong className="text-white">To deliver services and newsletters you have asked for.</strong> Our basis is the contract with you, or your consent.</li>
-            <li><strong className="text-white">To understand how this website is used,</strong> in aggregate. Our basis is our legitimate interest in maintaining and improving the site.</li>
+            <li><strong className="text-white">To understand how this website is used</strong> and to fix problems with it. Our basis is our legitimate interest in maintaining and improving the site.</li>
         </ul>
         <p className={p}>
           We never sell or rent personal information, and we never share contact lists with clients. Clients receive aggregate analysis only. We make no decisions about you by automated means.

@@ -15,8 +15,10 @@ if (typeof window !== 'undefined' && POSTHOG_KEY) {
     person_profiles: 'identified_only',
     capture_pageview: false,
     // Cookieless by design: no persistent identifiers in the browser, so no consent banner is needed.
+    // In-site navigation is client-side, so one visit keeps one ID; a reload or new tab starts a new one.
     persistence: 'memory',
-    disable_session_recording: true,
+    // Session replay is on (see /privacy). Anything typed into a field is masked.
+    session_recording: { maskAllInputs: true },
   });
 }
 

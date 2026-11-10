@@ -64,7 +64,7 @@ export default function InterconnectPage() {
         <div className="max-w-2xl mx-auto">
           <h2 className={h2}>Have a decision riding on one of these?</h2>
           <p className="text-slate-400 text-lg leading-relaxed mb-10">
-            If you&apos;re weighing an entry, an investment or a positioning call, and it has a date, the useful question is what this market will have settled by then and what it won&apos;t. We can put together a one-page read on what&apos;s moving in your market (rules, capital, offtake), where the skepticism sits, and what it means for that decision. It&apos;s only worth doing if it feeds a real decision. If it doesn&apos;t, we&apos;ll tell you.
+            If you&apos;re weighing an entry, an investment or a positioning call, and it has a date, the useful question is what this market will have settled by then and what it won&apos;t. Start with the one-page read for your sector: what&apos;s moving (rules, capital, offtake), where the skepticism sits and what to watch. If it feeds a real decision, book a call and we&apos;ll work through it against your date.
           </p>
           <div className="bg-slate-900/60 border border-slate-800 rounded-sm p-6 md:p-8 max-w-xl mx-auto">
             <p className="text-white font-semibold mb-5 text-left">Start with a one-page read on your sector</p>
