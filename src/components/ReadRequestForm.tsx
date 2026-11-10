@@ -24,7 +24,12 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const from = new URLSearchParams(window.location.search).get("from") || source;
-    const props = { source: from, sector: form.get("sector"), page: window.location.pathname, ...readUtm() };
+    const props = {
+      source: from,
+      sector: form.get("sector"),
+      page: window.location.pathname,
+      ...readUtm(),
+    };
     setState("sending");
     try {
       const res = await fetch("/api/read-request", {
@@ -68,10 +73,12 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
       <div className="space-y-4 text-left">
         <p className="text-slate-200 leading-relaxed">Here&apos;s your read on {chosen || "your sector"}, as of the date on the page.</p>
         {readLink}
-        <p className="text-sm text-slate-400">
-          If it bears on a decision with a date, we can work through it with you:{" "}
+        {/* Same bridge as the PDFs (approved 2026-11-09); keep the two in sync. */}
+        <p className="text-slate-300 leading-relaxed">
+          <strong className="text-white">If this bears on a decision you&apos;re making.</strong> A 30-minute call is for one
+          thing: you bring the decision and its date, and we&apos;ll tell you what this read changes about it, and what it
+          can&apos;t tell you. If the honest answer is that you don&apos;t need us, we&apos;ll say so.{" "}
           <a href={BOOKING_URL} className="text-cyan-300 hover:text-cyan-200 underline underline-offset-4">Book a call</a>.
-          No list, no follow-up unless you write to us.
         </p>
       </div>
     );
@@ -102,7 +109,7 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
         <input id={`decision-${source}`} name="decision" maxLength={500} placeholder="e.g. offtake contract, Q2" className={input} />
       </div>
       <div>
-        <label htmlFor={`contact-${source}`} className={label}>Your work email or LinkedIn profile</label>
+        <label htmlFor={`contact-${source}`} className={label}>Where should we send the January scorecard?</label>
         <input
           id={`contact-${source}`}
           name="contact"
@@ -118,7 +125,7 @@ export default function ReadRequestForm({ source, sector }: { source: string; se
         <input id={`hp-${source}`} name="hp_field" tabIndex={-1} autoComplete="new-password" />
       </div>
       <p className="text-sm text-slate-400">
-        Opens right away. No list, no follow-up unless you write to us.{" "}
+        The read opens right away. In January we score these calls, hits and misses both, and send you that one update. Nothing else unless you write to us.{" "}
         <a href="/privacy" className="underline underline-offset-4 hover:text-slate-200">Privacy</a>
       </p>
       <button
